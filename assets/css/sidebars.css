@@ -98,3 +98,14 @@ body {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
+
+
+@media (min-width: 1198px) {
+  #sidebarMenu,
+  .navbar-brand {
+    width: 300px;
+  }
+  main {
+    width: calc(100% - 300px);
+  }
+}
