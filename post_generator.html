@@ -20,13 +20,14 @@
 
 
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 col-xl-auto me-0 px-3" href="#"><img src="./assets/img/logo.png" alt=""></a>
+        <a class="navbar-brand col-md-3 col-lg-2 col-xl-auto me-0 px-3" href="#"><img src="./assets/img/logo.png"
+                alt=""></a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="navbar-nav px-3">
+        <ul class="navbar-nav px-3 d-none d-md-flex">
             <li class="nav-item text-nowrap">
                 <a class="nav-link" href="#">LIFT</a>
             </li>
@@ -83,9 +84,32 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg">
-                        <div class="alert alert-danger">
-                            Under contruction
+                    <div class="col-lg-9 col-xxl-7 mb-3">
+                        <h5>Source</h5>
+                        <textarea class="form-control"
+                            placeholder="Paste export file (.xml) from Wordpress post article" id="source"
+                            rows="20"></textarea>
+                    </div>
+                    <div class="col-lg-3 col-xxl-5 mb-3">
+                        <h5>Keywords</h5>
+                        <textarea class="form-control text-sm" placeholder="Paste your keywords list here" id="source"
+                            rows="20"></textarea>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <p><strong>Code Key:</strong> <span class="text-muted">[lift_kw_change]</span></p>
+                    </div>
+                    <div class="col-lg mb-3">
+                        <h5>Result</h5>
+                        <div class="rv">
+                            <div class="alert alert-warning">Nothing to show</div>
+                        </div>
+                        <div class="rs d-none1">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, veniam deleniti cupiditate animi numquam natus vel sequi fugiat! Quas fugit iste sed quia laborum. Dignissimos eveniet hic qui perferendis ab?</p>
+                            <button type="button" class="btn btn-success btn-lg btn-block"
+                                    id="dwn-btn">Download</button>
                         </div>
                     </div>
                 </div>
