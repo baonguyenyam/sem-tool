@@ -62,10 +62,27 @@ var LIFT_APP = {
         $('#number').text(LIFT_APP.KW.length)
     }
 }
-
+$('#keyworkds').val(localStorage.getItem('myLIFT'))
 $('#generator').on('click', function() {
     LIFT_APP.KW = []
     LIFT_APP.gen();
+})
+$('#create-btn').on('click', function() {
+    var nel = lift_decode(localStorage.getItem('myLIFT_KW')).split(",")
+    for (let index = 0; index < nel.length; index++) {
+        console.log(nel[index])
+    }
+})
+$('#save-btn').on('click', function() {
+    localStorage.removeItem('myLIFT');
+    localStorage.setItem('myLIFT', $('#results').val());
+    localStorage.removeItem('myLIFT_KW');
+    localStorage.setItem('myLIFT_KW', LIFT_APP.KW);
+})
+$('#clear').on('click', function() {
+    localStorage.removeItem('myLIFT_KW');
+    localStorage.removeItem('myLIFT');
+    alert('Finished!')
 })
 $('#load').on('click', function() {
     LIFT_APP.__a_kw.val('Search Engine')

@@ -120,3 +120,7 @@ body {
     margin-left: 300px;
   }
 }
+.btn-xs {
+  padding: .075rem .5rem;
+    font-size: .8rem;
+}

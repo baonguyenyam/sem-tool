@@ -18,6 +18,19 @@ function download(filename, text) {
 
 document.getElementById("dwn-btn").addEventListener("click", function () {
     var text = document.getElementById("results").value;
-    var filename = "LIFT_KW_LIST_"+new Date().getTime()+".txt";
+    var filename = "LIFT_KW_LIST_" + new Date().getTime() + ".txt";
     download(filename, text);
 }, false);
+
+function loadFileAsText() {
+    var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+    var fileReader = new FileReader();
+    fileReader.onload = function (fileLoadedEvent) {
+        var textFromFileLoaded = fileLoadedEvent.target.result;
+        document.getElementById("source").value = textFromFileLoaded;
+        localStorage.removeItem('myLIFT_Replace');
+        localStorage.setItem('myLIFT_Replace', textFromFileLoaded);
+    };
+    fileReader.readAsText(fileToLoad, "UTF-8");
+}
