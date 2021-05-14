@@ -69,6 +69,7 @@ $('#generator').on('click', function() {
 })
 $('#create-btn').on('click', function() {
     var nel = lift_decode(localStorage.getItem('myLIFT_KW')).split(",")
+    console.log($('#source').val().replace(/\[lift_kw_change\]/g, 'aaaaaaaaa'))
     for (let index = 0; index < nel.length; index++) {
         console.log(nel[index])
     }
