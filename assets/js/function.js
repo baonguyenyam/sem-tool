@@ -16,12 +16,6 @@ function download(filename, text) {
     document.body.removeChild(element);
 }
 
-document.getElementById("dwn-btn").addEventListener("click", function () {
-    var text = document.getElementById("results").value;
-    var filename = "LIFT_KW_LIST_" + new Date().getTime() + ".txt";
-    download(filename, text);
-}, false);
-
 function loadFileAsText() {
     var fileToLoad = document.getElementById("fileToLoad").files[0];
 
