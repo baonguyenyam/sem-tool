@@ -84,9 +84,11 @@ $('#create-btn').on('click', function() {
     } else {
         var nel = lift_decode(localStorage.getItem('myLIFT_KW')).split(",")
         console.log($('#source').val().replace(/\[lift_kw_change\]/g, 'aaaaaaaaa'))
-        for (let index = 0; index < nel.length; index++) {
-            console.log(nel[index])
-        }
+        var m = $('#source').val();
+        console.log($(m).find('item').eq(0).text())
+        // for (let index = 0; index < nel.length; index++) {
+        //     console.log(nel[index])
+        // }
     }
 })
 $('#dwn-btn').on('click', function() {
