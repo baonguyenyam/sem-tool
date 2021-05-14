@@ -64,14 +64,29 @@ var LIFT_APP = {
 }
 $('#keyworkds').val(localStorage.getItem('myLIFT'))
 $('#generator').on('click', function() {
-    LIFT_APP.KW = []
-    LIFT_APP.gen();
+    if(!LIFT_APP.__a_kw.val() || !LIFT_APP.__b_kw.val()) {
+        alert('Please enter kưywords')
+    } else {
+        LIFT_APP.KW = []
+        LIFT_APP.gen();
+    }
 })
 $('#create-btn').on('click', function() {
-    var nel = lift_decode(localStorage.getItem('myLIFT_KW')).split(",")
-    console.log($('#source').val().replace(/\[lift_kw_change\]/g, 'aaaaaaaaa'))
-    for (let index = 0; index < nel.length; index++) {
-        console.log(nel[index])
+    var err = ''
+    if(!$('#source').val()) {
+        err += 'Please upload source file\n'
+    }
+    if(!$('#keyworkds').val()) {
+        err += 'Please enter keywords list\n'
+    }
+    if(err) {
+        alert(err)
+    } else {
+        var nel = lift_decode(localStorage.getItem('myLIFT_KW')).split(",")
+        console.log($('#source').val().replace(/\[lift_kw_change\]/g, 'aaaaaaaaa'))
+        for (let index = 0; index < nel.length; index++) {
+            console.log(nel[index])
+        }
     }
 })
 $('#dwn-btn').on('click', function() {
