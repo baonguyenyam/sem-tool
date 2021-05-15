@@ -25,6 +25,20 @@ var LIFT_APP = {
         k = this.__e_kw.val().trim().split(",");
         return k;
     },
+    matix: function (m1, m2) {
+        var result = [];
+        for(let j = 0; j < m2.length; j++) {
+            result[j] = [];
+            for(let k = 0; k < m1[0].length; k++) {
+                var sum = 0;
+                for(let i = 0; i < m1.length; i++) {
+                    sum += m1[i][k] * m2[j][i];
+                }
+                result[j].push(sum);
+            }
+        }
+        return result;
+    },
     gen: function () {
         for (let index_a = 0; index_a < this.akw_get().length; index_a++) {
             let _a = lift_encode(this.akw_get()[index_a].trim());
@@ -102,7 +116,8 @@ $("#create-btn").on("click", function () {
             nst += '___REPLACE___'
         }
         for (let gmc = 0; gmc < nel.length; gmc++) {
-            arrayDone.push(result[0].replace(/\[lift_kw_change\]/g, nel[gmc]))
+            // arrayDone.push(result[0].replace(/\[lift_kw_change\]/g, nel[gmc]))
+            arrayDone.push(result[0].replace(/\[lift_kw_change\]/gi, nel[gmc]))
         }
         var t = dochange.replace(nst, arrayDone.join(""))
         $("#results").val(unReplaceLIFT(t))

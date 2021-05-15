@@ -16,13 +16,21 @@ function download(filename, text) {
     document.body.removeChild(element);
 }
 function replaceLIFT(str) {
-    return str.toString().replace(/"/gi, "&#34;").replace(/'/gi, "&#39;").replace(/\n/gi, '')
+    return str.toString()
+        .replace(/"/gi, "&#34;")
+        .replace(/'/gi, "&#39;")
+        .replace(/\n/gi, '')
+        .replace(/>\s+</g, "><")
+        .replace(/\n/g, "")
+        .replace(/[\t ]+\</g, "<")
+        .replace(/\>[\t ]+\</g, "><")
+        .replace(/\>[\t ]+$/g, ">")
 }
 function unReplaceLIFT(str) {
     return str.toString().replace(/&#34;/gi, "\"").replace(/&#39;/gi, "'")
 }
 function loadFileAsText() {
-    if(document.getElementById("fileToLoad").value) {
+    if (document.getElementById("fileToLoad").value) {
         var fileToLoad = document.getElementById("fileToLoad").files[0];
         var fileReader = new FileReader();
         fileReader.onload = function (fileLoadedEvent) {
