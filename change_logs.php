@@ -7,83 +7,18 @@
     <meta name="description" content="">
     <meta name="author" content="Nguyen Pham">
     <title>LIFT SEM Tools</title>
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./assets/css/all.min.css" rel="stylesheet">
-    <link href="./assets/css/sidebars.min.css" rel="stylesheet">
-    <script src="./assets/js/jquery.min.js"></script>
+    <?php require 'includes/header.php';?>
 </head>
 
 <body>
 
+<?php require 'includes/nav.php'; ?>
 
-    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 col-xl-auto me-0 px-3" href="index.html"><img
-                src="./assets/img/logo.png" alt=""></a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <ul class="navbar-nav px-3 d-none d-md-flex">
-            <li class="nav-item text-nowrap">
-                <span id="version"></span>
-            </li>
-        </ul>
-    </header>
 
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 col-xl d-md-block bg-light sidebar collapse">
-                <div class="position-sticky pt-3">
-                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-muted">
-                        <span>TOOLS</span>
-                    </h6>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">
-                                <i class="fa fa-fw fa-home"></i>
-                                Dashboard
-                            </a>
-                        </li>
+        <?php require 'includes/sidebar.php'; ?>
 
-                    </ul>
-
-                    <h6
-                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>MORE TOOLS</span>
-                    </h6>
-                    <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="keywork_generator.html">
-                                Keywords generator
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="post_generator.html">
-                                Wordpress posts generator
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="html_validator.html">
-                                HTML Validator
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="chrome_extensions.html">
-                                Chrome extensions
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="change_logs.html">
-                                Changelog
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
                 <div
@@ -158,9 +93,7 @@
         </div>
     </div>
 
-    <script src="./assets/js/function.min.js"></script>
-    <script src="./assets/js/lift.min.js"></script>
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <?php require 'includes/footer.php';?>
 
 </body>
 
