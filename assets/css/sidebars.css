@@ -72,8 +72,11 @@ body {
 }
 
 .navbar .navbar-toggler {
-  top: .25rem;
+  /* top: .25rem; */
   right: 1rem;
+}
+.navbar .navbar-brand  img{
+    max-height: 30px;
 }
 
 .navbar .form-control {
@@ -106,12 +109,12 @@ body {
 @media (min-width: 1198px) {
   #sidebarMenu,
   .navbar-brand {
-    width: 300px;
+    width: 250px;
   }
   main {
-    /* max-width: calc(100% - 300px) !important;
-    width: calc(100% - 300px) !important; */
-    margin-left: 300px;
+    /* max-width: calc(100% - 250px) !important;
+    width: calc(100% - 250px) !important; */
+    margin-left: 250px;
   }
 }
 .btn-xs {
