@@ -81,6 +81,35 @@ $("#generator").on("click", function () {
         LIFT_APP.gen();
     }
 });
+$("#url").on("click", function () {
+    var err = "";
+    if (!$("#urlsource").val()) {
+        err += "Please enter URL\n";
+    }
+    if (err) {
+        alert(err);
+    } else {
+        $.ajax({
+            type: 'GET',
+            url: $("#urlsource").val().trim(),
+            crossDomain: true,
+            dataType: 'text/html',
+            xhrFields: {
+                withCredentials: false
+            },
+            headers: {
+                "Access-Control-Allow-Origin: ": "*",
+                "Access-Control-Allow-Methods: ": "GET",
+                "Access-Control-Allow-Headers: ": "Authorization",
+            },
+            success: function (data) {
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+    }
+});
 $("#create-btn").on("click", function () {
     var err = "";
     if (!$("#source").val()) {
@@ -133,4 +162,54 @@ $("#load").on("click", function () {
     LIFT_APP.__c_kw.val("Dallas, DFW");
     LIFT_APP.__d_kw.val("tactics, strategy, strategies, blogs, blog, bloggers, blogger");
     LIFT_APP.__e_kw.val("near me, here");
+});
+$("#validator-btn").on("click", function () {
+    var err = "";
+    var err_HTML = "";
+    var check_HTML = "";
+    if (!$("#htmlcode").val()) {
+        err += "Please enter HTML Code\n";
+    }
+    if (err) {
+        alert(err);
+    } else {
+        var n = $("#htmlcode").val().trim()
+        LIFT_APP.htmlResults_H1 = n.match(/<h1[^>]*>(.*?)<\/h1>/gi);
+        LIFT_APP.htmlResults_H2 = n.match(/<h2[^>]*>(.*?)<\/h2>/gi);
+        LIFT_APP.htmlResults_H3 = n.match(/<h3[^>]*>(.*?)<\/h3>/gi);
+        LIFT_APP.htmlResults_H4 = n.match(/<h4[^>]*>(.*?)<\/h4>/gi);
+        LIFT_APP.htmlResults_H5 = n.match(/<h5[^>]*>(.*?)<\/h5>/gi);
+        LIFT_APP.htmlResults_H6 = n.match(/<h6[^>]*>(.*?)<\/h6>/gi);
+        LIFT_APP.htmlResults_og_title = n.match(/og:title/gi);
+        if(LIFT_APP.htmlResults_H1) {
+            LIFT_APP.htmlResults_H1.map(function (val) { return val; });
+            if(LIFT_APP.htmlResults_H1.length > 1) {
+                err_HTML += "<li>We have more than 1 tag H1</li>";
+            }
+        } else {
+            err_HTML += "<li>We need improve H1 tag</li>";
+            LIFT_APP.htmlResults_H1 = []
+        }
+        LIFT_APP.htmlResults_H2 ? LIFT_APP.htmlResults_H2 : LIFT_APP.htmlResults_H2 = []
+        LIFT_APP.htmlResults_H3 ? LIFT_APP.htmlResults_H3 : LIFT_APP.htmlResults_H3 = []
+        LIFT_APP.htmlResults_H4 ? LIFT_APP.htmlResults_H4 : LIFT_APP.htmlResults_H4 = []
+        LIFT_APP.htmlResults_H5 ? LIFT_APP.htmlResults_H5 : LIFT_APP.htmlResults_H5 = []
+        LIFT_APP.htmlResults_H6 ? LIFT_APP.htmlResults_H6 : LIFT_APP.htmlResults_H6 = []
+        if (err_HTML) {
+            $('#err_HTML').html('<ul class="mb-0">'+err_HTML+'</ul>').removeClass('d-none')
+            $('#done_HTML').addClass('d-none')
+        } else {
+            $('#err_HTML').addClass('d-none')
+            $('#done_HTML').removeClass('d-none')
+        }
+        $('#check_HTML').html('<div class="list-group">'
+        +resultHTMLValidate('H1 Tag',LIFT_APP.htmlResults_H1.length)
+        +resultHTMLValidate('H2 Tag',LIFT_APP.htmlResults_H1.length)
+        +resultHTMLValidate('H3 Tag',LIFT_APP.htmlResults_H3.length)
+        +resultHTMLValidate('H4 Tag',LIFT_APP.htmlResults_H1.length)
+        +resultHTMLValidate('H5 Tag',LIFT_APP.htmlResults_H1.length)
+        +resultHTMLValidate('H6 Tag',LIFT_APP.htmlResults_H1.length)
+        +resultHTMLValidate('OG Title Tag',(LIFT_APP.htmlResults_og_title ? 'Ready' : 'Undefined'))
+        +'</div>').removeClass('d-none')
+    }
 });
