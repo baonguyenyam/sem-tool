@@ -105,15 +105,17 @@ $("#create-btn").on("click", function () {
             arrayDone.push(result[0].replace(/\[lift_kw_change\]/g, nel[gmc]))
         }
         var t = dochange.replace(nst, arrayDone.join(""))
-        console.log(t)
+        $("#results").val(unReplaceLIFT(t))
+        var text = $("#results").val();
+        var filename = "LIFT_KW_LIST_" + new Date().getTime() + ".xml";
+        download(filename, text);
     }
 });
 $("#dwn-btn").on("click", function () {
-    var text = $("results").val();
+    var text = $("#results").val();
     var filename = "LIFT_KW_LIST_" + new Date().getTime() + ".txt";
     download(filename, text);
 });
-
 $("#save-btn").on("click", function () {
     localStorage.removeItem("myLIFT");
     localStorage.setItem("myLIFT", $("#results").val());

@@ -18,6 +18,9 @@ function download(filename, text) {
 function replaceLIFT(str) {
     return str.toString().replace(/"/gi, "&#34;").replace(/'/gi, "&#39;").replace(/\n/gi, '')
 }
+function unReplaceLIFT(str) {
+    return str.toString().replace(/&#34;/gi, "\"").replace(/&#39;/gi, "'")
+}
 function loadFileAsText() {
     if(document.getElementById("fileToLoad").value) {
         var fileToLoad = document.getElementById("fileToLoad").files[0];
