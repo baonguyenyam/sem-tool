@@ -25,20 +25,6 @@ var LIFT_APP = {
         k = this.__e_kw.val().trim().split(",");
         return k;
     },
-    matix: function (m1, m2) {
-        var result = [];
-        for(let j = 0; j < m2.length; j++) {
-            result[j] = [];
-            for(let k = 0; k < m1[0].length; k++) {
-                var sum = 0;
-                for(let i = 0; i < m1.length; i++) {
-                    sum += m1[i][k] * m2[j][i];
-                }
-                result[j].push(sum);
-            }
-        }
-        return result;
-    },
     gen: function () {
         for (let index_a = 0; index_a < this.akw_get().length; index_a++) {
             let _a = lift_encode(this.akw_get()[index_a].trim());
@@ -109,14 +95,13 @@ $("#create-btn").on("click", function () {
         var nel = lift_decode(localStorage.getItem("myLIFT_KW")).split(",");
         var nst = ''
         var arrayDone = []
-        var m = replaceLIFT($("#source").val());
+        var m = replaceLIFT(LIFT_APP.code.getValue());
         var dochange = m.replace(/<item>(.*?)<\/item>/gi, '___REPLACE___')
         var result = m.match(/<item>(.*?)<\/item>/gi).map(function (val) { return val; });
         for (let index = 0; index < result.length; index++) {
             nst += '___REPLACE___'
         }
         for (let gmc = 0; gmc < nel.length; gmc++) {
-            // arrayDone.push(result[0].replace(/\[lift_kw_change\]/g, nel[gmc]))
             arrayDone.push(result[0].replace(/\[lift_kw_change\]/gi, nel[gmc]))
         }
         var t = dochange.replace(nst, arrayDone.join(""))

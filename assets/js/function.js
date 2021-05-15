@@ -1,11 +1,9 @@
 function lift_encode(str) {
     return unescape(encodeURIComponent(str))
 }
-
 function lift_decode(str) {
     return decodeURIComponent(escape(str));
 }
-
 function download(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -38,6 +36,14 @@ function loadFileAsText() {
             document.getElementById("source").value = textFromFileLoaded;
             localStorage.removeItem('myLIFT_Replace');
             localStorage.setItem('myLIFT_Replace', textFromFileLoaded);
+            LIFT_APP.code = CodeMirror.fromTextArea(document.getElementById("source"), {
+                mode: "text/html",
+                lineNumbers: true,
+                styleActiveLine: true,
+                matchBrackets: true,
+                smartIndent: true,
+                indentWithTabs: true
+            }).setOption("theme", 'monokai');
         };
         fileReader.readAsText(fileToLoad, "UTF-8");
     } else {
