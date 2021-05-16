@@ -1,21 +1,16 @@
 {
   "name": "LIFT SEO/SEM Tool",
   "version": "1.0",
-  "description": "by Nguyen Pham",
+  "description": "The LIFT extension for your browser is easy to use to install. This extension made for the LIFT Creations.",
   "background": {
     "scripts": ["background.js", "global.js"],
     "persistent": false
   },
   "permissions": [
-    "<all_urls>",
-    "storage",
-    "tabs", 
-    "activeTab",
-    "background",
-    "clipboardWrite"
+    "activeTab"
   ],
   "browser_action": {
-    "default_title": "LIFT's Web developer tools", 
+    "default_title": "LIFT SEO/SEM Tool", 
     "default_popup": "app/index.html",
     "default_icon": "app/img/icon.png"
   },
