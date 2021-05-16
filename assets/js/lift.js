@@ -1,5 +1,5 @@
 var LIFT_APP = {
-    version: 'v1.0.2',
+    version: 'v1.0.5',
     KW: [],
     code: null,
     __a_kw: $("#a_kw"),
@@ -77,7 +77,7 @@ var LIFT_APP = {
 $("#keyworkds").val(localStorage.getItem("myLIFT"));
 $("#generator").on("click", function () {
     if (!LIFT_APP.__a_kw.val() || !LIFT_APP.__b_kw.val()) {
-        alert("Please enter kưywords");
+        alert("Please enter keywords");
     } else {
         LIFT_APP.KW = [];
         LIFT_APP.gen();
@@ -123,7 +123,7 @@ $("#create-btn").on("click", function () {
     if (err) {
         alert(err);
     } else {
-        var nel = lift_decode(localStorage.getItem("myLIFT_KW")).split(",");
+        var nel = $("#keyworkds").val().split("\n");
         var nst = ''
         var arrayDone = []
         var m = replaceLIFT(LIFT_APP.code.getValue());
@@ -134,7 +134,9 @@ $("#create-btn").on("click", function () {
         }
         for (let gmc = 0; gmc < nel.length; gmc++) {
             var id = makeid(5);
-            arrayDone.push(result[0].replace(/___REPLACE___/gi, nel[gmc]).replace(/<wp:post_id>(.*?)<\/wp:post_id>/gi, '<wp:post_id>'+id+'</wp:post_id>'))
+            if(nel[gmc] && nel[gmc].length>1) {
+                arrayDone.push(result[0].replace(/___REPLACE___/gi, nel[gmc].trim()).replace(/<wp:post_id>(.*?)<\/wp:post_id>/gi, '<wp:post_id>'+id+'</wp:post_id>'))
+            }
         }
         var t = dochange.replace(nst, arrayDone.join(""))
         $("#results").val(unReplaceLIFT(t))
@@ -217,3 +219,17 @@ $("#validator-btn").on("click", function () {
     }
 });
 $('#version').text(LIFT_APP.version)
+$('[data-preview-content]').each(function() {
+    var selfm = $(this);
+    $.ajax({
+        url: "/previewURL?url=" + selfm.attr('data-preview-content'),
+        cache: true,
+        dataType: 'JSON',
+        success: function (data, textStatus, jqXHR) {
+            selfm.html('<div class="mb-3 row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative" style="background: aliceblue;"> <div class="col p-4 d-flex flex-column position-static"> <div><strong class="d-inline-block mb-2 text-dark">'+extractRootDomain(selfm.attr('data-preview-content'))+'</strong><span class="ms-2"><a style="z-index: 1000; position: relative;" href="https://www.facebook.com/sharer.php?u='+selfm.attr('data-preview-content')+'&t='+data.title+'"><i class="fab fa-facebook-square"></i> Share</a></span></div> <h3 class="h4 text-primary mb-2">'+data.title+'</h3> <p class="card-text mb-auto mb-0">'+data.description+'</p>  <a href="'+selfm.attr('data-preview-content')+'" class="stretched-link" target="_blank">Open URL</a> </div> <div class="col-auto d-none d-md-block"> <div style="width:200px;min-height:100px;height:100%; background: '+(data.cover.length>10 ? '': '#dfdfdf')+' url('+data.cover+') center center no-repeat; background-size: cover"></div> </div> </div>')
+            if(jqXHR.status == 200) {
+                selfm.parents('.data-preview').find('.data-preview-url').remove()
+            }
+        }
+    });
+  });

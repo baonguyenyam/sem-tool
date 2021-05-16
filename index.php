@@ -1,3 +1,5 @@
+<?php require 'functions/functions.php'; ?>
+<?php $active='home'; ?>
 <!doctype html>
 <html lang="en">
 

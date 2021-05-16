@@ -1,3 +1,5 @@
+<?php require 'functions/functions.php'; ?>
+<?php $active='keyword'; ?>
 <!doctype html>
 <html lang="en">
 

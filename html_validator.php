@@ -1,3 +1,5 @@
+<?php require 'functions/functions.php'; ?>
+<?php $active='html'; ?>
 <!doctype html>
 <html lang="en">
 
@@ -7,23 +9,28 @@
     <meta name="description" content="">
     <meta name="author" content="Nguyen Pham">
     <title>LIFT SEM Tools</title>
-    <?php require 'includes/header.php';?>
+    <?php require 'includes/header.php'; ?>
 </head>
+
+<?php
+if (isset($_GET['url'])) {
+    $value = getHtml($_GET['url']);
+}
+?>
 
 <body>
 
 
-<?php require 'includes/nav.php'; ?>
+    <?php require 'includes/nav.php'; ?>
 
 
     <div class="container-fluid">
         <div class="row">
-        <?php require 'includes/sidebar.php'; ?>
+            <?php require 'includes/sidebar.php'; ?>
 
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
-                <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">HTML Validator</h1>
 
                 </div>
@@ -34,17 +41,27 @@
                         <h3 class="mb-3">HTML Source</h3>
                     </div>
                     <div class="col-lg">
-                        <textarea class="form-control text-sm" placeholder="Paste your HTML Code here" id="htmlcode"
-                            rows="12"></textarea>
+                        <form action="" method="get">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Enter URL" aria-label="Enter URL" aria-describedby="button-addon2" name="url">
+                                <button class="btn btn-primary" type="submit" id="button-addon2">Read this URL</button>
+                            </div>
+                        </form>
+
+                        <?php
+                        if (isset($_GET['url'])) {
+                            echo auto_preview($_GET["url"]);
+                        }
+                        ?>
+
+                        <textarea class="form-control text-sm" placeholder="Paste your HTML Code here" id="htmlcode" rows="12"><?=isset($value)?$value:''?></textarea>
                         <div class="input-group mb-3 d-none">
-                            <input type="text" class="form-control" placeholder="Enter URL" aria-label="Enter URL"
-                                aria-describedby="url" id="urlsource">
+                            <input type="text" class="form-control" placeholder="Enter URL" aria-label="Enter URL" aria-describedby="url" id="urlsource">
                             <button class="btn btn-primary" type="button" id="url">Check</button>
                         </div>
                         <div class="row">
                             <div class="col-lg my-3">
-                                <button type="button" class="btn btn-success btn-lg btn-block"
-                                    id="validator-btn">Validator</button>
+                                <button type="button" class="btn btn-success btn-lg btn-block" id="validator-btn">Validation</button>
                             </div>
                         </div>
                     </div>
@@ -59,11 +76,13 @@
 
 
 
+
+
             </main>
         </div>
     </div>
 
-    <?php require 'includes/footer.php';?>
+    <?php require 'includes/footer.php'; ?>
 
 </body>
 

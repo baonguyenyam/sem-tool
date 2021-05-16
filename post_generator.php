@@ -1,3 +1,5 @@
+<?php require 'functions/functions.php'; ?>
+<?php $active='post'; ?>
 <!doctype html>
 <html lang="en">
 

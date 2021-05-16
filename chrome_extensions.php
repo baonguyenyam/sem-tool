@@ -1,3 +1,5 @@
+<?php require 'functions/functions.php'; ?>
+<?php $active='chrome'; ?>
 <!doctype html>
 <html lang="en">
 

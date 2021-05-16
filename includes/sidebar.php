@@ -5,7 +5,7 @@
         </h6>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">
+                <a class="nav-link <?= $active === 'home' ? 'active' : '' ?>" aria-current="page" href="/">
                     <i class="fa fa-fw fa-home"></i>
                     Dashboard
                 </a>
@@ -18,28 +18,33 @@
         </h6>
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link" href="keywork_generator.php">
+                <a class="nav-link <?= $active === 'keyword' ? 'active' : '' ?>" href="keywork_generator.php">
                     Keywords generator
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="post_generator.php">
+                <a class="nav-link <?= $active === 'post' ? 'active' : '' ?>" href="post_generator.php">
                     Wordpress posts generator
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="html_validator.php">
+                <a class="nav-link <?= $active === 'html' ? 'active' : '' ?>" href="html_validator.php">
                     HTML Validator
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="chrome_extensions.php">
+                <a class="nav-link <?= $active === 'chrome' ? 'active' : '' ?>" href="chrome_extensions.php">
                     Chrome extensions
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="change_logs.php">
+                <a class="nav-link <?= $active === 'changelog' ? 'active' : '' ?>" href="change_logs.php">
                     Changelog
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $active === 'roadmap' ? 'active' : '' ?>" href="road_map.php">
+                    Roadmap
                 </a>
             </li>
         </ul>
