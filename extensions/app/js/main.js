@@ -1,3 +1,4 @@
 $('#createGrid').on('click', function () {
-    alert(1)
+    chrome.runtime.sendMessage({ msg: "__build_Grid" });
+    window.close();
 })

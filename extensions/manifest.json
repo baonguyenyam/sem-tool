@@ -3,11 +3,16 @@
   "version": "1.0",
   "description": "The LIFT extension for your browser is easy to use to install. This extension made for the LIFT Creations.",
   "background": {
-    "scripts": ["background.js", "global.js"],
-    "persistent": false
+    "scripts": ["global.js", "background.js"]
   },
   "permissions": [
     "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["app/js/jquery.min.js", "app/js/functions.js"]
+    }
   ],
   "browser_action": {
     "default_title": "LIFT SEO/SEM Tool", 
