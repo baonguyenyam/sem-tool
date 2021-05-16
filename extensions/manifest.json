@@ -1,0 +1,18 @@
+{
+  "name": "LIFT SEO/SEM Tool",
+  "version": "1.0",
+  "description": "by Nguyen Pham",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lib.js", "functions.js", "main.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "manifest_version": 2
+}
