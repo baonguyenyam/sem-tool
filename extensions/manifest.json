@@ -3,7 +3,7 @@
   "version": "1.0",
   "description": "by Nguyen Pham",
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["background.js", "global.js"],
     "persistent": false
   },
   "permissions": [
@@ -13,12 +13,6 @@
     "activeTab",
     "background",
     "clipboardWrite"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["global.js"]
-    }
   ],
   "browser_action": {
     "default_title": "LIFT's Web developer tools", 

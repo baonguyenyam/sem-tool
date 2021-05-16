@@ -1,1 +1,5 @@
-window.resizeBy(400,400)
+document.getElementById("inputId").addEventListener("click", function() {
+    chrome.runtime.getBackgroundPage(function(backgroundPage) {
+        backgroundPage.helloWorld();
+    });
+}, false);

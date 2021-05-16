@@ -1,3 +1,4 @@
-function hehe() {
+
+function helloWorld() {
     alert(1)
 }
