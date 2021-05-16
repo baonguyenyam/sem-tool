@@ -17,7 +17,7 @@
 
     <div class="container-fluid">
         <div class="row">
-        <?php require 'includes/sidebar.php'; ?>
+            <?php require 'includes/sidebar.php'; ?>
 
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
@@ -52,7 +52,10 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-9 col-xxl-7 mb-3">
-                        <h5>Source</h5>
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <h5>Source</h5>
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#liftModal" class="howto"><i class="fa fa-question"></i></a>
+                        </div>
                         <textarea class="form-control" placeholder="Paste export file (.xml) from Wordpress post article" id="source" rows="12"></textarea>
                     </div>
                     <div class="col-lg-3 col-xxl-5 mb-3">
@@ -81,6 +84,25 @@
 
 
             </main>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal" id="liftModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="liftModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="liftModalLabel">How to?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="/assets/img/help-1.png" alt="" class="img-thumbnail img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 
