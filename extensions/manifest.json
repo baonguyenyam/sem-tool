@@ -3,16 +3,28 @@
   "version": "1.0",
   "description": "by Nguyen Pham",
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "persistent": false
   },
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs", 
+    "activeTab",
+    "background",
+    "clipboardWrite"
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["lib.js", "functions.js", "main.js"]
+      "js": ["global.js"]
     }
   ],
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_title": "LIFT's Web developer tools", 
+    "default_popup": "app/index.html",
+    "default_icon": "app/img/icon.png"
   },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "manifest_version": 2
 }
