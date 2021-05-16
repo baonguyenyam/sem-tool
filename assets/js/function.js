@@ -13,6 +13,16 @@ function download(filename, text) {
     element.click();
     document.body.removeChild(element);
 }
+function makeid(length) {
+    var result = [];
+    var characters = '123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result.push(characters.charAt(Math.floor(Math.random() *
+            charactersLength)));
+    }
+    return result.join('');
+}
 function replaceLIFT(str) {
     return str.toString()
         .replace(/"/gi, "&#34;")

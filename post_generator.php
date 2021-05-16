@@ -66,7 +66,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 mb-3">
-                        <p><strong>Code Key:</strong> <span class="text-muted" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">[lift_kw_change]</span>
+                        <p><strong>Code Key:</strong> <span class="text-muted" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE___</span>
                         </p>
                         <textarea class="d-none" id="results"></textarea>
                     </div>

@@ -127,13 +127,14 @@ $("#create-btn").on("click", function () {
         var nst = ''
         var arrayDone = []
         var m = replaceLIFT(LIFT_APP.code.getValue());
-        var dochange = m.replace(/<item>(.*?)<\/item>/gi, '___REPLACE___')
+        var dochange = m.replace(/<item>(.*?)<\/item>/gi, '___LIFTCHANGE___')
         var result = m.match(/<item>(.*?)<\/item>/gi).map(function (val) { return val; });
         for (let index = 0; index < result.length; index++) {
-            nst += '___REPLACE___'
+            nst += '___LIFTCHANGE___'
         }
         for (let gmc = 0; gmc < nel.length; gmc++) {
-            arrayDone.push(result[0].replace(/\[lift_kw_change\]/gi, nel[gmc]))
+            var id = makeid(5);
+            arrayDone.push(result[0].replace(/___REPLACE___/gi, nel[gmc]).replace(/<wp:post_id>(.*?)<\/wp:post_id>/gi, '<wp:post_id>'+id+'</wp:post_id>'))
         }
         var t = dochange.replace(nst, arrayDone.join(""))
         $("#results").val(unReplaceLIFT(t))
