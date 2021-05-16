@@ -3,7 +3,7 @@
   "version": "1.0",
   "description": "The LIFT extension for your browser is easy to use to install. This extension made for the LIFT Creations.",
   "background": {
-    "scripts": ["global.js", "background.js"]
+    "scripts": ["app/js/jquery.min.js", "global.js", "background.js"]
   },
   "permissions": [
     "activeTab"

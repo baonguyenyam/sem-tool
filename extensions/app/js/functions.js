@@ -1,3 +1,4 @@
+'use strict';
 var APP_HOST = window.location.host;
 var APP_PATH = window.location.pathname;
 function getUrlParameter(sParam) {
