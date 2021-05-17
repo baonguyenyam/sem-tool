@@ -1,5 +1,5 @@
 var LIFT_APP = {
-    version: 'v2.0.0',
+    version: 'v2.0.1',
     KW: [],
     code: null,
     __a_kw: $("#a_kw"),
