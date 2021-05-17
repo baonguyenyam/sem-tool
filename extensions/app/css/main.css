@@ -7,11 +7,23 @@ html {
   margin: 0 auto;
   padding: 0;
 }
+*:not(.btn) {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 header {
   background-color: #e91e63;
   color: #fff;
   font-weight: bold;
   padding: 0.25rem 0.5rem;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 footer {
     background-color: #dfdfdf;
@@ -19,6 +31,11 @@ footer {
     padding: 0.15rem 0.25rem;
     font-size: .7rem;
     text-align: center;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 section {
     padding: 32px 0;

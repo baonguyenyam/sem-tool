@@ -1,12 +1,21 @@
-function createGrid() {
-    $('body').append('<h1>sdfsdfsdf</h1>').css({
-        'background': 'red'
-    })
-};
 var LIFT_APP = {
+    ruler: function () { 
+        chrome.tabs.executeScript(null, {code: `
+        if($('#lift_ruler').length>0) {
+            $('body').removeClass('lift_ruler_enable')
+            $('#lift_ruler').remove()
+        } else {
+            $('body').append('<div id="lift_ruler"></div>');$("#lift_ruler").ruler()
+        }
+        `});
+    },
     grid: function () { 
-        chrome.tabs.executeScript(null, {code: `$('body').remove()`});
-        // chrome.tabs.executeScript(null, {"file": "app/js/jquery.min.js"}, createGrid());
-        // chrome.tabs.executeScript(null, {code: ``}, createGrid());
+        chrome.tabs.executeScript(null, {code: `
+        if($('#lift_grid').length>0) {
+            $('#lift_grid').remove()
+        } else {
+            $('body').append('<div id="lift_grid"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div></div></div>')
+        }
+        `});
     }
 }
