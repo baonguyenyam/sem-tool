@@ -25,6 +25,7 @@ function initDraw(canvas) {
             element.style.height = Math.abs(mouse.y - mouse.startY) + 'px';
             element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
             element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y + 'px' : mouse.startY + 'px';
+            element.innerHTML = '<span>' + Math.abs(mouse.x - mouse.startX) +' x ' + Math.abs(mouse.y - mouse.startY) + '<span>';
         }
     }
 
