@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "css": ["app/css/app.css"],
+      "css": ["app/css/app.min.css"],
       "js": [
         "app/js/jquery.min.js",
         "app/js/modernizr.min.js",

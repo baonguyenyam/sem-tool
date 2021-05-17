@@ -1,11 +1,3 @@
-/**
- * jQuery.Ruler v1.1
- * Add Photoshop-like rulers and mouse position to a container element using jQuery.
- * http://ruler.hilliuse.com
- * 
- * Dual licensed under the MIT and GPL licenses.
- * Copyright 2013 Hillius Ettinoffe http://hilliuse.com
- */
 ;(function( $ ){
 
 	$.fn.ruler = function(options) {

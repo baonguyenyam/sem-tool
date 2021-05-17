@@ -1,6 +1,4 @@
 #lift_grid {
-  /* background: #333;
-  opacity: 0.5; */
   position: fixed;
   top: 0;
   left: 0;
@@ -68,8 +66,6 @@
   padding-top: 19px;
 }
 .lift_ruler_enable {
-  /* margin-top: 19px;
-  margin-left: 19px; */
 }
 #lift_ruler .ruler {
   background: rgba(255, 255, 255, 1);
