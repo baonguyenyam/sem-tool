@@ -34,6 +34,16 @@
                         <div class="list-group">
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v2.0.0</h5>
+                                    <small>05/16/2021</small>
+                                </div>
+                                <p class="mb-1">Chrome extensions</p>
+                                <ul class="small">
+                                    <li>This is a LIFT's Chrome extensions. All-in-one tool for SEO/SEM services.</li>
+                                </ul>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">v1.0.5</h5>
                                     <small>05/16/2021</small>
                                 </div>

@@ -40,6 +40,20 @@
                     </div>
                 </div>
 
+                <div class="alert alert-light">
+                    <h5>How to install</h5>
+                    <p>To install extension manually you need to unzip the extension first. Follow the steps to load the unpacked extension.</p>
+                    <p>
+                        <span class="badge bg-info">Step 1</span> On the Address bar go to this URL <code>chrome://extensions</code>
+                    </p>
+                    <p>
+                        <span class="badge bg-info">Step 2</span> Now, Enable developer mode
+                    </p>
+                    <p>
+                        <span class="badge bg-info">Step 3</span> Click on Load Unpacked and select your Unzip folder.
+                    </p>
+                </div>
+
 
             </main>
         </div>
