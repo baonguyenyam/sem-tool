@@ -43,8 +43,8 @@ if (isset($_GET['url'])) {
                     <div class="col-lg">
                         <form action="" method="get">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Enter URL" aria-label="Enter URL" aria-describedby="button-addon2" name="url">
-                                <button class="btn btn-primary" type="submit" id="button-addon2">Read this URL</button>
+                                <input type="text" value="<?=isset($_GET['url'])?$_GET['url']:''?>" class="form-control" placeholder="Enter URL" aria-label="Enter URL" aria-describedby="checkHTML" id="checkHTML_URL" name="url">
+                                <button class="btn btn-primary" type="submit" id="checkHTML">Read this URL</button>
                             </div>
                         </form>
 
@@ -54,12 +54,8 @@ if (isset($_GET['url'])) {
                         }
                         ?>
 
-                        <textarea class="form-control text-sm" placeholder="Paste your HTML Code here" id="htmlcode" rows="12"><?=isset($value)?$value:''?></textarea>
-                        <div class="input-group mb-3 d-none">
-                            <input type="text" class="form-control" placeholder="Enter URL" aria-label="Enter URL" aria-describedby="url" id="urlsource">
-                            <button class="btn btn-primary" type="button" id="url">Check</button>
-                        </div>
-                        <div class="row">
+                        <textarea class="form-control text-sm d-none" placeholder="Paste your HTML Code here" id="htmlcode" rows="12"><?=isset($value)?$value:''?></textarea>
+                        <div class="row d-none">
                             <div class="col-lg my-3">
                                 <button type="button" class="btn btn-success btn-lg btn-block" id="validator-btn">Validation</button>
                             </div>

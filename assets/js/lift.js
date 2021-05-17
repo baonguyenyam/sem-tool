@@ -169,6 +169,12 @@ $("#load").on("click", function () {
     LIFT_APP.__d_kw.val("tactics, strategy, strategies, blogs, blog, bloggers, blogger");
     LIFT_APP.__e_kw.val("near me, here");
 });
+$("#checkHTML").on("click", function () {
+    if (!$('#checkHTML_URL').val()) {
+        alert("Please enter HTML Code");
+        return false
+    }
+})
 $("#validator-btn").on("click", function () {
     var err = "";
     var err_HTML = "";
@@ -230,6 +236,9 @@ $('[data-preview-content]').each(function() {
             selfm.html('<div class="mb-3 row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative" style="background: aliceblue;"> <div class="col p-4 d-flex flex-column position-static"> <div><strong class="d-inline-block mb-2 text-dark">'+extractRootDomain(selfm.attr('data-preview-content'))+'</strong><span class="ms-2"><a style="z-index: 1000; position: relative;" href="https://www.facebook.com/sharer.php?u='+selfm.attr('data-preview-content')+'&t='+data.title+'"><i class="fab fa-facebook-square"></i> Share</a></span></div> <h3 class="h4 text-primary mb-2">'+data.title+'</h3> <p class="card-text mb-auto mb-0">'+data.description+'</p>  <a href="'+selfm.attr('data-preview-content')+'" class="stretched-link" target="_blank">Open URL</a> </div> <div class="col-auto d-none d-md-block"> <div style="width:200px;min-height:100px;height:100%; background: '+(data.cover.length>10 ? '': '#dfdfdf')+' url('+data.cover+') center center no-repeat; background-size: cover"></div> </div> </div>')
             if(jqXHR.status == 200) {
                 selfm.parents('.data-preview').find('.data-preview-url').remove()
+                if($('#htmlcode').val().length>0 ){
+                    $('#validator-btn').trigger('click')
+                }
             }
         }
     });
