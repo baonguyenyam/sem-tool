@@ -159,7 +159,8 @@ $("#save-btn").on("click", function () {
 $("#clear").on("click", function () {
     localStorage.removeItem("myLIFT_KW");
     localStorage.removeItem("myLIFT");
-    alert("Finished!");
+    $("#keyworkds").val('');
+    $('#keyworkds_toast').toast("show")
 });
 $("#load").on("click", function () {
     LIFT_APP.__a_kw.val("Search Engine");

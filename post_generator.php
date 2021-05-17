@@ -1,5 +1,5 @@
 <?php require 'functions/functions.php'; ?>
-<?php $active='post'; ?>
+<?php $active = 'post'; ?>
 <!doctype html>
 <html lang="en">
 
@@ -104,6 +104,19 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+        <div id="keyworkds_toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Memory cleared</strong>
+                <small>1s ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Your keywords list has been cleared
             </div>
         </div>
     </div>
