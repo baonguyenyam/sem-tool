@@ -155,6 +155,7 @@ $("#save-btn").on("click", function () {
     localStorage.setItem("myLIFT", $("#results").val());
     localStorage.removeItem("myLIFT_KW");
     localStorage.setItem("myLIFT_KW", LIFT_APP.KW);
+    $('#keyworkds_toast').toast("show")
 });
 $("#clear").on("click", function () {
     localStorage.removeItem("myLIFT_KW");
