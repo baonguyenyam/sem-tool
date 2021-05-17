@@ -13,7 +13,7 @@
  * @package           LIFT_WP_CORE_MAIN
  *
  * @wordpress-plugin
- * Plugin Name:       @LIFT Creations - LIFT Blocks
+ * Plugin Name:       @LIFT Creations - LIFT Main
  * Plugin URI:        https://liftcreations.com
  * Description:       This is a product of LIFT Creations. 
  * Version:           1.0.0
