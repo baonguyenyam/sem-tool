@@ -76,6 +76,18 @@
             </div>
           </div>
 
+          <div class="col d-flex align-items-start mb-4">
+
+            <div>
+              <h2>Wordpress plugins</h2>
+              <p class="text-muted">The LIFT Wordpress plugins for your website is easy to use to install. This Wordpress plugins made for the LIFT Creations.
+              </p>
+              <a href="wp_plugins.php" class="btn btn-primary">
+                Download
+              </a>
+            </div>
+          </div>
+
         </div>
 
 
