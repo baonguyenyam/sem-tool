@@ -1,4 +1,14 @@
 var LIFT_APP = {
+    measure: function () { 
+        chrome.tabs.executeScript(null, {code: `
+        if($('#lift_canvas').length>0) {
+            
+        } else {
+            $('body').append('<div id="lift_canvas"></div>');
+            initDraw(document.getElementById('lift_canvas'));
+        }
+        `});
+    },
     ruler: function () { 
         chrome.tabs.executeScript(null, {code: `
         if($('#lift_ruler').length>0) {

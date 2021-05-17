@@ -25,4 +25,7 @@ chrome.runtime.onMessage.addListener(function (request) {
     if (request.msg == "__build_Ruler") {
         LIFT_APP.ruler()
     }
+    if (request.msg == "__build_Measure") {
+        LIFT_APP.measure()
+    }
 });

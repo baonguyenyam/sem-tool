@@ -15,6 +15,7 @@
       "js": [
         "app/js/jquery.min.js",
         "app/js/modernizr.min.js",
+        "app/js/draw.js",
         "app/js/ruler.js"
       ]
     }
