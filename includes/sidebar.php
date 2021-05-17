@@ -37,6 +37,11 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link <?= $active === 'plugins' ? 'active' : '' ?>" href="wp_plugins.php">
+                <i class="fas fa-fw fa-archive me-1"></i> Wordpress plugins
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link <?= $active === 'changelog' ? 'active' : '' ?>" href="change_logs.php">
                 <i class="fa fa-fw fa-calendar-alt me-1"></i> Changelog
                 </a>
