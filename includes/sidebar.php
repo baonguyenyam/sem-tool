@@ -27,7 +27,7 @@
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>MORE...</span>
+            <span>ADDONS...</span>
         </h6>
         <ul class="nav flex-column mb-2">
 
@@ -41,6 +41,11 @@
                 <i class="fas fa-fw fa-archive me-1"></i> Wordpress plugins
                 </a>
             </li>
+        </ul>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>LOGS...</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
             <li class="nav-item">
                 <a class="nav-link <?= $active === 'changelog' ? 'active' : '' ?>" href="change_logs.php">
                 <i class="fa fa-fw fa-calendar-alt me-1"></i> Changelog
