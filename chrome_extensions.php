@@ -36,7 +36,7 @@
                         <div class="d-grid gap-2 d-inline-flex flex-column">
                             <div>
                             <a href="/files/extensions.zip" class="btn btn-primary btn-lg px-4">Download</a>  &nbsp;	
-                            <a href="https://drive.google.com/file/d/1Yjjc-AQ3L03RnPM2VT98caHo6AVyMIdo/view?usp=sharing" target="_blank" class="btn btn-primary btn-lg px-4">gDrive Download</a>
+                            <a href="https://drive.google.com/file/d/1zN7ROTE4BN3tozWC0rWsoBH13nQ-QW4L/view?usp=sharing" target="_blank" class="btn btn-primary btn-lg px-4">gDrive Download</a>
                             </div>
                             <p class="my-1 text-muted small">v.1.0</p>
                         </div>
