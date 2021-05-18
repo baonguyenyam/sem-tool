@@ -238,6 +238,7 @@
   top: 0;
   left: 0;
   z-index: 999999;
+  min-height: 100vh;
 }
 .lift_rectangle {
   border: 1px solid #0048ce;
