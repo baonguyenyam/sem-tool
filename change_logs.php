@@ -38,8 +38,12 @@
                                     <small>05/17/2021</small>
                                 </div>
                                 <p class="mb-1">Wordpress plugins</p>
+                                <small>The LIFT Wordpress plugins for your website is easy to use to install. This Wordpress plugins made for the LIFT Creations.</small>
                                 <ul class="small">
-                                    <li>The LIFT Wordpress plugins for your website is easy to use to install. This Wordpress plugins made for the LIFT Creations.</li>
+                                    <li>LIFT Main</li>
+                                    <li>LIFT Blocks</li>
+                                    <li>LIFT Export 1 post</li>
+                                    <li>LIFT CleanUp</li>
                                 </ul>
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">

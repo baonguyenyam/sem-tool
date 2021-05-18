@@ -18,6 +18,8 @@ function initDraw(canvas) {
     };
     var element = null;
 
+    canvas.setAttribute("style","height:"+document.body.offsetHeight+"px");
+
     canvas.onmousemove = function (e) {
         setMousePosition(e);
         if (element !== null) {
