@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       @LIFT Creations - LIFT Blocks
  * Plugin URI:        https://liftcreations.com
- * Description:       This is a product of LIFT Creations. 
+ * Description:       This plugins add new Blocks feature into Wordpress site.
  * Version:           1.0.0
  * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io/cv
@@ -30,9 +30,6 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-// require plugin_dir_path( __FILE__ ) . 'core/config.php';
-// require plugin_dir_path( __FILE__ ) . 'core/widget.php';
-// require plugin_dir_path( __FILE__ ) . 'core/menu.php';
 require plugin_dir_path( __FILE__ ) . 'core/posttype.php';
 
 

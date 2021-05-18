@@ -10,18 +10,18 @@
  *
  * @link              https://liftcreations.com
  * @since             1.0.0
- * @package           LIFT_WP_CORE_MAIN
+ * @package           LIFT_WP_CLEAN_MAIN
  *
  * @wordpress-plugin
- * Plugin Name:       @LIFT Creations - LIFT Main
+ * Plugin Name:       @LIFT Creations - LIFT CleanUp
  * Plugin URI:        https://liftcreations.com
- * Description:       This plugins add new LIFT's menu into Wordpress site.
+ * Description:       This is a product of LIFT Creations. 
  * Version:           1.0.0
  * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io/cv
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       bn-wp-core
+ * Text Domain:       bn-wp-clean
  * Domain Path:       /languages
  */
 
@@ -30,29 +30,30 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-require plugin_dir_path( __FILE__ ) . 'core/menu.php';
+require plugin_dir_path( __FILE__ ) . 'core/widget.php';
+require plugin_dir_path( __FILE__ ) . 'core/cleanup.php';
 
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-bn-wp-activator.php
  */
-function activate_bn_core_wp() {
+function activate_bn_clean_wp() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-bn-wp-activator.php';
-	LIFT_WP_CORE_Activator::activate();
+	LIFT_WP_CLEAN_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-bn-wp-deactivator.php
  */
-function deactivate_bn_core_wp() {
+function deactivate_bn_clean_wp() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-bn-wp-deactivator.php';
-	LIFT_WP_CORE_Deactivator::deactivate();
+	LIFT_WP_CLEAN_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_bn_core_wp' );
-register_deactivation_hook( __FILE__, 'deactivate_bn_core_wp' );
+register_activation_hook( __FILE__, 'activate_bn_clean_wp' );
+register_deactivation_hook( __FILE__, 'deactivate_bn_clean_wp' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -69,10 +70,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-bn-wp.php';
  *
  * @since    1.0.0
  */
-function run_bn_core_wp() {
+function run_bn_clean_wp() {
 
-	$plugin = new LIFT_WP_CORE_MAIN();
+	$plugin = new LIFT_WP_CLEAN_MAIN();
 	$plugin->run();
 
 }
-run_bn_core_wp();
+run_bn_clean_wp();
