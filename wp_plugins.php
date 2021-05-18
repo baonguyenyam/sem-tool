@@ -38,21 +38,7 @@
 
                 <div class="alert alert-light">
                     <h5>Plugins</h5>
-                    <div class="d-flex text-muted pt-3">
-                        <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
-                            <i class="fas fa-archive fa-3x"></i>
-                        </div>
 
-                        <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                            <div class="d-flex w-100 justify-content-between align-items-start">
-                                <div>
-                                    <strong class="d-block text-gray-dark">LIFT Blocks</strong>
-                                    <p class="mb-0">This plugins add new Blocks feature into Wordpress site.</p>
-                                </div>
-                                <a href="/files/wp-lift-blocks.zip" class="btn btn-sm btn-success">Download</a>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
@@ -69,6 +55,58 @@
                             </div>
                         </div>
                     </div>
+
+                    
+                    <div class="d-flex text-muted pt-3">
+                        <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+                            <i class="fas fa-archive fa-3x"></i>
+                        </div>
+
+                        <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                            <div class="d-flex w-100 justify-content-between align-items-start">
+                                <div>
+                                    <strong class="d-block text-gray-dark">LIFT Blocks</strong>
+                                    <p class="mb-0">This plugins add new Blocks feature into Wordpress site.</p>
+                                </div>
+                                <a href="/files/wp-lift-blocks.zip" class="btn btn-sm btn-success">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex text-muted pt-3">
+                        <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+                            <i class="fas fa-archive fa-3x"></i>
+                        </div>
+
+                        <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                            <div class="d-flex w-100 justify-content-between align-items-start">
+                                <div>
+                                    <strong class="d-block text-gray-dark">LIFT Export 1 post</strong>
+                                    <p class="mb-0">This plugins add export link into Wordpress site.</p>
+                                </div>
+                                <a href="/files/wp-lift-export.zip" class="btn btn-sm btn-success">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex text-muted pt-3">
+                        <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+                            <i class="fas fa-archive fa-3x"></i>
+                        </div>
+
+                        <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                            <div class="d-flex w-100 justify-content-between align-items-start">
+                                <div>
+                                    <strong class="d-block text-gray-dark">LIFT CleanUp</strong>
+                                    <p class="mb-0">This is a product of LIFT Creations.</p>
+                                </div>
+                                <a href="/files/wp-lift-cleanup.zip" class="btn btn-sm btn-success">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
