@@ -1,3 +1,3 @@
-<script src="/assets/js/function.min.js"></script>
-<script src="/assets/js/lift.min.js"></script>
-<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/dist/function.prod.js"></script>
+<script src="/assets/js/dist/lift.prod.js"></script>

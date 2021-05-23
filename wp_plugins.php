@@ -50,6 +50,7 @@
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Main</strong>
                                     <p class="mb-0">This plugins add new LIFT's menu into Wordpress site.</p>
+                                    <small class="mb-0 text-primary">v1.0.0</small>
                                 </div>
                                 <a href="/files/wp-lift.zip" class="btn btn-sm btn-success">Download</a>
                             </div>
@@ -65,8 +66,27 @@
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
                             <div class="d-flex w-100 justify-content-between align-items-start">
                                 <div>
+                                    <strong class="d-block text-gray-dark">LIFT Addons for Visual Composer</strong>
+                                    <p class="mb-0">A collection of LIFT's addons for use in WPBakery Page Builder. WPBakery Page Builder must be installed and activated.</p>
+                                    <small class="mb-0 text-primary">v2.0.0</small>
+                                </div>
+                                <a href="/files/lift-vc-addon.zip" class="btn btn-sm btn-success">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="d-flex text-muted pt-3">
+                        <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+                            <i class="fas fa-archive fa-3x"></i>
+                        </div>
+
+                        <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                            <div class="d-flex w-100 justify-content-between align-items-start">
+                                <div>
                                     <strong class="d-block text-gray-dark">LIFT Blocks</strong>
                                     <p class="mb-0">This plugins add new Blocks feature into Wordpress site.</p>
+                                    <small class="mb-0 text-primary">v1.0.0</small>
                                 </div>
                                 <a href="/files/wp-lift-blocks.zip" class="btn btn-sm btn-success">Download</a>
                             </div>
@@ -84,6 +104,7 @@
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Export 1 post</strong>
                                     <p class="mb-0">This plugins add export link into Wordpress site.</p>
+                                    <small class="mb-0 text-primary">v1.0.0</small>
                                 </div>
                                 <a href="/files/wp-lift-export.zip" class="btn btn-sm btn-success">Download</a>
                             </div>
@@ -101,6 +122,7 @@
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT CleanUp</strong>
                                     <p class="mb-0">This is a product of LIFT Creations.</p>
+                                    <small class="mb-0 text-primary">v1.0.0</small>
                                 </div>
                                 <a href="/files/wp-lift-cleanup.zip" class="btn btn-sm btn-success">Download</a>
                             </div>

@@ -1,11 +1,11 @@
-<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="/assets/css/all.min.css" rel="stylesheet">
-<link href="/assets/css/sidebars.min.css" rel="stylesheet">
-<link href="/assets/css/codemirror.min.css" rel="stylesheet">
-<link href="/assets/css/theme/monokai.css" rel="stylesheet">
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/codemirror.min.js"></script>
-<script src="/assets/js/mode/xml/xml.js"></script>
+<link href="/assets/css/vendor/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/vendor/all.min.css" rel="stylesheet">
+<link href="/assets/css/vendor/codemirror.min.css" rel="stylesheet">
+<link href="/assets/css/vendor/theme/monokai.css" rel="stylesheet">
+<link href="/assets/css/dist/main.min.css" rel="stylesheet">
+<script src="/assets/js/vendor/jquery.min.js"></script>
+<script src="/assets/js/vendor/codemirror.min.js"></script>
+<script src="/assets/js/vendor/mode/xml/xml.js"></script>
 <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">

@@ -34,6 +34,19 @@
                         <div class="list-group">
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.0.0</h5>
+                                    <small>05/23/2021</small>
+                                </div>
+                                <p class="mb-1">LIFT Addons for Visual Composer</p>
+                                <small>Big changed. A collection of LIFT's addons for use in WPBakery Page Builder. WPBakery Page Builder must be installed and activated.</small>
+                                <ul class="small">
+                                    <li>LIFT Box Info</li>
+                                    <li>LIFT Blocks Integrate</li>
+                                    <li>LIFT Custom post builder</li>
+                                </ul>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">v2.0.1</h5>
                                     <small>05/17/2021</small>
                                 </div>
