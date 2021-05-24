@@ -1,0 +1,26 @@
+// https://developer.wordpress.org/resource/dashicons/#album
+body #wpadminbar>#wp-toolbar>#wp-admin-bar-root-default #wp-admin-bar-lift_admin_bar_menu,
+body #wpadminbar #wp-admin-bar-lift_admin_bar_menu {
+    a{
+        display: flex;
+        align-items: center;
+        .ab-icon.lifemx {
+            background-image: url(../../img/icon.png) !important;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 20px;
+            width: 20px;
+        }
+    }
+    ul {
+        .ab-item {
+            display: flex;
+            align-items: center;
+            span {
+                line-height: 1;
+                margin-right: 5px;  
+            }
+        }
+    }
+}

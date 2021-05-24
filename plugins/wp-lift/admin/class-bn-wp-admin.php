@@ -73,12 +73,8 @@ class LIFT_WP_CORE_Admin {
 		 * class.
 		 */
 
-		// if( (current_user_can('editor') || current_user_can('author')) && wp_get_current_user() !== 'admin' ) {
-		// 	// Stuff here for administrators or editors
-		// 	wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/lift-wp-admin.css', array(), $this->version . '3', 'all' );
-		// }
-		// // Stuff here for administrators or editors
-		// wp_enqueue_style('alladminper', plugin_dir_url( __FILE__ ) . 'css/lift-wp-admin-all.css', array(), $this->version. '10', 'all' );
+		wp_enqueue_style( 'lift_admin_main_css',  plugin_dir_url( __FILE__ ) . 'assets/css/dist/main.min.css', array() );
+		wp_enqueue_script('lift_admin_main_js');
 
 	}
 
@@ -101,7 +97,8 @@ class LIFT_WP_CORE_Admin {
 		 * class.
 		 */
 
-		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/lift-wp-admin.js', array( 'jquery' ), $this->version . '16', false );
+		wp_register_script('lift_admin_main_js', plugin_dir_url( __FILE__ ) . 'assets/js/dist/main.prod.js', array('jquery'));
+        wp_enqueue_script('lift_admin_main_js');
 
 	}
 	
