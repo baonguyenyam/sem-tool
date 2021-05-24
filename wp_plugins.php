@@ -93,6 +93,23 @@
                         </div>
                     </div>
 
+                    <div class="d-flex text-muted pt-3">
+                        <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+                            <i class="fas fa-archive fa-3x"></i>
+                        </div>
+
+                        <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                            <div class="d-flex w-100 justify-content-between align-items-start">
+                                <div>
+                                    <strong class="d-block text-gray-dark">LIFT Custom Post</strong>
+                                    <p class="mb-0">This plugins add new Custom Post feature into Wordpress site.</p>
+                                    <small class="mb-0 text-primary">v1.0.0</small>
+                                </div>
+                                <a href="/files/wp-lift-custompost.zip" class="btn btn-sm btn-success">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
