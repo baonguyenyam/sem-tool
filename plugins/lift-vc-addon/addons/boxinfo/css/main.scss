@@ -1,0 +1,88 @@
+.lift-elements {
+    &.lift-boxinfo{
+        &.lift-hold-click {
+            position: relative;
+            .hold-click {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 480px) {
+    .lift-elements {
+        &.lift-boxinfo{
+            &.lift-theme-style-4 {
+                position: relative;
+                overflow: hidden;
+                article {
+                    position: absolute;
+                    z-index: 100;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background: rgba(0,0,0,.75);
+                    .lift-title {
+                        transition: all ease-in-out 0s;
+                        height: auto;
+                    }
+                    .lift-content,
+                    .lift-button {
+                        height: 0;
+                        overflow: hidden;
+                        transition: all ease-in-out .5s;
+                        opacity: 0;
+                    }
+                }
+                figure {
+                    img {
+                        width: 100%;
+                    }
+                }
+                &:hover {
+                    article {
+                        .lift-content,
+                        .lift-button {
+                            height: auto;
+                            opacity: 1;
+                        }
+                        .lift-title {
+                            height: 0;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 690px) {
+    .lift-elements {
+        &.lift-boxinfo{
+            &.lift-theme-style-2 {
+                display: flex;
+                figure {
+                    max-width: 40%;
+                    flex: 0 0 40%;
+                    margin-right: 2rem;
+                }
+            }
+            &.lift-theme-style-3 {
+                display: flex;
+                figure {
+                    max-width: 40%;
+                    flex: 0 0 40%;
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+}

@@ -31,3 +31,16 @@ function admin_lift_menu($meta = TRUE){
     ));
 }
 add_action( 'admin_bar_menu', 'admin_lift_menu' , 100);
+
+
+add_filter( 'wp_handle_upload_prefilter', 'lift_custom_upload_filter' );
+function lift_custom_upload_filter( $file ) {
+    if ( ! isset( $_REQUEST['post_id'] ) ) {
+        return $file;
+    }
+    $id           = intval( $_REQUEST['post_id'] );
+    $parent_post  = get_post( $id );
+    $post_name    = sanitize_title( $parent_post->post_title );
+    $file['name'] = $post_name . '-' . $file['name'];
+    return $file;
+}
