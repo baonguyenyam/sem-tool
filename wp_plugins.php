@@ -48,8 +48,8 @@
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
                             <div class="d-flex w-100 justify-content-between align-items-start">
                                 <div>
-                                    <strong class="d-block text-gray-dark">LIFT Main</strong>
-                                    <p class="mb-0">This plugins add new LIFT's menu into Wordpress site.</p>
+                                    <strong class="d-block text-gray-dark">LIFT Core</strong>
+                                    <p class="mb-0">This plugins add new LIFT's menu into Wordpress site. It also auto rename image file by post title</p>
                                     <small class="mb-0 text-primary">v1.0.0</small>
                                 </div>
                                 <a href="/files/wp-lift.zip" class="btn btn-sm btn-success">Download</a>
