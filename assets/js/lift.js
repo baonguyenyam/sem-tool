@@ -8,23 +8,23 @@ var LIFT_APP = {
     __d_kw: $("#d_kw"),
     __e_kw: $("#e_kw"),
     akw_get: function () {
-        k = this.__a_kw.val().trim().split(",");
+        var k = this.__a_kw.val().trim().split(",");
         return k;
     },
     bkw_get: function () {
-        k = this.__b_kw.val().trim().split(",");
+        var k = this.__b_kw.val().trim().split(",");
         return k;
     },
     ckw_get: function () {
-        k = this.__c_kw.val().trim().split(",");
+        var k = this.__c_kw.val().trim().split(",");
         return k;
     },
     dkw_get: function () {
-        k = this.__d_kw.val().trim().split(",");
+        var k = this.__d_kw.val().trim().split(",");
         return k;
     },
     ekw_get: function () {
-        k = this.__e_kw.val().trim().split(",");
+        var k = this.__e_kw.val().trim().split(",");
         return k;
     },
     gen: function () {

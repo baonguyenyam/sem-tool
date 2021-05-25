@@ -42,7 +42,7 @@
 
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
-                            <i class="fas fa-archive fa-3x"></i>
+                            <i class="fas fa-archive fa-3x text-primary"></i>
                         </div>
 
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
@@ -60,7 +60,7 @@
                     
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
-                            <i class="fas fa-archive fa-3x"></i>
+                            <i class="fas fa-archive fa-3x text-primary"></i>
                         </div>
 
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
