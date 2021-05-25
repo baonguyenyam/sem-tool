@@ -88,6 +88,18 @@
             </div>
           </div>
 
+          <div class="col d-flex align-items-start mb-4">
+
+            <div>
+              <h2>Testing site</h2>
+              <p class="text-muted">Development site. <span class="text-danger">(demo/demo)</span>
+              </p>
+              <a href="https://myseo.website/wp/wp-admin/" target="_blank" class="btn btn-danger">
+              Demo site
+              </a>
+            </div>
+          </div>
+
         </div>
 
 

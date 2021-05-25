@@ -32,6 +32,16 @@
                 <div class="row mb-3">
                     <div class="col-12">
                         <div class="list-group">
+
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.0.1</h5>
+                                    <small>05/24/2021</small>
+                                </div>
+                                <p class="mb-1">Auto Rename Image</p>
+                                <small>Rename image file by post title</small>
+                            </div>
+
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">v3.0.0</h5>
