@@ -12,6 +12,23 @@
     <?php require 'includes/header.php'; ?>
 </head>
 
+<?php
+   if(isset($_POST['submit'])) {
+      
+   $mydir = dirname( __FILE__ )."/tmp/wp-lift-custompost";
+   if(!is_dir($mydir)){
+    mkdir("tmp/wp-lift-custompost");
+   }
+   // Move all images files
+   $files = glob("plugins/wp-lift-custompost/*.*");
+   foreach($files as $file){
+   $file_to_go = str_replace("plugins/wp-lift-custompost","tmp/wp-lift-custompost",$file);
+         copy($file, $file_to_go);
+   }
+
+   }
+?>
+
 <body>
 
     <?php require 'includes/nav.php'; ?>
@@ -30,142 +47,26 @@
 
 
                 <div class="row mb-3">
-                    <div class="col-12">
-                        <div class="list-group">
-
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v3.0.1</h5>
-                                    <small>05/24/2021</small>
-                                </div>
-                                <p class="mb-1">Auto Rename Image</p>
-                                <small>Rename image file by post title</small>
+                    <div class="col-md-4 offset-md-4">
+                        <form action="" class="shadow p-3 mb-5 bg-body rounded border" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name">
                             </div>
-
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v3.0.0</h5>
-                                    <small>05/23/2021</small>
-                                </div>
-                                <p class="mb-1">LIFT Addons for Visual Composer</p>
-                                <small>Big changed. A collection of LIFT's addons for use in WPBakery Page Builder. WPBakery Page Builder must be installed and activated.</small>
-                                <ul class="small">
-                                    <li>LIFT Box Info</li>
-                                    <li>LIFT Blocks Integrate</li>
-                                    <li>LIFT Custom post builder</li>
-                                </ul>
+                            <div class="mb-3">
+                                <label for="shortname" class="form-label">Short Name</label>
+                                <input type="text" class="form-control" id="shortname" name="shortname">
                             </div>
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v2.0.1</h5>
-                                    <small>05/17/2021</small>
-                                </div>
-                                <p class="mb-1">Wordpress plugins</p>
-                                <small>The LIFT Wordpress plugins for your website is easy to use to install. This Wordpress plugins made for the LIFT Creations.</small>
-                                <ul class="small">
-                                    <li>LIFT Main</li>
-                                    <li>LIFT Blocks</li>
-                                    <li>LIFT Export 1 post</li>
-                                    <li>LIFT CleanUp</li>
-                                </ul>
+                            <div class="mb-3">
+                                <label for="slug" class="form-label">Slug</label>
+                                <input type="text" class="form-control" id="slug" name="slug">
                             </div>
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v2.0.0</h5>
-                                    <small>05/16/2021</small>
-                                </div>
-                                <p class="mb-1">Chrome extensions</p>
-                                <ul class="small">
-                                    <li>This is a LIFT's Chrome extensions. All-in-one tool for SEO/SEM services.</li>
-                                </ul>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name">
                             </div>
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.5</h5>
-                                    <small>05/16/2021</small>
-                                </div>
-                                <p class="mb-1">Curl and Agent</p>
-                                <ul class="small">
-                                    <li>Fetch URL HTML Code by PHP CURL and set AGENT as <code>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.141 Safari/537.36</code></li>
-                                    <li>Also set <code>SSL_VERIFYPEER</code> and <code>SSL_VERIFYHOST</code> into the Fetching code</li>
-                                </ul>
-                            </div>
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.4</h5>
-                                    <small>05/16/2021</small>
-                                </div>
-                                <p class="mb-1">Code Key</p>
-                                <ul class="small">
-                                    <li>New feature, we use the <code>___REPLACE___</code> code key to easy replace everything in Wordpress Post generator page</li>
-                                </ul>
-                            </div>
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.3</h5>
-                                    <small>05/16/2021</small>
-                                </div>
-                                <p class="mb-1">Preview URL</p>
-                                <ul class="small">
-                                    <li>New feature, add the preview URL plugin in HTML Validator page</li>
-                                    <li>Fixed bug when somebody type Keywords list with empty value</li>
-                                </ul>
-                            </div>
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.2</h5>
-                                    <small>05/15/2021</small>
-                                </div>
-                                <p class="mb-1">Fixed bugs and improved somethings</p>
-                                <ul class="small">
-                                    <li>Fixed <code>LIFT_APP.code.setOption("theme", 'monokai')</code></li>
-                                    <li>Fixed <code>localStorage.getItem("myLIFT_KW")</code></li>
-                                    <li>Improved save keywords list feature</li>
-                                    <li>Auto load keywords list from saved list</li>
-                                </ul>
-                            </div>
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.1</h5>
-                                    <small>05/15/2021</small>
-                                </div>
-                                <p class="mb-1">Code Refactor</p>
-                                <small>Big change, we have improved the source code and create matrix math to generator keyword and fixed some bugs on Wordpress Post generator tool</small>
-                            </div>
-                            <div class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v0.4</h5>
-                                    <small>05/15/2021</small>
-                                </div>
-                                <p class="mb-1">HTML Code validator</p>
-                                <small>Find missing or unbalanced HTML tags in your documents, stray characters, duplicate IDs, missing or invalid attributes and other recommendations.</small>
-                            </div>
-                            <div class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v0.3</h5>
-                                    <small class="text-muted">05/14/2021</small>
-                                </div>
-                                <p class="mb-1">Wordpress Post generator tool. </p>
-                                <small>The tool auto-generation posts from the keywords list you have.</small>
-                            </div>
-                            <div class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v0.2</h5>
-                                    <small class="text-muted">05/14/2021</small>
-                                </div>
-                                <p class="mb-1">Create "Keywords generator" tool. </p>
-                                <small>The tool works by allowing you to input general words and phrases into the 5
-                                    boxes, and then quickly generate keyword lists that can include your basic phrases
-                                    and your long-tail terms.</small>
-                            </div>
-                            <div class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">First version - v0.1</h5>
-                                    <small class="text-muted">05/13/2021</small>
-                                </div>
-                                <p class="mb-1">Build the source code structure</p>
-                            </div>
-                        </div>
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
                 </div>
 

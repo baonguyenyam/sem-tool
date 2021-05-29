@@ -16,7 +16,7 @@
  * Plugin Name:       @LIFT Creations - LIFT Blocks
  * Plugin URI:        https://liftcreations.com
  * Description:       This plugins add new Blocks feature into Wordpress site.
- * Version:           1.0.0
+ * Version:           2.2.0
  * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io/cv
  * License:           GPL-2.0+

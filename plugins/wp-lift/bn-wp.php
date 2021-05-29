@@ -13,10 +13,10 @@
  * @package           LIFT_WP_CORE_MAIN
  *
  * @wordpress-plugin
- * Plugin Name:       @LIFT Creations - LIFT Main
+ * Plugin Name:       @LIFT Creations - LIFT Core
  * Plugin URI:        https://liftcreations.com
  * Description:       This plugins add new LIFT's menu into Wordpress site.
- * Version:           1.0.0
+ * Version:           2.3.0
  * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io/cv
  * License:           GPL-2.0+
@@ -25,13 +25,14 @@
  * Domain Path:       /languages
  */
 
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+require plugin_dir_path( __FILE__ ) . 'lift_carbon_frame.php';
 require plugin_dir_path( __FILE__ ) . 'core/menu.php';
-
 
 /**
  * The code that runs during plugin activation.

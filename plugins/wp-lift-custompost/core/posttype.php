@@ -1,7 +1,7 @@
 <?php 
 // https://developer.wordpress.org/resource/dashicons/#album
 
-function create_posttype_cp() {
+function lift_create_posttype_cp() {
 
 	$name = 'Locations';
 	$shortname = 'Locations';
@@ -15,7 +15,7 @@ function create_posttype_cp() {
 		'show_ui' => true,
 		'capability_type' => 'post',
 		'hierarchical' => true,
-		'rewrite' => array('slug' => 'view-location'),
+		'rewrite' => array('slug' => 'view-'.$slug),
 		'query_var' => true,
 		'has_archive' => true,
 		'show_in_admin_bar' => true,
@@ -103,5 +103,5 @@ function create_posttype_cp() {
 
 }
 // Hooking up our function to theme setup
-add_action( 'init', 'create_posttype_cp' );
+add_action( 'init', 'lift_create_posttype_cp' );
 

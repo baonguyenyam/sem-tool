@@ -18,10 +18,6 @@
 .wpb-content-layouts-container .wpb-content-layouts li .icon-lift-adminicon:before {
   display: none;
 }
-.wpb-content-layouts-container .wpb-content-layouts li:hover .icon-lift-adminicon {
-  filter: invert(1) brightness(100);
-}
-
 #poststuff .lift-title {
   padding: 0;
   font-weight: bold;
@@ -35,9 +31,7 @@
   display: none;
 }
 
-.prevoew_0,
-.prevoew_1,
-.prevoew_2 {
+.lift_hidden_frm {
   display: none;
 }
 
@@ -48,4 +42,24 @@
 }
 .wpb_el_type_lift_group_header .wpb_element_label {
   margin: 0;
+}
+
+.admin-lift-col.pt-0 {
+  padding-top: 0 !important;
+}
+
+.lift-childcol-3 .edit_form_line {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.lift-childcol-3 .edit_form_line .vc_column {
+  width: 50%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 15px;
 }

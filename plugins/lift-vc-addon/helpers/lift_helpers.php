@@ -4,6 +4,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class LIFT_Helpers extends WPBakeryShortCode {
+	public function generateRandomString($length = 10) {
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$charactersLength = strlen($characters);
+		$randomString = '';
+		for ($i = 0; $i < $length; $i++) {
+			$randomString .= $characters[rand(0, $charactersLength - 1)];
+		}
+		return $randomString;
+	}
+	public function generateRandomNum($length = 10) {
+		$characters = '0123456789';
+		$charactersLength = strlen($characters);
+		$randomString = '';
+		for ($i = 0; $i < $length; $i++) {
+			$randomString .= $characters[rand(0, $charactersLength - 1)];
+		}
+		return $randomString;
+	}
 
 	public function applyQuery($query = null,$offset=0) {
 		$paged = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -64,13 +82,32 @@ class LIFT_Helpers extends WPBakeryShortCode {
 		}
 		return $qu;
 	}
-	public function applyHeading($font_container_data, $title = null, $link = null, $line_height= null, $font_size= null) {
+	public function applyHeading($font_container_data, $title = null, $link = null, $line_height= null, $font_size= null, $add_heading_click= null) {
 		$styles = $initStyles = '';
 		$tag = 'h2';
 		foreach ( explode("|",$font_container_data) as $key => $value ) {
 			if ( preg_match( '/tag/', $value ) ) {
 				$tag = ''.explode(":",$value)[1];
 			}
+		}
+		if($font_size) {
+			$fontsize = ' '.$font_size.'';
+		}
+		if($add_heading_click) {
+			$url = $this->extractLink($link,$title,false,false,false,$fontsize);
+		} else {
+			$url = $this->extractLink(null,$title,false,false,false,$fontsize);
+		}
+		if($url) {
+			$styles = '<'.$tag.' class="lift-title'.$fontsize.'">' . $url . '</'.$tag.'>';
+		} else {
+			$styles = '<'.$tag.' class="lift-title"'.$fontsize.'>' .  $title . '</'.$tag.'>';
+		}
+		return $styles;
+	}
+	public function applyHeadingStyle($font_container_data, $line_height= null) {
+		$styles = $lineheight = $color = '';
+		foreach ( explode("|",$font_container_data) as $key => $value ) {
 			if ( preg_match( '/color/', $value ) ) {
 				$color = 'color:'.urldecode(explode(":",$value)[1]).';';
 			}
@@ -80,18 +117,7 @@ class LIFT_Helpers extends WPBakeryShortCode {
 			preg_match( $pattern, $line_height, $matches );
 			$lineheight = isset( $matches[2] ) ? 'line-height:'.$matches[0].';' : 'line-height:'.$matches[0].';';	
 		}
-		if($color) {
-			$initStyles = ' style="'.$color.''.$lineheight.'"';
-		}
-		if($font_size) {
-			$fontsize = ' '.$font_size.'';
-		}
-		$url = $this->extractLink($link,$title,false,$initStyles,false,false,$fontsize);
-		if($url) {
-			$styles = '<'.$tag.' class="lift-title'.$fontsize.'"'.$initStyles.'>' . $url . '</'.$tag.'>';
-		} else {
-			$styles = '<'.$tag.' class="lift-title"'.$fontsize.''.$initStyles.'>' .  $title . '</'.$tag.'>';
-		}
+		$styles = ''.$color.''.$lineheight.'';
 		return $styles;
 	}
 	public function applyDesc($desc_color = null, $desc_line_height = null) {
@@ -105,7 +131,7 @@ class LIFT_Helpers extends WPBakeryShortCode {
 			$lineheight = isset( $matches[2] ) ? 'line-height:'.$matches[0].';' : 'line-height:'.$matches[0].';';	
 		}
 		if($color || $lineheight) {
-			$styles = ' style="'.$color.''.$lineheight.'"';
+			$styles = ''.$color.''.$lineheight.'';
 		}
 		return $styles;
 	}
@@ -156,23 +182,27 @@ class LIFT_Helpers extends WPBakeryShortCode {
 			}
 			
 			if($ff || $fs || $fw) {
-				$styles = ' style="'.$ff.''.$fw.''.$fs.'"';
+				$styles = ''.$ff.''.$fw.''.$fs.'';
 			}
 		}
 		return $styles;
 	}
-	public function applyIcon($icon = null, $icon_size = null) {
-		$styles = $doIcon = $fontsize = '';
+	public function applyIcon($icon = null) {
+		$styles = $doIcon = '';
+		if($icon) {
+			$styles = ' class="lift-icon '.$icon.'"';
+			$doIcon = '<i'.$styles.'></i>';
+		}
+		return $doIcon;
+	}
+	public function applyIconStyle($icon_size = null) {
+		$fontsize = '';
 		if($icon_size) {
 			$pattern = '/^(\d*(?:\.\d+)?)\s*(px|\%|in|cm|mm|em|rem|ex|pt|pc|vw|vh|vmin|vmax)?$/';
 			preg_match( $pattern, $icon_size, $matches );
-			$fontsize = isset( $matches[2] ) ? ' style="font-size:'.$matches[0].';"' : ' style="font-size:'.$matches[0].'px;"';
+			$fontsize = isset( $matches[2] ) ? 'font-size:'.$matches[0].';' : 'font-size:'.$matches[0].'px;';
 		}
-		if($icon) {
-			$styles = ' class="'.$icon.'"';
-			$doIcon = '<i'.$styles.''.$fontsize.'></i>';
-		}
-		return $doIcon;
+		return $fontsize;
 	}
 	public function textAlign($font_container_data) {
 		$align = '';
@@ -183,13 +213,13 @@ class LIFT_Helpers extends WPBakeryShortCode {
 		}
 		return $align;
 	}
-	public function extractLink($link, $title, $settile = true, $initStyles = null,$removeTitle = false,$btn = false, $fontsize) {
+	public function extractLink($link, $title, $settile = true,$removeTitle = false,$btn = false, $fontsize) {
 		$URL = $returnURL = $target = $rel = '';
 		foreach ( explode("|",$link) as $key => $value ) {
 			if ( preg_match( '/url/', $value ) ) {
 				$URL = urldecode(explode(":",$value)[1]);
 			}
-			if ( preg_match( '/title/', $value ) && $settile) {
+			if ( preg_match( '/title:/', $value ) && !$settile) {
 				$title = urldecode(explode(":",$value)[1]);
 			}
 			if ( preg_match( '/target/', $value )) {
@@ -199,12 +229,22 @@ class LIFT_Helpers extends WPBakeryShortCode {
 				$rel = ' rel="'. explode(":",$value)[1].'"';
 			}
 		}
-		$btn ? $btn = ' btn btn-primary' : '';
-		if($removeTitle) {
-			$returnURL = '<a class="lift-title-link'.$fontsize.$btn.' hold-click" href="'.$URL.'"'.$target.''.$rel.''.$initStyles.'></a>';
+		$btn ? $btn = ' btn btn-light' : '';
+		
+		if($link) {
+			if($removeTitle) {
+				$returnURL = '<a class="lift-title-link'.$fontsize.$btn.' hold-click" href="'.$URL.'"'.$target.''.$rel.'></a>';
+			} else {
+				$returnURL = '<a class="lift-title-link'.$fontsize.$btn.'" href="'.$URL.'"'.$target.''.$rel.'>'.$title.'</a>';
+			}
 		} else {
-			$returnURL = '<a class="lift-title-link'.$fontsize.$btn.'" href="'.$URL.'"'.$target.''.$rel.''.$initStyles.'>'.$title.'</a>';
+			if($removeTitle) {
+				$returnURL = '<a class="lift-title-link'.$fontsize.$btn.' hold-click" href="'.$URL.'"'.$target.''.$rel.'></a>';
+			} else {
+				$returnURL = '<span>'.$title.'</span>';
+			}
 		}
+		
 		return $returnURL;
 	}
 

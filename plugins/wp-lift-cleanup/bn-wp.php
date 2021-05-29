@@ -16,7 +16,7 @@
  * Plugin Name:       @LIFT Creations - LIFT CleanUp
  * Plugin URI:        https://liftcreations.com
  * Description:       This is a product of LIFT Creations. 
- * Version:           1.0.0
+ * Version:           2.0.1
  * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io/cv
  * License:           GPL-2.0+

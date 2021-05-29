@@ -32,8 +32,13 @@ function admin_lift_menu($meta = TRUE){
 }
 add_action( 'admin_bar_menu', 'admin_lift_menu' , 100);
 
+add_action( 'carbon_fields_fields_registered', '___lift_auto_rename_img' );
+function ___lift_auto_rename_img() {
+    if(carbon_get_theme_option('___lift_auto_rename_img')) {
+        add_filter( 'wp_handle_upload_prefilter', 'lift_custom_upload_filter' );
+    }
+}
 
-add_filter( 'wp_handle_upload_prefilter', 'lift_custom_upload_filter' );
 function lift_custom_upload_filter( $file ) {
     if ( ! isset( $_REQUEST['post_id'] ) ) {
         return $file;

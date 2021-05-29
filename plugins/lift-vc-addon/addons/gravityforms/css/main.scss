@@ -12,6 +12,13 @@
                 .gform_fields {
                     .gfield {
                         padding: 0;
+                        .ginput_container {
+                            input,
+                            textarea,
+                            select {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
@@ -23,15 +30,27 @@
                         margin: 0 0 1rem 0;
                         border: 1px solid #e8e8e8;
                         padding: 0;
+                        span {
+                            label{
+                                display: none;
+                            }
+                        }
                         label,
                         .ginput_container {
                             margin: 0;
                             padding: 1rem 1rem;
+                            width: 100%;
                             input,
                             textarea,
                             select {
                                 margin: 0;
                                 background: none;
+                                font-size: inherit;
+                                font-family: inherit;
+                                padding: 5px 4px;
+                                letter-spacing: normal;
+                                border: 0;
+                                box-shadow: none;
                             }
                         }
                         label {
@@ -47,6 +66,7 @@
                                 flex-direction: column;
                                 box-sizing: border-box;
                                 width: 100%;
+                                margin: 0 !important;
                                 > * {
                                     padding: 0;
                                     display: block;
@@ -56,6 +76,7 @@
                                     + * {
                                         border-top: 1px solid #e8e8e8;
                                         margin-top: .5rem;
+                                        margin-bottom: 0;
                                         input,textarea,select {
                                             margin-top: .5rem;
                                         }
@@ -124,6 +145,70 @@
                 }
             }
         }
+        &.lift-style-3 {
+            .gform_wrapper{
+                .gform_body {
+                    .gform_fields {
+                        .gfield {
+                            margin: 0 0 1rem 0;
+                            border: 1px solid #e8e8e8;
+                            padding: 0;
+                            span {
+                                label{
+                                    display: none;
+                                }
+                            }
+                            .ginput_container {
+                                margin: 0;
+                                padding: .5rem;
+                                width: 100%;
+                                input,
+                                textarea,
+                                select {
+                                    margin: 0;
+                                    background: none;
+                                    font-size: inherit;
+                                    font-family: inherit;
+                                    padding: .5rem;
+                                    letter-spacing: normal;
+                                    border: 0;
+                                    box-shadow: none;
+                                }
+                            }
+                            label {
+                                font-weight: normal;
+                                display: block;
+                                background: #f9f9f9;
+                                padding: .5rem;
+                                margin: 0;
+                                width: 100%;
+                            }
+                            .ginput_container {
+                                @media only screen and (max-width: 767px) {
+                                    display: flex;
+                                    flex-direction: column;
+                                    box-sizing: border-box;
+                                    width: 100%;
+                                    padding: 0;
+                                    margin: 0 !important;
+                                    > * {
+                                        padding: 0;
+                                        display: block;
+                                        width: 100%;
+                                        flex: 0 0 100%;
+                                        max-width: 100%;
+                                        margin-bottom: 0;
+                                        + * {
+                                            border-top: 1px solid #e8e8e8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media only screen and (min-width: 767px) {
@@ -134,8 +219,38 @@
                     .gform_fields {
                         .gfield {
                             .ginput_container {
-                                input,textarea,select {
+                                > *:not(input,textarea,select) {
+                                    padding: 0;
+                                }
+                                input,
+                                textarea,
+                                select {
                                     width: 100% !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.lift-style-3 {
+                .gform_wrapper {
+                    .gform_body {
+                        .gform_fields {
+                            .gfield {
+                                .ginput_container {
+                                    padding: 0;
+                                    > *:not(input,textarea,select) {
+                                        padding: 0;
+                                        border-right: 1px solid #e8e8e8;
+                                        &:last-child {
+                                            border-right: 0;
+                                        }
+                                    }
+                                    input,
+                                    textarea,
+                                    select {
+                                        width: 100% !important;
+                                    }
                                 }
                             }
                         }

@@ -16,7 +16,7 @@
  * Plugin Name:       @LIFT Creations - LIFT Custom Post (location)
  * Plugin URI:        https://liftcreations.com
  * Description:       This plugins add new Custom Post feature into Wordpress site.
- * Version:           1.0.0
+ * Version:           null
  * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io/cv
  * License:           GPL-2.0+

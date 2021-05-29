@@ -1,12 +1,5 @@
 <?php
 
-/**
- * the WPBakery Visual Composer plugin by Nguyen Pham
- * https://visualcomposer.com/help/api/
- * https://kb.wpbakery.com/docs/developers-how-tos/add-design-options-tab-with-css-editor-to-your-element/
- * https://www.wpelixir.com/how-to-customize-default-elements-visual-composer/
- *
- */
 
 if (!defined('ABSPATH')) {
 	die('Silly human what are you doing here');
@@ -123,6 +116,7 @@ if (!class_exists('liftVC_Addons_Block')) {
 			$attribute = isset($atts['el_attribute']) ? ' ' . $atts['el_attribute'] : '';
 			$css = isset($atts["css"]) ? $atts["css"] : '';
 			$css_class = apply_filters(VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class($css, ' '), $this->settings['base'], $atts);
+			$classname = isset($atts['el_class']) ? ' ' . $atts['el_class'] : '';
 
 			// Admin
 			$settings = shortcode_atts(array(
@@ -134,7 +128,7 @@ if (!class_exists('liftVC_Addons_Block')) {
 			// FrontEnd
 			$output = $css ? '<style>' . $css . '</style>' : '';
 			if($block_id || $css_class || $attribute) {
-				$output .= '<section'. $block_id .' class="lift-elements lift-' . $this->name . $css_class.'"' . str_replace('``', '', $attribute) . '>';
+				$output .= '<section'. $block_id .' class="lift-elements lift-' . $this->name . $css_class. $classname.'"' . str_replace('``', '', $attribute) . '>';
 			}
 			$output .= $content ?  do_shortcode('[blocks id="'.$content.'"]') : null;
 			if($block_id || $css_class || $attribute) {

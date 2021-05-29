@@ -1,14 +1,5 @@
 <?php
 
-/**
- * the WPBakery Visual Composer plugin by Nguyen Pham
- * https://developer.wordpress.org/reference/classes/wp_query/
- * https://visualcomposer.com/help/api/
- * https://kb.wpbakery.com/docs/developers-how-tos/add-design-options-tab-with-css-editor-to-your-element/
- * https://www.wpelixir.com/how-to-customize-default-elements-visual-composer/
- *
- */
-
 if (!defined('ABSPATH')) {
 	die('Silly human what are you doing here');
 }
@@ -140,8 +131,15 @@ if (!class_exists('liftVC_Addons_CustomPost')) {
 						'description' => esc_html__('Enter image size (Example: "thumbnail", "medium", "large", "full" or other sizes defined by theme). Alternatively enter size in pixels (Example: 200x100 (Width x Height)).', 'js_composer'),
 						'group' => __('General', 'js_composer')
 					),
-					vcadd_css_animation(),
 					array(
+						'type' => 'animation_style',
+						'heading' => __( 'Animation Style', 'text-domain' ),
+						'param_name' => 'css_animation',
+						'description' => __( 'Choose your animation style', 'text-domain' ),
+						'admin_label' => false,
+						'weight' => 0,
+						'group' => __('General', 'js_composer')
+					),					array(
 						"type" => "textfield",
 						"heading" => esc_html__("Animation Delay", "salient-core"),
 						"param_name" => "delay",
@@ -188,6 +186,7 @@ if (!class_exists('liftVC_Addons_CustomPost')) {
 			$theme = isset($atts['theme']) ? ' lift-' . $atts['theme'] : '';
 			$css = isset($atts["css"]) ? $atts["css"] : '';
 			$css_class = apply_filters(VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class($css, ' '), $this->settings['base'], $atts);
+			$classname = isset($atts['el_class']) ? ' ' . $atts['el_class'] : '';
 
 			$field_name = isset($atts['field_name']) ? ' ' . $atts['field_name'] : '';
 			$offset = isset($atts['offset']) ? ' ' . $atts['offset'] : '';
@@ -204,7 +203,7 @@ if (!class_exists('liftVC_Addons_CustomPost')) {
 			extract($settings);
 			// FrontEnd
 			$output = $css ? '<style>' . $css . '</style>' : '';
-			$output .= '<section'. $block_id .' class="lift-elements lift-' . $this->name . $css_class. $theme.'"' . str_replace('``', '', $attribute) . '>';
+			$output .= '<section'. $block_id .' class="lift-elements lift-' . $this->name . $css_class. $theme.$classname.'"' . str_replace('``', '', $attribute) . '>';
 
 			// foreach ($result->posts as &$value) {
 			// 	var_dump($value->post_name);
