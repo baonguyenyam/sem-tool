@@ -1,3 +1,4 @@
+<?php require 'includes/hook.php'; ?>
 <?php require 'functions/functions.php'; ?>
 <?php $active = 'chrome'; ?>
 <!doctype html>
@@ -28,6 +29,10 @@
 
                 </div>
 
+                        <?php   
+                    $arr = $auth->getfile(1);
+                    foreach ($arr as &$value) {                    
+                ?>
                 <div class="px-4 py-5 my-5 text-center">
                     <img class="d-block mx-auto mb-4" src="/assets/img/icon.png" alt="" width="72" height="72">
                     <h1 class="display-5 fw-bold text-primary">LIFT's Chrome extensions</h1>
@@ -35,13 +40,15 @@
                         <p class="lead mb-4">The LIFT extension for your browser is easy to use to install. This extension made for the LIFT Creations.</p>
                         <div class="d-grid gap-2 d-inline-flex flex-column">
                             <div>
-                            <a href="/files/extensions.zip" class="btn btn-primary btn-lg px-4">Download</a>  &nbsp;	
-                            <a href="https://drive.google.com/file/d/1zN7ROTE4BN3tozWC0rWsoBH13nQ-QW4L/view?usp=sharing" target="_blank" class="btn btn-primary btn-lg px-4">gDrive Download</a>
+                            <a href="download.php?filename=<?=md5($value['version'])?>&f=<?=$value['fname']?>" class="btn btn-primary btn-lg px-4">Download</a>
                             </div>
-                            <p class="my-1 text-muted small">v.1.0</p>
+                            <p class="my-1 text-muted small">v<?=$value['version']?></p>
                         </div>
                     </div>
                 </div>
+                            <?php
+                        }
+                    ?>
 
                 <div class="alert alert-light">
                     <h5>How to install</h5>

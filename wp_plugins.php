@@ -1,3 +1,4 @@
+<?php require 'includes/hook.php'; ?>
 <?php require 'functions/functions.php'; ?>
 <?php $active = 'plugins'; ?>
 <!doctype html>
@@ -40,6 +41,12 @@
                     <h5>Plugins</h5>
 
 
+                    <?php
+                        $arr = $auth->getfile(2);
+                        foreach ($arr as &$value) {                    
+                    ?>
+
+
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
                             <i class="fas fa-archive fa-3x text-primary"></i>
@@ -50,14 +57,22 @@
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Core</strong>
                                     <p class="mb-0">This plugins add new LIFT's menu into Wordpress site. It also auto rename image file by post title</p>
-                                    <small class="mb-0 text-primary">v2.3.0</small>
+                                    <small class="mb-0 text-primary">v<?=$value['version']?></small>
                                 </div>
-                                <a href="/files/wp-lift.zip" class="btn btn-sm btn-success">Download</a>
+                                <a href="download.php?filename=<?=md5($value['version'])?>&f=<?=$value['fname']?>" class="btn btn-sm btn-success">Download</a>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <?php
+                        }
+                    ?>
+
+                    <?php
+                        $arr = $auth->getfile(3);
+                        foreach ($arr as &$value) {                    
+                    ?>
+
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
                             <i class="fas fa-archive fa-3x text-primary"></i>
@@ -68,14 +83,21 @@
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Addons for Visual Composer</strong>
                                     <p class="mb-0">A collection of LIFT's addons for use in WPBakery Page Builder. WPBakery Page Builder must be installed and activated.</p>
-                                    <small class="mb-0 text-primary">v4.0.0</small>
+                                    <small class="mb-0 text-primary">v<?=$value['version']?></small>
                                 </div>
-                                <a href="/files/lift-vc-addon.zip" class="btn btn-sm btn-success">Download</a>
+                                <a href="download.php?filename=<?=md5($value['version'])?>&f=<?=$value['fname']?>" class="btn btn-sm btn-success">Download</a>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <?php
+                        }
+                    ?>
+
+                    <?php
+                        $arr = $auth->getfile(4);
+                        foreach ($arr as &$value) {                    
+                    ?>
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
                         <i class="fas fa-archive fa-3x text-primary"></i>
@@ -86,12 +108,21 @@
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Blocks</strong>
                                     <p class="mb-0">This plugins add new Blocks feature into Wordpress site.</p>
-                                    <small class="mb-0 text-primary">v2.2.0</small>
+                                    <small class="mb-0 text-primary">v<?=$value['version']?></small>
                                 </div>
-                                <a href="/files/wp-lift-blocks.zip" class="btn btn-sm btn-success">Download</a>
+                                <a href="download.php?filename=<?=md5($value['version'])?>&f=<?=$value['fname']?>" class="btn btn-sm btn-success">Download</a>
                             </div>
                         </div>
                     </div>
+
+                    <?php
+                        }
+                    ?>
+
+                    <?php   
+                        $arr = $auth->getfile(5);
+                        foreach ($arr as &$value) {                    
+                    ?>
 
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
@@ -103,14 +134,16 @@
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT CleanUp</strong>
                                     <p class="mb-0">This is a product of LIFT Creations.</p>
-                                    <small class="mb-0 text-primary">v2.0.1</small>
+                                    <small class="mb-0 text-primary">v<?=$value['version']?></small>
                                 </div>
-                                <a href="/files/wp-lift-cleanup.zip" class="btn btn-sm btn-success">Download</a>
+                                <a href="download.php?filename=<?=md5($value['version'])?>&f=<?=$value['fname']?>" class="btn btn-sm btn-success">Download</a>
                             </div>
                         </div>
                     </div>
 
-
+                    <?php
+                        }
+                    ?>
 
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
@@ -122,9 +155,8 @@
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Export 1 post</strong>
                                     <p class="mb-0">This plugins add export link into Wordpress site.</p>
-                                    <small class="mb-0 text-primary">v1.0.0</small>
                                 </div>
-                                <a href="/files/wp-lift-export.zip" class="btn btn-sm btn-success">Download</a>
+                                <a href="download.php?filename=<?=md5('wp-lift-export')?>&f=wp-lift-export.zip" class="btn btn-sm btn-success">Download</a>
                             </div>
                         </div>
                     </div>
@@ -144,7 +176,7 @@
                                     <strong class="d-block text-gray-dark">Visual Composer Clipboard</strong>
                                     <p class="mb-0">Clipboard and template manager for WPBakery Page Builder (Visual Composer)</p>
                                 </div>
-                                <a href="/files/vc_clipboard.zip" class="btn btn-sm btn-success">Download</a>
+                                <a href="download.php?filename=<?=md5('vc_clipboard')?>&f=vc_clipboard.zip" class="btn btn-sm btn-success">Download</a>
                             </div>
                         </div>
                     </div>
