@@ -16,19 +16,22 @@
 <body>
 <?php
 if(isset($_POST['submit'])!=""){
+    $allowed_types = array('zip');
     $version=$_POST['version'];
     $stype=$_POST['type'];
     $name=$_FILES['file']['name'];
     $size=$_FILES['file']['size'];
     $type=$_FILES['file']['type'];
     $temp=$_FILES['file']['tmp_name'];
-    $ext = pathinfo($name, PATHINFO_EXTENSION);
+    $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
     $nn = pathinfo($name, PATHINFO_FILENAME);
     $fname = $nn.'_v'.$version.'.'.$ext;
-    $move =  move_uploaded_file($temp,"uploads/".$fname);
-    if($move){
-        $auth->upload($name,$fname,$stype,$version);
-            header("location: index.php");
+    if (in_array(strtolower($ext), $allowed_types)) {
+        $move =  move_uploaded_file($temp,"uploads/".$fname);
+        if($move){
+            $auth->upload($name,$fname,$stype,$version);
+                header("location: index.php");
+        }
     }
 }
 ?>
