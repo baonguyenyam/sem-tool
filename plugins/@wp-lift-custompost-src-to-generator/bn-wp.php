@@ -13,7 +13,7 @@
  * @package           LIFT_WP_CP
  *
  * @wordpress-plugin
- * Plugin Name:       @LIFT Creations - LIFT Custom Post (location)
+ * Plugin Name:       @LIFT Creations - LIFT Custom Post (___replace___)
  * Plugin URI:        https://liftcreations.com
  * Description:       This plugins add new Custom Post feature into Wordpress site.
  * Version:           null

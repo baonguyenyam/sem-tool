@@ -181,6 +181,15 @@ function get_client_ip()
         $ipaddress = 'UNKNOWN';
     return $ipaddress;
 }
+function replaceGeneratorPlugins($str,$key,$attrs)
+{
+    $str = str_replace("LIFT_WP_CP","LIFT_WP_CP".$key, $str);
+    $str = str_replace("_bn_wp_cp","_bn_wp_cp".$key, $str);
+    $str = str_replace("___replaceshort___",$attrs['shortname'], $str);
+    $str = str_replace("___replaceslug___",$attrs['slug'], $str);
+    $str = str_replace("___replace___",$attrs['name'], $str);
+    return $str;
+}
 function stripVN($str)
 {
     $str = preg_replace("/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/", "a", $str);
@@ -285,6 +294,21 @@ function genHashByDash($str, $length) {
         }
     }
     return $result;
+}
+function copy_directory($src,$dst) {
+    $dir = opendir($src);
+    @mkdir($dst);
+    while(false !== ( $file = readdir($dir)) ) {
+        if (( $file != '.' ) && ( $file != '..' )) {
+            if ( is_dir($src . '/' . $file) ) {
+                copy_directory($src . '/' . $file,$dst . '/' . $file);
+            }
+            else {
+                copy($src . '/' . $file,$dst . '/' . $file);
+            }
+        }
+    }
+    closedir($dir);
 }
 function getRandomKeyNum($n)
 {
@@ -446,6 +470,36 @@ function delete_directory($dirname)
     // rmdir($dirname);
     return true;
 }
+function zipDataPlugins($source, $destination, $num)
+{
+    // Get real path for our folder
+    $rootPath = $source;
+
+    // Initialize archive object
+    $zip = new ZipArchive();
+    $zip->open($destination, ZipArchive::CREATE | ZipArchive::OVERWRITE);
+
+    // Create recursive directory iterator
+    /** @var SplFileInfo[] $files */
+    $files = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($rootPath),
+        RecursiveIteratorIterator::LEAVES_ONLY
+    );
+
+    foreach ($files as $name => $file)
+    {
+        // Skip directories (they would be added automatically)
+        if (!$file->isDir())
+        {
+            // Get real and relative path for current file
+            $filePath = $file->getRealPath();
+            $relativePath = $num.'\\'. substr($filePath, strlen($rootPath) + 1);
+            // Add current file to archive
+            $zip->addFile($filePath, $relativePath);
+        }
+    }
+    $zip->close();
+}
 function zipData($source, $destination)
 {
     if (extension_loaded('zip')) {
@@ -456,7 +510,7 @@ function zipData($source, $destination)
                 if (is_dir($source)) {
                     $iterator = new RecursiveDirectoryIterator($source);
                     // skip dot files while iterating 
-                    $iterator->setFlags(RecursiveDirectoryIterator::SKIP_DOTS);
+                    // $iterator->setFlags(RecursiveDirectoryIterator::SKIP_DOTS);
                     $files = new RecursiveIteratorIterator($iterator, RecursiveIteratorIterator::SELF_FIRST);
                     foreach ($files as $file) {
                         $file = realpath($file);

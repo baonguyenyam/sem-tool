@@ -3,9 +3,9 @@
 
 function lift_create_posttype_cp() {
 
-	$name = 'Locations';
-	$shortname = 'Locations';
-	$slug = 'location';
+	$name = '___replace___';
+	$shortname = '___replaceshort___';
+	$slug = '___replaceslug___';
  
     register_post_type($slug.'s', 
 	array(	
