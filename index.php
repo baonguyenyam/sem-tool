@@ -92,9 +92,9 @@
 
             <div>
               <h2>Testing site</h2>
-              <p class="text-muted">Development site. <span class="text-danger">(demo/demo)</span>
+              <p class="text-muted">Development site.
               </p>
-              <a href="https://myseo.website/wp/wp-admin/" target="_blank" class="btn btn-danger">
+              <a href="https://myseo.website/wp" target="_blank" class="btn btn-danger">
               Demo site
               </a>
             </div>
