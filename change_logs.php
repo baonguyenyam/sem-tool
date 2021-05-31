@@ -35,6 +35,41 @@
 
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v4.0.0</h5>
+                                    <small>05/30/2021</small>
+                                </div>
+                                <p class="mb-1">Plugin Generator</p>
+                                <small>Big change, add new feature WP Generator</small>
+                                <ul class="small">
+                                    <li>Upload Manager</li>
+                                    <li>Download Manager</li>
+                                    <li>Add a simple database</li>
+                                </ul>
+                            </div>
+
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.5.1</h5>
+                                    <small>05/29/2021</small>
+                                </div>
+                                <p class="mb-1">Fixed bugs</p>
+                                <ul class="small">
+                                    <li>Fixed some bugs on Keywords generator</li>
+                                <ul>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.5.0</h5>
+                                    <small>05/27/2021</small>
+                                </div>
+                                <p class="mb-1">Setting page</p>
+                                <ul class="small">
+                                    <li>Add Setting page into LIFT Core</li>
+                                    <li>Add <code>Carbon_Fields</code> Framework</li>
+                                <ul>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">v3.0.1</h5>
                                     <small>05/24/2021</small>
                                 </div>

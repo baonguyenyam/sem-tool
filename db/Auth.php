@@ -17,6 +17,13 @@ class Auth
         $result = $db_handle->runQuery($query, 's', array($type));
         return $result;
     }
+    function getfileAll($type)
+    {
+        $db_handle = new DBController();
+        $query = "SELECT * FROM upload WHERE type = ? ORDER BY id DESC";
+        $result = $db_handle->runQuery($query, 's', array($type));
+        return $result;
+    }
     
     function update($query)
     {
