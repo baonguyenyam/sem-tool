@@ -17,7 +17,8 @@
         "app/vendor/jquery.js",
         "app/vendor/modernizr.js",
         "app/vendor/draw.js",
-        "app/vendor/ruler.js"
+        "app/vendor/ruler.js",
+        "app/vendor/scale.js"
       ]
     }
   ],

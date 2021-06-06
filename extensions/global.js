@@ -27,5 +27,10 @@ var LIFT_APP = {
             $('body').append('<div id="lift_grid"><div class="row"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div></div></div>')
         }
         `});
+    },
+    scale: function () { 
+        chrome.tabs.executeScript(null, {code: `
+        LIFT_Scale_WebSite();
+        `});
     }
 }

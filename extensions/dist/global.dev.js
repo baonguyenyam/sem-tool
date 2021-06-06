@@ -15,5 +15,10 @@ var LIFT_APP = {
     chrome.tabs.executeScript(null, {
       code: "\n        if($('#lift_grid').length>0) {\n            $('#lift_grid').remove()\n        } else {\n            $('body').append('<div id=\"lift_grid\"><div class=\"row\"><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div><div class=\"col\"></div></div></div>')\n        }\n        "
     });
+  },
+  scale: function scale() {
+    chrome.tabs.executeScript(null, {
+      code: "\n        LIFT_Scale_WebSite();\n        "
+    });
   }
 };

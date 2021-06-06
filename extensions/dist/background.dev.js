@@ -23,4 +23,8 @@ chrome.runtime.onMessage.addListener(function (request) {
   if (request.msg == "__build_Measure") {
     LIFT_APP.measure();
   }
+
+  if (request.msg == "__build_Scalse") {
+    LIFT_APP.scale();
+  }
 });
