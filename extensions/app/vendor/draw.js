@@ -27,8 +27,18 @@ function initDraw(canvas) {
         if (element !== null) {
             element.style.width = Math.abs(mouse.x - mouse.startX) + 'px';
             element.style.height = Math.abs(mouse.y - mouse.startY  - window.scrollY) + 'px';
-            element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
-            element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y  - window.scrollY + 'px' : mouse.startY + 'px';
+            if((mouse.y - mouse.startY  - window.scrollY) < 0) {
+                if((mouse.y - mouse.startY < 0)) {
+                    element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
+                    element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y - window.scrollY + 'px' : mouse.startY + 'px';
+                } else {
+                    element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
+                    element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y - window.scrollY + 'px' : mouse.y - window.scrollY + 'px';
+                }
+            } else {
+                element.style.left = (mouse.x - mouse.startX < 0) ? mouse.x + 'px' : mouse.startX + 'px';
+                element.style.top = (mouse.y - mouse.startY < 0) ? mouse.y - window.scrollY + 'px' : mouse.startY + 'px';
+            }
             element.innerHTML = '<span>' + Math.abs(mouse.x - mouse.startX) +' x ' + Math.abs(mouse.y - mouse.startY) + '<span>';
         }
     }
