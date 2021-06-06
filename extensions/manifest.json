@@ -1,10 +1,10 @@
 {
-  "name": "LIFT SEO/SEM Tool",
+  "name": "LIFT SEO and SEM Tool",
   "author": "Nguyen Pham",
-  "version": "1.0",
+  "version": "2.0.3",
   "description": "The LIFT extension for your browser is easy to use to install. This extension made for the LIFT Creations.",
   "background": {
-    "scripts": ["global.min.js", "background.min.js"]
+    "scripts": ["dist/global.prod.js", "dist/background.prod.js"]
   },
   "permissions": [
     "activeTab"
@@ -12,12 +12,12 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "css": ["app/css/app.min.css"],
+      "css": ["app/css/dist/app.min.css"],
       "js": [
-        "app/js/jquery.min.js",
-        "app/js/modernizr.min.js",
-        "app/js/draw.min.js",
-        "app/js/ruler.min.js"
+        "app/vendor/jquery.js",
+        "app/vendor/modernizr.js",
+        "app/vendor/draw.js",
+        "app/vendor/ruler.js"
       ]
     }
   ],

@@ -9,49 +9,53 @@
   flex-wrap: nowrap;
   z-index: 88888;
 }
-#lift_grid .row{
+
+#lift_grid .row {
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 @media only screen and (max-width: 690px) {
-  #lift_grid .row{
+  #lift_grid .row {
     max-width: 320px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 690px) {
-  #lift_grid .row{
+  #lift_grid .row {
     max-width: 420px;
   }
 }
 @media only screen and (min-width: 690px) and (max-width: 999px) {
-  #lift_grid .row{
+  #lift_grid .row {
     max-width: 600px;
   }
 }
 @media only screen and (min-width: 690px) and (max-width: 999px) {
-  #lift_grid .row{
+  #lift_grid .row {
     max-width: 600px;
   }
 }
 @media only screen and (min-width: 1000px) {
-  #lift_grid .row{
+  #lift_grid .row {
     max-width: 1425px;
-    padding: 0px 90px
+    padding: 0px 90px;
   }
 }
-#lift_grid .col{
+#lift_grid .col {
   background-color: aqua;
-  opacity: .5;
+  opacity: 0.5;
   margin: 0 1%;
 }
-#lift_grid .col:first-child{
-  margin-left: 0!important;
+
+#lift_grid .col:first-child {
+  margin-left: 0 !important;
 }
-#lift_grid .col:last-child{
-  margin-right: 0!important;
+
+#lift_grid .col:last-child {
+  margin-right: 0 !important;
 }
 
 #lift_ruler {
@@ -65,14 +69,11 @@
   padding-left: 19px;
   padding-top: 19px;
 }
-.lift_ruler_enable {
-}
+
 #lift_ruler .ruler {
-  background: rgba(255, 255, 255, 1);
+  background: white;
   color: #444;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 12px;
   line-height: 14px;
   overflow: hidden;
@@ -210,9 +211,7 @@
 #lift_ruler .mousePosBox {
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 12px;
   line-height: 1.5;
   border: 1px solid rgba(0, 0, 0, 0.8);
@@ -232,6 +231,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 #lift_canvas {
   position: absolute;
   width: 100%;
@@ -240,29 +240,31 @@
   z-index: 999999;
   min-height: 100vh;
 }
+
 .lift_rectangle {
   border: 1px solid #0048ce;
   position: absolute;
 }
+
 .lift_rectangle span {
   background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 12px;
-    line-height: 1.5;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    position: absolute;
-    white-space: nowrap;
-    display: block;
-    overflow-y: hidden;
-    text-align: left;
-    right: 2px;
-    bottom: 2px;
-    padding: 0 2px;
-    z-index: 999999;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  color: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 12px;
+  line-height: 1.5;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  position: absolute;
+  white-space: nowrap;
+  display: block;
+  overflow-y: hidden;
+  text-align: left;
+  right: 2px;
+  bottom: 2px;
+  padding: 0 2px;
+  z-index: 999999;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
