@@ -1,7 +1,7 @@
 "use strict";
 
 var LIFT_APP = {
-  version: 'v3.0.1',
+  version: 'v3.6.1',
   KW: [],
   code: null,
   __a_kw: $("#a_kw"),

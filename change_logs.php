@@ -35,21 +35,62 @@
 
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v4.0.0</h5>
+                                    <h5 class="mb-1">v3.6.1</h5>
+                                    <small>06/06/2021</small>
+                                </div>
+                                <p class="mb-1">Fixed bugs</p>
+                                <ul class="small">
+                                    <li>Fixed some bugs on Chrome extensions</li>
+                                </ul>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.6.0</h5>
+                                    <small>06/05/2021</small>
+                                </div>
+                                <p class="mb-1">LIFT Core Framework</p>
+                                <small>Big change, add new framework in to LIFT Core</small>
+                                <ul class="small">
+                                    <li>Upgrade Chrome extensions</li>
+                                    <li>Upgrade LIFT plugins</li>
+                                    <li>Error images name fixing tool</li>
+                                    <li>Logo Manager</li>
+                                    <li>Email Notification Manager</li>
+                                </ul>
+                            </div>
+
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.5.0</h5>
+                                    <small>06/02/2021</small>
+                                </div>
+                                <p class="mb-1">Download Manager</p>
+                                
+                            </div>
+
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.4.0</h5>
+                                    <small>05/31/2021</small>
+                                </div>
+                                <p class="mb-1">Upload Manager</p>
+                            </div>
+
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.3.0</h5>
                                     <small>05/30/2021</small>
                                 </div>
                                 <p class="mb-1">Plugin Generator</p>
                                 <small>Big change, add new feature WP Generator</small>
                                 <ul class="small">
-                                    <li>Upload Manager</li>
-                                    <li>Download Manager</li>
                                     <li>Add a simple database</li>
                                 </ul>
                             </div>
 
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v3.5.1</h5>
+                                    <h5 class="mb-1">v3.2.1</h5>
                                     <small>05/29/2021</small>
                                 </div>
                                 <p class="mb-1">Fixed bugs</p>
@@ -59,7 +100,7 @@
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v3.5.0</h5>
+                                    <h5 class="mb-1">v3.2.0</h5>
                                     <small>05/27/2021</small>
                                 </div>
                                 <p class="mb-1">Setting page</p>
@@ -70,7 +111,7 @@
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v3.0.1</h5>
+                                    <h5 class="mb-1">v3.1.0</h5>
                                     <small>05/24/2021</small>
                                 </div>
                                 <p class="mb-1">Auto Rename Image</p>
@@ -92,7 +133,7 @@
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v2.0.1</h5>
+                                    <h5 class="mb-1">v2.1.0</h5>
                                     <small>05/17/2021</small>
                                 </div>
                                 <p class="mb-1">Wordpress plugins</p>
@@ -116,7 +157,7 @@
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.5</h5>
+                                    <h5 class="mb-1">v1.5.0</h5>
                                     <small>05/16/2021</small>
                                 </div>
                                 <p class="mb-1">Curl and Agent</p>
@@ -127,7 +168,7 @@
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.4</h5>
+                                    <h5 class="mb-1">v1.4.0</h5>
                                     <small>05/16/2021</small>
                                 </div>
                                 <p class="mb-1">Code Key</p>
@@ -137,31 +178,46 @@
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.3</h5>
+                                    <h5 class="mb-1">v1.3.1</h5>
+                                    <small>05/16/2021</small>
+                                </div>
+                                <p class="mb-1">Fixed bug when somebody type Keywords list with empty value</p>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v1.3.0</h5>
                                     <small>05/16/2021</small>
                                 </div>
                                 <p class="mb-1">Preview URL</p>
                                 <ul class="small">
                                     <li>New feature, add the preview URL plugin in HTML Validator page</li>
-                                    <li>Fixed bug when somebody type Keywords list with empty value</li>
                                 </ul>
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.2</h5>
-                                    <small>05/15/2021</small>
+                                    <h5 class="mb-1">v1.2.1</h5>
+                                    <small>05/16/2021</small>
                                 </div>
-                                <p class="mb-1">Fixed bugs and improved somethings</p>
+                                <p class="mb-1">Fixed bugs</p>
                                 <ul class="small">
                                     <li>Fixed <code>LIFT_APP.code.setOption("theme", 'monokai')</code></li>
                                     <li>Fixed <code>localStorage.getItem("myLIFT_KW")</code></li>
+                                </ul>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v1.2.0</h5>
+                                    <small>05/15/2021</small>
+                                </div>
+                                <p class="mb-1">Improved somethings</p>
+                                <ul class="small">
                                     <li>Improved save keywords list feature</li>
                                     <li>Auto load keywords list from saved list</li>
                                 </ul>
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v1.0.1</h5>
+                                    <h5 class="mb-1">v1.1.0</h5>
                                     <small>05/15/2021</small>
                                 </div>
                                 <p class="mb-1">Code Refactor</p>

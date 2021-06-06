@@ -39,7 +39,7 @@
                             </svg>
 
                             <p class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                                <strong class="d-block text-gray-dark">Addon for Visual Composer</strong>
+                                <del class="d-block text-gray-dark">Addon for Visual Composer</del>
                             </p>
                         </div>
                         <div class="d-flex text-muted pt-3">
@@ -69,7 +69,7 @@
                             </svg>
 
                             <p class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                                <strong class="d-block text-gray-dark">Build database system</strong>
+                                <del class="d-block text-gray-dark">Build database system</del>
                             </p>
                         </div>
                         <div class="d-flex text-muted pt-3">
@@ -79,7 +79,7 @@
                             </svg>
 
                             <p class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                                <strong class="d-block text-gray-dark">Build the website using Chrome extensions, also testing/analytics everything by this tool</strong>
+                                <del class="d-block text-gray-dark">Build the website using Chrome extensions, also testing/analytics everything by this tool</del>
                             </p>
                         </div>
                         <div class="d-flex text-muted pt-3">
