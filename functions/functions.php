@@ -493,14 +493,15 @@ function zipDataPlugins($source, $destination, $num)
         {
             // Get real and relative path for current file
             $filePath = $file->getRealPath();
-            $relativePath = $num.'\\'. substr($filePath, strlen($rootPath) + 1);
+            // $relativePath = $num.'\\'. substr($filePath, strlen($rootPath) + 1);
+            $relativePath = substr($filePath, strlen($rootPath) + 1);
             // Add current file to archive
             $zip->addFile($filePath, $relativePath);
         }
     }
     $zip->close();
 }
-function zipData($source, $destination)
+function zipData($source, $destination, $num)
 {
     if (extension_loaded('zip')) {
         if (file_exists($source)) {

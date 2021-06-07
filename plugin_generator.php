@@ -42,7 +42,7 @@ if(isset($_POST['submit'])) {
          }
      }
     
-    zipDataPlugins($dist, './tmp/wp-lift-custompost'.$num.'.zip',"wp-lift-custompost".$num);
+     zipData($dist, './tmp/wp-lift-custompost'.$num.'.zip',"wp-lift-custompost".$num);
     $downloadDone = 'wp-lift-custompost'.$num.'.zip';
  
     } else {
