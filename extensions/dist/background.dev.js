@@ -1,14 +1,16 @@
 "use strict";
 
-// chrome.runtime.onInstalled.addListener(function(details){
-//     if(details.reason == "install"){
-//         chrome.tabs.create({'url': chrome.extension.getURL('app/welcome.html')}, function(tab) {
-// 		});
-//     }else if(details.reason == "update"){
-//         chrome.tabs.create({'url': chrome.extension.getURL('app/welcome.html')}, function(tab) {
-// 		});
-//     }
-// });
+chrome.runtime.onInstalled.addListener(function (details) {
+  if (details.reason == "install") {
+    chrome.tabs.create({
+      'url': chrome.extension.getURL('app/welcome.html')
+    }, function (tab) {});
+  } else if (details.reason == "update") {
+    chrome.tabs.create({
+      'url': chrome.extension.getURL('app/welcome.html')
+    }, function (tab) {});
+  }
+});
 chrome.browserAction.onClicked.addListener(function (request) {});
 chrome.extension.onConnect.addListener(function (request) {});
 chrome.runtime.onMessage.addListener(function (request) {
