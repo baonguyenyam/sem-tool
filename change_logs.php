@@ -35,8 +35,28 @@
 
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">v3.6.1</h5>
+                                    <h5 class="mb-1">v3.6.3</h5>
+                                    <small>06/07/2021</small>
+                                </div>
+                                <p class="mb-1">Improved</p>
+                                <ul class="small">
+                                    <li>LIFT Web development guidelines</li>
+                                </ul>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.6.2</h5>
                                     <small>06/06/2021</small>
+                                </div>
+                                <p class="mb-1">Fixed bugs</p>
+                                <ul class="small">
+                                    <li>Fixed some bugs on Plugin Generator</li>
+                                </ul>
+                            </div>
+                            <div class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">v3.6.1</h5>
+                                    <small>06/05/2021</small>
                                 </div>
                                 <p class="mb-1">Fixed bugs</p>
                                 <ul class="small">
@@ -46,7 +66,7 @@
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">v3.6.0</h5>
-                                    <small>06/05/2021</small>
+                                    <small>06/04/2021</small>
                                 </div>
                                 <p class="mb-1">LIFT Core Framework</p>
                                 <small>Big change, add new framework in to LIFT Core</small>

@@ -86,19 +86,19 @@ if(isset($_POST['submit'])) {
                                 </div>
                             <?php } ?>
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
+                                <label for="name" class="form-label text-primary">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="e.g: LIFT Member" required>
-                                <div id="emailHelp" class="form-text">Don't add (s) after name</div>
+                                <div id="emailHelp" class="form-text">Don't add <code>(s)</code> after name, text should be capitalize the first letter</div>
                             </div>
                             <div class="mb-3">
-                                <label for="shortname" class="form-label">Short Name</label>
+                                <label for="shortname" class="form-label text-primary">Short Name</label>
                                 <input type="text" class="form-control" id="shortname" name="shortname" placeholder="e.g: Member" required>
-                                <div id="emailHelp" class="form-text">Don't add (s) after short name</div>
+                                <div id="emailHelp" class="form-text">Don't add <code>(s)</code> after short name, text should be capitalize the first letter</div>
                             </div>
                             <div class="mb-3">
-                                <label for="slug" class="form-label">Slug</label>
+                                <label for="slug" class="form-label text-primary">Slug</label>
                                 <input type="text" class="form-control" id="slug" name="slug" pattern="[\w,./_=?-]+" placeholder="e.g: member" required>
-                                <div id="emailHelp" class="form-text">Don't add space for slug</div>
+                                <div id="emailHelp" class="form-text">Don't add <code>space</code> for slug, text should be <code>lowercase</code></div>
                             </div>
                             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                         </form>
