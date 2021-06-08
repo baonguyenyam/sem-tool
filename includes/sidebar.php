@@ -72,5 +72,8 @@
                 </a>
             </li>
         </ul>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span style="text-transform: none">by Nguyen Pham</span>
+        </h6>
     </div>
 </nav>
