@@ -64,6 +64,36 @@
               </a>
             </div>
           </div>
+
+          <div class="col d-flex align-items-start mb-4">
+
+            <div>
+              <h2>Plugin Generator</h2>
+              <p class="text-muted">Quickly generate unique, unlimited post type with our WordPress Plugin.
+
+              </p>
+              <a href="plugin_generator.php" class="btn btn-primary">
+              Plugin Generator
+              </a>
+            </div>
+          </div>
+
+          <div class="col d-flex align-items-start mb-4">
+
+            <div>
+              <h2>Content SEO Generator</h2>
+              <p class="text-muted">Quickly generate content to SEO with keywords and URLs.
+
+              </p>
+              <a href="content_generator.php" class="btn btn-primary">
+              Content Generator
+              </a>
+            </div>
+          </div>
+
+          </div>
+          <div class="row g-4 p-3 p-xl-5 row-cols-1 row-cols-lg-3">
+
           <div class="col d-flex align-items-start mb-4">
 
             <div>
@@ -87,6 +117,9 @@
               </a>
             </div>
           </div>
+
+          </div>
+          <div class="row g-4 p-3 p-xl-5 row-cols-1 row-cols-lg-3">
 
           <div class="col d-flex align-items-start mb-4">
 
