@@ -25,15 +25,15 @@
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Wordpress plugins</h1>
+                    <h1 class="h2">WordPress plugins</h1>
 
                 </div>
 
                 <div class="px-4 py-5 my-5 text-center">
                     <img class="d-block mx-auto mb-4" src="/assets/img/icon.png" alt="" width="72" height="72">
-                    <h1 class="display-5 fw-bold text-primary">LIFT's Wordpress plugins</h1>
+                    <h1 class="display-5 fw-bold text-primary">LIFT's WordPress plugins</h1>
                     <div class="col-lg-6 mx-auto">
-                        <p class="lead mb-4">The LIFT Wordpress plugins for your website is easy to use to install. This Wordpress plugins made for the LIFT Creations.</p>
+                        <p class="lead mb-4">The LIFT WordPress plugins for your website is easy to use to install. This WordPress plugins made for the LIFT Creations.</p>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                             <div class="d-flex w-100 justify-content-between align-items-start">
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Core</strong>
-                                    <p class="mb-0">This plugins add new LIFT's menu into Wordpress site. It also auto rename image file by post title</p>
+                                    <p class="mb-0">This plugins add new LIFT's menu into WordPress site. It also auto rename image file by post title</p>
                                     <small class="mb-0 text-primary">
                                     <?php $arrN = $auth->getfileAll(2); foreach ($arrN as &$item) {  ?><a href="download.php?filename=<?=md5($item['version'])?>&f=<?=$item['fname']?>">v<?=$item['version']?></a> <?php } ?>
                                     </small>                                
@@ -111,7 +111,7 @@
                             <div class="d-flex w-100 justify-content-between align-items-start">
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Blocks</strong>
-                                    <p class="mb-0">This plugins add new Blocks feature into Wordpress site.</p>
+                                    <p class="mb-0">This plugins add new Blocks feature into WordPress site.</p>
                                     <small class="mb-0 text-primary">
                                     <?php $arrN = $auth->getfileAll(4); foreach ($arrN as &$item) {  ?><a href="download.php?filename=<?=md5($item['version'])?>&f=<?=$item['fname']?>">v<?=$item['version']?></a> <?php } ?>
                                     </small>                                
@@ -162,7 +162,7 @@
                             <div class="d-flex w-100 justify-content-between align-items-start">
                                 <div>
                                     <strong class="d-block text-gray-dark">LIFT Export 1 post</strong>
-                                    <p class="mb-0">This plugins add export link into Wordpress site.</p>
+                                    <p class="mb-0">This plugins add export link into WordPress site.</p>
                                 </div>
                                 <a href="download.php?filename=<?=md5('wp-lift-export')?>&f=wp-lift-export.zip" class="btn btn-sm btn-success">Download</a>
                             </div>

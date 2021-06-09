@@ -24,7 +24,7 @@
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Wordpress Post generator
+                    <h1 class="h2">WordPress Post generator
                     </h1>
 
                 </div>
@@ -58,7 +58,7 @@
                             <h5>Source</h5>
                             <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#liftModal" class="howto"><i class="fa fa-question"></i></a>
                         </div>
-                        <textarea class="form-control" placeholder="Paste export file (.xml) from Wordpress post article" id="source" rows="12"></textarea>
+                        <textarea class="form-control" placeholder="Paste export file (.xml) from WordPress post article" id="source" rows="12"></textarea>
                     </div>
                     <div class="col-lg-3 col-xxl-5 mb-3">
                         <div class="d-flex flex-row justify-content-between align-items-center">

@@ -1,3 +1,4 @@
+<link href="/assets/css/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="/assets/css/vendor/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/css/vendor/all.min.css" rel="stylesheet">
 <link href="/assets/css/vendor/codemirror.min.css" rel="stylesheet">

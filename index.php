@@ -44,7 +44,7 @@
           <div class="col d-flex align-items-start mb-4">
 
             <div>
-              <h2>Wordpress Post generator</h2>
+              <h2>WordPress Post generator</h2>
               <p class="text-muted">The tool auto-generation posts from the keywords list you have.
               </p>
               <a href="post_generator.php" class="btn btn-primary">
@@ -109,8 +109,8 @@
           <div class="col d-flex align-items-start mb-4">
 
             <div>
-              <h2>Wordpress plugins</h2>
-              <p class="text-muted">The LIFT Wordpress plugins for your website is easy to use to install. This Wordpress plugins made for the LIFT Creations.
+              <h2>WordPress plugins</h2>
+              <p class="text-muted">The LIFT WordPress plugins for your website is easy to use to install. This WordPress plugins made for the LIFT Creations.
               </p>
               <a href="wp_plugins.php" class="btn btn-primary">
                 Download

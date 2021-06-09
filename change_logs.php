@@ -156,8 +156,8 @@
                                     <h5 class="mb-1">v2.1.0</h5>
                                     <small>05/17/2021</small>
                                 </div>
-                                <p class="mb-1">Wordpress plugins</p>
-                                <small>The LIFT Wordpress plugins for your website is easy to use to install. This Wordpress plugins made for the LIFT Creations.</small>
+                                <p class="mb-1">WordPress plugins</p>
+                                <small>The LIFT WordPress plugins for your website is easy to use to install. This WordPress plugins made for the LIFT Creations.</small>
                                 <ul class="small">
                                     <li>LIFT Main</li>
                                     <li>LIFT Blocks</li>
@@ -193,7 +193,7 @@
                                 </div>
                                 <p class="mb-1">Code Key</p>
                                 <ul class="small">
-                                    <li>New feature, we use the <code>___REPLACE___</code> code key to easy replace everything in Wordpress Post generator page</li>
+                                    <li>New feature, we use the <code>___REPLACE___</code> code key to easy replace everything in WordPress Post generator page</li>
                                 </ul>
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
@@ -241,7 +241,7 @@
                                     <small>05/15/2021</small>
                                 </div>
                                 <p class="mb-1">Code Refactor</p>
-                                <small>Big change, we have improved the source code and create matrix math to generator keyword and fixed some bugs on Wordpress Post generator tool</small>
+                                <small>Big change, we have improved the source code and create matrix math to generator keyword and fixed some bugs on WordPress Post generator tool</small>
                             </div>
                             <div class="list-group-item list-group-item-action" aria-current="true">
                                 <div class="d-flex w-100 justify-content-between">
@@ -256,7 +256,7 @@
                                     <h5 class="mb-1">v0.3</h5>
                                     <small class="text-muted">05/14/2021</small>
                                 </div>
-                                <p class="mb-1">Wordpress Post generator tool. </p>
+                                <p class="mb-1">WordPress Post generator tool. </p>
                                 <small>The tool auto-generation posts from the keywords list you have.</small>
                             </div>
                             <div class="list-group-item list-group-item-action">
