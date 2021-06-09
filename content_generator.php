@@ -27,67 +27,96 @@
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Content SEO generator</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-secondary" id="load">Load an example</button>
+                    <div class="btn-toolbar align-items-center mb-2 mb-md-0">
+                        <div class="form-group form-check me-2 mb-0">
+                            <input type="checkbox" class="form-check-input" id="add-title">
+                            <label class="form-check-label" for="add-title">Include <code>title</code> tag</label>
                         </div>
-                        <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-primary" id="generator">Generator</button>
+                        <div class="form-group form-check me-2 mb-0">
+                            <input type="checkbox" class="form-check-input" id="add-nofollow">
+                            <label class="form-check-label" for="add-nofollow">Include <code>rel="nofollow"</code></label>
                         </div>
+                        <div class="form-group form-check me-2 mb-0">
+                            <input type="checkbox" class="form-check-input" id="add-tab">
+                            <label class="form-check-label" for="add-tab">Open in new tab</label>
+                        </div>
+                        <?php if($_GET['type'] === 'enter') {?>
+                            <div class="btn-group me-2">
+                                <button type="button" class="btn btn-sm btn-primary" id="contentgenerator">Generator</button>
+                            </div>
+                            <?php } else { ?>
+                                <div class="btn-group me-2">
+                                <button type="button" class="btn btn-sm btn-primary" id="contentgeneratorimport">Generator</button>
+                            </div>
+                        <?php } ?>
 
                     </div>
                 </div>
 
 
                 <div class="row">
-                    <div class="col-lg">
-                        <h3 class="mb-3"><span class="badge bg-primary">A</span> keywords</h3>
-                        <div class="form-floating mb-4">
-                            <textarea class="form-control" placeholder="" id="a_kw"
-                                style="height: 70px">nguyen,van</textarea>
-                            <label for="a_kw">enter keywords and add comma (,) end of words</label>
-                        </div>
-                        <h3 class="mb-3"><span class="badge bg-info">B</span> keywords</h3>
-                        <div class="form-floating mb-4">
-                            <textarea class="form-control" placeholder="" id="b_kw"
-                                style="height: 70px">1,2,3</textarea>
-                            <label for="b_kw">enter keywords and add comma (,) end of words</label>
-                        </div>
-                        <h3 class="mb-3"><span class="badge bg-warning">C</span> keywords</h3>
-                        <div class="form-floating mb-4">
-                            <textarea class="form-control" placeholder="" id="c_kw" style="height: 70px">@,#</textarea>
-                            <label for="c_kw">enter keywords and add comma (,) end of words</label>
-                        </div>
-                        <h3 class="mb-3"><span class="badge bg-dark">D</span> keywords</h3>
-                        <div class="form-floating mb-4">
-                            <textarea class="form-control" placeholder="" id="d_kw" style="height: 70px">ᚠ,ᛉ</textarea>
-                            <label for="d_kw">enter keywords and add comma (,) end of words</label>
-                        </div>
-                        <h3 class="mb-3"><span class="badge bg-secondary">E</span> keywords</h3>
-                        <div class="form-floating mb-4">
-                            <textarea class="form-control" placeholder="" id="e_kw"
-                                style="height: 70px">隨,河,予</textarea>
-                            <label for="e_kw">enter keywords and add comma (,) end of words</label>
-                        </div>
+                    <div class="col-12">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="?type=import" class="nav-link<?= ($_GET['type'] === 'import' || !$_GET['type']) ? ' active' : '' ?>">Import .CSV file</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="?type=enter" class="nav-link<?= $_GET['type'] === 'enter' ? ' active' : '' ?>">Enter list</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-lg">
-                        <div id="boxresult">
-                            <h3 class="mb-3">Results keywords <span id="number"
-                                    class="badge bg-danger text-white small"></span></h3>
-                            <div class="rv">
-                                <div class="alert alert-warning">Nothing to show</div>
+                </div>
+
+                <div class="border p-3 border-top-0">
+                    <div class="row mt-1">
+                        <?php if($_GET['type'] === 'enter') {?>
+                        <div class="col-lg">
+                            <h3 class="mb-3">Keywords list</h3>
+                            <div class="mb-4">
+                                <textarea class="form-control" placeholder="enter keywords and enter end of words" id="contentkeyword" rows="20"></textarea>
                             </div>
-                            <div class="rs d-none mb-3">
-                                <textarea class="form-control mb-2" placeholder="" rows="20" id="results"></textarea>
-                                <div class="row mt-3">
-                                    <div class="col-auto">
-                                        <button type="button" class="btn btn-success btn-lg"
-                                            id="dwn-btn">Download</button>
+                        </div>
+                        <div class="col-lg">
+                            <h3 class="mb-3">URLs list</h3>
+                            <div class="mb-4">
+                                <textarea class="form-control" placeholder="enter keywords and enter end of words" id="contenturls" rows="20"></textarea>
+                            </div>
+                        </div>
+                        <?php } else { ?>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3">Upload .csv file</h3>
+
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="fileCSVToLoad">
+                                    <button class="btn btn-primary" type="button" id="loadcsv" onclick="loadCSVFileAsText()">Submit</button>
+                                </div>
+                                <textarea class="form-control" placeholder="Paste export file (.csv) content here. You have to follow the rule: 'TITLE, URL'" id="csvsource" rows="12"></textarea>
+
+                            </div>
+                        <?php } ?>
+                        <div class="col-lg">
+                            <div id="boxresult">
+                                <h3 class="mb-3">Results</h3>
+                                <div class="rv">
+                                    <div class="alert alert-warning">Nothing to show</div>
+                                </div>
+                                <div class="rs d-none mb-3">
+
+
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab-re" role="tablist">
+                                        <button class="nav-link active" id="tab-total" data-bs-toggle="tab" data-bs-target="#nav-tab-total" type="button" role="tab" aria-controls="nav-tab-total" aria-selected="true">Text</button>
+                                        <button class="nav-link" id="tab-area" data-bs-toggle="tab" data-bs-target="#nav-tab-area" type="button" role="tab" aria-controls="nav-tab-area" aria-selected="false">HTML</button>
                                     </div>
-                                    <div class="col-auto">
-                                        <button type="button" class="btn btn-primary btn-lg" id="save-btn">Save
-                                            it</button>
-                                    </div>
+                                </nav>
+                                <div class="tab-content border p-3 border-top-0" id="nav-tabContent-re">
+                                    <div class="tab-pane fade show active" id="nav-tab-total" role="tabpanel" aria-labelledby="tab-total"><div id="totalurls"></div></div>
+                                    <div class="tab-pane fade" id="nav-tab-area" role="tabpanel" aria-labelledby="tab-area"><textarea class="form-control form-control-sm" placeholder="enter keywords and enter end of words" id="contentresult" rows="15"></textarea></div>
+                                </div>
+
+
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
@@ -97,21 +126,8 @@
 
 
 
+
             </main>
-        </div>
-    </div>
-
-
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
-        <div id="keyworkds_toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">Keywords saved</strong>
-                <small>1s ago</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-                Your keywords list has been saved
-            </div>
         </div>
     </div>
 

@@ -40,6 +40,28 @@ function unReplaceLIFT(str) {
 function resultHTMLValidate(key, string) {
     return '<div class="list-group-item d-flex justify-content-between"><strong>' + key + '</strong> ' + string + '</div>';
 }
+function loadCSVFileAsText() {
+    if (document.getElementById("fileCSVToLoad").value) {
+        var fileCSVToLoad = document.getElementById("fileCSVToLoad").files[0];
+        var fileReader = new FileReader();
+        fileReader.onload = function (fileLoadedEvent) {
+            var textFromFileLoaded = fileLoadedEvent.target.result;
+            document.getElementById("csvsource").value = textFromFileLoaded;
+            LIFT_APP.code = CodeMirror.fromTextArea(document.getElementById("csvsource"), {
+                mode: "text/x-textile",
+                lineNumbers: true,
+                styleActiveLine: true,
+                matchBrackets: true,
+                smartIndent: true,
+                indentWithTabs: true
+            });
+            LIFT_APP.code.setOption("theme", 'monokai')
+        };
+        fileReader.readAsText(fileCSVToLoad, "UTF-8");
+    } else {
+        alert('Please upload file')
+    }
+}
 function loadFileAsText() {
     if (document.getElementById("fileToLoad").value) {
         var fileToLoad = document.getElementById("fileToLoad").files[0];
