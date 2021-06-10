@@ -1,17 +1,10 @@
-<?php require 'includes/hook.php'; ?>
-<?php require 'functions/functions.php'; ?>
-<?php $active='upload'; ?>
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Nguyen Pham">
-    <title>LIFT SEM Tools</title>
-    <?php require 'includes/header.php';?>
-</head>
+<?php 
+/*// HEADER */
+$title = "Upload";
+$active='upload'; 
+/*// LAYOUT */
+require_once 'includes/header.php';
+?>
 
 <body>
 <?php
