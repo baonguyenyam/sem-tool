@@ -52,7 +52,7 @@ if(isset($_POST['submit'])!=""){
                 </div>
 
 
-                <div class="row">
+                <div class="row mt-5">
                 <div class="col-md-4 offset-md-4">
                     <form enctype="multipart/form-data" action="" name="form" method="post" class="shadow p-3 mb-5 bg-body rounded border">
                         <div class="mb-3">

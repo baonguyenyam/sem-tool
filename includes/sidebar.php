@@ -32,13 +32,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'html' ? 'active' : '' ?>" href="html_validator.php">
-                <i class="bi bi-check2-all fa-lg fa-fw me-1"></i> HTML Validator
+                <a class="nav-link <?= $active === 'content' ? 'active' : '' ?>" href="content_generator.php">
+                <i class="bi bi-bullseye fa-lg fa-fw me-1"></i> Content SEO generator
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'content' ? 'active' : '' ?>" href="content_generator.php">
-                <i class="bi bi-bullseye fa-lg fa-fw me-1"></i> Content SEO generator
+                <a class="nav-link <?= $active === 'html' ? 'active' : '' ?>" href="html_validator.php">
+                <i class="bi bi-check2-all fa-lg fa-fw me-1"></i> HTML Validator
                 </a>
             </li>
             <li class="nav-item">

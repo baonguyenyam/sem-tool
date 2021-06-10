@@ -28,6 +28,61 @@
           <h1 class="h2">Dashboard</h1>
         </div>
 
+        <div class="row">
+          <div class="col-12 my-3">
+              <ul id="home-menu">
+                <li>
+                  <a href="#">
+                    <i class="bi bi-type-h1 fa-3x fa-fw me-1"></i>
+                    <span>Keywords generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
+                    <span>Content SEO Generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
+                    <span>Content SEO Generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
+                    <span>Content SEO Generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
+                    <span>Content SEO Generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
+                    <span>Content SEO Generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
+                    <span>Content SEO Generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
+                    <span>Content SEO Generator</span>
+                  </a>
+                </li>
+              </ul>
+          </div>
+        </div>
+
         <div class="row g-4 p-3 p-xl-5 row-cols-1 row-cols-lg-3">
           <div class="col d-flex align-items-start mb-4">
 
