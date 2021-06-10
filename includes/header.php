@@ -5,6 +5,7 @@
 <link href="/assets/css/vendor/theme/monokai.css" rel="stylesheet">
 <link href="/assets/css/dist/main.min.css" rel="stylesheet">
 <script src="/assets/js/vendor/jquery.min.js"></script>
+<script src="/assets/js/vendor/clipboard.min.js"></script>
 <script src="/assets/js/vendor/codemirror.min.js"></script>
 <script src="/assets/js/vendor/mode/xml/xml.js"></script>
 <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">

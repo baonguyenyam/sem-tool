@@ -103,3 +103,8 @@ $("#contentgenerator").on("click", function () {
     }
   }
 });
+var clipboard = new ClipboardJS('[data-clipboard-target]');
+clipboard.on('success', function (e) {
+  $('#copy_toast').toast("show");
+  e.clearSelection();
+});

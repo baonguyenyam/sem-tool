@@ -113,8 +113,13 @@
                                     </div>
                                 </nav>
                                 <div class="tab-content border p-3 border-top-0" id="nav-tabContent-re">
-                                    <div class="tab-pane fade show active" id="nav-tab-total" role="tabpanel" aria-labelledby="tab-total"><div id="totalurls"></div></div>
-                                    <div class="tab-pane fade" id="nav-tab-area" role="tabpanel" aria-labelledby="tab-area"><textarea class="form-control form-control-sm" placeholder="enter keywords and enter end of words" id="contentresult" rows="15"></textarea></div>
+                                    <div class="tab-pane fade show active" id="nav-tab-total" role="tabpanel" aria-labelledby="tab-total"><div id="totalurls"></div>
+                                    <hr>
+                                    <button class="btn btn-success" data-clipboard-target="#totalurls">Copy</button>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-tab-area" role="tabpanel" aria-labelledby="tab-area"><textarea class="form-control form-control-sm" placeholder="enter keywords and enter end of words" id="contentresult" rows="15"></textarea>
+                                    <button class="btn btn-success" data-clipboard-target="#contentresult">Copy</button>
+                                    </div>
                                 </div>
 
 
@@ -150,6 +155,19 @@
                 <a href="download.php?filename=<?=md5('sample')?>&f=sample-import.csv" class="btn btn-primary">Download sample file</a>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+        <div id="copy_toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Copied!</strong>
+                <small>1s ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Your contents has been copied
             </div>
         </div>
     </div>
