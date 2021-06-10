@@ -26,7 +26,10 @@
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div>
                     <h1 class="h2">Keywords generator</h1>
+                    <p>The tool works by allowing you to input general words and phrases into the 5 boxes, and then quickly generate keyword lists that can include your basic phrases and your long-tail terms.</p>
+                    </div>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group me-2">
                             <button type="button" class="btn btn-sm btn-secondary" id="load">Load an example</button>

@@ -28,168 +28,73 @@
           <h1 class="h2">Dashboard</h1>
         </div>
 
-        <div class="row">
+        <div class="row" id="home-menu">
           <div class="col-12 my-3">
-              <ul id="home-menu">
+              <h4>TOOLS</h4>
+              <ul>
                 <li>
-                  <a href="#">
+                  <a href="keywork_generator.php">
                     <i class="bi bi-type-h1 fa-3x fa-fw me-1"></i>
                     <span>Keywords generator</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="post_generator.php">
+                    <i class="bi bi-stickies fa-3x fa-fw me-1"></i>
+                    <span>WordPress Post generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="content_generator.php">
                     <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
                     <span>Content SEO Generator</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
-                    <span>Content SEO Generator</span>
+                  <a href="plugin_generator.php">
+                    <i class="bi bi-cloud-download fa-3x fa-fw me-1"></i>
+                    <span>Plugin Generator</span>
+                  </a>
+                </li>
+              </ul>
+              <h4>ADDONS</h4>
+              <ul>
+                <li>
+                  <a href="wp_plugins.php">
+                    <i class="bi bi-archive fa-3x fa-fw me-1"></i>
+                    <span>WordPress plugins</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
-                    <span>Content SEO Generator</span>
+                  <a href="chrome_extensions.php">
+                    <i class="bi bi-box-seam fa-3x fa-fw me-1"></i>
+                    <span>Chrome extensions</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
-                    <span>Content SEO Generator</span>
+                  <a href="html_validator.php">
+                    <i class="bi bi-check2-all fa-3x fa-fw me-1"></i>
+                    <span>HTML Code validator</span>
+                  </a>
+                </li>
+              </ul>
+              <h4>OTHER</h4>
+              <ul>
+                <li>
+                  <a href="https://docs.myseo.website/" target="_blank">
+                    <i class="bi bi-journal-bookmark fa-3x fa-fw me-1"></i>
+                    <span>Guideline</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
-                    <span>Content SEO Generator</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
-                    <span>Content SEO Generator</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
-                    <span>Content SEO Generator</span>
+                  <a href="https://myseo.website/wp" target="_blank">
+                    <i class="bi bi-braces fa-3x fa-fw me-1"></i>
+                    <span>Testing site</span>
                   </a>
                 </li>
               </ul>
           </div>
         </div>
-
-        <div class="row g-4 p-3 p-xl-5 row-cols-1 row-cols-lg-3">
-          <div class="col d-flex align-items-start mb-4">
-
-            <div>
-              <h2>Keywords generator</h2>
-              <p class="text-muted">The tool works by allowing you to input general words and phrases into the 5 boxes,
-                and then quickly generate keyword lists that can include your basic phrases and your long-tail terms.
-              </p>
-              <a href="keywork_generator.php" class="btn btn-primary">
-                Generate keyworks
-              </a>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start mb-4">
-
-            <div>
-              <h2>WordPress Post generator</h2>
-              <p class="text-muted">The tool auto-generation posts from the keywords list you have.
-              </p>
-              <a href="post_generator.php" class="btn btn-primary">
-                Generate Posts
-              </a>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start mb-4">
-
-            <div>
-              <h2>HTML Code validator</h2>
-              <p class="text-muted">Find missing or unbalanced HTML tags in your documents, stray characters, duplicate
-                IDs, missing or invalid attributes and other recommendations.
-              </p>
-              <a href="html_validator.php" class="btn btn-primary">
-                HTML Validator
-              </a>
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-start mb-4">
-
-            <div>
-              <h2>Plugin Generator</h2>
-              <p class="text-muted">Quickly generate unique, unlimited post type with our WordPress Plugin.
-
-              </p>
-              <a href="plugin_generator.php" class="btn btn-primary">
-              Plugin Generator
-              </a>
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-start mb-4">
-
-            <div>
-              <h2>Content SEO Generator</h2>
-              <p class="text-muted">Quickly generate content to SEO with keywords and URLs.
-
-              </p>
-              <a href="content_generator.php" class="btn btn-primary">
-              Content Generator
-              </a>
-            </div>
-          </div>
-
-          </div>
-          <div class="row g-4 p-3 p-xl-5 row-cols-1 row-cols-lg-3">
-
-          <div class="col d-flex align-items-start mb-4">
-
-            <div>
-              <h2>Chrome extensions</h2>
-              <p class="text-muted">This is a LIFT's Chrome extensions. All-in-one tool for SEO/SEM services.
-              </p>
-              <a href="chrome_extensions.php" class="btn btn-primary">
-                Download
-              </a>
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-start mb-4">
-
-            <div>
-              <h2>WordPress plugins</h2>
-              <p class="text-muted">The LIFT WordPress plugins for your website is easy to use to install. This WordPress plugins made for the LIFT Creations.
-              </p>
-              <a href="wp_plugins.php" class="btn btn-primary">
-                Download
-              </a>
-            </div>
-          </div>
-
-          </div>
-          <div class="row g-4 p-3 p-xl-5 row-cols-1 row-cols-lg-3">
-
-          <div class="col d-flex align-items-start mb-4">
-
-            <div>
-              <h2>Testing site</h2>
-              <p class="text-muted">Development site.
-              </p>
-              <a href="https://myseo.website/wp" target="_blank" class="btn btn-danger">
-              Demo site
-              </a>
-            </div>
-          </div>
-
-        </div>
-
 
       </main>
     </div>

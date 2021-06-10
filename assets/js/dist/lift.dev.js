@@ -6,6 +6,9 @@ var LIFT_APP = {
   code: null,
   init: function init() {
     $('#version').text(this.version);
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
   },
   __a_kw: $("#a_kw"),
   __b_kw: $("#b_kw"),

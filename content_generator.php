@@ -26,7 +26,10 @@
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Content SEO generator</h1>
+                    <div>
+                        <h1 class="h2">Content SEO generator</h1>
+                        <p>Quickly generate content to SEO with keywords and URLs.</p>
+                    </div>
                     <div class="btn-toolbar align-items-center mb-2 mb-md-0">
                         <div class="form-group form-check me-2 mb-0">
                             <input type="checkbox" class="form-check-input" id="add-title">
@@ -117,7 +120,8 @@
                                     <hr>
                                     <button class="btn btn-success" data-clipboard-target="#totalurls">Copy</button>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-tab-area" role="tabpanel" aria-labelledby="tab-area"><textarea class="form-control form-control-sm" placeholder="enter keywords and enter end of words" id="contentresult" rows="15"></textarea>
+                                    <div class="tab-pane fade" id="nav-tab-area" role="tabpanel" aria-labelledby="tab-area">
+                                    <textarea class="form-control form-control-sm mb-2" placeholder="enter keywords and enter end of words" id="contentresult" rows="15"></textarea>
                                     <button class="btn btn-success" data-clipboard-target="#contentresult">Copy</button>
                                     </div>
                                 </div>

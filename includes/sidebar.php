@@ -1,6 +1,6 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 col-xl d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3">
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-muted">
+        <!-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-muted">
             <span>ADMIN</span>
         </h6>
         <div class="list-group">
@@ -8,7 +8,7 @@
                 <i class="bi bi-upload fa-lg fa-fw me-1"></i> Upload
             </a>
         </div>
-        <hr>
+        <hr> -->
 
         <ul class="nav flex-column">
             <li class="nav-item">
@@ -36,11 +36,7 @@
                 <i class="bi bi-bullseye fa-lg fa-fw me-1"></i> Content SEO generator
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link <?= $active === 'html' ? 'active' : '' ?>" href="html_validator.php">
-                <i class="bi bi-check2-all fa-lg fa-fw me-1"></i> HTML Validator
-                </a>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link <?= $active === 'plugingen' ? 'active' : '' ?>" href="plugin_generator.php">
                 <i class="bi bi-cloud-download fa-lg fa-fw me-1"></i> Plugin Generator
@@ -52,7 +48,11 @@
             <span>ADDONS...</span>
         </h6>
         <ul class="nav flex-column mb-2">
-
+            <li class="nav-item">
+                <a class="nav-link <?= $active === 'html' ? 'active' : '' ?>" href="html_validator.php">
+                <i class="bi bi-check2-all fa-lg fa-fw me-1"></i> HTML Validator
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link <?= $active === 'chrome' ? 'active' : '' ?>" href="chrome_extensions.php">
                 <i class="bi bi-box-seam fa-lg fa-fw me-1"></i>  Chrome extensions
