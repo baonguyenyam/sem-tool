@@ -1,11 +1,11 @@
 <?php
+ob_start();
 session_start();
 require_once "db/authCookieSessionValidate.php";
 require_once 'functions/functions.php';
 require 'functions/class.phpmailer.php';
 require_once 'functions/class.smtp.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

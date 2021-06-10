@@ -27,7 +27,7 @@ if (!empty($_SESSION["member_id"])) {
     }
     $isMemberActive = $auth->getMemberByID($_SESSION["member_id"])[0]["member_active"];
     if ($isMemberActive == 0) {
-        $util->redirect("./forbidden.php");
+        $util->redirect("./");
     }
 }
 // Check if loggedin session exists

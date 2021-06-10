@@ -1,14 +1,26 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 col-xl d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3">
-        <!-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-muted">
-            <span>ADMIN</span>
-        </h6>
-        <div class="list-group">
-            <a href="upload.php" class="list-group-item list-group-item-action <?= $active === 'upload' ? 'active' : '' ?>">
-                <i class="bi bi-upload fa-lg fa-fw me-1"></i> Upload
-            </a>
-        </div>
-        <hr> -->
+        <?php if ($isLoggedIn) { ?>
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-muted">
+                <span>Control Panel</span>
+            </h6>
+            <div class="list-group">
+                <?php if ($isMemberTypye == 1) { ?>
+                    <?php if ($_SESSION["member_id"] == 1) {?>
+                        <a href="upload.php" class="list-group-item list-group-item-action <?= $active === 'upload' ? 'active' : '' ?>">
+                            <i class="bi bi-upload fa-lg fa-fw me-1"></i> Upload
+                        </a>
+                    <?php } ?>
+                    <a href="create_user.php" class="list-group-item list-group-item-action">
+                        <i class="bi bi-person-plus fa-lg fa-fw me-1"></i> Create user
+                    </a>
+                <?php } ?>
+                <a href="logout.php" class="list-group-item list-group-item-action">
+                    <i class="bi bi-box-arrow-right fa-lg fa-fw me-1"></i> Logout
+                </a>
+            </div>
+            <hr>
+        <?php } ?>
 
         <ul class="nav flex-column">
             <li class="nav-item">

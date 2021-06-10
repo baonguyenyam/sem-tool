@@ -1,12 +1,15 @@
 <?php
+ob_start();
 session_start();
 require_once "db/authNologin.php";
 require_once 'functions/functions.php';
 require 'functions/class.phpmailer.php';
 require_once 'functions/class.smtp.php';
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 ?>
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -196,7 +199,7 @@ require_once 'functions/class.smtp.php';
                     $auth->markAsExpired($userToken[0]["auth_id"]);
                 }
 
-                setcookie("random_type", $user[0]["member_type"], $cookie_expiration_time);
+                setcookie("member_type", $user[0]["member_type"], $cookie_expiration_time);
 
                 // Insert new token
                 $auth->insertToken($username, $random_password_hash, $random_selector_hash, $expiry_date);
@@ -257,9 +260,9 @@ require_once 'functions/class.smtp.php';
                             <div class="form-group  mb-0 text-center mt-2">
                             <input type="submit" name="login" value="Login" class="btn btn-lg btn-primary btn-block">
                             </div>
-                            <div class="form-group  mb-0 text-center mt-5">
+                            <!-- <div class="form-group  mb-0 text-center mt-5">
                                 <p class="mb-0"><a href="forgot.php">Forgot Password</a></p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </form>

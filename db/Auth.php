@@ -90,6 +90,20 @@ class Auth
         $result = $db_handle->runQuery($query, 's', array($username));
         return $result;
     }
+    function checkEmail($id)
+    {
+        $db_handle = new DBController();
+        $query = "Select * from tbl_members where member_email = ?";
+        $result = $db_handle->runQuery($query, 's', array($id));
+        return $result;
+    }
+    function insertUser($username, $random_password, $email, $type, $fullname, $content)
+    {
+        $db_handle = new DBController();
+        $query = "INSERT INTO tbl_members (member_name, member_password, member_email, member_type, member_fullname, member_info) values (?, ?, ?, ?, ?, ?)";
+        $result = $db_handle->insert($query, 'ssssss', array($username, $random_password, $email, $type, $fullname, $content));
+        return $result;
+    }
     
     function update($query)
     {

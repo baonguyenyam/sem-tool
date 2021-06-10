@@ -31,14 +31,11 @@ class Util {
     }
     
     public function redirect($url) {
-        header("Location: " . $url);
+        header("Location: ". $url);
         exit;
     }
     
     public function clearAuthCookie() {
-        if (isset($_COOKIE["member_theme"])) {
-            setcookie("member_theme", "");
-        }
         if (isset($_COOKIE["member_login"])) {
             setcookie("member_login", "");
         }
@@ -48,8 +45,8 @@ class Util {
         if (isset($_COOKIE["random_selector"])) {
             setcookie("random_selector", "");
         }
-        if (isset($_COOKIE["random_type"])) {
-            setcookie("random_type", "");
+        if (isset($_COOKIE["member_type"])) {
+            setcookie("member_type", "");
         }
     }
 }
