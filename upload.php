@@ -4,6 +4,12 @@ $title = "Upload";
 $active='upload'; 
 /*// LAYOUT */
 require_once 'includes/header.php';
+/*// CHECK */
+$getUserConfig = $auth->getMemberByID($_SESSION["member_id"]);
+if ($isMemberTypye == 1) {
+} else {
+    $util->redirect("./");
+}
 ?>
 
 <body>
