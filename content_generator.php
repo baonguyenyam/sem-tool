@@ -40,7 +40,7 @@
                             <input type="checkbox" class="form-check-input" id="add-tab">
                             <label class="form-check-label" for="add-tab">Open in new tab</label>
                         </div>
-                        <?php if($_GET['type'] === 'enter') {?>
+                        <?php if(isset($_GET['type']) && $_GET['type'] === 'enter') {?>
                             <div class="btn-group me-2">
                                 <button type="button" class="btn btn-sm btn-primary" id="contentgenerator">Generator</button>
                             </div>
@@ -58,10 +58,10 @@
                     <div class="col-12">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a href="?type=import" class="nav-link<?= ($_GET['type'] === 'import' || !$_GET['type']) ? ' active' : '' ?>">Import .CSV file</a>
+                                <a href="?type=import" class="nav-link<?= (isset($_GET['type']) && $_GET['type'] === 'import' || !isset($_GET['type'])) ? ' active' : '' ?>">Import .CSV file</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a href="?type=enter" class="nav-link<?= $_GET['type'] === 'enter' ? ' active' : '' ?>">Enter list</a>
+                                <a href="?type=enter" class="nav-link<?= isset($_GET['type']) && $_GET['type'] === 'enter' ? ' active' : '' ?>">Enter list</a>
                             </li>
                         </ul>
                     </div>
@@ -69,7 +69,7 @@
 
                 <div class="border p-3 border-top-0">
                     <div class="row mt-1">
-                        <?php if($_GET['type'] === 'enter') {?>
+                        <?php if(isset($_GET['type']) && $_GET['type'] === 'enter') {?>
                         <div class="col-lg">
                             <h3 class="mb-3">Keywords list</h3>
                             <div class="mb-4">
