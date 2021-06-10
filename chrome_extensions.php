@@ -40,9 +40,9 @@
                         <p class="lead mb-4">The LIFT extension for your browser is easy to use to install. This extension made for the LIFT Creations.</p>
                         <div class="d-grid gap-2 d-inline-flex flex-column">
                             <div>
-                            <a href="download.php?filename=<?=md5($value['version'])?>&f=<?=$value['fname']?>" class="btn btn-primary btn-lg px-4">Download</a>
+                            <a href="download.php?filename=<?=md5($value['upload_version'])?>&f=<?=$value['upload_fname']?>" class="btn btn-primary btn-lg px-4">Download</a>
                             </div>
-                            <p class="my-1 text-muted small">v<?=$value['version']?></p>
+                            <p class="my-1 text-muted small">v<?=$value['upload_version']?></p>
                         </div>
                     </div>
                 </div>
