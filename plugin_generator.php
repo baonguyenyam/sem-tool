@@ -75,7 +75,7 @@ if(isset($_POST['submit'])) {
                                 </p>
                             </div>
                         <?php } else { ?>
-                        <form action="" class="shadow p-3 mb-5 bg-body rounded border" method="POST">
+                        <form action="" class="shadow p-5 mb-5 bg-body rounded border" method="POST">
                             <?php if(isset($errorNoti)) {?>
                                 <div class="alert alert-danger">
                                     <?=$errorNoti?>

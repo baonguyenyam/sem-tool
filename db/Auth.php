@@ -104,6 +104,13 @@ class Auth
         $result = $db_handle->insert($query, 'ssssss', array($username, $random_password, $email, $type, $fullname, $content));
         return $result;
     }
+    function editUser($email, $type, $fullname, $content, $id)
+    {
+        $db_handle = new DBController();
+        $query = "UPDATE tbl_members SET member_email = ?, member_type = ?, member_fullname = ?, member_info = ? WHERE member_id = $id";
+        $result = $db_handle->update($query, 'ssss', array($email, $type, $fullname, $content));
+        return $result;
+    }
     
     function update($query)
     {

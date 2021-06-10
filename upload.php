@@ -53,7 +53,7 @@ if(isset($_POST['submit'])!=""){
 
                 <div class="row mt-5">
                 <div class="col-md-4 offset-md-4">
-                    <form enctype="multipart/form-data" action="" name="form" method="post" class="shadow p-3 mb-5 bg-body rounded border">
+                    <form enctype="multipart/form-data" action="" name="form" method="post" class="shadow p-5 mb-5 bg-body rounded border">
                         <div class="mb-3">
                             <label for="formFile" class="form-label">File</label>
                             <input class="form-control" name="file" type="file" id="file" required>
