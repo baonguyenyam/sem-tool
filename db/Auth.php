@@ -68,6 +68,28 @@ class Auth
         $result = $db_handle->insert($query, 'ssss', array($username, $random_password_hash, $random_selector_hash, $expiry_date));
         return $result;
     }
+    function getTokenByUsername($username, $expired)
+    {
+        $db_handle = new DBController();
+        $query = "Select * from tbl_token_auth where auth_username = ? and auth_is_expired = ?";
+        $result = $db_handle->runQuery($query, 'si', array($username, $expired));
+        return $result;
+    }
+    function markAsExpired($tokenId)
+    {
+        $db_handle = new DBController();
+        $query = "UPDATE tbl_token_auth SET auth_is_expired = ? WHERE auth_id = ?";
+        $expired = 1;
+        $result = $db_handle->update($query, 'ii', array($expired, $tokenId));
+        return $result;
+    }
+    function getMemberByUsername($username)
+    {
+        $db_handle = new DBController();
+        $query = "Select * from tbl_members where member_name = ?";
+        $result = $db_handle->runQuery($query, 's', array($username));
+        return $result;
+    }
     
     function update($query)
     {
