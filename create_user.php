@@ -141,12 +141,12 @@ if (!empty($_POST["change"])) {
         </div>
     </div>
 
+    <?php require 'includes/footer.php';?>
     <script>
-        $().ready(function() {
+        $(document).ready(function() {
             $('#inputPassword').val(generatePassword());
         });
     </script>
-    <?php require 'includes/footer.php';?>
 
 </body>
 
