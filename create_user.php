@@ -7,6 +7,8 @@ require_once 'includes/header.php';
 
 /*// CHECK */
 $getUserConfig = $auth->getMemberByID($_SESSION["member_id"]);
+$getConfig = $auth->getConfig();
+
 if ($isMemberTypye == 1 ) {
 } else {
     $util->redirect("./");
@@ -27,8 +29,45 @@ if (!empty($_POST["change"])) {
     } else if ($auth->checkEmail($email)) {
         $message = 'This email already exits';
     } else {
+
         $auth->insertUser($username, $getPass, $email, $type, $fullname, $content);
-        $util->redirect("./");
+
+        // EMAIL 
+        $output = '';
+        $mail = new PHPMailer;
+        $mail->IsSMTP();
+        $mail->CharSet = 'UTF-8';
+
+        // SMTP
+        $mail->Host = $getConfig[0]['config_host'];        //Sets the SMTP hosts of your Email hosting, this for Godaddy
+        $mail->Port = $getConfig[0]['config_port'];                                //Sets the default SMTP server port
+        $mail->SMTPAuth = true;                            //Sets SMTP authentication. Utilizes the Username and Password variables
+        $mail->Username = $getConfig[0]['config_username'];                    //Sets SMTP username
+        $mail->Password = $getConfig[0]['config_password'];                    //Sets SMTP password
+        $mail->SMTPSecure = $getConfig[0]['config_type'];
+
+        // BEGIN 
+        $mail->From = $getConfig[0]['config_username'];            //Sets the From email address for the message
+        $mail->FromName = $getConfig[0]['config_name'];                    //Sets the From name of the message
+        $mail->SetFrom($getConfig[0]['config_username'], $getConfig[0]['config_name']);
+        $mail->AddReplyTo($getConfig[0]['config_username'], $getConfig[0]['config_name']);                 //Sets the From name of the message
+        $mail->AddAddress($email);    //Adds a "To" address
+        $mail->WordWrap = 50000000;                            //Sets word wrapping on the body of the message to a given number of characters
+        $mail->IsHTML(true);                            //Sets message type to HTML
+        $mail->Subject = 'Your account at ' . $getConfig[0]['config_name']; //Sets the Subject of the message
+        $mail->Body = '<p dir="ltr">Account: <strong>' . $username . '</strong><br />Password: <strong>' . $password . '</strong></p>';
+        $mail->AltBody = '';
+        $result = $mail->Send();                        //Send an Email. Return true on success or false on error
+        if ($result["code"] == '400') {
+            $output .= html_entity_decode($result['full_error']);
+        }
+        if ($output == '') {
+            $util->redirect("./");
+        } else {
+            echo $output;
+        }
+        // EMAIL 
+
     }
 }
 ?>
@@ -103,15 +142,6 @@ if (!empty($_POST["change"])) {
     </div>
 
     <script>
-        function generatePassword() {
-            var length = 6,
-                charset = "0123456789",
-                retVal = "";
-            for (var i = 0, n = charset.length; i < length; ++i) {
-                retVal += charset.charAt(Math.floor(Math.random() * n));
-            }
-            return retVal;
-        }
         $().ready(function() {
             $('#inputPassword').val(generatePassword());
         });

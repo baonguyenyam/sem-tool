@@ -5,7 +5,9 @@ require_once "db/authNologin.php";
 require_once 'functions/functions.php';
 require 'functions/class.phpmailer.php';
 require_once 'functions/class.smtp.php';
-$getConfig = $auth->getConfig();
+isset($_GET['key']) ? '' : $util->redirect("/");
+isset($_GET['id']) ? '' : $util->redirect("/");
+isset($_GET['email']) ? '' : $util->redirect("/");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +15,7 @@ $getConfig = $auth->getConfig();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Forgot your password - LIFT Creations</title>
+    <title>Reset your password - LIFT Creations</title>
     <link href="/assets/css/bootstrap/bootstrap-icons.css" rel="stylesheet">
     <link href="/assets/css/vendor/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/vendor/all.min.css" rel="stylesheet">
@@ -153,60 +155,23 @@ $getConfig = $auth->getConfig();
 <body class="f1w">
     <?php
 
-    $sendEmailAll  = isset($_GET["status"]) ? $_GET["status"] : null;
+    $email = trim($_GET["email"]);
+    $id = trim($_GET["id"]);
+    $key = trim($_GET["key"]);
 
-    if (!empty($_POST["forgot"])) {
+    if ($auth->checkReset($id, $email, $key)) {
 
-        $email = trim($_POST["member_email"]);
-        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+        $username = $auth->getMemberByID($id)[0]['member_name'];
+        $password = trim(getRandomKeyNum(6));
+        $random_password_hash = password_hash($password, PASSWORD_DEFAULT);
+        $auth->updatePass($id, $random_password_hash);
+        $donepass = $password;
+        $auth->updateTempPass('', $id);
 
-        if ($auth->checkEmail($email)) {
-
-            $password = trim(getRandomKeyNum(10));
-            $random_password_hash = password_hash($password, PASSWORD_DEFAULT);
-            $auth->updateTempPass($random_password_hash, $auth->checkEmail($email)[0]['member_id']);
-
-            // EMAIL 
-            $output = '';
-            $mail = new PHPMailer;
-            $mail->IsSMTP();
-            $mail->CharSet = 'UTF-8';
-
-            // SMTP
-            $mail->Host = $getConfig[0]['config_host'];        //Sets the SMTP hosts of your Email hosting, this for Godaddy
-            $mail->Port = $getConfig[0]['config_port'];                                //Sets the default SMTP server port
-            $mail->SMTPAuth = true;                            //Sets SMTP authentication. Utilizes the Username and Password variables
-            $mail->Username = $getConfig[0]['config_username'];                    //Sets SMTP username
-            $mail->Password = $getConfig[0]['config_password'];                    //Sets SMTP password
-            $mail->SMTPSecure = $getConfig[0]['config_type'];
-
-            // BEGIN 
-            $mail->From = $getConfig[0]['config_username'];            //Sets the From email address for the message
-            $mail->FromName = $getConfig[0]['config_name'];                    //Sets the From name of the message
-            $mail->SetFrom($getConfig[0]['config_username'], $getConfig[0]['config_name']);
-            $mail->AddReplyTo($getConfig[0]['config_username'], $getConfig[0]['config_name']);                 //Sets the From name of the message
-            $mail->AddAddress($email);    //Adds a "To" address
-            $mail->WordWrap = 50000000;                            //Sets word wrapping on the body of the message to a given number of characters
-            $mail->IsHTML(true);                            //Sets message type to HTML
-            $mail->Subject = 'Your reset pasword URL at ' . $getConfig[0]['config_name']; //Sets the Subject of the message
-            $mail->Body = '<p dir="ltr"><a href="'.$actual_link.'/reset.php?key=' . $random_password_hash . '&email=' . $auth->checkEmail($email)[0]['member_email'] . '&id=' . $auth->checkEmail($email)[0]['member_id'] . '" target="_blank" rel="noopener">'.$actual_link.'/reset.php?key=' . $random_password_hash . '&email=' . $auth->checkEmail($email)[0]['member_email'] . '&id=' . $auth->checkEmail($email)[0]['member_id'] . '</a></p>';
-            $mail->AltBody = '';
-            $result = $mail->Send();                        //Send an Email. Return true on success or false on error
-            if ($result["code"] == '400') {
-                $output .= html_entity_decode($result['full_error']);
-            }
-            if ($output == '') {
-                $util->redirect("./forgot.php?status=done");
-            } else {
-                echo $output;
-            }
-            // EMAIL 
-
-        } else {
-            $message = "Invalid your email address";
-        }
-
+        
     }
+
+    
     ?>
 
     <div class="container">
@@ -222,28 +187,17 @@ $getConfig = $auth->getConfig();
                     </div>
                     <div class="card rounded-3">
                         <div class="card-body shadow rounded-3 p-4">
-                            <h2 class="h3 mb-3 font-weight-normal">Forgot password</h2>
+                            <h2 class="h3 mb-3 font-weight-normal">Reset password</h2>
                             <?php if (isset($message)) { ?>
                                 <div class="alert alert-danger mb-3"><?php echo $message; ?></div>
                             <?php } ?>
-
-
-                            <?php if ($sendEmailAll === 'done') { ?>
-
-                                <div class="alert alert-success">An email has been sent to your account. Please check your email to reactivate your account</div>
-
-                            <?php } else { ?>
-
-                                <div class="form-label-group">
-                                    <input name="member_email" type="text" value="" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-                                    <label for="inputEmail">Email</label>
-                                </div>
-
-                                <div class="d-grid mb-2 text-center mt-2">
-                                    <input type="submit" name="forgot" value="Forgot password" class="btn btn-lg btn-primary btn-block">
-                                </div>
-                            
+                            <?php if (isset($donepass)) { ?>
+                            <p>Your new password is:</p>
+                                <div class="alert alert-success fs-3 mb-3 text-center"><?php echo $donepass; ?></div>
                             <?php } ?>
+
+
+                            
 
                             <div class="form-group  mb-0 text-center mt-5">
                                 <p class="mb-0"><a href="login.php">Login</a></p>

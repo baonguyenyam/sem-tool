@@ -8,6 +8,7 @@ require_once 'includes/header.php';
 /*// CHECK */
 $getID  = isset($_GET["id"]) ? $_GET["id"] : $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"];
 $getMemberByID = $auth->getMemberByID($getID);
+$getConfig = $auth->getConfig();
 
 if ($isMemberTypye == 1 || $getMemberByID[0]["member_id"] == $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"]) {
     if ($getID == 1 && (int)$_SESSION["member_id"] != 1) {
@@ -24,9 +25,47 @@ if(!$getMemberByID) {
 // CREATE 
 if (!empty($_POST["change"])) {
     $password = trim($_POST["member_password"]);
+    $email = trim($_POST["member_email"]);
     $random_password_hash = password_hash($password, PASSWORD_DEFAULT);
     $tokenId = $getID;
     $auth->updatePass($tokenId, $random_password_hash);
+
+    // EMAIL 
+    $output = '';
+    $mail = new PHPMailer;
+    $mail->IsSMTP();
+    $mail->CharSet = 'UTF-8';
+
+    // SMTP
+    $mail->Host = $getConfig[0]['config_host'];        //Sets the SMTP hosts of your Email hosting, this for Godaddy
+    $mail->Port = $getConfig[0]['config_port'];                                //Sets the default SMTP server port
+    $mail->SMTPAuth = true;                            //Sets SMTP authentication. Utilizes the Username and Password variables
+    $mail->Username = $getConfig[0]['config_username'];                    //Sets SMTP username
+    $mail->Password = $getConfig[0]['config_password'];                    //Sets SMTP password
+    $mail->SMTPSecure = $getConfig[0]['config_type'];
+
+    // BEGIN 
+    $mail->From = $getConfig[0]['config_username'];            //Sets the From email address for the message
+    $mail->FromName = $getConfig[0]['config_name'];                    //Sets the From name of the message
+    $mail->SetFrom($getConfig[0]['config_username'], $getConfig[0]['config_name']);
+    $mail->AddReplyTo($getConfig[0]['config_username'], $getConfig[0]['config_name']);                 //Sets the From name of the message
+    $mail->AddAddress($email);    //Adds a "To" address
+    $mail->WordWrap = 50000000;                            //Sets word wrapping on the body of the message to a given number of characters
+    $mail->IsHTML(true);                            //Sets message type to HTML
+    $mail->Subject = 'Your password has been changed at ' . $getConfig[0]['config_name']; //Sets the Subject of the message
+    $mail->Body = '<p dir="ltr">Password: <strong>' . $password . '</strong></p>';
+    $mail->AltBody = '';
+    $result = $mail->Send();                        //Send an Email. Return true on success or false on error
+    if ($result["code"] == '400') {
+        $output .= html_entity_decode($result['full_error']);
+    }
+    if ($output == '') {
+        $util->redirect("./");
+    } else {
+        echo $output;
+    }
+    // EMAIL 
+
 }
 ?>
 
@@ -66,8 +105,8 @@ if (!empty($_POST["change"])) {
                                 <?php } ?>
                                 <div class="form-group mb-3">
                                     <label class="form-control" disabled><?php echo $getMemberByID[0]["member_name"]; ?></label>
+                                    <input name="member_email" type="hidden" value="<?php echo $getMemberByID[0]["member_email"]; ?>" id="txtEmail" class="form-control" placeholder="">
                                 </div>
-                                
                                 
                                 <?php
                                 if($isMemberTypye == 1 && $getMemberByID[0]["member_id"] != $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"]) {

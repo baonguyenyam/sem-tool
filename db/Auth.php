@@ -25,6 +25,22 @@ class Auth
         return $result;
     }
 
+    // CONFIG 
+    function getConfig()
+    {
+        $db_handle = new DBController();
+        $query = "Select * from tbl_config where config_id = 1";
+        $result = $db_handle->runBaseQuery($query);
+        return $result;
+    }
+    function updateConfig($host, $port, $username, $password, $type, $name)
+    {
+        $db_handle = new DBController();
+        $query = "UPDATE tbl_config SET config_host = ?, config_port = ?, config_username = ?, config_password = ?, config_type = ?, config_name = ? WHERE config_id = 1";
+        $result = $db_handle->update($query, 'ssssss', array($host, $port, $username, $password, $type, $name));
+        return $result;
+    }
+
     // USER
     function getAllMember($search)
     {
@@ -99,11 +115,11 @@ class Auth
         $result = $db_handle->runQuery($query, 's', array($username));
         return $result;
     }
-    function checkEmail($id)
+    function checkEmail($email)
     {
         $db_handle = new DBController();
         $query = "Select * from tbl_members where member_email = ?";
-        $result = $db_handle->runQuery($query, 's', array($id));
+        $result = $db_handle->runQuery($query, 's', array($email));
         return $result;
     }
     function insertUser($username, $random_password, $email, $type, $fullname, $content)
@@ -130,6 +146,13 @@ class Auth
         $db_handle = new DBController();
         $query = "UPDATE tbl_members SET member_password = ? WHERE member_id = ?";
         $result = $db_handle->update($query, 'si', array($pass, $tokenId));
+        return $result;
+    }
+    function checkReset($id, $email, $key)
+    {
+        $db_handle = new DBController();
+        $query = "Select * from tbl_members where member_id = ? AND member_email = ? AND member_temp_pass = ?";
+        $result = $db_handle->runQuery($query, 'sss', array($id, $email, $key));
         return $result;
     }
     

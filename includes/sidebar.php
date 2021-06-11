@@ -101,6 +101,9 @@
                     <a href="create_user.php" class="list-group-item list-group-item-action <?= $active === 'create' ? 'active' : '' ?>">
                         <i class="bi bi-person-plus fa-lg fa-fw me-1"></i> Create user
                     </a>
+                    <a href="config.php" class="list-group-item list-group-item-action <?= $active === 'config' ? 'active' : '' ?>">
+                        <i class="bi bi-gear fa-lg fa-fw me-1"></i> Configs
+                    </a>
                     <hr>
                 <?php } ?>
                 <a href="profile.php" class="list-group-item list-group-item-action <?= $active === 'profile' ? 'active' : '' ?>">
