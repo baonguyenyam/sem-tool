@@ -12,7 +12,7 @@ require_once 'functions/class.smtp.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>LogIn - LIFT Creations</title>
+    <title>Forgot your password - LIFT Creations</title>
     <link href="/assets/css/bootstrap/bootstrap-icons.css" rel="stylesheet">
     <link href="/assets/css/vendor/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/vendor/all.min.css" rel="stylesheet">

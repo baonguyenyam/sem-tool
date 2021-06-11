@@ -1,9 +1,11 @@
 function lift_encode(str) {
     return unescape(encodeURIComponent(str))
 }
+
 function lift_decode(str) {
     return decodeURIComponent(escape(str));
 }
+
 function download(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -13,6 +15,7 @@ function download(filename, text) {
     element.click();
     document.body.removeChild(element);
 }
+
 function makeid(length) {
     var result = [];
     var characters = '123456789';
@@ -23,6 +26,7 @@ function makeid(length) {
     }
     return result.join('');
 }
+
 function replaceLIFT(str) {
     return str.toString()
         .replace(/"/gi, "&#34;")
@@ -34,12 +38,15 @@ function replaceLIFT(str) {
         .replace(/\>[\t ]+\</g, "><")
         .replace(/\>[\t ]+$/g, ">")
 }
+
 function unReplaceLIFT(str) {
     return str.toString().replace(/&#34;/gi, "\"").replace(/&#39;/gi, "'")
 }
+
 function resultHTMLValidate(key, string) {
     return '<div class="list-group-item d-flex justify-content-between"><strong>' + key + '</strong> ' + string + '</div>';
 }
+
 function loadCSVFileAsText() {
     if (document.getElementById("fileCSVToLoad").value) {
         var fileCSVToLoad = document.getElementById("fileCSVToLoad").files[0];
@@ -60,7 +67,7 @@ function loadCSVFileAsText() {
             var getFirstValueValue = getFirstValue[0].split(",");
             var buildLit = '';
             for (let index = 0; index < getFirstValueValue.length; index++) {
-                buildLit += '<option value="'+index+'">'+getFirstValueValue[index]+'</option>';
+                buildLit += '<option value="' + index + '">' + getFirstValueValue[index] + '</option>';
             }
             $('#readCSVTable').removeClass('d-none')
             $('#readCSVTable #fkw').append(buildLit)
@@ -71,6 +78,7 @@ function loadCSVFileAsText() {
         alert('Please upload file')
     }
 }
+
 function loadFileAsText() {
     if (document.getElementById("fileToLoad").value) {
         var fileToLoad = document.getElementById("fileToLoad").files[0];
@@ -95,20 +103,20 @@ function loadFileAsText() {
         alert('Please upload file')
     }
 }
+
 function extractHostname(url) {
     var hostname;
     if (url.indexOf("//") > -1) {
         hostname = url.split('/')[2];
-    }
-    else {
+    } else {
         hostname = url.split('/')[0];
     }
     hostname = hostname.split(':')[0];
     hostname = hostname.split('?')[0];
     return hostname;
-  }
-  
-  function extractRootDomain(url) {
+}
+
+function extractRootDomain(url) {
     var domain = extractHostname(url),
         splitArr = domain.split('.'),
         arrLen = splitArr.length;
@@ -119,4 +127,17 @@ function extractHostname(url) {
         }
     }
     return domain;
-  }
+}
+function Validate() {
+    var password = document.getElementById("txtPassword").value;
+    var confirmPassword = document.getElementById("txtConfirmPassword").value;
+    if (password != confirmPassword) {
+        alert("The password does not match");
+        return false;
+    }
+    if (password.length < 3 || confirmPassword.length < 3) {
+        alert("Your Password is too short");
+        return false;
+    }
+    return true;
+}

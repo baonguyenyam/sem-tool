@@ -134,3 +134,20 @@ function extractRootDomain(url) {
 
   return domain;
 }
+
+function Validate() {
+  var password = document.getElementById("txtPassword").value;
+  var confirmPassword = document.getElementById("txtConfirmPassword").value;
+
+  if (password != confirmPassword) {
+    alert("The password does not match");
+    return false;
+  }
+
+  if (password.length < 3 || confirmPassword.length < 3) {
+    alert("Your Password is too short");
+    return false;
+  }
+
+  return true;
+}

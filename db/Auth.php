@@ -125,6 +125,13 @@ class Auth
         }
         return $result;
     }
+    function updatePass($tokenId, $pass)
+    {
+        $db_handle = new DBController();
+        $query = "UPDATE tbl_members SET member_password = ? WHERE member_id = ?";
+        $result = $db_handle->update($query, 'si', array($pass, $tokenId));
+        return $result;
+    }
     
     function update($query)
     {

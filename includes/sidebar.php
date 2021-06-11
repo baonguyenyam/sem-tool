@@ -106,6 +106,9 @@
                 <a href="profile.php" class="list-group-item list-group-item-action <?= $active === 'profile' ? 'active' : '' ?>">
                     <i class="bi bi-person fa-lg fa-fw me-1"></i> Profile
                 </a>
+                <a href="changepass.php" class="list-group-item list-group-item-action <?= $active === 'changepass' ? 'active' : '' ?>">
+                    <i class="bi bi-shield-check fa-lg fa-fw me-1"></i> Change password
+                </a>
                 <a href="logout.php" class="list-group-item list-group-item-action">
                     <i class="bi bi-box-arrow-right fa-lg fa-fw me-1"></i> Logout
                 </a>
