@@ -24,7 +24,6 @@ require_once 'includes/header.php';
 
         <div class="row" id="home-menu">
           <div class="col-12 my-3">
-              <h4>TOOLS</h4>
               <ul>
                 <li>
                   <a href="keywork_generator.php">
@@ -50,9 +49,7 @@ require_once 'includes/header.php';
                     <span>Plugin Generator</span>
                   </a>
                 </li>
-              </ul>
-              <h4>ADDONS</h4>
-              <ul>
+              
                 <li>
                   <a href="wp_plugins.php">
                     <i class="bi bi-archive fa-3x fa-fw me-1"></i>
@@ -71,9 +68,7 @@ require_once 'includes/header.php';
                     <span>HTML Code validator</span>
                   </a>
                 </li>
-              </ul>
-              <h4>OTHER</h4>
-              <ul>
+              
                 <li>
                   <a href="https://docs.myseo.website/" target="_blank">
                     <i class="bi bi-journal-bookmark fa-3x fa-fw me-1"></i>
@@ -85,6 +80,21 @@ require_once 'includes/header.php';
                     <i class="bi bi-braces fa-3x fa-fw me-1"></i>
                     <span>Testing site</span>
                   </a>
+                </li>
+              </ul>
+              <h4>Control Panel</h4>
+              <ul>
+              <li>
+                    <a href="profile.php">
+                      <i class="bi bi-person fa-3x fa-fw me-1"></i>
+                      <span>Profile</span>
+                    </a>
+                </li>  
+              <li>
+                    <a href="logout.php">
+                      <i class="bi bi-box-arrow-right fa-3x fa-fw me-1"></i>
+                      <span>Logout</span>
+                    </a>
                 </li>
               </ul>
           </div>
