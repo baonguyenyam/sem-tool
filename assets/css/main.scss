@@ -330,7 +330,8 @@ background: #007bff;
       }
       &.active {
         box-shadow: 0 -3px 0 #0e6efd inset;
-        color: #0e6efd
+        color: #0e6efd;
+        border: 0;
       }
     }
   }

@@ -116,7 +116,7 @@
 
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link" href="about.php">
+                <a class="nav-link <?= $active === 'copyright' ? 'active' : '' ?>" href="about.php">
                 <i class="bi bi-bootstrap-reboot fa-lg fa-fw me-1"></i> Copyright
                 </a>
             </li>

@@ -75,7 +75,15 @@ if ($isMemberTypye == 1) {
                                 <th scope="row"><?=$m?></th>
                                 <td><a href="profile.php?id=<?=$item["member_id"]?>"><?=$item["member_name"]?></a></td>
                                 <td><?=$item["member_fullname"]?></td>
-                                <td><?=$item["member_name"]?></td>
+                                <td><?php
+                                if($item["member_type"] == 1) {
+                                    echo 'Administartor';
+                                } else if($item["member_type"] == 2) {
+                                    echo 'Moderator';
+                                } else if($item["member_type"] == 0) {
+                                    echo 'User';
+                                }
+                                ?></td>
                                 <td><?=$item["member_email"]?></td>
                                 </tr>
                                 <?php
