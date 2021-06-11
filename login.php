@@ -245,18 +245,18 @@ ini_set("display_errors", 1);
                                 <label for="inputPassword">Password</label>
 
                             </div>
-                            <div class="checkbox mb-3">
-                                <label>
-                                    <?php
+                            <div class="form-check form-switch mb-4">
+                                <?php
                                     echo '<input type="hidden" name="location" value="';
                                     if (isset($_GET['location'])) {
                                         echo htmlspecialchars($_GET['location']);
                                     }
                                     echo '" />';
-                                    ?>
-                                    <input type="checkbox" name="remember" id="remember" <?php if (isset($_COOKIE["member_login"])) { ?> checked <?php } ?> /> Remember me
-                                </label>
+                                ?>
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" <?php if (isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
+                                <label class="form-check-label" for="remember">Remember me</label>
                             </div>
+
                             <div class="d-grid mb-2 text-center mt-2">
                                 <input type="submit" name="login" value="Login" class="btn btn-lg btn-primary btn-block">
                             </div>
