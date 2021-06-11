@@ -654,4 +654,51 @@ function auto_preview($text) {
     $text = preg_replace($pattern, '<div class="data-preview"><div class="data-preview-url"></div><div data-preview-content="$1"></div></div>', $text);
     $text = preg_replace('/href="www/', 'href="//www', $text);
     return $text;
-  }
+}
+function get_page(array $input, $pageNum, $perPage)
+{
+    $start = ($pageNum - 1) * $perPage;
+    $end = $start + $perPage;
+    $count = count($input);
+
+    // Conditionally return results
+    if ($start < 0 || $count <= $start) {
+        // Page is out of range
+        return array();
+    } else if ($count <= $end) {
+        // Partially-filled page
+        return array_slice($input, $start);
+    } else {
+        // Full page 
+        return array_slice($input, $start, $end - $start);
+    }
+}
+function pagination($data, $allpage, $curent_page, $link, $query)
+{
+    $url = '';
+    foreach ($query as &$value) {
+        if (isset($_GET['' . $value . ''])) {
+            $url .=  '&' . $value . '=' . $_GET['' . $value . ''];
+        }
+    }
+
+    if ($allpage <= 5) {
+        $nav = '<nav aria-label="Page navigation example"><ul class="pagination">';
+        if (count($data) > 0) {
+            $nav .= '<li class="page-item disabled"> <span class="page-link">Page</span> </li>';
+        }
+        for ($i = 0; $i < $allpage; $i++) {
+            $vem = (($i + 1) == $curent_page) ? 'active' : '';
+            $nav .= '<li class="page-item ' . $vem . '"> <a class="page-link" href="' . $link . '?p=' . ($i + 1) . $url . '">' . ($i + 1) . '</a> </li>';
+        }
+        $nav .= '</ul></nav>';
+    } else {
+        $nav = '<ul class="list-inline"><li class="list-inline-item">Page</li><li class="list-inline-item"><select class="custom-select" name="phantrang" id="phantrang">';
+        for ($i = 0; $i < $allpage; $i++) {
+            $vem = (($i + 1) == $curent_page) ? 'selected' : '';
+            $nav .= '<option ' . $vem . ' value="' . $link . '?p=' . ($i + 1) . $url . '"> Page ' . ($i + 1) . '</option>';
+        }
+        $nav .= '</select></li></ul>';
+    }
+    return $nav;
+}

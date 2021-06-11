@@ -17,6 +17,10 @@ if ($isMemberTypye == 1 || $getMemberByID[0]["member_id"] == $auth->getMemberByI
     $util->redirect("./");
 }
 
+if(!$getMemberByID) {
+    $util->redirect("./");
+}
+
 // CREATE 
 if (!empty($_POST["change"])) {
     $userid = isset($_POST["userid"]) ?  $_POST["userid"] : $_SESSION["member_id"];
@@ -33,7 +37,11 @@ if (!empty($_POST["change"])) {
         if ($auth->checkEmail($email)) {
             $message = 'This email already exits';
         } else {
-            $auth->editUser($email, $type, $fullname, $content, $userid);
+            if($isMemberTypye == 1 && $getMemberByID[0]["member_id"] == $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"]) {
+                $auth->editUser($email, null , $fullname, $content, $userid);
+            } else {
+                $auth->editUser($email, $type, $fullname, $content, $userid);
+            }
             if ($isMemberTypye == 1) {
                 $util->redirect("./profile.php?id=" . $getID . "");
             } else {
@@ -41,7 +49,11 @@ if (!empty($_POST["change"])) {
             }
         }
     } else {
-        $auth->editUser($email, $type, $fullname, $content, $userid);
+        if($isMemberTypye == 1 && $getMemberByID[0]["member_id"] == $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"]) {
+            $auth->editUser($email, null, $fullname, $content, $userid);
+        } else {
+            $auth->editUser($email, $type, $fullname, $content, $userid);
+        }
         if ($isMemberTypye == 1) {
             $util->redirect("./profile.php?id=" . $getID . "");
         } else {
@@ -112,7 +124,7 @@ if (!empty($_POST["change"])) {
                                 }
                                 ?>
                                 <div class="form-floating">
-                                    <textarea name="content" id="content" class="form-control" rows="5" style="min-height: 100px"></textarea>
+                                    <textarea name="content" id="content" class="form-control" rows="5" style="min-height: 100px"><?php echo $getMemberByID[0]["member_info"]; ?></textarea>
                                     <label for="content">Information</label>
                                 </div>
                             </div>

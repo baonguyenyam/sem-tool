@@ -232,7 +232,7 @@ ini_set("display_errors", 1);
                     </div>
                     <div class="card rounded-3">
                         <div class="card-body shadow rounded-3 p-4">
-                            <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+                            <h2 class="h3 mb-3 font-weight-normal">Login</h2>
                             <?php if (isset($message)) { ?>
                                 <div class="alert alert-danger mb-3"><?php echo $message; ?></div>
                             <?php } ?>

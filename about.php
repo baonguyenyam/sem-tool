@@ -17,7 +17,7 @@ require_once 'includes/header.php';
         <div class="row">
         <?php require 'includes/sidebar.php'; ?>
 
-            <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
+            <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4 px-xxl-5 mt-xxl-4">
                     <div class="row mt-4">
                         <div class="col-12">
                             <div class="shadow p-5 mb-5 bg-body rounded border">
