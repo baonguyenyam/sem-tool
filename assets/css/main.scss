@@ -227,7 +227,10 @@ background: #007bff;
   }
 }
 
-
+#totalurls {
+  max-height: 400px;
+  overflow-y: auto;
+}
         
 
 #home-menu {

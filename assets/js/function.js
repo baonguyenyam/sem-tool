@@ -56,6 +56,15 @@ function loadCSVFileAsText() {
                 indentWithTabs: true
             });
             LIFT_APP.code.setOption("theme", 'monokai')
+            var getFirstValue = LIFT_APP.code.getValue().replace(/^(?:\r\n?|\n|\r|\s*)/gm, '').replace(/\n*$/, '').split("\n")
+            var getFirstValueValue = getFirstValue[0].split(",");
+            var buildLit = '';
+            for (let index = 0; index < getFirstValueValue.length; index++) {
+                buildLit += '<option value="'+index+'">'+getFirstValueValue[index]+'</option>';
+            }
+            $('#readCSVTable').removeClass('d-none')
+            $('#readCSVTable #fkw').append(buildLit)
+            $('#readCSVTable #furl').append(buildLit)
         };
         fileReader.readAsText(fileCSVToLoad, "UTF-8");
     } else {

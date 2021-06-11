@@ -23,10 +23,12 @@ $("#contentgeneratorimport").on("click", function () {
     }
 
     sourcev = sourcev.replace(/^(?:\r\n?|\n|\r|\s*)/gm, '').replace(/\n*$/, '').split("\n");
+    var getkwv = $('#readCSVTable #fkw').val();
+    var geturlv = $('#readCSVTable #furl').val();
 
     for (var index = 0; index < sourcev.length; index++) {
       if ($('#add-title:checkbox:checked').length > 0) {
-        stringurl += ' title="' + replaceLIFT(sourcev[index].split(",")[0]).trim() + '"';
+        stringurl += ' title="' + replaceLIFT(sourcev[index].split(",")[getkwv]).trim() + '"';
       }
 
       if ($('#add-nofollow:checkbox:checked').length > 0) {
@@ -38,9 +40,9 @@ $("#contentgeneratorimport").on("click", function () {
       }
 
       if (index < sourcev.length - 1) {
-        pushlistkw += '<a href="' + sourcev[index].split(",")[1] + '"' + stringurl + '>' + replaceLIFT(sourcev[index].split(",")[0]).trim() + '</a>, ';
+        pushlistkw += '<a href="' + sourcev[index].split(",")[geturlv] + '"' + stringurl + '>' + replaceLIFT(sourcev[index].split(",")[getkwv]).trim() + '</a>, ';
       } else {
-        pushlistkw += '<a href="' + sourcev[index].split(",")[1] + '"' + stringurl + '>' + replaceLIFT(sourcev[index].split(",")[0]).trim() + '</a>';
+        pushlistkw += '<a href="' + sourcev[index].split(",")[geturlv] + '"' + stringurl + '>' + replaceLIFT(sourcev[index].split(",")[getkwv]).trim() + '</a>';
       }
     }
 

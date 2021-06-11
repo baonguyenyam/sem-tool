@@ -201,6 +201,11 @@ body {
   color: #0a58ca;
 }
 
+#totalurls {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
 #home-menu h4 {
   padding: 1rem 0;
   margin-bottom: 0;

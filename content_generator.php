@@ -91,7 +91,30 @@ require_once 'includes/header.php';
                                     <input type="file" class="form-control" id="fileCSVToLoad">
                                     <button class="btn btn-primary" type="button" id="loadcsv" onclick="loadCSVFileAsText()">Submit</button>
                                 </div>
-                                <textarea class="form-control" placeholder="Paste export file (.csv) content here. You have to follow the rule: 'TITLE, URL'" id="csvsource" rows="12"></textarea>
+
+                                <table id="readCSVTable" class="table table-bordered table-striped table-hover d-none">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th scope="col">Keyword</th>
+                                            <th scope="col">URL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <select id="fkw" class="form-select" required>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select id="furl" class="form-select" required>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="d-none">
+                                    <textarea class="form-control" placeholder="Paste export file (.csv) content here. You have to follow the rule: 'TITLE, URL'" id="csvsource" rows="12"></textarea>
+                                </div>
 
                             </div>
                         <?php } ?>
