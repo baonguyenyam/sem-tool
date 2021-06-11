@@ -35,7 +35,14 @@ $("#create-btn").on("click", function () {
         $("#results").val(unReplaceLIFT(t))
         var text = $("#results").val();
         var filename = "LIFT_KW_LIST_" + new Date().getTime() + ".xml";
-        download(filename, text);
+        try {
+            text
+        }
+        catch (e) {
+        }
+        finally {
+            download(filename, text);
+        }
     }
 });
 $("#keyworkds").val(localStorage.getItem("myLIFT"));

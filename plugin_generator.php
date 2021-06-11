@@ -23,21 +23,23 @@ if(isset($_POST['submit'])) {
      if(!is_dir($dist)){
          mkdir("tmp/wp-lift-custompost".$num);
      }
- 
-     copy_directory( $src, $dist );
-     $it = new RecursiveDirectoryIterator($dist);
-     foreach(new RecursiveIteratorIterator($it) as $file) {
-         if ($file->getExtension() == 'php') {
-             $lines = file( $file );
-             for ( $i = 0; $i < count( $lines ); $i++ ) {
-                 $lines[ $i ] = replaceGeneratorPlugins($lines[ $i ],$num,$attrs); 
-                 file_put_contents( $file,$lines );
-             }
-         }
-     }
-    
-     zipData($dist, './tmp/wp-lift-custompost'.$num.'.zip',"wp-lift-custompost".$num);
-    $downloadDone = 'wp-lift-custompost'.$num.'.zip';
+
+    try {
+        copy_directory( $src, $dist );
+        $it = new RecursiveDirectoryIterator($dist);
+        foreach(new RecursiveIteratorIterator($it) as $file) {
+            if ($file->getExtension() == 'php') {
+                $lines = file( $file );
+                for ( $i = 0; $i < count( $lines ); $i++ ) {
+                    $lines[ $i ] = replaceGeneratorPlugins($lines[ $i ],$num,$attrs); 
+                    file_put_contents( $file,$lines );
+                }
+            }
+        }
+    } finally {
+        zipData($dist, './tmp/wp-lift-custompost'.$num.'.zip',"wp-lift-custompost".$num);
+        $downloadDone = 'wp-lift-custompost'.$num.'.zip';
+    }
  
     } else {
         $errorNoti = 'Something wrong!';

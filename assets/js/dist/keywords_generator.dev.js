@@ -22,7 +22,12 @@ $("#generator").on("click", function () {
 $("#dwn-btn").on("click", function () {
   var text = $("#results").val();
   var filename = "LIFT_KW_LIST_" + new Date().getTime() + ".txt";
-  download(filename, text);
+
+  try {
+    text;
+  } catch (e) {} finally {
+    download(filename, text);
+  }
 });
 $("#save-btn").on("click", function () {
   localStorage.removeItem("myLIFT");
