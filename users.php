@@ -63,6 +63,7 @@ if ($isMemberTypye == 1) {
                                 <th scope="col">Fullname</th>
                                 <th scope="col">Group</th>
                                 <th scope="col">Email</th>
+                                <th scope="col" width="100">CP</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -85,6 +86,7 @@ if ($isMemberTypye == 1) {
                                 }
                                 ?></td>
                                 <td><?=$item["member_email"]?></td>
+                                <td class="small"><a href="changepass.php?id=<?=$item["member_id"]?>" class="btn btn-sm btn-danger text-nowrap">Change pass</a></td>
                                 </tr>
                                 <?php
                                         }

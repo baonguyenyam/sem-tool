@@ -1,6 +1,8 @@
 "use strict";
 
 $("#contentgeneratorimport").on("click", function () {
+  $('#totalurls').html('');
+  $('#contentresult').val('');
   var err = "";
 
   if (!$("#csvsource").val() && !LIFT_APP.code) {
@@ -12,7 +14,6 @@ $("#contentgeneratorimport").on("click", function () {
   } else {
     var sourcev = null;
     var pushlistkw = '';
-    var stringurl = '';
 
     if ($("#csvsource").val()) {
       sourcev = $("#csvsource").val();
@@ -27,6 +28,8 @@ $("#contentgeneratorimport").on("click", function () {
     var geturlv = $('#readCSVTable #furl').val();
 
     for (var index = 0; index < sourcev.length; index++) {
+      var stringurl = '';
+
       if ($('#add-title:checkbox:checked').length > 0) {
         stringurl += ' title="' + replaceLIFT(sourcev[index].split(",")[getkwv]).trim() + '"';
       }
@@ -55,6 +58,8 @@ $("#contentgeneratorimport").on("click", function () {
   }
 });
 $("#contentgenerator").on("click", function () {
+  $('#totalurls').html('');
+  $('#contentresult').val('');
   var err = "";
   var contentkeyword = $("#contentkeyword").val().replace(/^(?:\r\n?|\n|\r|\s*)/gm, '').replace(/\n*$/, '').split("\n");
   var contenturls = $("#contenturls").val().replace(/^(?:\r\n?|\n|\r|\s*)/gm, '').replace(/\n*$/, '').split("\n");
@@ -75,9 +80,10 @@ $("#contentgenerator").on("click", function () {
     alert(err);
   } else {
     var pushlistkw = '';
-    var stringurl = '';
 
     for (var index = 0; index < contentkeyword.length; index++) {
+      var stringurl = '';
+
       if ($('#add-title:checkbox:checked').length > 0) {
         stringurl += ' title="' + replaceLIFT(contentkeyword[index]).trim() + '"';
       }
