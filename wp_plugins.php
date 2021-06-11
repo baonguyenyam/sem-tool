@@ -46,8 +46,8 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                            <div class="d-flex w-100 justify-content-between align-items-start">
-                                <div>
+                            <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                <div class="mb-2">
                                     <strong class="d-block text-gray-dark">LIFT Core</strong>
                                     <p class="mb-0">This plugins add new LIFT's menu into WordPress site. It also auto rename image file by post title</p>
                                     <small class="mb-0 text-primary">
@@ -74,8 +74,8 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                            <div class="d-flex w-100 justify-content-between align-items-start">
-                                <div>
+                            <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                <div class="mb-2">
                                     <strong class="d-block text-gray-dark">LIFT Addons for Visual Composer</strong>
                                     <p class="mb-0">A collection of LIFT's addons for use in WPBakery Page Builder. WPBakery Page Builder must be installed and activated.</p>
                                     <small class="mb-0 text-primary">
@@ -101,8 +101,8 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                            <div class="d-flex w-100 justify-content-between align-items-start">
-                                <div>
+                            <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                <div class="mb-2">
                                     <strong class="d-block text-gray-dark">LIFT Blocks</strong>
                                     <p class="mb-0">This plugins add new Blocks feature into WordPress site.</p>
                                     <small class="mb-0 text-primary">
@@ -129,8 +129,8 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                            <div class="d-flex w-100 justify-content-between align-items-start">
-                                <div>
+                            <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                <div class="mb-2">
                                     <strong class="d-block text-gray-dark">LIFT CleanUp</strong>
                                     <p class="mb-0">This is a product of LIFT Creations.</p>
                                     <small class="mb-0 text-primary">
@@ -152,8 +152,8 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                            <div class="d-flex w-100 justify-content-between align-items-start">
-                                <div>
+                            <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                <div class="mb-2">
                                     <strong class="d-block text-gray-dark">LIFT Export 1 post</strong>
                                     <p class="mb-0">This plugins add export link into WordPress site.</p>
                                 </div>
@@ -172,8 +172,8 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
-                            <div class="d-flex w-100 justify-content-between align-items-start">
-                                <div>
+                            <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                <div class="mb-2">
                                     <strong class="d-block text-gray-dark">Visual Composer Clipboard</strong>
                                     <p class="mb-0">Clipboard and template manager for WPBakery Page Builder (Visual Composer)</p>
                                 </div>

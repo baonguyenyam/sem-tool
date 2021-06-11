@@ -228,11 +228,11 @@ ini_set("display_errors", 1);
 
 
                     <div class="text-center mb-4 mt-4">
-                        <p><img src="/public/img/logo.png" alt="" class="w-100" style="max-width:250px"></p>
-                        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+                        <p><img src="/assets/img/logoc.png" alt="" class="w-100" style="max-width:250px"></p>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="card rounded-3">
+                        <div class="card-body shadow rounded-3 p-4">
+                            <h1 class="h3 mb-3 font-weight-normal">Login</h1>
                             <?php if (isset($message)) { ?>
                                 <div class="alert alert-danger mb-3"><?php echo $message; ?></div>
                             <?php } ?>
@@ -257,8 +257,8 @@ ini_set("display_errors", 1);
                                     <input type="checkbox" name="remember" id="remember" <?php if (isset($_COOKIE["member_login"])) { ?> checked <?php } ?> /> Remember me
                                 </label>
                             </div>
-                            <div class="form-group  mb-0 text-center mt-2">
-                            <input type="submit" name="login" value="Login" class="btn btn-lg btn-primary btn-block">
+                            <div class="d-grid mb-2 text-center mt-2">
+                                <input type="submit" name="login" value="Login" class="btn btn-lg btn-primary btn-block">
                             </div>
                             <!-- <div class="form-group  mb-0 text-center mt-5">
                                 <p class="mb-0"><a href="forgot.php">Forgot Password</a></p>
@@ -270,8 +270,10 @@ ini_set("display_errors", 1);
 
                 
 
-
-                <p class="mb-5 mb-0 text-muted text-center">© 2019-<?php echo date('Y'); ?></p>
+                <div class="mb-1 text-center mt-5">
+                    <p class="mb-0"><a href="https://docs.myseo.website/" target="_blank">Guidelines</a></p>
+                </div>
+                <p class="mb-5 mb-0 text-muted text-center">© <?php echo date('Y'); ?></p>
 
             </div>
         </div>

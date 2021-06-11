@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
 
 
                 <div class="row mt-5 mb-3">
-                    <div class="col-md-4 offset-md-4">
+                    <div class="col-xl-6 offset-xl-3 col-xxl-4 offset-xxl-4">
                         <?php if(isset($downloadDone)) {?>
                             <div class="alert alert-success my-3">
                                 <p>Thank you!</p>

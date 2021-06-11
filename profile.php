@@ -78,7 +78,7 @@ if (!empty($_POST["change"])) {
                         </div>
                     </div>
                     <div class="row mt-5">
-                        <div class="col-md-4 offset-md-4">
+                        <div class="col-xl-6 offset-xl-3 col-xxl-4 offset-xxl-4">
                             <div class="shadow p-5 mb-5 bg-body rounded border">
                                 <h3 class="h3 mb-3 mt-0">Edit profile</h3>
                                 <?php if (isset($message)) { ?>

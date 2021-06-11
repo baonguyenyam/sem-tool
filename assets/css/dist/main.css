@@ -75,6 +75,17 @@ body {
 }
 .sidebar .position-sticky {
   padding: 1rem 0;
+  padding-right: 0.5rem;
+}
+
+#sidebarMenu .nav .nav-item .nav-link {
+  border-radius: 0 5rem 5rem 0;
+}
+#sidebarMenu .nav .nav-item .nav-link:hover {
+  background-color: #efefef;
+}
+#sidebarMenu .nav .nav-item .nav-link.active {
+  background-color: #e7f1ff;
 }
 
 .sidebar-sticky {
@@ -88,7 +99,6 @@ body {
 }
 
 .sidebar .nav-link {
-  font-weight: 500;
   color: #333;
 }
 .sidebar .nav-link .feather {
@@ -174,13 +184,21 @@ body {
 
 #sidebarMenu .list-group {
   border: 0;
-  border-radius: 0;
+  border-radius: 0 5rem 5rem 0;
 }
 #sidebarMenu .list-group .list-group-item {
   border: 0;
+  border-radius: 0 5rem 5rem 0;
 }
 #sidebarMenu .list-group .list-group-item.list-group-item-action:not(.active, :hover) {
   background: none;
+}
+#sidebarMenu .list-group .list-group-item:hover {
+  background-color: #efefef;
+}
+#sidebarMenu .list-group .list-group-item.active {
+  background-color: #e7f1ff;
+  color: #0a58ca;
 }
 
 #home-menu h4 {
