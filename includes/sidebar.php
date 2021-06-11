@@ -114,8 +114,12 @@
         <?php } ?>
 
 
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span style="text-transform: none">by Nguyen Pham</span>
-        </h6>
+        <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+                <a class="nav-link" href="about.php">
+                <i class="bi bi-bootstrap-reboot fa-lg fa-fw me-1"></i> Copyright
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>
