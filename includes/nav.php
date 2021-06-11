@@ -5,7 +5,7 @@
     </button>
     <ul class="navbar-nav px-3 d-none d-md-flex">
         <li class="nav-item text-nowrap">
-            <span id="version"></span>
+            <span id="version">v<?=LIFT_VERSION?></span>
         </li>
     </ul>
 </header>

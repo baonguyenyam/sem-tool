@@ -1,11 +1,9 @@
 "use strict";
 
 var LIFT_APP = {
-  version: 'v3.6.1',
   KW: [],
   code: null,
   init: function init() {
-    $('#version').text(this.version);
     $(function () {
       $('[data-toggle="tooltip"]').tooltip();
     });
