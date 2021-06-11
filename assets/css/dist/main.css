@@ -2,6 +2,52 @@ body {
   font-size: 0.875rem;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dfdfdf;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  height: 100px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007bff;
+}
+
+#sidebarMenu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#sidebarMenu::-webkit-scrollbar {
+  height: 10px;
+  width: 5px;
+}
+
+#sidebarMenu::-webkit-scrollbar-track {
+  background: #dfdfdf;
+}
+
+#sidebarMenu::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  height: 100px;
+  border-radius: 5px;
+}
+
+#sidebarMenu::-webkit-scrollbar-thumb:hover {
+  background: #007bff;
+}
+
 .feather {
   width: 16px;
   height: 16px;
@@ -13,7 +59,8 @@ body {
    */
 .sidebar {
   position: fixed;
-  top: 0;
+  overflow-y: auto;
+  top: 54px;
   /* rtl:raw:
     right: 0;
     */
@@ -22,9 +69,12 @@ body {
   left: 0;
   z-index: 100;
   /* Behind the navbar */
-  padding: 64px 0 0;
+  padding: 0;
   /* Height of navbar */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+.sidebar .position-sticky {
+  padding: 1rem 0;
 }
 
 .sidebar-sticky {
