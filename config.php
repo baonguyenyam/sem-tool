@@ -49,7 +49,7 @@ if (!empty($_POST["change"])) {
                         </div>
                     </div>
                     <div class="row mt-5">
-                        <div class="col-xl-6 offset-xl-3 col-xxl-4 offset-xxl-4">
+                        <div class="col-xl-6 offset-xl-3">
                             <div class="shadow p-5 mb-5 bg-body rounded border">
                                 <?php if (isset($message)) { ?>
                                     <div class="form-group mb-3">

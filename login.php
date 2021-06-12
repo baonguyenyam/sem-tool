@@ -228,8 +228,8 @@ require_once 'functions/class.smtp.php';
                     <div class="text-center mb-4 mt-4">
                         <p><img src="/assets/img/logoc.png" alt="" class="w-100" style="max-width:250px"></p>
                     </div>
-                    <div class="card rounded-3">
-                        <div class="card-body shadow rounded-3 p-4">
+                    <div class="card rounded">
+                        <div class="card-body shadow rounded p-4">
                             <h2 class="h3 mb-3 font-weight-normal">Login</h2>
                             <?php if (isset($message)) { ?>
                                 <div class="alert alert-danger mb-3"><?php echo $message; ?></div>
