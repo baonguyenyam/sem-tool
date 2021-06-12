@@ -85,7 +85,13 @@ if ($isMemberTypye == 1) {
                                     echo 'User';
                                 }
                                 ?></td>
-                                <td><?=$item["member_email"]?></td>
+                                <td>
+                                <div class="text-dark"><?=$item["member_email"]?></div>
+                                <?php if ($_SESSION["member_id"] == 1) {?>
+                                    <div class="small text-muted"><?php echo isset($auth->getLogin($item["member_id"])[0]['login_last_login']) ? time_elapsed_string(date("Y-m-d H:i:s", $auth->getLogin($item["member_id"])[0]['login_last_login'])) : ''; ?></div>
+                                <?php } ?>
+                            
+                            </td>
                                 <td class="small"><a href="changepass?id=<?=$item["member_id"]?>" class="btn btn-sm btn-danger text-nowrap">Change pass</a></td>
                                 </tr>
                                 <?php
