@@ -109,9 +109,12 @@ Route::add('/robots-generator',function(){
 Route::add('/qr-generator',function(){
     include 'views/qr_generator.php';
 });
-Route::add('/qr-generator',function(){
-    include 'views/qr_generator.php';
-},'post');
+Route::add('/image-generator',function(){
+    include 'views/image_generator.php';
+});
+Route::add('/favicon-generator',function(){
+    include 'views/favicon_generator.php';
+});
 
 // // Accept only numbers as parameter. Other characters will result in a 404 error
 // Route::add('/foo/([0-9]*)/bar',function($var1){

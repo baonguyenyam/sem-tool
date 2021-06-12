@@ -33,12 +33,12 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'aaaaaaaaa' ? 'active' : '' ?>" href="aaaaaaaaa">
+                <a class="nav-link <?= $active === 'image' ? 'active' : '' ?>" href="image-generator">
                 <i class="bi bi-camera fa-lg fa-fw me-1"></i> Image generator
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'aaaaaaaaa' ? 'active' : '' ?>" href="aaaaaaaaa">
+                <a class="nav-link <?= $active === 'favicon' ? 'active' : '' ?>" href="favicon-generator">
                 <i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon generator
                 </a>
             </li>

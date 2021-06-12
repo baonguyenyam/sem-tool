@@ -43,6 +43,32 @@ require_once 'includes/header.php';
                     <span>Content SEO Generator</span>
                   </a>
                 </li>
+
+                <li>
+                  <a href="qr-generator">
+                    <i class="bi bi-upc-scan fa-3x fa-fw me-1"></i>
+                    <span>QR Code generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="image-generator">
+                    <i class="bi bi-camera fa-3x fa-fw me-1"></i>
+                    <span>Image generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="favicon-generator">
+                    <i class="bi bi-command fa-3x fa-fw me-1"></i>
+                    <span>Favicon generator</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="robots-generator">
+                    <i class="bi bi-bug fa-3x fa-fw me-1"></i>
+                    <span>robots.txt generator</span>
+                  </a>
+                </li>
+
                 <li>
                   <a href="plugin-generator">
                     <i class="bi bi-cloud-download fa-3x fa-fw me-1"></i>
@@ -68,6 +94,7 @@ require_once 'includes/header.php';
                     <span>HTML Code validator</span>
                   </a>
                 </li>
+                
               
                 <li>
                   <a href="https://docs.myseo.website/" target="_blank">
