@@ -178,7 +178,7 @@ require_once 'includes/header.php';
 						</div>
                         <div class="col-lg">
 							<h5 class="mb-3">Results</h5>
-							<textarea class="form-control form-control-sm mb-3" id="robotsresult" rows="15"></textarea>
+							<textarea class="form-control form-control-sm mb-3" id="robotsresult" rows="24"></textarea>
 							<button class="btn btn-success" data-clipboard-target="#robotsresult">Copy</button>
 						</div>
                     </div>

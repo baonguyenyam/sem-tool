@@ -49,7 +49,7 @@ require_once 'includes/header.php';
                             <h5><span class="badge bg-info">Step 2</span></h5>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row gx-5">
                         <div class="col-lg-9 col-xxl-7 mb-3">
                             <div class="d-flex flex-row justify-content-between align-items-center">
                                 <h5>Source</h5>

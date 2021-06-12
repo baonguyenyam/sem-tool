@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'aaaaaaaaa' ? 'active' : '' ?>" href="aaaaaaaaa">
+                <a class="nav-link <?= $active === 'qr' ? 'active' : '' ?>" href="qr-generator">
                 <i class="bi bi-upc-scan fa-lg fa-fw me-1"></i> QR Code generator
                 </a>
             </li>
@@ -43,7 +43,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'robots' ? 'active' : '' ?>" href="robots">
+                <a class="nav-link <?= $active === 'robots' ? 'active' : '' ?>" href="robots-generator">
                 <i class="bi bi-bug fa-lg fa-fw me-1"></i> robots.txt generator
                 </a>
             </li>

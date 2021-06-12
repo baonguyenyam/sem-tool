@@ -36,7 +36,7 @@ require_once 'includes/header.php';
 
 
                 <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border">
-                    <div class="row">
+                    <div class="row gx-5">
                         <div class="col-lg">
 
                             <h3 class="mb-3"><span class="badge bg-primary">A</span> keywords</h3>

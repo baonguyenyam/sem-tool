@@ -103,9 +103,15 @@ Route::add('/forgot',function(){
 Route::add('/download',function(){
     include 'views/download.php';
 });
-Route::add('/robots',function(){
-    include 'views/robots.php';
+Route::add('/robots-generator',function(){
+    include 'views/robots_generator.php';
 });
+Route::add('/qr-generator',function(){
+    include 'views/qr_generator.php';
+});
+Route::add('/qr-generator',function(){
+    include 'views/qr_generator.php';
+},'post');
 
 // // Accept only numbers as parameter. Other characters will result in a 404 error
 // Route::add('/foo/([0-9]*)/bar',function($var1){

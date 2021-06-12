@@ -333,6 +333,9 @@ body {
   border: 0;
   background-color: #e7f1ff;
 }
+.nav.nav-tabs.nav-sm .nav-item .nav-link {
+  padding: 0.75rem 1.5rem;
+}
 
 .btn.btn-primary {
   border-color: #0957cc;

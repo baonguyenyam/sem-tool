@@ -67,7 +67,7 @@ require_once 'includes/header.php';
                     </div>
 
                     <div class="pt-4 border-top-0">
-                        <div class="row mt-1">
+                        <div class="row mt-1 gx-5">
                             <?php if(isset($_GET['type']) && $_GET['type'] === 'enter') {?>
                             <div class="col-lg">
                                 <h3 class="mb-3">Keywords list</h3>
