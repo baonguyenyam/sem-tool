@@ -188,7 +188,7 @@ $getConfig = $auth->getConfig();
             $mail->AddAddress($email);    //Adds a "To" address
             $mail->WordWrap = 50000000;                            //Sets word wrapping on the body of the message to a given number of characters
             $mail->IsHTML(true);                            //Sets message type to HTML
-            $mail->Subject = 'Your reset pasword URL at ' . $getConfig[0]['config_name']; //Sets the Subject of the message
+            $mail->Subject = 'Your reset password URL at ' . $getConfig[0]['config_name']; //Sets the Subject of the message
             $mail->Body = '<p dir="ltr"><a href="'.$actual_link.'/reset.php?key=' . $random_password_hash . '&email=' . $auth->checkEmail($email)[0]['member_email'] . '&id=' . $auth->checkEmail($email)[0]['member_id'] . '" target="_blank" rel="noopener">'.$actual_link.'/reset.php?key=' . $random_password_hash . '&email=' . $auth->checkEmail($email)[0]['member_email'] . '&id=' . $auth->checkEmail($email)[0]['member_id'] . '</a></p>';
             $mail->AltBody = '';
             $result = $mail->Send();                        //Send an Email. Return true on success or false on error

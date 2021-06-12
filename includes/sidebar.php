@@ -26,6 +26,26 @@
                 <i class="bi bi-bullseye fa-lg fa-fw me-1"></i> Content SEO generator
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $active === 'aaaaaaaaa' ? 'active' : '' ?>" href="aaaaaaaaa.php">
+                <i class="bi bi-upc-scan fa-lg fa-fw me-1"></i> QR Code generator
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $active === 'aaaaaaaaa' ? 'active' : '' ?>" href="aaaaaaaaa.php">
+                <i class="bi bi-camera fa-lg fa-fw me-1"></i> Image generator
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $active === 'aaaaaaaaa' ? 'active' : '' ?>" href="aaaaaaaaa.php">
+                <i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon generator
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $active === 'aaaaaaaaa' ? 'active' : '' ?>" href="aaaaaaaaa.php">
+                <i class="bi bi-bug fa-lg fa-fw me-1"></i> robots.txt generator
+                </a>
+            </li>
             
             <li class="nav-item">
                 <a class="nav-link <?= $active === 'plugingen' ? 'active' : '' ?>" href="plugin_generator.php">

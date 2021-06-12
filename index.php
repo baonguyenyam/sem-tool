@@ -85,11 +85,17 @@ require_once 'includes/header.php';
               <h4>Control Panel</h4>
               <ul>
               <li>
-                    <a href="profile.php">
-                      <i class="bi bi-person fa-3x fa-fw me-1"></i>
-                      <span>Profile</span>
-                    </a>
-                </li>  
+                  <a href="profile.php">
+                    <i class="bi bi-person fa-3x fa-fw me-1"></i>
+                    <span>My Account</span>
+                  </a>
+              </li>  
+              <li>
+                  <a href="changepass.php">
+                    <i class="bi bi-shield-check fa-3x fa-fw me-1"></i>
+                    <span>Change password</span>
+                  </a>
+              </li>  
               <li>
                     <a href="logout.php">
                       <i class="bi bi-box-arrow-right fa-3x fa-fw me-1"></i>

@@ -5,6 +5,7 @@ require_once "db/authCookieSessionValidate.php";
 require_once 'functions/functions.php';
 require_once 'functions/class.phpmailer.php';
 require_once 'functions/class.smtp.php';
+require_once 'functions/class-concat.php';
 define("LIFT_VERSION", "3.0.6");
 ?>
 <!DOCTYPE html>
@@ -15,16 +16,26 @@ define("LIFT_VERSION", "3.0.6");
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Nguyen Pham">
 	<title><?= $title ?> - LIFT Creations ✅</title>
-	<link href="/assets/css/bootstrap/bootstrap-icons.css?v=<?=LIFT_VERSION?>" rel="stylesheet">
-    <link href="/assets/css/vendor/bootstrap.min.css?v=<?=LIFT_VERSION?>" rel="stylesheet">
-    <link href="/assets/css/vendor/all.min.css?v=<?=LIFT_VERSION?>" rel="stylesheet">
-    <link href="/assets/css/vendor/codemirror.min.css?v=<?=LIFT_VERSION?>" rel="stylesheet">
-    <link href="/assets/css/vendor/theme/monokai.css?v=<?=LIFT_VERSION?>" rel="stylesheet">
-    <link href="/assets/css/dist/main.min.css?v=<?=LIFT_VERSION?>" rel="stylesheet">
-    <script src="/assets/js/vendor/jquery.min.js?v=<?=LIFT_VERSION?>"></script>
-    <script src="/assets/js/vendor/clipboard.min.js?v=<?=LIFT_VERSION?>"></script>
-    <script src="/assets/js/vendor/codemirror.min.js?v=<?=LIFT_VERSION?>"></script>
-    <script src="/assets/js/vendor/mode/xml/xml.js?v=<?=LIFT_VERSION?>"></script>
+    <?php
+    echo AssetPacker::css('/assets/css/dist/bundled/lift-bundled-v-'.LIFT_VERSION.'.css',
+    [
+        'assets/css/bootstrap/bootstrap-icons.css',
+        'assets/css/vendor/bootstrap.min.css',
+        'assets/css/vendor/all.min.css',
+        'assets/css/vendor/codemirror.min.css',
+        'assets/css/vendor/theme/monokai.css',
+        'assets/css/dist/main.min.css',
+    ]);
+    ?>
+    <?php
+    echo AssetPacker::js('/assets/js/dist/bundled/lift-bundled-v-'.LIFT_VERSION.'.js',
+    [
+        'assets/js/vendor/jquery.min.js',
+        'assets/js/vendor/clipboard.min.js',
+        'assets/js/vendor/codemirror.min.js',
+        'assets/js/vendor/mode/xml/xml.js',
+    ]);
+    ?>
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">

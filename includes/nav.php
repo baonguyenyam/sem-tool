@@ -15,6 +15,12 @@
                             <i class="bi bi-journal-bookmark fa-lg fa-fw me-1"></i> Guideline
                         </a>
                     </li>
+                    <li>
+                        <a class="dropdown-item" href="https://myseo.website/wp" target="_blank">
+                            <i class="bi bi-braces fa-lg fa-fw me-1"></i>
+                            <span>Testing site</span>
+                        </a>
+                    </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
                         <a class="dropdown-item <?= $active === 'changelog' ? 'active' : '' ?>" href="change_logs.php">
