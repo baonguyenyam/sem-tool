@@ -103,10 +103,16 @@ Route::add('/forgot',function(){
 Route::add('/download',function(){
     include 'views/download.php';
 });
+Route::add('/robots',function(){
+    include 'views/robots.php';
+});
 
 // // Accept only numbers as parameter. Other characters will result in a 404 error
 // Route::add('/foo/([0-9]*)/bar',function($var1){
 //     echo $var1.' is a great number!';
 // });
+Route::add('/boiler',function(){
+    include 'views/@boiler.php';
+});
 
 Route::run('/');

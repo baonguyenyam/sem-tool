@@ -8,5 +8,6 @@ echo AssetPacker::js('/assets/js/dist/bundled/lift-loader-bundled-v-'.LIFT_VERSI
     'assets/js/dist/keywords_generator.prod.js',
     'assets/js/dist/post_generator.prod.js',
     'assets/js/dist/content_generator.prod.js',
+    'assets/js/dist/robots_generator.prod.js',
 ]);
 ?>
