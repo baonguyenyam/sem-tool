@@ -12,17 +12,17 @@
         </h6>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'keyword' ? 'active' : '' ?>" href="keywork_generator.php">
+                <a class="nav-link <?= $active === 'keyword' ? 'active' : '' ?>" href="keywork-generator">
                 <i class="bi bi-type-h1 fa-lg fa-fw me-1"></i> Keywords generator
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'post' ? 'active' : '' ?>" href="post_generator.php">
+                <a class="nav-link <?= $active === 'post' ? 'active' : '' ?>" href="post-generator">
                 <i class="bi bi-stickies fa-lg fa-fw me-1"></i> WordPress posts generator
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'content' ? 'active' : '' ?>" href="content_generator.php">
+                <a class="nav-link <?= $active === 'content' ? 'active' : '' ?>" href="content-generator">
                 <i class="bi bi-bullseye fa-lg fa-fw me-1"></i> Content SEO generator
                 </a>
             </li>
@@ -48,7 +48,7 @@
             </li>
             
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'plugingen' ? 'active' : '' ?>" href="plugin_generator.php">
+                <a class="nav-link <?= $active === 'plugingen' ? 'active' : '' ?>" href="plugin-generator">
                 <i class="bi bi-cloud-download fa-lg fa-fw me-1"></i> Plugin Generator
                 </a>
             </li>
@@ -59,17 +59,17 @@
         </h6>
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'html' ? 'active' : '' ?>" href="html_validator.php">
+                <a class="nav-link <?= $active === 'html' ? 'active' : '' ?>" href="html-validator">
                 <i class="bi bi-check2-all fa-lg fa-fw me-1"></i> HTML Validator
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'chrome' ? 'active' : '' ?>" href="chrome_extensions.php">
+                <a class="nav-link <?= $active === 'chrome' ? 'active' : '' ?>" href="chrome-extensions">
                 <i class="bi bi-box-seam fa-lg fa-fw me-1"></i>  Chrome extensions
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'plugins' ? 'active' : '' ?>" href="wp_plugins.php">
+                <a class="nav-link <?= $active === 'plugins' ? 'active' : '' ?>" href="wp-plugins">
                 <i class="bi bi-archive fa-lg fa-fw me-1"></i> WordPress plugins
                 </a>
             </li>
@@ -77,7 +77,7 @@
         <hr>
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link <?= $active === 'copyright' ? 'active' : '' ?>" href="about.php">
+                <a class="nav-link <?= $active === 'copyright' ? 'active' : '' ?>" href="copyright">
                 <i class="bi bi-bootstrap-reboot fa-lg fa-fw me-1"></i> Copyright
                 </a>
             </li>

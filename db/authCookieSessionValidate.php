@@ -79,5 +79,5 @@ else if (!empty($_COOKIE["member_login"]) && !empty($_COOKIE["random_password"])
 }
 
 if (!$isLoggedIn) {
-	$util->redirect("login.php?location=" . urlencode($_SERVER['REQUEST_URI']));
+	$util->redirect("login?location=" . urlencode($_SERVER['REQUEST_URI']));
 }

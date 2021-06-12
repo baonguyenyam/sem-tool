@@ -23,12 +23,12 @@
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                        <a class="dropdown-item <?= $active === 'changelog' ? 'active' : '' ?>" href="change_logs.php">
+                        <a class="dropdown-item <?= $active === 'changelog' ? 'active' : '' ?>" href="change-logs">
                             <i class="bi bi-calendar4-event fa-lg fa-fw me-1"></i> Changelog
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item <?= $active === 'roadmap' ? 'active' : '' ?>" href="road_map.php">
+                        <a class="dropdown-item <?= $active === 'roadmap' ? 'active' : '' ?>" href="road-map">
                             <i class="bi bi-diagram-3 fa-lg fa-fw me-1"></i> Roadmap
                         </a>
                     </li>
@@ -42,25 +42,25 @@
                     <ul class="dropdown-menu" aria-labelledby="myadmin">
                         <?php if ($_SESSION["member_id"] == 1) {?>
                         <li>
-                            <a href="upload.php" class="dropdown-item <?= $active === 'upload' ? 'active' : '' ?>">
+                            <a href="upload" class="dropdown-item <?= $active === 'upload' ? 'active' : '' ?>">
                                 <i class="bi bi-upload fa-lg fa-fw me-1"></i> Upload
                             </a>
                         </li>
                         <li><hr class="dropdown-divider"></li>
                         <?php } ?>
                         <li>
-                            <a href="users.php" class="dropdown-item <?= $active === 'users' ? 'active' : '' ?>">
+                            <a href="users" class="dropdown-item <?= $active === 'users' ? 'active' : '' ?>">
                                 <i class="bi bi-people fa-lg fa-fw me-1"></i> Users list
                             </a>
                         </li>
                         <li>
-                            <a href="create_user.php" class="dropdown-item <?= $active === 'create' ? 'active' : '' ?>">
+                            <a href="create-user" class="dropdown-item <?= $active === 'create' ? 'active' : '' ?>">
                                 <i class="bi bi-person-plus fa-lg fa-fw me-1"></i> Create user
                             </a>
                         </li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
-                            <a href="config.php" class="dropdown-item <?= $active === 'config' ? 'active' : '' ?>">
+                            <a href="config" class="dropdown-item <?= $active === 'config' ? 'active' : '' ?>">
                                 <i class="bi bi-gear fa-lg fa-fw me-1"></i> Configs
                             </a>
                         </li>
@@ -73,18 +73,18 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="myprofile">
                     <li>
-                        <a href="profile.php" class="dropdown-item <?= $active === 'profile' ? 'active' : '' ?>">
+                        <a href="profile" class="dropdown-item <?= $active === 'profile' ? 'active' : '' ?>">
                             <i class="bi bi-person fa-lg fa-fw me-1"></i> My Account
                         </a>
                     </li>
                     <li>
-                        <a href="changepass.php" class="dropdown-item <?= $active === 'changepass' ? 'active' : '' ?>">
+                        <a href="changepass" class="dropdown-item <?= $active === 'changepass' ? 'active' : '' ?>">
                             <i class="bi bi-shield-check fa-lg fa-fw me-1"></i> Change password
                         </a>
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                        <a href="logout.php" class="dropdown-item">
+                        <a href="logout" class="dropdown-item">
                             <i class="bi bi-box-arrow-right fa-lg fa-fw me-1"></i> Logout
                         </a>
                     </li>

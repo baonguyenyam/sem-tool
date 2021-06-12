@@ -1,118 +1,112 @@
 <?php 
-/*// HEADER */
-$title = "Dashboard";
-$active='home'; 
-/*// LAYOUT */
-require_once 'includes/header.php';
-?>
+include('core/route.php');
 
-<body>
+Route::add('/',function(){
+    include 'views/home.php';
+});
+Route::add('/copyright',function(){
+    include 'views/copyright.php';
+});
+Route::add('/keywork-generator',function(){
+    include 'views/keywork_generator.php';
+});
+Route::add('/post-generator',function(){
+    include 'views/post_generator.php';
+});
+Route::add('/content-generator',function(){
+    include 'views/content_generator.php';
+});
+Route::add('/plugin-generator',function(){
+    include 'views/plugin_generator.php';
+});
+Route::add('/plugin-generator',function(){
+    include 'views/plugin_generator.php';
+},'post');
+Route::add('/html-validator',function(){
+    include 'views/html_validator.php';
+});
+Route::add('/html-validator',function(){
+    include 'views/html_validator.php';
+},'get');
+Route::add('/chrome-extensions',function(){
+    include 'views/chrome_extensions.php';
+});
+Route::add('/wp-plugins',function(){
+    include 'views/wp_plugins.php';
+});
+Route::add('/profile',function(){
+    include 'views/profile.php';
+});
+Route::add('/profile',function(){
+    include 'views/profile.php';
+},'post');
+Route::add('/change-logs',function(){
+    include 'views/change_logs.php';
+});
+Route::add('/road-map',function(){
+    include 'views/road_map.php';
+});
+Route::add('/upload',function(){
+    include 'views/upload.php';
+});
+Route::add('/upload',function(){
+    include 'views/upload.php';
+},'post');
+Route::add('/users',function(){
+    include 'views/users.php';
+});
+Route::add('/users',function(){
+    include 'views/users.php';
+},'post');
+Route::add('/users',function(){
+    include 'views/users.php';
+},'get');
+Route::add('/create-user',function(){
+    include 'views/create_user.php';
+});
+Route::add('/create-user',function(){
+    include 'views/create_user.php';
+},'post');
+Route::add('/config',function(){
+    include 'views/config.php';
+});
+Route::add('/config',function(){
+    include 'views/config.php';
+},'post');
+Route::add('/changepass',function(){
+    include 'views/changepass.php';
+},'post');
+Route::add('/changepass',function(){
+    include 'views/changepass.php';
+});
+Route::add('/logout',function(){
+    include 'views/logout.php';
+});
+Route::add('/login',function(){
+    include 'views/login.php';
+});
+Route::add('/login',function(){
+    include 'views/login.php';
+},'post');
+Route::add('/reset',function(){
+    include 'views/reset.php';
+});
+Route::add('/reset',function(){
+    include 'views/reset.php';
+},'post');
+Route::add('/forgot',function(){
+    include 'views/forgot.php';
+});
+Route::add('/forgot',function(){
+    include 'views/forgot.php';
+},'post');
+Route::add('/download',function(){
+    include 'views/download.php';
+});
 
+// // Accept only numbers as parameter. Other characters will result in a 404 error
+// Route::add('/foo/([0-9]*)/bar',function($var1){
+//     echo $var1.' is a great number!';
+// });
 
-<?php require 'includes/nav.php'; ?>
-
-
-  <div class="container-fluid">
-    <div class="row">
-    <?php require 'includes/sidebar.php'; ?>
-
-      <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
-        <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Dashboard</h1>
-        </div>
-
-        <div class="row" id="home-menu">
-          <div class="col-12 my-3">
-              <ul>
-                <li>
-                  <a href="keywork_generator.php">
-                    <i class="bi bi-type-h1 fa-3x fa-fw me-1"></i>
-                    <span>Keywords generator</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="post_generator.php">
-                    <i class="bi bi-stickies fa-3x fa-fw me-1"></i>
-                    <span>WordPress Post generator</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="content_generator.php">
-                    <i class="bi bi-bullseye fa-3x fa-fw me-1"></i>
-                    <span>Content SEO Generator</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="plugin_generator.php">
-                    <i class="bi bi-cloud-download fa-3x fa-fw me-1"></i>
-                    <span>Plugin Generator</span>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="wp_plugins.php">
-                    <i class="bi bi-archive fa-3x fa-fw me-1"></i>
-                    <span>WordPress plugins</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="chrome_extensions.php">
-                    <i class="bi bi-box-seam fa-3x fa-fw me-1"></i>
-                    <span>Chrome extensions</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="html_validator.php">
-                    <i class="bi bi-check2-all fa-3x fa-fw me-1"></i>
-                    <span>HTML Code validator</span>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://docs.myseo.website/" target="_blank">
-                    <i class="bi bi-journal-bookmark fa-3x fa-fw me-1"></i>
-                    <span>Guideline</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://myseo.website/wp" target="_blank">
-                    <i class="bi bi-braces fa-3x fa-fw me-1"></i>
-                    <span>Testing site</span>
-                  </a>
-                </li>
-              </ul>
-              <h4>Control Panel</h4>
-              <ul>
-              <li>
-                  <a href="profile.php">
-                    <i class="bi bi-person fa-3x fa-fw me-1"></i>
-                    <span>My Account</span>
-                  </a>
-              </li>  
-              <li>
-                  <a href="changepass.php">
-                    <i class="bi bi-shield-check fa-3x fa-fw me-1"></i>
-                    <span>Change password</span>
-                  </a>
-              </li>  
-              <li>
-                    <a href="logout.php">
-                      <i class="bi bi-box-arrow-right fa-3x fa-fw me-1"></i>
-                      <span>Logout</span>
-                    </a>
-                </li>
-              </ul>
-          </div>
-        </div>
-
-      </main>
-    </div>
-  </div>
-
-
-  <?php require 'includes/footer.php';?>
-
-</body>
-
-</html>
+Route::run('/');
