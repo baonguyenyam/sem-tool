@@ -59,7 +59,7 @@ if(isset($_POST['submit'])) {
 
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                     <div>
                         <h1 class="h2">Plugin Generator</h1>
                         <p>Quickly generate unique, unlimited post type with our WordPress Plugin.</p>
@@ -67,7 +67,7 @@ if(isset($_POST['submit'])) {
                 </div>
 
 
-                <div class="row mt-5 mb-3">
+                <div class="row mt-3 mb-3">
                     <div class="col-xl-6 offset-xl-3">
                         <?php if(isset($downloadDone)) {?>
                             <div class="alert alert-success my-3">

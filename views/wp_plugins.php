@@ -17,12 +17,8 @@ require_once 'includes/header.php';
 
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">WordPress plugins</h1>
 
-                </div>
-
-                <div class="px-4 py-5 my-5 text-center">
+                <div class="px-4 my-5 text-center">
                     <img class="d-block mx-auto mb-4" src="/assets/img/icon.png" alt="" width="72" height="72">
                     <h1 class="display-5 fw-bold text-primary">LIFT's WordPress plugins</h1>
                     <div class="col-lg-6 mx-auto">
@@ -30,7 +26,7 @@ require_once 'includes/header.php';
                     </div>
                 </div>
 
-                <div class="alert alert-light">
+                <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border">
                     <h5>Plugins</h5>
 
 

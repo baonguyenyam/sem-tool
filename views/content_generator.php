@@ -19,13 +19,13 @@ require_once 'includes/header.php';
 
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
-                <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <div>
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2">
+                    <div class="pe-md-4">
                         <h1 class="h2">Content SEO generator</h1>
                         <p>Quickly generate content to SEO with keywords and URLs.</p>
                     </div>
-                    <div class="btn-toolbar align-items-center mb-2 mb-md-0">
+                    <div class="btn-toolbar align-items-center text-nowrap mb-2 mb-md-0">
+
                         <div class="form-group form-check me-2 mb-0">
                             <input type="checkbox" class="form-check-input" id="add-title">
                             <label class="form-check-label" for="add-title">Include <code>title</code> tag</label>
@@ -52,108 +52,109 @@ require_once 'includes/header.php';
                 </div>
 
 
-                <div class="row">
-                    <div class="col-12">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <a href="?type=import" class="nav-link<?= (isset($_GET['type']) && $_GET['type'] === 'import' || !isset($_GET['type'])) ? ' active' : '' ?>">Import .CSV file</a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a href="?type=enter" class="nav-link<?= isset($_GET['type']) && $_GET['type'] === 'enter' ? ' active' : '' ?>">Enter list</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="border p-3 border-top-0">
-                    <div class="row mt-1">
-                        <?php if(isset($_GET['type']) && $_GET['type'] === 'enter') {?>
-                        <div class="col-lg">
-                            <h3 class="mb-3">Keywords list</h3>
-                            <div class="mb-4">
-                                <textarea class="form-control" placeholder="enter keywords and enter end of words" id="contentkeyword" rows="20"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg">
-                            <h3 class="mb-3">URLs list</h3>
-                            <div class="mb-4">
-                                <textarea class="form-control" placeholder="enter keywords and enter end of words" id="contenturls" rows="20"></textarea>
-                            </div>
-                        </div>
-                        <?php } else { ?>
-                            <div class="col-lg-6">
-                                <div class="d-flex flex-row justify-content-between align-items-center">
-                                    <h3 class="mb-3">Upload .csv file</h3>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#liftModal" class="howto"><i class="fa fa-question"></i></a>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <input type="file" class="form-control" id="fileCSVToLoad">
-                                    <button class="btn btn-primary" type="button" id="loadcsv" onclick="loadCSVFileAsText()">Submit</button>
-                                </div>
-
-                                <table id="readCSVTable" class="table table-bordered table-striped table-hover d-none">
-                                    <thead class="table-dark">
-                                        <tr>
-                                            <th scope="col">Keyword</th>
-                                            <th scope="col">URL</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <select id="fkw" class="form-select" required>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select id="furl" class="form-select" required>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="d-none">
-                                    <textarea class="form-control" placeholder="Paste export file (.csv) content here. You have to follow the rule: 'TITLE, URL'" id="csvsource" rows="12"></textarea>
-                                </div>
-
-                            </div>
-                        <?php } ?>
-                        <div class="col-lg">
-                            <div id="boxresult">
-                                <h3 class="mb-3">Results</h3>
-                                <div class="rv">
-                                    <div class="alert alert-warning">Nothing to show</div>
-                                </div>
-                                <div class="rs d-none mb-3">
-
-
-                                <nav>
-                                    <div class="nav nav-tabs" id="nav-tab-re" role="tablist">
-                                        <button class="nav-link active" id="tab-total" data-bs-toggle="tab" data-bs-target="#nav-tab-total" type="button" role="tab" aria-controls="nav-tab-total" aria-selected="true">Text</button>
-                                        <button class="nav-link" id="tab-area" data-bs-toggle="tab" data-bs-target="#nav-tab-area" type="button" role="tab" aria-controls="nav-tab-area" aria-selected="false">HTML</button>
-                                    </div>
-                                </nav>
-                                <div class="tab-content border p-3 border-top-0" id="nav-tabContent-re">
-                                    <div class="tab-pane fade show active" id="nav-tab-total" role="tabpanel" aria-labelledby="tab-total"><div id="totalurls"></div>
-                                    <hr>
-                                    <button class="btn btn-success" data-clipboard-target="#totalurls">Copy</button>
-                                    </div>
-                                    <div class="tab-pane fade" id="nav-tab-area" role="tabpanel" aria-labelledby="tab-area">
-                                    <textarea class="form-control form-control-sm mb-2" placeholder="enter keywords and enter end of words" id="contentresult" rows="15"></textarea>
-                                    <button class="btn btn-success" data-clipboard-target="#contentresult">Copy</button>
-                                    </div>
-                                </div>
-
-
-                                    
-                                    
-                                </div>
-                            </div>
+                <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a href="?type=import" class="nav-link<?= (isset($_GET['type']) && $_GET['type'] === 'import' || !isset($_GET['type'])) ? ' active' : '' ?>">Import .CSV file</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="?type=enter" class="nav-link<?= isset($_GET['type']) && $_GET['type'] === 'enter' ? ' active' : '' ?>">Enter list</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
+                    <div class="pt-4 border-top-0">
+                        <div class="row mt-1">
+                            <?php if(isset($_GET['type']) && $_GET['type'] === 'enter') {?>
+                            <div class="col-lg">
+                                <h3 class="mb-3">Keywords list</h3>
+                                <div class="mb-4">
+                                    <textarea class="form-control" placeholder="enter keywords and enter end of words" id="contentkeyword" rows="20"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg">
+                                <h3 class="mb-3">URLs list</h3>
+                                <div class="mb-4">
+                                    <textarea class="form-control" placeholder="enter keywords and enter end of words" id="contenturls" rows="20"></textarea>
+                                </div>
+                            </div>
+                            <?php } else { ?>
+                                <div class="col-lg-6">
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        <h3 class="mb-3">Upload .csv file</h3>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#liftModal" class="howto"><i class="fa fa-question"></i></a>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="fileCSVToLoad">
+                                        <button class="btn btn-primary" type="button" id="loadcsv" onclick="loadCSVFileAsText()">Submit</button>
+                                    </div>
+
+                                    <table id="readCSVTable" class="table table-bordered table-striped table-hover d-none">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th scope="col">Keyword</th>
+                                                <th scope="col">URL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select id="fkw" class="form-select" required>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select id="furl" class="form-select" required>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="d-none">
+                                        <textarea class="form-control" placeholder="Paste export file (.csv) content here. You have to follow the rule: 'TITLE, URL'" id="csvsource" rows="12"></textarea>
+                                    </div>
+
+                                </div>
+                            <?php } ?>
+                            <div class="col-lg">
+                                <div id="boxresult">
+                                    <h3 class="mb-3">Results</h3>
+                                    <div class="rv">
+                                        <div class="alert alert-warning">Nothing to show</div>
+                                    </div>
+                                    <div class="rs d-none mb-3">
+
+
+                                    <nav>
+                                        <div class="nav nav-tabs" id="nav-tab-re" role="tablist">
+                                            <button class="nav-link active" id="tab-total" data-bs-toggle="tab" data-bs-target="#nav-tab-total" type="button" role="tab" aria-controls="nav-tab-total" aria-selected="true">Text</button>
+                                            <button class="nav-link" id="tab-area" data-bs-toggle="tab" data-bs-target="#nav-tab-area" type="button" role="tab" aria-controls="nav-tab-area" aria-selected="false">HTML</button>
+                                        </div>
+                                    </nav>
+                                    <div class="tab-content border p-3 border-top-0" id="nav-tabContent-re">
+                                        <div class="tab-pane fade show active" id="nav-tab-total" role="tabpanel" aria-labelledby="tab-total"><div id="totalurls"></div>
+                                        <hr>
+                                        <button class="btn btn-success" data-clipboard-target="#totalurls">Copy</button>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-tab-area" role="tabpanel" aria-labelledby="tab-area">
+                                        <textarea class="form-control form-control-sm mb-2" placeholder="enter keywords and enter end of words" id="contentresult" rows="15"></textarea>
+                                        <button class="btn btn-success" data-clipboard-target="#contentresult">Copy</button>
+                                        </div>
+                                    </div>
+
+
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-
 
 
 
