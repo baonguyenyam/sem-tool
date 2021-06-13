@@ -59,3 +59,11 @@ $('#qrgenbtn').on('click', function () {
     console.log(vCard);
   }
 });
+$('.clicktosave').on('click', function () {
+  var link = document.createElement('a');
+  link.href = $(this).attr('src'); // use realtive url 
+
+  link.download = 'QR-CODE-' + makeid(5) + '.jpg';
+  document.body.appendChild(link);
+  link.click();
+});

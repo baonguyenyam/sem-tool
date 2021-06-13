@@ -18,10 +18,10 @@ if(isset($_POST['submit'])) {
          'slug' => $_POST['slug'],
      );
        
-     $src = dirname( __FILE__ )."/@dev/plugins/@wp-lift-custompost-src-to-generator";
-     $dist = dirname( __FILE__ )."/tmp/wp-lift-custompost".$num;
+     $src = getcwd()."/@dev/plugins/@wp-lift-custompost-src-to-generator";
+     $dist = getcwd()."/tmp/wp-lift-custompost".$num;
      if(!is_dir($dist)){
-         mkdir("tmp/wp-lift-custompost".$num);
+         mkdir($dist);
      }
 
     try {

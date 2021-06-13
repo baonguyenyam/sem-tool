@@ -86,6 +86,10 @@ die('Error - cannot open file.');
 die();
 }
 set_time_limit(0);
-$file_path='uploads/'.$_REQUEST['f'];
+if(isset($_REQUEST['dir'])) {
+    $file_path= $_REQUEST['dir'].'/'.$_REQUEST['f'];
+} else {
+    $file_path='uploads/'.$_REQUEST['f'];
+}
 output_file($file_path, ''.$_REQUEST['f'].'', 'text/plain');
 ?>

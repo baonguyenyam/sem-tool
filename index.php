@@ -115,6 +115,9 @@ Route::add('/image-generator',function(){
 Route::add('/favicon-generator',function(){
     include 'views/favicon_generator.php';
 });
+Route::add('/favicon-generator',function(){
+    include 'views/favicon_generator.php';
+},'post');
 
 // // Accept only numbers as parameter. Other characters will result in a 404 error
 // Route::add('/foo/([0-9]*)/bar',function($var1){

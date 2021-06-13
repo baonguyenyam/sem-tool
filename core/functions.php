@@ -190,6 +190,12 @@ function replaceGeneratorPlugins($str,$key,$attrs)
     $str = str_replace("___replace___",$attrs['name'], $str);
     return $str;
 }
+function replaceFavicon($str,$key,$attrs)
+{
+    $str = str_replace("___SITECOLOR___",$attrs['sitecolor'], $str);
+    $str = str_replace("___SITENAME___",$attrs['sitename'], $str);
+    return $str;
+}
 function stripVN($str)
 {
     $str = preg_replace("/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/", "a", $str);
@@ -530,6 +536,73 @@ function zipData($source, $destination, $num)
     }
     return false;
 }
+function create_square_thumbnail($image_path, $thumb_width, $thumb_height, $prefix, $fixname = false, $holdname = false) {
+
+    if ($thumb_width === "*" && $thumb_height === "*") {
+        echo "Both values must not be a wildcard";
+        exit(1);
+    }
+
+    if (!(is_integer($thumb_width) && $thumb_width > 0) && !($thumb_width === "*")) {
+        echo "The width is invalid";
+        exit(1);
+    }
+
+    if (!(is_integer($thumb_height) && $thumb_height > 0) && !($thumb_height === "*")) {
+        echo "The height is invalid";
+        exit(1);
+    }
+
+    $extension = pathinfo($image_path, PATHINFO_EXTENSION);
+    switch ($extension) {
+        case "jpg":
+        case "jpeg":
+            $source_image = imagecreatefromjpeg($image_path);
+            break;
+        case "gif":
+            $source_image = imagecreatefromgif($image_path);
+            break;
+        case "png":
+            $source_image = imagecreatefrompng($image_path);
+            break;
+        default:
+            exit(1);
+            break;
+    }
+
+    $source_width = imageSX($source_image);
+    $source_height = imageSY($source_image);
+
+    $target_image = ImageCreateTrueColor($thumb_width, $thumb_height);
+
+    imagecopyresampled($target_image, $source_image, 0, 0, 0, 0, $thumb_width, $thumb_height, $source_width, $source_height);
+
+    $img_dir = pathinfo($image_path)['dirname'];
+    $img_name = $fixname ? '' : pathinfo($image_path)['filename'].'-';
+    $hold_name = $holdname ? '' : $thumb_width.'x'.$thumb_height;
+    $img_ext = pathinfo($image_path)['extension'];
+
+    switch ($extension) {
+        case "jpg":
+        case "jpeg":
+            imagejpeg($target_image, $img_dir.'/'.$prefix.$img_name.$hold_name.'.'.$img_ext);
+            break;
+        case "gif":
+            imagegif($target_image, $img_dir.'/'.$prefix.$img_name.$hold_name.'.'.$img_ext);
+            break;
+        case "png":
+            imagepng($target_image, $img_dir.'/'.$prefix.$img_name.$hold_name.'.'.$img_ext);
+            break;
+        default:
+            exit(1);
+            break;
+    }
+
+    imagedestroy($target_image);
+    imagedestroy($source_image);
+}
+
+
 function create_scaled_thumbnail($image_path, $thumb_width, $thumb_height, $prefix) {
 
     if ($thumb_width === "*" && $thumb_height === "*") {
