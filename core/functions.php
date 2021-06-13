@@ -407,6 +407,35 @@ function remove_html_tags($html_string, $html_tags)
     $result = preg_replace($pat_str, "", $html_string);
     return $result;
 }
+
+function pingURL($url=NULL)  
+{  
+    if($url == NULL) return false;  
+    $ch = curl_init($url);  
+    $agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.141 Safari/537.36';
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);  
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);  
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+    // ADD 
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_HEADER, true);
+    curl_setopt($ch, CURLOPT_VERBOSE, true);
+    curl_setopt($ch, CURLOPT_USERAGENT, $agent);
+    // ADD 
+    $data = curl_exec($ch);  
+    $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);  
+    // file_get_contents("http://www.google.com/ping?sitemap=http://www.domain.com/sitemap.php");
+    curl_close($ch);  
+    if($httpcode>=200 && $httpcode<300){  
+        return true;  
+    } else {  
+        return false;  
+    }  
+}  
+
 function getHtml($url, $post = null)
 {
     $ch = curl_init();

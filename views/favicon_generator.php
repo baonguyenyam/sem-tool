@@ -40,7 +40,7 @@ require_once 'core/class-php-ico.php';
                 if (in_array(strtolower($ext), $allowed_types)) {
                     $filenamewithoutextension = pathinfo($file_name, PATHINFO_FILENAME);
                     $createfolder = "favicon_".$num;
-                    $filename_to_store = 'favicon.' . $ext;
+                    $filename_to_store = 'favicon.png';
                     try {
                         move_uploaded_file($_FILES['file']['tmp_name'][$key], getcwd() . '/tmp/' . $createfolder . '/' . $filename_to_store);
                         $getpath = getcwd() . '/tmp/' . $createfolder . '/' . $filename_to_store;
@@ -126,7 +126,7 @@ require_once 'core/class-php-ico.php';
                                         </div>
                                         <div class="col-md-12">
                                             <h6>Color theme</h6>
-                                            <input type="color" name="sitecolor" class="form-control form-control-color" id="sitecolor"  value="#ffffff" title="Choose your color" required>
+                                            <input type="color" name="sitecolor" class="form-control form-control-color" id="sitecolor" value="#ffffff" title="Choose your color" required>
                                         </div>
                                     </div>
                                 </div>

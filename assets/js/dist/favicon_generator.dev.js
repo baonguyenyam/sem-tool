@@ -1,5 +1,8 @@
 "use strict";
 
+$('#sitecolor').on('change', function () {
+  loadfilePreview();
+});
 $('#getfrmSubmit').on('submit', function () {
   var name = $('#filePreview').get(0).files[0];
 

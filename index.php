@@ -115,6 +115,12 @@ Route::add('/qr-generator',function(){
 Route::add('/crawler',function(){
     include 'views/crawler.php';
 });
+Route::add('/ping',function(){
+    include 'views/ping.php';
+});
+Route::add('/ping',function(){
+    include 'views/ping.php';
+},'get');
 Route::add('/favicon-generator',function(){
     include 'views/favicon_generator.php';
 });

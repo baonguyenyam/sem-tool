@@ -75,6 +75,12 @@
 		</a>
 	</li>
 	<li>
+		<a href="ping">
+		<i class="bi bi-arrow-left-right fa-3x fa-fw me-1"></i>
+		<span>Ping to search engines</span>
+		</a>
+	</li>
+	<li>
 		<a href="crawler">
 		<i class="bi bi-lightning fa-3x fa-fw me-1"></i>
 		<span>Crawler list</span>
