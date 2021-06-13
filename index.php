@@ -31,6 +31,9 @@ Route::add('/html-validator',function(){
 Route::add('/chrome-extensions',function(){
     include 'views/chrome_extensions.php';
 });
+Route::add('/app',function(){
+    include 'views/app.php';
+});
 Route::add('/wp-plugins',function(){
     include 'views/wp_plugins.php';
 });
