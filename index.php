@@ -120,6 +120,9 @@ Route::add('/ping',function(){
 });
 Route::add('/ping',function(){
     include 'views/ping.php';
+},'post');
+Route::add('/doping',function(){
+    include 'views/doping.php';
 },'get');
 Route::add('/favicon-generator',function(){
     include 'views/favicon_generator.php';
