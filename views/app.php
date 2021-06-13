@@ -30,14 +30,46 @@ require_once 'includes/header.php';
                 <div class="row">
                     <div class="col-xl-8 offset-xl-2">
                         <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border">
+                            <h5>Mac OS</h5>
+        
+                            <div class="d-flex text-muted pt-3">
+                                <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+                                    <i class="fas fa-archive fa-2x"></i>
+                                </div>
+        
+                                <div class="flex-fill pb-1 mb-0 small lh-sm border-bottom">
+                                    <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                        <div class="mb-2">
+                                            <strong class="d-block text-gray-dark">LIFT Creations</strong>
+                                            <p class="mb-0">darwin-arm64</p>
+                                        </div>
+                                        <a href="download?filename=<?=md5('darwin-arm64')?>&f=LIFT_Creations-darwin-arm64.zip&dir=desktop" class="btn btn-sm btn-success">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex text-muted pt-3 mb-5">
+                                <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+                                    <i class="fas fa-archive fa-2x"></i>
+                                </div>
+        
+                                <div class="flex-fill pb-1 mb-0 small lh-sm border-bottom">
+                                    <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                        <div class="mb-2">
+                                            <strong class="d-block text-gray-dark">LIFT Creations</strong>
+                                            <p class="mb-0">darwin-x64</p>
+                                        </div>
+                                        <a href="download?filename=<?=md5('darwin-x64')?>&f=LIFT_Creations-darwin-x64.zip&dir=desktop" class="btn btn-sm btn-success">Download</a>
+                                    </div>
+                                </div>
+                            </div>
                             <h5>Window</h5>
         
                             <div class="d-flex text-muted pt-3">
                                 <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
-                                    <i class="fas fa-archive fa-3x"></i>
+                                    <i class="fas fa-archive fa-2x"></i>
                                 </div>
         
-                                <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                                <div class="flex-fill pb-1 mb-0 small lh-sm border-bottom">
                                     <div class="d-lg-flex w-100 justify-content-between align-items-start">
                                         <div class="mb-2">
                                             <strong class="d-block text-gray-dark">LIFT Creations</strong>
@@ -49,10 +81,10 @@ require_once 'includes/header.php';
                             </div>
                             <div class="d-flex text-muted pt-3">
                                 <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
-                                    <i class="fas fa-archive fa-3x"></i>
+                                    <i class="fas fa-archive fa-2x"></i>
                                 </div>
         
-                                <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                                <div class="flex-fill pb-1 mb-0 small lh-sm border-bottom">
                                     <div class="d-lg-flex w-100 justify-content-between align-items-start">
                                         <div class="mb-2">
                                             <strong class="d-block text-gray-dark">LIFT Creations</strong>
@@ -64,10 +96,10 @@ require_once 'includes/header.php';
                             </div>
                             <div class="d-flex text-muted pt-3 mb-5">
                                 <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
-                                    <i class="fas fa-archive fa-3x"></i>
+                                    <i class="fas fa-archive fa-2x"></i>
                                 </div>
         
-                                <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                                <div class="flex-fill pb-1 mb-0 small lh-sm border-bottom">
                                     <div class="d-lg-flex w-100 justify-content-between align-items-start">
                                         <div class="mb-2">
                                             <strong class="d-block text-gray-dark">LIFT Creations</strong>
@@ -82,10 +114,10 @@ require_once 'includes/header.php';
         
                             <div class="d-flex text-muted pt-3">
                                 <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
-                                    <i class="fas fa-archive fa-3x"></i>
+                                    <i class="fas fa-archive fa-2x"></i>
                                 </div>
         
-                                <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                                <div class="flex-fill pb-1 mb-0 small lh-sm border-bottom">
                                     <div class="d-lg-flex w-100 justify-content-between align-items-start">
                                         <div class="mb-2">
                                             <strong class="d-block text-gray-dark">LIFT Creations</strong>
@@ -97,10 +129,10 @@ require_once 'includes/header.php';
                             </div>
                             <div class="d-flex text-muted pt-3">
                                 <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
-                                    <i class="fas fa-archive fa-3x"></i>
+                                    <i class="fas fa-archive fa-2x"></i>
                                 </div>
         
-                                <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                                <div class="flex-fill pb-1 mb-0 small lh-sm border-bottom">
                                     <div class="d-lg-flex w-100 justify-content-between align-items-start">
                                         <div class="mb-2">
                                             <strong class="d-block text-gray-dark">LIFT Creations</strong>
