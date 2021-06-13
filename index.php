@@ -115,6 +115,12 @@ Route::add('/qr-generator',function(){
 Route::add('/crawler',function(){
     include 'views/crawler.php';
 });
+Route::add('/pagespeed',function(){
+    include 'views/pagespeed.php';
+});
+Route::add('/pagespeed',function(){
+    include 'views/pagespeed.php';
+},'post');
 Route::add('/ping',function(){
     include 'views/ping.php';
 });

@@ -23,7 +23,7 @@ require_once 'includes/header.php';
                             <p>Pinging is an act to inform search engines and directories that your website has new content. The process is simple; just enter a URL of your site in ping website tool free, press “Ping Now” button and the site will be pinged on the net. Once you ping your website, search engines are ready to do several things.</p>
                         </div>
                         <div class="btn-toolbar align-items-center flex-nowrap text-nowrap mb-2 mb-md-0">
-                            <div class="btn-group ms-2">
+                            <div class="btn-group">
                                 <input type="submit" class="btn btn-sm btn-primary" name="pinglistaddress" value="Ping Now">
                             </div>
                         </div>

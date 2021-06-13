@@ -24,7 +24,7 @@ require_once 'includes/header.php';
                         <p>Search Engines are using robots (or so called User-Agents) to crawl your pages. The robots.txt file is a text file that defines which parts of a domain can be crawled by a robot. In addition, the robots.txt file can include a link to the XML-sitemap.</p>
                     </div>
                     <div class="btn-toolbar align-items-center flex-nowrap text-nowrap mb-2 mb-md-0">
-                        <div class="btn-group ms-2">
+                        <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-primary" id="robotCraw">Generator</button>
                         </div>
                     </div>

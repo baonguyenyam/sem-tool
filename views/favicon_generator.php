@@ -103,7 +103,7 @@ require_once 'core/class-php-ico.php';
                             <p>With so many platforms and icons, it's hard to know exactly what you should do. What are the dimensions of favicon.ico? How many Touch icons do I need? LIFT did the reseach and testing for you.</p>
                         </div>
                         <div class="btn-toolbar align-items-center flex-nowrap text-nowrap mb-2 mb-md-0">
-                            <div class="btn-group ms-2">
+                            <div class="btn-group">
                                 <input type="submit" class="btn btn-sm btn-primary" name="uploadfrm" value="Generator">
                             </div>
                         </div>

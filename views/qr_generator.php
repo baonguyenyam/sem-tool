@@ -23,7 +23,7 @@ require_once 'includes/header.php';
                             <p>You may choose from URL, vCard, Plain Text, Email, Tel, WiFi, and Bitcoin.</p>
                         </div>
                         <div class="btn-toolbar align-items-center flex-nowrap text-nowrap mb-2 mb-md-0">
-                            <div class="btn-group ms-2">
+                            <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-primary" id="qrgenbtn">Generator</button>
                             </div>
                         </div>

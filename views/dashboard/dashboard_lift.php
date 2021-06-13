@@ -75,6 +75,12 @@
 		</a>
 	</li>
 	<li>
+		<a href="pagespeed">
+		<i class="bi bi-graph-up fa-3x fa-fw me-1"></i>
+		<span>PageSpeed Insights</span>
+		</a>
+	</li>
+	<li>
 		<a href="ping">
 		<i class="bi bi-arrow-left-right fa-3x fa-fw me-1"></i>
 		<span>Ping your website</span>
