@@ -44,7 +44,7 @@
 		</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" href="banner-creator" target="_blank">
+		<a class="nav-link" href="banner-creator/index.html" target="_blank">
 		<i class="bi bi-camera fa-lg fa-fw me-1"></i> Banner Creator
 		</a>
 	</li>

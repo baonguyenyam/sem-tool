@@ -57,7 +57,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="banner-creator" target="_blank">
+		<a href="banner-creator/index.html" target="_blank">
 		<i class="bi bi-camera fa-3x fa-fw me-1"></i>
 		<span>Banner Creator</span>
 		</a>
