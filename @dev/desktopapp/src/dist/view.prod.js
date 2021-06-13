@@ -1,0 +1,1 @@
+"use strict";var electron=require("electron"),webContents=electron.webContents,BrowserView=electron.BrowserView;exports.createBrowserView=function(e){var t=new BrowserView;e.setBrowserView(t),t.setBounds({x:0,y:0,width:1450,height:950}),t.webContents.loadURL("https://myseo.website")};

@@ -5,7 +5,7 @@
 <ul class="nav flex-column">
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'favicon' ? 'active' : '' ?>" href="favicon-generator">
-		<i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon generator
+		<i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon Generator
 		</a>
 	</li>
 	<li class="nav-item">
@@ -15,7 +15,7 @@
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'ping' ? 'active' : '' ?>" href="ping">
-		<i class="bi bi-arrow-left-right fa-lg fa-fw me-1"></i> Ping your website
+		<i class="bi bi-arrow-left-right fa-lg fa-fw me-1"></i> Ping Your Website
 		</a>
 	</li>
 </ul>
@@ -30,7 +30,7 @@
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'crawler' ? 'active' : '' ?>" href="crawler">
-		<i class="bi bi-lightning fa-lg fa-fw me-1"></i> Crawler list
+		<i class="bi bi-lightning fa-lg fa-fw me-1"></i> Crawler List
 		</a>
 	</li>
 	

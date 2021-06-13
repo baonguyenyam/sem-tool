@@ -2,13 +2,13 @@
 	<li>
 		<a href="favicon-generator">
 		<i class="bi bi-command fa-3x fa-fw me-1"></i>
-		<span>Favicon generator</span>
+		<span>Favicon Generator</span>
 		</a>
 	</li>
 	<li>
 		<a href="html-validator">
 		<i class="bi bi-check2-all fa-3x fa-fw me-1"></i>
-		<span>HTML Code validator</span>
+		<span>HTML Code Validator</span>
 		</a>
 	</li>
 	<li>
@@ -20,13 +20,13 @@
 	<li>
 		<a href="ping">
 		<i class="bi bi-arrow-left-right fa-3x fa-fw me-1"></i>
-		<span>Ping your website</span>
+		<span>Ping Your Website</span>
 		</a>
 	</li>
 	<li>
 		<a href="crawler">
 		<i class="bi bi-lightning fa-3x fa-fw me-1"></i>
-		<span>Crawler list</span>
+		<span>Crawler List</span>
 		</a>
 	</li>
 </ul>

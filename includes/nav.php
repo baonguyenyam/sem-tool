@@ -19,7 +19,7 @@
                     <li>
                         <a class="dropdown-item" href="https://myseo.website/wp" target="_blank">
                             <i class="bi bi-braces fa-lg fa-fw me-1"></i>
-                            <span>Testing site</span>
+                            <span>Testing Site</span>
                         </a>
                     </li>
                     <li><hr class="dropdown-divider"></li>
@@ -52,12 +52,12 @@
                         <?php } ?>
                         <li>
                             <a href="users" class="dropdown-item <?= $active === 'users' ? 'active' : '' ?>">
-                                <i class="bi bi-people fa-lg fa-fw me-1"></i> Users list
+                                <i class="bi bi-people fa-lg fa-fw me-1"></i> Users List
                             </a>
                         </li>
                         <li>
                             <a href="create-user" class="dropdown-item <?= $active === 'create' ? 'active' : '' ?>">
-                                <i class="bi bi-person-plus fa-lg fa-fw me-1"></i> Create user
+                                <i class="bi bi-person-plus fa-lg fa-fw me-1"></i> Create User
                             </a>
                         </li>
                         <li><hr class="dropdown-divider"></li>
@@ -81,7 +81,7 @@
                     </li>
                     <li>
                         <a href="changepass" class="dropdown-item <?= $active === 'changepass' ? 'active' : '' ?>">
-                            <i class="bi bi-shield-check fa-lg fa-fw me-1"></i> Change password
+                            <i class="bi bi-shield-check fa-lg fa-fw me-1"></i> Change Password
                         </a>
                     </li>
                     <li><hr class="dropdown-divider"></li>

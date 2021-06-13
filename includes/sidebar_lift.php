@@ -5,37 +5,37 @@
 <ul class="nav flex-column">
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'keyword' ? 'active' : '' ?>" href="keywork-generator">
-		<i class="bi bi-type-h1 fa-lg fa-fw me-1"></i> Keywords generator
+		<i class="bi bi-type-h1 fa-lg fa-fw me-1"></i> Keywords Generator
 		</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'post' ? 'active' : '' ?>" href="post-generator">
-		<i class="bi bi-stickies fa-lg fa-fw me-1"></i> WordPress posts generator
+		<i class="bi bi-stickies fa-lg fa-fw me-1"></i> WordPress Posts Generator
 		</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'content' ? 'active' : '' ?>" href="content-generator">
-		<i class="bi bi-bullseye fa-lg fa-fw me-1"></i> Content SEO generator
+		<i class="bi bi-bullseye fa-lg fa-fw me-1"></i> Content SEO Generator
 		</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'qr' ? 'active' : '' ?>" href="qr-generator">
-		<i class="bi bi-upc-scan fa-lg fa-fw me-1"></i> QR Code generator
+		<i class="bi bi-upc-scan fa-lg fa-fw me-1"></i> QR Code Generator
 		</a>
 	</li>
 	<!-- <li class="nav-item">
 		<a class="nav-link <?= $active === 'image' ? 'active' : '' ?>" href="image-generator">
-		<i class="bi bi-camera fa-lg fa-fw me-1"></i> Image generator
+		<i class="bi bi-camera fa-lg fa-fw me-1"></i> Image Generator
 		</a>
 	</li> -->
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'favicon' ? 'active' : '' ?>" href="favicon-generator">
-		<i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon generator
+		<i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon Generator
 		</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'robots' ? 'active' : '' ?>" href="robots-generator">
-		<i class="bi bi-bug fa-lg fa-fw me-1"></i> robots.txt generator
+		<i class="bi bi-bug fa-lg fa-fw me-1"></i> Robots.txt Generator
 		</a>
 	</li>
 	<li class="nav-item">
@@ -55,7 +55,7 @@
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'ping' ? 'active' : '' ?>" href="ping">
-		<i class="bi bi-arrow-left-right fa-lg fa-fw me-1"></i> Ping your website
+		<i class="bi bi-arrow-left-right fa-lg fa-fw me-1"></i> Ping Your Website
 		</a>
 	</li>
 </ul>
@@ -70,17 +70,17 @@
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'chrome' ? 'active' : '' ?>" href="chrome-extensions">
-		<i class="bi bi-box-seam fa-lg fa-fw me-1"></i>  Chrome extensions
+		<i class="bi bi-box-seam fa-lg fa-fw me-1"></i>  Chrome Extensions
 		</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'plugins' ? 'active' : '' ?>" href="wp-plugins">
-		<i class="bi bi-archive fa-lg fa-fw me-1"></i> WordPress plugins
+		<i class="bi bi-archive fa-lg fa-fw me-1"></i> WordPress Plugins
 		</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'crawler' ? 'active' : '' ?>" href="crawler">
-		<i class="bi bi-lightning fa-lg fa-fw me-1"></i> Crawler list
+		<i class="bi bi-lightning fa-lg fa-fw me-1"></i> Crawler List
 		</a>
 	</li>
 </ul>

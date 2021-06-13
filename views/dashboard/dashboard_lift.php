@@ -2,13 +2,13 @@
 	<li>
 		<a href="keywork-generator">
 		<i class="bi bi-type-h1 fa-3x fa-fw me-1"></i>
-		<span>Keywords generator</span>
+		<span>Keywords Generator</span>
 		</a>
 	</li>
 	<li>
 		<a href="post-generator">
 		<i class="bi bi-stickies fa-3x fa-fw me-1"></i>
-		<span>WordPress Post generator</span>
+		<span>WordPress Post Generator</span>
 		</a>
 	</li>
 	<li>
@@ -21,25 +21,25 @@
 	<li>
 		<a href="qr-generator">
 		<i class="bi bi-upc-scan fa-3x fa-fw me-1"></i>
-		<span>QR Code generator</span>
+		<span>QR Code Generator</span>
 		</a>
 	</li>
 	<!-- <li>
 		<a href="image-generator">
 		<i class="bi bi-camera fa-3x fa-fw me-1"></i>
-		<span>Image generator</span>
+		<span>Image Generator</span>
 		</a>
 	</li> -->
 	<li>
 		<a href="favicon-generator">
 		<i class="bi bi-command fa-3x fa-fw me-1"></i>
-		<span>Favicon generator</span>
+		<span>Favicon Generator</span>
 		</a>
 	</li>
 	<li>
 		<a href="robots-generator">
 		<i class="bi bi-bug fa-3x fa-fw me-1"></i>
-		<span>robots.txt generator</span>
+		<span>Robots.txt Generator</span>
 		</a>
 	</li>
 
@@ -53,7 +53,7 @@
 	<li>
 		<a href="wp-plugins">
 		<i class="bi bi-archive fa-3x fa-fw me-1"></i>
-		<span>WordPress plugins</span>
+		<span>WordPress Plugins</span>
 		</a>
 	</li>
 	<li>
@@ -65,13 +65,13 @@
 	<li>
 		<a href="chrome-extensions">
 		<i class="bi bi-box-seam fa-3x fa-fw me-1"></i>
-		<span>Chrome extensions</span>
+		<span>Chrome Extensions</span>
 		</a>
 	</li>
 	<li>
 		<a href="html-validator">
 		<i class="bi bi-check2-all fa-3x fa-fw me-1"></i>
-		<span>HTML Code validator</span>
+		<span>HTML Code Validator</span>
 		</a>
 	</li>
 	<li>
@@ -83,13 +83,13 @@
 	<li>
 		<a href="ping">
 		<i class="bi bi-arrow-left-right fa-3x fa-fw me-1"></i>
-		<span>Ping your website</span>
+		<span>Ping Your Website</span>
 		</a>
 	</li>
 	<li>
 		<a href="crawler">
 		<i class="bi bi-lightning fa-3x fa-fw me-1"></i>
-		<span>Crawler list</span>
+		<span>Crawler List</span>
 		</a>
 	</li>
 	<li>
@@ -101,7 +101,7 @@
 	<li>
 		<a href="https://myseo.website/wp" target="_blank">
 		<i class="bi bi-braces fa-3x fa-fw me-1"></i>
-		<span>Testing site</span>
+		<span>Testing Site</span>
 		</a>
 	</li>
 </ul>
