@@ -93,6 +93,12 @@
 		</a>
 	</li>
 	<li>
+		<a href="app">
+		<i class="bi bi-laptop fa-3x fa-fw me-1"></i>
+		<span>Desktop App</span>
+		</a>
+	</li>
+	<li>
 		<a href="https://docs.myseo.website/" target="_blank">
 		<i class="bi bi-journal-bookmark fa-3x fa-fw me-1"></i>
 		<span>Guideline</span>

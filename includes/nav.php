@@ -12,6 +12,12 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="myhelp">
                     <li>
+                        <a class="dropdown-item" href="app">
+                            <i class="bi bi-laptop fa-lg fa-fw me-1"></i> Desktop Apps
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
                         <a class="dropdown-item" href="https://docs.myseo.website/" target="_blank">
                             <i class="bi bi-journal-bookmark fa-lg fa-fw me-1"></i> Guideline
                         </a>
