@@ -75,6 +75,7 @@
                     </ul>
                 </li>
             <?php } ?>
+            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="myprofile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-person fa-lg fa-fw me-1"></i> Profile

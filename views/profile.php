@@ -33,6 +33,12 @@ if (!empty($_POST["change"])) {
     $getPass = $random_password_hash;
     $getnow = date("Y-m-d H:i:s");
     
+    if (isset($_POST["darkmode"])) {
+        setcookie("active_theme", true, $cookie_expiration_time);
+    } else {
+        setcookie("active_theme", '');
+    }
+
     if ($email !== $getMemberByID[0]['member_email']) {
         if ($auth->checkEmail($email)) {
             $message = 'This email already exits';
@@ -124,10 +130,20 @@ if (!empty($_POST["change"])) {
                                 <?php
                                 }
                                 ?>
-                                <div class="form-floating">
+                                <div class="form-floating mb-3">
                                     <textarea name="content" id="content" class="form-control" rows="5" style="min-height: 100px"><?php echo $getMemberByID[0]["member_info"]; ?></textarea>
                                     <label for="content">Information</label>
                                 </div>
+
+                                <?php
+                                if($getMemberByID[0]["member_id"] == $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"]) {
+                                ?>
+                                <div class="form-check form-switch mb-0">
+                                    <input class="form-check-input" type="checkbox" id="darkmode" name="darkmode"<?= (!empty($_COOKIE["active_theme"]) && $_COOKIE["active_theme"] === '1') ? ' checked': '' ;?> />
+                                    <label class="form-check-label" for="darkmode">Dark Mode</label>
+                                </div>
+                                <?php } ?>
+
                             </div>
                         </div>
                     </div>

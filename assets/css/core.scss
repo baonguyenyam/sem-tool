@@ -1,0 +1,72 @@
+body {
+	font-size: 0.875rem;
+}
+.feather {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-bottom;
+}
+.shadow-sm {
+	box-shadow: 0 0.25rem 0.55rem rgba(0, 0, 0, 0.095) !important;
+}
+.form-control-dark {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.1);
+
+	&:focus {
+		border-color: transparent;
+		box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+	}
+}
+.btn-xs {
+	padding: 0.075rem 0.5rem;
+	font-size: 0.8rem;
+}
+
+#version {
+	color: #fff;
+}
+
+#totalurls {
+	max-height: 400px;
+	overflow-y: auto;
+}
+.btn {
+	&.btn-primary {
+		border-color: #0957cc;
+	}
+	&.btn-secondary {
+		border-color: #50575d;
+	}
+}
+
+h1 {
+	color: #0c6efd;
+}
+.rounded {
+	border-radius: 10px !important;
+}
+
+@media (min-width: 768px) {
+	main {
+		margin-left: 25%;
+	}
+}
+
+@media (min-width: 992px) {
+	main {
+		margin-left: 16.6666666667%;
+	}
+}
+
+@media (min-width: 1198px) {
+	main {
+		/* max-width: calc(100% - 250px) !important;
+			width: calc(100% - 250px) !important; */
+		margin-left: 250px;
+	}
+}
+.alert {
+    border-radius: 10px;
+}
