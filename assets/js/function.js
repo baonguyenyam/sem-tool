@@ -15,7 +15,10 @@ function download(filename, text) {
     element.click();
     document.body.removeChild(element);
 }
+function addCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
+}
 function makeid(length) {
     var result = [];
     var characters = '123456789';

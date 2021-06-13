@@ -28,6 +28,7 @@ function pingURL($url=NULL)
 if(pingURL($_GET["data"])){
 	file_get_contents($_GET["data"]);
 	echo '<tr>
+	<td>'.$_GET["number"].'</td>
 	<td><a href="'.$_GET["data"].'" target="_blank">'.$_GET["data"].'</a></td>
 	<td class="text-center text-success">
 	<i class="fa fa-check"></i>

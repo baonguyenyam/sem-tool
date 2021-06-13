@@ -36,9 +36,17 @@ require_once 'includes/header.php';
 
                                 
                             <?php if (!empty($_POST["pinglistaddress"])) {?>
+
+                                <div class="d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap pb-2">
+                                    <h4 class="mb-3"><span id="pingCount"></span> address</h4>
+                                    <div class="ifLoading">
+                                        <i class="fas fa-spinner fa-lg1 fa-pulse"></i>
+                                    </div>
+                                </div>
                                 <table id="loadingCheck" class="table table-bordered table-striped table-hover">
                                     <thead class="table-dark">
                                         <tr>
+                                            <th scope="col" width="10">No.</th>
                                             <th scope="col">Ping to</th>
                                             <th scope="col" width="50">Status</th>
                                         </tr>
@@ -49,6 +57,7 @@ require_once 'includes/header.php';
                                 </table>
                             <?php } else {?>
 
+                                <h4 class="mb-3"><span id="pingCount"></span> address</h4>
                                 <div class="input-group mb-3">
                                     <input type="text" value="<?=isset($_GET['url'])?$_GET['url']:''?>" class="form-control" placeholder="Enter URL" aria-label="Enter your domain" aria-describedby="pingHTML" id="pingHTML_URL" name="url" required>
                                 </div>
@@ -79,19 +88,26 @@ require_once 'includes/header.php';
             async: false,
             success: function(json) {
                 $('#pingList').html(json)
-
-                lines = json.split("\n")
-
+                
+                var lines = json.split("\n")
+                
+                $('#pingCount').html(addCommas(lines.length.toFixed(0)))
                 var sendToServer = function(lines, index){
                 if (index > lines.length) return; // guard condition
                 item = lines[index];
                 if (item.trim().length != 0){
+                    if(index < 1) {
+                        $('#pustpingList').prepend('<tr class="onloadtb"><td colspan="3">Loading...</td></tr>');
+                    }
                     $.ajax({
                     type: 'GET',
                     url: 'doping',
                     dataType: 'html',
-                    data: 'data=' + item.replace(/___YOURDOMAIN___/gi, '<?=parse_url($_POST["url"])['host']?>')+'',
+                    data: 'data=' + item.replace(/___YOURDOMAIN___/gi, '<?=parse_url($_POST["url"])['host']?>')+'&number='+(index+1),
                     success: function(msg){
+                        if(index == 0) {
+                            $('#pustpingList .onloadtb').remove();
+                        }
                         $('#pustpingList').prepend(msg);
                         setTimeout(
                         function () { 
@@ -116,6 +132,8 @@ require_once 'includes/header.php';
                 async: false,
                 success: function(json) {
                     $('#pingList').html(json)
+                    var lines = json.split("\n")
+                    $('#pingCount').html(addCommas(lines.length.toFixed(0)))
                 }
             });
     <?php } ?>
