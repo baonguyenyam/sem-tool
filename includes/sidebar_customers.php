@@ -18,4 +18,9 @@
 		<i class="bi bi-check2-all fa-lg fa-fw me-1"></i> HTML Validator
 		</a>
 	</li>
+	<li class="nav-item">
+		<a class="nav-link <?= $active === 'crawler' ? 'active' : '' ?>" href="crawler">
+		<i class="bi bi-lightning fa-lg fa-fw me-1"></i> Crawler list
+		</a>
+	</li>
 </ul>

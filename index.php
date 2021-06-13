@@ -112,6 +112,9 @@ Route::add('/qr-generator',function(){
 Route::add('/image-generator',function(){
     include 'views/image_generator.php';
 });
+Route::add('/crawler',function(){
+    include 'views/crawler.php';
+});
 Route::add('/favicon-generator',function(){
     include 'views/favicon_generator.php';
 });

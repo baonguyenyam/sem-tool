@@ -64,4 +64,9 @@
 		<i class="bi bi-archive fa-lg fa-fw me-1"></i> WordPress plugins
 		</a>
 	</li>
+	<li class="nav-item">
+		<a class="nav-link <?= $active === 'crawler' ? 'active' : '' ?>" href="crawler">
+		<i class="bi bi-lightning fa-lg fa-fw me-1"></i> Crawler list
+		</a>
+	</li>
 </ul>

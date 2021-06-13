@@ -11,4 +11,10 @@
 		<span>HTML Code validator</span>
 		</a>
 	</li>
+	<li>
+		<a href="crawler">
+		<i class="bi bi-lightning fa-3x fa-fw me-1"></i>
+		<span>Crawler list</span>
+		</a>
+	</li>
 </ul>
