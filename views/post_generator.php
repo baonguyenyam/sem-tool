@@ -38,7 +38,7 @@ require_once 'includes/header.php';
 
                             <div class="input-group mb-3">
                                 <input type="file" class="form-control" id="fileToLoad">
-                                <button class="btn btn-primary" type="button" id="loadf" onclick="loadFileAsText()">Submit</button>
+                                <button class="btn btn-primary" type="button" id="loadf" onclick="loadFileAsText()">Upload</button>
                             </div>
 
                         </div>

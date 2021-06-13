@@ -51,6 +51,9 @@ function loadCSVFileAsText() {
     if (document.getElementById("fileCSVToLoad").value) {
         var fileCSVToLoad = document.getElementById("fileCSVToLoad").files[0];
         var fileReader = new FileReader();
+        if(LIFT_APP.code) {
+            LIFT_APP.code.toTextArea()
+        }
         fileReader.onload = function (fileLoadedEvent) {
             var textFromFileLoaded = fileLoadedEvent.target.result;
             document.getElementById("csvsource").value = textFromFileLoaded;
@@ -83,6 +86,9 @@ function loadFileAsText() {
     if (document.getElementById("fileToLoad").value) {
         var fileToLoad = document.getElementById("fileToLoad").files[0];
         var fileReader = new FileReader();
+        if(LIFT_APP.code) {
+            LIFT_APP.code.toTextArea()
+        }
         fileReader.onload = function (fileLoadedEvent) {
             var textFromFileLoaded = fileLoadedEvent.target.result;
             document.getElementById("source").value = textFromFileLoaded;

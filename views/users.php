@@ -83,6 +83,8 @@ if ($isMemberTypye == 1) {
                                     echo 'Moderator';
                                 } else if($item["member_type"] == 0) {
                                     echo 'User';
+                                } else if($item["member_type"] == 3) {
+                                    echo 'Customers';
                                 }
                                 ?></td>
                                 <td>

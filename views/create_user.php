@@ -126,6 +126,7 @@ if (!empty($_POST["change"])) {
                                         <option value="0">User</option>
                                         <option value="1">Administrator</option>
                                         <option value="2">Moderator</option>
+                                        <option value="3">Customers</option>
                                     </select>
                                     <label for="type">Type</label>
                                 </div>

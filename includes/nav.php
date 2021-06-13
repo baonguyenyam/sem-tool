@@ -5,6 +5,7 @@
     </button>
     <div class="ml-auto justify-content-end collapse navbar-collapse">
         <ul class="navbar-nav px-3 d-none d-md-flex align-items-center">
+            <?php if ($isMemberTypye != 3) { ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="myhelp" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-question-circle fa-lg fa-fw me-1"></i> Support
@@ -34,6 +35,7 @@
                     </li>
                 </ul>
             </li>
+            <?php } ?>
             <?php if ($isMemberTypye == 1) { ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="myadmin" role="button" data-bs-toggle="dropdown" aria-expanded="false">

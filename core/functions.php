@@ -219,7 +219,7 @@ function stripVN($str)
     $str = preg_replace("/[^\x20-\x7E]/", '', $str);
     $str = preg_replace('/[^\00-\255]+/u', '', $str);
     $str = preg_replace("/[^\x01-\x7F]/", '', $str);
-    return $str . 'tapchidangnho_com';
+    return $str . 'lift';
 }
 function time_elapsed_string($datetime, $full = false)
 {
@@ -231,13 +231,13 @@ function time_elapsed_string($datetime, $full = false)
     $diff->d -= $diff->w * 7;
 
     $string = array(
-        'y' => 'năm',
-        'm' => 'tháng',
-        'w' => 'tuần',
-        'd' => 'ngày',
-        'h' => 'giờ',
-        'i' => 'phút',
-        's' => 'giây',
+        'y' => 'year',
+        'm' => 'month',
+        'w' => 'week',
+        'd' => 'day',
+        'h' => 'hour',
+        'i' => 'minute',
+        's' => 'second',
     );
     foreach ($string as $k => &$v) {
         if ($diff->$k) {
@@ -248,7 +248,7 @@ function time_elapsed_string($datetime, $full = false)
     }
 
     if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' trước' : 'vừa tức thì';
+    return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
 function format_bytes($bytes)
 {

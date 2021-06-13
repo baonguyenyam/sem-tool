@@ -117,6 +117,7 @@ if (!empty($_POST["change"])) {
                                         <option value="0"<?php echo $getMemberByID[0]["member_type"] == 0 ? ' selected' : ''; ?>>User</option>
                                         <option value="1"<?php echo $getMemberByID[0]["member_type"] == 1 ? ' selected' : ''; ?>>Administrator</option>
                                         <option value="2"<?php echo $getMemberByID[0]["member_type"] == 2 ? ' selected' : ''; ?>>Moderator</option>
+                                        <option value="3"<?php echo $getMemberByID[0]["member_type"] == 3 ? ' selected' : ''; ?>>Customers</option>
                                     </select>
                                     <label for="type">Type</label>
                                 </div>

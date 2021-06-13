@@ -90,7 +90,7 @@ require_once 'includes/header.php';
 
                                     <div class="input-group mb-3">
                                         <input type="file" class="form-control" id="fileCSVToLoad">
-                                        <button class="btn btn-primary" type="button" id="loadcsv" onclick="loadCSVFileAsText()">Submit</button>
+                                        <button class="btn btn-primary" type="button" id="loadcsv" onclick="loadCSVFileAsText()">Upload</button>
                                     </div>
 
                                     <table id="readCSVTable" class="table table-bordered table-striped table-hover d-none">
