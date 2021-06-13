@@ -143,7 +143,7 @@ require_once 'includes/header.php';
 				$('.ifDone').removeClass('d-none');
 			},
 			error: function () {
-				$('.ifLoading').text('Something wrong!');
+				$('.ifLoading').html('<div class="alert alert-danger">Something wrong!</div>');
 			},
 		});
 	</script>

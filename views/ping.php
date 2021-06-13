@@ -102,7 +102,9 @@ require_once 'includes/header.php';
                     }
                     });
                 }
-                else { sendToServer(lines, index+1); }
+                else { 
+                    sendToServer(lines, index+1); 
+                }
                 };
                 sendToServer(lines, 0);
             }
