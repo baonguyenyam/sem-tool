@@ -22,20 +22,9 @@ require_once 'includes/header.php';
                         <div class="col-12">
                             <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border">
 
-                                <p><img src="/assets/img/logoc.png" alt="" class="w-100" style="max-width:250px"></p>
-                            <h1>Website Design and Web Development</h1>
-                            <h3 class="mb-4">LIFT the Marketing Agency | Create Something Great.</h3>
-                            <p>Sharing your brand-vision through beautiful web page design and website development for higher rankings and conversions.</p>
-                            <p>The highest level of creative and professional engagement is what our crew brings to the brands we love. Branding, Website Design, Website Development, Social Media, Search Engine Optimization (SEO), Paid Search (PPC) and Video.
-                            </p>
-                            <p>LIFT Creations is a marketing agency that creates beautiful websites that are optimized for SEO and structured for higher conversions. Creative content and quality execution for digital design, web development, social media, search engine optimization, paid search, print, and video.</p>
-                            <hr>
-                            <p class="mb-0"><strong>Email:</strong> <a href="mailto:hello@liftcreations.com" target="_blank">hello@liftcreations.com</a></p>
-                            <p class="mb-0"><strong>Website:</strong> <a href="https://liftcreations.com/" target="_blank">liftcreations.com</a></p>
-                            <p class="mb-0"><strong>Call Us:</strong> <a href="tel:866-244-1150" target="_blank">866-244-1150</a></p>
+                                <h1 class="h2 mt-0 mb-3">Crawler User Agents <span id="countAgent" class="badge bg-success fs-6"></span></h1>
 
-                            <hr>
-                            <p class="mb-0"><strong>Author:</strong> <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>
+                                <div id="crawlerTable"></div>
 
                             </div>
                         </div>
@@ -43,9 +32,33 @@ require_once 'includes/header.php';
             </main>
         </div>
     </div>
-
     
     <?php require 'includes/footer.php';?>
+
+    <script>
+        $.ajax({
+            url: '/assets/crawler-user-agents.json',
+            dataType: 'json',
+            async: false,
+            success: function(json) {
+                var crawlerTable = '<table class="table table-bordered table-striped table-hover"><thead class="table-dark"><tr><th>Name</th><th>Bot Name</th></tr></thead>'
+                for (let index = 0; index < json.length; index++) {
+                    crawlerTable += '<tr>'
+                    crawlerTable += '<td>'+JSON.stringify(json[index]['pattern'].replace("\\/", "").replace("\\", ""))+'</td>'
+                    let mu = json[index]['instances']
+                    crawlerTable += '<td class="small"><ul>'
+                    for (let y = 0; y < mu.length; y++) {
+                        crawlerTable += '<li>'+JSON.stringify(mu[y])+'</li>'
+                    }
+                    crawlerTable += '</ul></td>'
+                    crawlerTable += '</tr>'
+                }
+                crawlerTable += '</table>';
+                $('#crawlerTable').html(crawlerTable)
+                $('#countAgent').html(json.length+' crawlers')
+            }
+        });
+    </script>
 
 </body>
 

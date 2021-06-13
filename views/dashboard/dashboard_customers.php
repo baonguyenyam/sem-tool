@@ -12,6 +12,12 @@
 		</a>
 	</li>
 	<li>
+		<a href="banner-creator" target="_blank">
+		<i class="bi bi-camera fa-3x fa-fw me-1"></i>
+		<span>Banner Creator</span>
+		</a>
+	</li>
+	<li>
 		<a href="crawler">
 		<i class="bi bi-lightning fa-3x fa-fw me-1"></i>
 		<span>Crawler list</span>

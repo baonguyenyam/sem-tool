@@ -109,9 +109,9 @@ Route::add('/robots-generator',function(){
 Route::add('/qr-generator',function(){
     include 'views/qr_generator.php';
 });
-Route::add('/image-generator',function(){
-    include 'views/image_generator.php';
-});
+// Route::add('/image-generator',function(){
+//     include 'views/image_generator.php';
+// });
 Route::add('/crawler',function(){
     include 'views/crawler.php';
 });

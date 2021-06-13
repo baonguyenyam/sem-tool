@@ -23,11 +23,11 @@
 		<i class="bi bi-upc-scan fa-lg fa-fw me-1"></i> QR Code generator
 		</a>
 	</li>
-	<li class="nav-item">
+	<!-- <li class="nav-item">
 		<a class="nav-link <?= $active === 'image' ? 'active' : '' ?>" href="image-generator">
 		<i class="bi bi-camera fa-lg fa-fw me-1"></i> Image generator
 		</a>
-	</li>
+	</li> -->
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'favicon' ? 'active' : '' ?>" href="favicon-generator">
 		<i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon generator
@@ -38,10 +38,14 @@
 		<i class="bi bi-bug fa-lg fa-fw me-1"></i> robots.txt generator
 		</a>
 	</li>
-	
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'plugingen' ? 'active' : '' ?>" href="plugin-generator">
 		<i class="bi bi-cloud-download fa-lg fa-fw me-1"></i> Plugin Generator
+		</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="banner-creator" target="_blank">
+		<i class="bi bi-camera fa-lg fa-fw me-1"></i> Banner Creator
 		</a>
 	</li>
 </ul>

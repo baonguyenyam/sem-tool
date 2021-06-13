@@ -24,12 +24,12 @@
 		<span>QR Code generator</span>
 		</a>
 	</li>
-	<li>
+	<!-- <li>
 		<a href="image-generator">
 		<i class="bi bi-camera fa-3x fa-fw me-1"></i>
 		<span>Image generator</span>
 		</a>
-	</li>
+	</li> -->
 	<li>
 		<a href="favicon-generator">
 		<i class="bi bi-command fa-3x fa-fw me-1"></i>
@@ -54,6 +54,12 @@
 		<a href="wp-plugins">
 		<i class="bi bi-archive fa-3x fa-fw me-1"></i>
 		<span>WordPress plugins</span>
+		</a>
+	</li>
+	<li>
+		<a href="banner-creator" target="_blank">
+		<i class="bi bi-camera fa-3x fa-fw me-1"></i>
+		<span>Banner Creator</span>
 		</a>
 	</li>
 	<li>

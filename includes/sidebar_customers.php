@@ -8,6 +8,11 @@
 		<i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon generator
 		</a>
 	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="banner-creator" target="_blank">
+		<i class="bi bi-camera fa-lg fa-fw me-1"></i> Banner Creator
+		</a>
+	</li>
 </ul>
 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
 	<span>ADDONS...</span>
@@ -23,4 +28,5 @@
 		<i class="bi bi-lightning fa-lg fa-fw me-1"></i> Crawler list
 		</a>
 	</li>
+	
 </ul>
