@@ -50,7 +50,7 @@
 	</li>
 	<li class="nav-item">
 		<a class="nav-link <?= $active === 'ping' ? 'active' : '' ?>" href="ping">
-		<i class="bi bi-arrow-left-right fa-lg fa-fw me-1"></i> Ping to search engines
+		<i class="bi bi-arrow-left-right fa-lg fa-fw me-1"></i> Ping your website
 		</a>
 	</li>
 </ul>

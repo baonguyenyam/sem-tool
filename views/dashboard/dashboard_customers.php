@@ -20,7 +20,7 @@
 	<li>
 		<a href="ping">
 		<i class="bi bi-arrow-left-right fa-3x fa-fw me-1"></i>
-		<span>Ping to search engines</span>
+		<span>Ping your website</span>
 		</a>
 	</li>
 	<li>
