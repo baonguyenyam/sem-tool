@@ -44,18 +44,20 @@ require_once 'includes/header.php';
                                         <i class="fas fa-spinner fa-lg1 fa-pulse"></i>
                                     </div>
                                 </div>
-                                <table id="loadingCheck" class="table table-bordered table-striped table-hover">
-                                    <thead class="table-dark">
-                                        <tr>
-                                            <th scope="col" width="10">No.</th>
-                                            <th scope="col">Ping to</th>
-                                            <th scope="col" width="50">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="pustpingList">
-                                        
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive">
+                                    <table id="loadingCheck" class="table table-bordered table-striped table-hover">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th scope="col" width="10">No.</th>
+                                                <th scope="col">Ping to</th>
+                                                <th scope="col" width="50">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="pustpingList">
+                                            
+                                        </tbody>
+                                    </table>
+                            </div>
                             <?php } else {?>
 
                                 <h5 class="mb-3"><span id="pingCount"></span> address</h5>

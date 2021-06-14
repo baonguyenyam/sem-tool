@@ -25,7 +25,7 @@ require_once 'includes/header.php';
 
                                 <h1 class="h2 mt-0 mb-3">Crawler User Agents <span id="countAgent" class="badge bg-success fs-6"></span></h1>
 
-                                <div id="crawlerTable"></div>
+                                <div id="crawlerTable" class="table-responsive"></div>
 
                             </div>
                         </div>
