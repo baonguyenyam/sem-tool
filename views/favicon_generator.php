@@ -96,8 +96,8 @@ require_once 'core/class-php-ico.php';
         <div class="row">
             <?php require 'includes/sidebar.php'; ?>
 
-            <form enctype="multipart/form-data" action="" id="getfrmSubmit" name="upload" method="post">
-                <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
+            <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
+                <form enctype="multipart/form-data" action="" id="getfrmSubmit" name="upload" method="post">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2">
                         <div class="pe-md-4">
                             <h1 class="h2">Favicon generator</h1>
@@ -111,7 +111,7 @@ require_once 'core/class-php-ico.php';
                     </div>
 
 
-                    <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border">
+                    <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border mt-xxl-5 mx-xxl-5">
                         <div class="row gx-5">
                             <div class="col-xxl">
                                 <h5 class="mb-3">Upload</h5>
@@ -187,8 +187,8 @@ require_once 'core/class-php-ico.php';
 
 
 
-                </main>
-            </form>
+                </form>
+            </main>
         </div>
     </div>
 

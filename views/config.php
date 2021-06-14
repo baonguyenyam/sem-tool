@@ -38,7 +38,7 @@ if (!empty($_POST["change"])) {
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
                 <form action="" method="post" id="frmchange" class="form-signin">
                     <div
-                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                         <div>
                         <h1 class="h2">Configs</h1>
                         </div>
@@ -51,7 +51,7 @@ if (!empty($_POST["change"])) {
                     </div>
                     <div class="row mt-5">
                         <div class="col-xl-6 offset-xl-3">
-                            <div class="shadow p-5 mb-5 bg-body rounded border">
+                            <div class="shadow p-5 mb-5 bg-body rounded border mt-xxl-5 mx-xxl-5">
                                 <?php if (isset($message)) { ?>
                                     <div class="form-group mb-3">
                                         <div class="alert alert-danger mb-0"><?php echo $message ?></div>

@@ -21,7 +21,7 @@ require_once 'includes/header.php';
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4 px-xxl-5 mt-xxl-4">
                     <div class="row mt-4">
                         <div class="col-12">
-                            <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border">
+                            <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border mt-xxl-5 mx-xxl-5">
 
                                 <p><img src="/assets/img/logoc.png" alt="" class="w-100" style="max-width:250px"></p>
                             <h1>Website Design and Web Development</h1>

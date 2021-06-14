@@ -26,34 +26,42 @@ require_once 'includes/header.php';
         <div class="row" id="home-menu">
           <div class="col-12 my-3">
 
+          <div class="mt-xxl-5 mx-xxl-5">
+
             <?php if ($isMemberTypye != 3) { ?>
                 <?php include 'dashboard/dashboard_lift.php'; ?>
             <?php } else { ?>
                 <?php include 'dashboard/dashboard_customers.php'; ?>
             <?php } ?>
 
+            <h4>Control Panel</h4>
+            <ul>
+            <li>
+                <a href="profile">
+                  <i class="bi bi-person fa-3x fa-fw me-1"></i>
+                  <span>My Account</span>
+                </a>
+            </li>  
+            <li>
+                <a href="changepass">
+                  <i class="bi bi-shield-check fa-3x fa-fw me-1"></i>
+                  <span>Change password</span>
+                </a>
+            </li>  
+            <li>
+                  <a href="logout">
+                    <i class="bi bi-box-arrow-right fa-3x fa-fw me-1"></i>
+                    <span>Logout</span>
+                  </a>
+              </li>
+            </ul>
+
+
+
+          </div>
+
+
               
-              <h4>Control Panel</h4>
-              <ul>
-              <li>
-                  <a href="profile">
-                    <i class="bi bi-person fa-3x fa-fw me-1"></i>
-                    <span>My Account</span>
-                  </a>
-              </li>  
-              <li>
-                  <a href="changepass">
-                    <i class="bi bi-shield-check fa-3x fa-fw me-1"></i>
-                    <span>Change password</span>
-                  </a>
-              </li>  
-              <li>
-                    <a href="logout">
-                      <i class="bi bi-box-arrow-right fa-3x fa-fw me-1"></i>
-                      <span>Logout</span>
-                    </a>
-                </li>
-              </ul>
           </div>
         </div>
 

@@ -32,7 +32,7 @@ if ($isMemberTypye == 1) {
 
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                     <h1 class="h2">Users</h1>
                     <form action="" method="get" class="form-inline mb-2">
                             <div class="form-group">
@@ -54,7 +54,7 @@ if ($isMemberTypye == 1) {
                         $page = get_page($users, $curent_page, $pageper);
 
                     ?>
-                        
+                <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border mt-xxl-5 mx-xxl-5">
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover">
                             <thead class="table-dark">
@@ -116,6 +116,7 @@ if ($isMemberTypye == 1) {
                             <?php echo pagination($users, $allpage, $curent_page, 'users', ['s']); ?>
 
                         </div>
+                    </div>
                     </div>
 
 

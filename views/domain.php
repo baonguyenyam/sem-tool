@@ -16,8 +16,8 @@ require_once 'includes/header.php';
     <div class="container-fluid">
         <div class="row">
         	<?php require 'includes/sidebar.php'; ?>
-			<form action="" id="checkmyDomain" name="checkmyDomain" method="post">
-				<main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
+			<main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
+				<form action="" id="checkmyDomain" name="checkmyDomain" method="post">
 					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2">
 						<div class="pe-md-4">
 							<h1 class="h2">WHOIS Domain Lookup</h1>
@@ -33,7 +33,7 @@ require_once 'includes/header.php';
 
 					<div class="row">
 						<div class="col-xl-8 offset-xl-2">
-							<div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border" id="speedResult">
+							<div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border mt-xxl-5 mx-xxl-5" id="speedResult">
 								<?php if (!empty($_POST["checkaddress"])) {?>
 
 									<div class="ifLoading">
@@ -68,8 +68,8 @@ require_once 'includes/header.php';
 
 
 
-				</main>
-			</form>
+				</form>
+			</main>
         </div>
     </div>
 

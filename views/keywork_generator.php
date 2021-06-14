@@ -36,7 +36,7 @@ require_once 'includes/header.php';
                 </div>
 
 
-                <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border">
+                <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border mt-xxl-5 mx-xxl-5">
                     <div class="row gx-5">
                         <div class="col-lg">
 
