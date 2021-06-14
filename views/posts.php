@@ -56,7 +56,7 @@ if (isset($_GET['s'])) {
                             <table class="table table-bordered table-striped table-hover">
                                 <thead class="table-dark">
                                     <tr>
-                                    <th scope="col" width="10">.No</th>
+                                    <th scope="col" width="30">.No</th>
                                     <th scope="col">Title</th>
                                     <th scope="col">Information</th>
                                     <th scope="col" width="100">CP</th>

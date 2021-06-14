@@ -63,7 +63,7 @@ if (!empty($_POST["change"])) {
             $output .= html_entity_decode($result['full_error']);
         }
         if ($output == '') {
-            $util->redirect("./");
+            $util->redirect("/users");
         } else {
             echo $output;
         }

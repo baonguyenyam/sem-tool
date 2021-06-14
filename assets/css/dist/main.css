@@ -89,6 +89,63 @@ h1 {
   color: #fff;
 }
 
+.table-responsive {
+  margin-bottom: 1rem;
+}
+.table-responsive table {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0;
+  border: 0;
+  box-shadow: 0 0 1px #333 inset;
+}
+.table-responsive table tr, .table-responsive table th, .table-responsive table td {
+  border: 0;
+}
+.table-responsive table > tr:first-child td:first-child,
+.table-responsive table > tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+.table-responsive table > tr:first-child td:last-child,
+.table-responsive table > tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+.table-responsive table > tr:last-child td:first-child,
+.table-responsive table > tr:last-child th:first-child {
+  border-bottom-left-radius: 10px;
+}
+.table-responsive table > tr:last-child td:last-child,
+.table-responsive table > tr:last-child th:last-child {
+  border-bottom-right-radius: 10px;
+}
+.table-responsive table thead {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  border: 0;
+}
+.table-responsive table thead tr:first-child td:first-child,
+.table-responsive table thead tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+.table-responsive table thead tr:first-child td:last-child,
+.table-responsive table thead tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+.table-responsive table tbody {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  border: 0;
+}
+.table-responsive table tbody tr:last-child td:first-child,
+.table-responsive table tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 10px;
+}
+.table-responsive table tbody tr:last-child td:last-child,
+.table-responsive table tbody tr:last-child th:last-child {
+  border-bottom-right-radius: 10px;
+}
 .nav.nav-tabs .nav-item .nav-link {
   padding: 1rem 3rem;
   border: 0;

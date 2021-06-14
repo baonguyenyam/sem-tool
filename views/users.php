@@ -59,7 +59,7 @@ if ($isMemberTypye == 1) {
                         <table class="table table-bordered table-striped table-hover">
                             <thead class="table-dark">
                                 <tr>
-                                <th scope="col">.No</th>
+                                <th scope="col" width="30">.No</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Fullname</th>
                                 <th scope="col">Group</th>
