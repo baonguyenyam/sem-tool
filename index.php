@@ -201,16 +201,16 @@ Route::add('/favicon-generator',function(){
 },'post');
 
 Route::add('/barcode',function(){
-    require 'barcode.php';
+    require 'core/barcode.php';
 });
 Route::add('/barcode',function(){
-    require 'barcode.php';
+    require 'core/barcode.php';
 },'get');
 Route::add('/qrcode',function(){
-    require 'qrcode.php';
+    require 'core/qrcode.php';
 });
 Route::add('/qrcode',function(){
-    require 'qrcode.php';
+    require 'core/qrcode.php';
 },'get');
 
 // // Accept only numbers as parameter. Other characters will result in a 404 error
