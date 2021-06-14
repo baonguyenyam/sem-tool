@@ -7,10 +7,10 @@ $active='helps';
 require_once 'includes/header.php';
 
 if (isset($_GET['s'])) {
-    $posts = $auth->getAllPosts('%' . $_GET['s'] . '%', 'helps');
+    $posts = $auth->getAllPosts('%' . $_GET['s'] . '%', 'helps', true);
     $query = $_GET['s'];
 } else {
-    $posts = $auth->getAllPosts('%%', 'helps');
+    $posts = $auth->getAllPosts('%%', 'helps', true);
     $query = '';
 }
 ?>

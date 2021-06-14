@@ -42,10 +42,14 @@ class Auth
     }
 
     // POSTS
-    function getAllPosts($search, $type)
+    function getAllPosts($search, $type, $private = false)
     {
         $db_handle = new DBController();
-        $query = "SELECT * FROM tbl_posts WHERE (post_title LIKE ? OR post_content LIKE ?) AND post_type = ? AND post_del = 0 ORDER BY post_id DESC";
+        if($private) {
+            $query = "SELECT * FROM tbl_posts WHERE (post_title LIKE ? OR post_content LIKE ?) AND post_type = ? AND post_del = 0 AND post_status = 0 ORDER BY post_id DESC";
+        } else {
+            $query = "SELECT * FROM tbl_posts WHERE (post_title LIKE ? OR post_content LIKE ?) AND post_type = ? AND post_del = 0 ORDER BY post_id DESC";
+        }
         $result = $db_handle->runQuery($query, 'sss', array($search, $search, $type));
         return $result;
     }
