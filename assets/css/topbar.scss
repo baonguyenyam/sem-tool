@@ -71,6 +71,10 @@
 				flex: 0 0 16.666666%;
 				max-width: 16.666666%;
 			}
+			@media (min-width: 2000px) {
+				flex: 0 0 12.5%;
+				max-width: 12.5%;
+			}
 			a {
 				display: flex;
 				width: 100%;
@@ -88,11 +92,15 @@
 				height: 100%;
 				@media (min-width: 1800px) {
 					padding: 2rem;
-					font-size: 1.1rem;
+					// font-size: 1.1rem;
 				}
-				@media (min-width: 2000px) {
-					padding: 3rem 2rem;
+				@media (min-width: 2400px) {
+					padding: 2.5rem;
+					font-size: 1rem;
 				}
+				// @media (min-width: 2000px) {
+				// 	padding: 3rem 2rem;
+				// }
 				span {
 					max-width: 80%;
 					display: block;

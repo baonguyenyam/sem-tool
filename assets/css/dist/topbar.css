@@ -82,6 +82,12 @@
     max-width: 16.666666%;
   }
 }
+@media (min-width: 2000px) {
+  #home-menu ul li {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+}
 #home-menu ul li a {
   display: flex;
   width: 100%;
@@ -101,12 +107,12 @@
 @media (min-width: 1800px) {
   #home-menu ul li a {
     padding: 2rem;
-    font-size: 1.1rem;
   }
 }
-@media (min-width: 2000px) {
+@media (min-width: 2400px) {
   #home-menu ul li a {
-    padding: 3rem 2rem;
+    padding: 2.5rem;
+    font-size: 1rem;
   }
 }
 #home-menu ul li a span {
