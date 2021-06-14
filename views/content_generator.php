@@ -70,13 +70,13 @@ require_once 'includes/header.php';
                         <div class="row mt-1 gx-5">
                             <?php if(isset($_GET['type']) && $_GET['type'] === 'enter') {?>
                             <div class="col-lg">
-                                <h3 class="mb-3">Keywords list</h3>
+                                <h5 class="mb-3">Keywords list</h5>
                                 <div class="mb-4">
                                     <textarea class="form-control" placeholder="enter keywords and enter end of words" id="contentkeyword" rows="20"></textarea>
                                 </div>
                             </div>
                             <div class="col-lg">
-                                <h3 class="mb-3">URLs list</h3>
+                                <h5 class="mb-3">URLs list</h5>
                                 <div class="mb-4">
                                     <textarea class="form-control" placeholder="enter keywords and enter end of words" id="contenturls" rows="20"></textarea>
                                 </div>
@@ -84,7 +84,7 @@ require_once 'includes/header.php';
                             <?php } else { ?>
                                 <div class="col-lg-6">
                                     <div class="d-flex flex-row justify-content-between align-items-center">
-                                        <h3 class="mb-3">Upload .csv file</h3>
+                                        <h5 class="mb-3">Upload .csv file</h5>
                                         <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#liftModal" class="howto"><i class="fa fa-question"></i></a>
                                     </div>
 
@@ -121,7 +121,7 @@ require_once 'includes/header.php';
                             <?php } ?>
                             <div class="col-lg">
                                 <div id="boxresult">
-                                    <h3 class="mb-3">Results</h3>
+                                    <h5 class="mb-3">Results</h5>
                                     <div class="rv">
                                         <div class="alert alert-warning">Nothing to show</div>
                                     </div>

@@ -6,6 +6,31 @@ $("#clear").on("click", function () {
   $("#keyworkds").val('');
   $('#keyworkds_toast').toast("show");
 });
+$("#clear_a").on("click", function () {
+  localStorage.removeItem("myLIFT_A");
+  $("#keyworkds_a").val('');
+  $('#keyworkds_toast').toast("show");
+});
+$("#clear_b").on("click", function () {
+  localStorage.removeItem("myLIFT_B");
+  $("#keyworkds_b").val('');
+  $('#keyworkds_toast').toast("show");
+});
+$("#clear_c").on("click", function () {
+  localStorage.removeItem("myLIFT_C");
+  $("#keyworkds_c").val('');
+  $('#keyworkds_toast').toast("show");
+});
+$("#clear_d").on("click", function () {
+  localStorage.removeItem("myLIFT_D");
+  $("#keyworkds_d").val('');
+  $('#keyworkds_toast').toast("show");
+});
+$("#clear_e").on("click", function () {
+  localStorage.removeItem("myLIFT_E");
+  $("#keyworkds_e").val('');
+  $('#keyworkds_toast').toast("show");
+});
 $("#create-btn").on("click", function () {
   var err = "";
 
@@ -54,3 +79,8 @@ $("#create-btn").on("click", function () {
   }
 });
 $("#keyworkds").val(localStorage.getItem("myLIFT"));
+$("#keyworkds_a").val(localStorage.getItem("myLIFT_A"));
+$("#keyworkds_b").val(localStorage.getItem("myLIFT_B"));
+$("#keyworkds_c").val(localStorage.getItem("myLIFT_C"));
+$("#keyworkds_d").val(localStorage.getItem("myLIFT_D"));
+$("#keyworkds_e").val(localStorage.getItem("myLIFT_E"));

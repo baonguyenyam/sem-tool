@@ -38,7 +38,7 @@ require_once 'includes/header.php';
                             <?php if (!empty($_POST["pinglistaddress"])) {?>
 
                                 <div class="d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap pb-2">
-                                    <h4 class="mb-3"><span id="pingCount"></span> address</h4>
+                                    <h5 class="mb-3"><span id="pingCount"></span> address</h5>
                                     <div class="ifLoading">
                                         <i class="fas fa-spinner fa-lg1 fa-pulse"></i>
                                     </div>
@@ -57,7 +57,7 @@ require_once 'includes/header.php';
                                 </table>
                             <?php } else {?>
 
-                                <h4 class="mb-3"><span id="pingCount"></span> address</h4>
+                                <h5 class="mb-3"><span id="pingCount"></span> address</h5>
                                 <div class="input-group mb-3">
                                     <input type="text" value="<?=isset($_GET['url'])?$_GET['url']:''?>" class="form-control" placeholder="Enter URL" aria-label="Enter your domain" aria-describedby="pingHTML" id="pingHTML_URL" name="url" required>
                                 </div>

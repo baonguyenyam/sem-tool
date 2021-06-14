@@ -179,4 +179,51 @@ html.dark {
 			color: var(--color);
 		}
 	}
+
+
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+	::-webkit-scrollbar {
+		height: 10px;
+		width: 10px;
+	}
+	
+	::-webkit-scrollbar-track {
+		background: #dfdfdf;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background: #aaaaaa;
+		height: 100px;
+		border-radius: 5px;
+	}
+	
+	::-webkit-scrollbar-thumb:hover {
+		background: #d63384;
+	}
+	
+	#sidebarMenu::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+	#sidebarMenu::-webkit-scrollbar {
+		height: 10px;
+		width: 5px;
+	}
+	
+	#sidebarMenu::-webkit-scrollbar-track {
+		background: #dfdfdf;
+	}
+	
+	#sidebarMenu::-webkit-scrollbar-thumb {
+		background: #aaaaaa;
+		height: 100px;
+		border-radius: 5px;
+	}
+	
+	#sidebarMenu::-webkit-scrollbar-thumb:hover {
+		background: #d63384;
+	}
+
+
 }

@@ -150,3 +150,39 @@ html.dark body .alert-light {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   color: var(--color);
 }
+html.dark ::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+html.dark ::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #dfdfdf;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  height: 100px;
+  border-radius: 5px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #d63384;
+}
+html.dark #sidebarMenu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+html.dark #sidebarMenu::-webkit-scrollbar {
+  height: 10px;
+  width: 5px;
+}
+html.dark #sidebarMenu::-webkit-scrollbar-track {
+  background: #dfdfdf;
+}
+html.dark #sidebarMenu::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  height: 100px;
+  border-radius: 5px;
+}
+html.dark #sidebarMenu::-webkit-scrollbar-thumb:hover {
+  background: #d63384;
+}

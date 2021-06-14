@@ -68,9 +68,8 @@ class Route{
 			array_shift($matches);// Always remove first element. This contains the whole string
 
 			if($basepath!=''&&$basepath!='/'){
-			array_shift($matches);// Remove basepath
+				array_shift($matches);// Remove basepath
 			}
-
 			call_user_func_array($route['function'], $matches);
 
 			$route_match_found = true;
@@ -92,9 +91,9 @@ class Route{
 		}
 		}else{
 		header("HTTP/1.0 404 Not Found");
-		if(self::$pathNotFound){
-			call_user_func_array(self::$pathNotFound, Array($path));
-		}
+			if(self::$pathNotFound){
+				call_user_func_array(self::$pathNotFound, Array($path));
+			}
 		}
 
 	}

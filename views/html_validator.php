@@ -36,7 +36,7 @@ if (isset($_GET['url'])) {
 
                     <div class="row">
                         <div class="col-12">
-                            <h3 class="mb-3">HTML Source</h3>
+                            <h5 class="mb-3">HTML Source</h5>
                         </div>
                         <div class="col-lg">
                             <form action="" method="get">
