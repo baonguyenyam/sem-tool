@@ -35,10 +35,10 @@ if ($isMemberTypye == 1) {
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                     <h1 class="h2">Users</h1>
                     <form action="" method="get" class="form-inline mb-2">
-                            <div class="form-group">
-                                <input type="text" name="s" id="s" placeholder="Search" class="form-control form-control-sm">
-                            </div>
-                        </form>
+                        <div class="form-group">
+                            <input type="text" name="s" id="s" placeholder="Search" class="form-control form-control-sm">
+                        </div>
+                    </form>
                 </div>
 
 
