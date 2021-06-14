@@ -34,6 +34,12 @@ Route::add('/chrome-extensions',function(){
 Route::add('/app',function(){
     include 'views/app.php';
 });
+Route::add('/domain',function(){
+    include 'views/domain.php';
+});
+Route::add('/domain',function(){
+    include 'views/domain.php';
+},'post');
 Route::add('/wp-plugins',function(){
     include 'views/wp_plugins.php';
 });

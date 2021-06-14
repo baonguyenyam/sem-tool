@@ -1,0 +1,499 @@
+{
+	"handle": "414320",
+	"ldhName": "congdongviet.net",
+	"nameServers": [
+	  {
+		"ldhName": "jonah.ns.cloudflare.com",
+		"status": [
+		  "active"
+		],
+		"links": [],
+		"objectClassName": "nameserver",
+		"lang": "en"
+	  },
+	  {
+		"ldhName": "may.ns.cloudflare.com",
+		"status": [
+		  "active"
+		],
+		"links": [],
+		"objectClassName": "nameserver",
+		"lang": "en"
+	  }
+	],
+	"secureDNS": {
+	  "delegationSigned": false
+	},
+	"entities": [
+	  {
+		"vcardArray": [
+		  "vcard",
+		  [
+			[
+			  "version",
+			  {},
+			  "text",
+			  "4.0"
+			],
+			[
+			  "kind",
+			  {},
+			  "text",
+			  "individual"
+			],
+			[
+			  "fn",
+			  {},
+			  "text",
+			  "Nguyen Pham"
+			],
+			[
+			  "adr",
+			  {},
+			  "text",
+			  [
+				"",
+				"",
+				[
+				  "",
+				  "",
+				  "None"
+				],
+				"Fort Worth",
+				"Texas",
+				"76109",
+				"US"
+			  ]
+			],
+			[
+			  "email",
+			  {},
+			  "text",
+			  "baonguyenyam@gmail.com"
+			],
+			[
+			  "tel",
+			  {
+				"type": "voice"
+			  },
+			  "uri",
+			  "tel:+1.6822340242"
+			],
+			[
+			  "tel",
+			  {
+				"type": "fax"
+			  },
+			  "uri",
+			  "tel:"
+			]
+		  ]
+		],
+		"status": [
+		  "active"
+		],
+		"roles": [
+		  "billing"
+		],
+		"objectClassName": "entity",
+		"lang": "en"
+	  },
+	  {
+		"vcardArray": [
+		  "vcard",
+		  [
+			[
+			  "version",
+			  {},
+			  "text",
+			  "4.0"
+			],
+			[
+			  "kind",
+			  {},
+			  "text",
+			  "individual"
+			],
+			[
+			  "fn",
+			  {},
+			  "text",
+			  "Bluehost Inc"
+			],
+			[
+			  "adr",
+			  {},
+			  "text",
+			  [
+				"",
+				"",
+				[
+				  "",
+				  "",
+				  "550 E TIMPANOGOS PKWY"
+				],
+				"Orem",
+				"Utah",
+				"84097",
+				"US"
+			  ]
+			],
+			[
+			  "email",
+			  {},
+			  "text",
+			  "domain@redl.ca"
+			],
+			[
+			  "tel",
+			  {
+				"type": "voice"
+			  },
+			  "uri",
+			  "tel:+1.8017659400"
+			],
+			[
+			  "tel",
+			  {
+				"type": "fax"
+			  },
+			  "uri",
+			  "tel:+1.8017651992"
+			]
+		  ]
+		],
+		"status": [
+		  "active"
+		],
+		"roles": [
+		  "technical"
+		],
+		"objectClassName": "entity",
+		"lang": "en"
+	  },
+	  {
+		"vcardArray": [
+		  "vcard",
+		  [
+			[
+			  "version",
+			  {},
+			  "text",
+			  "4.0"
+			],
+			[
+			  "kind",
+			  {},
+			  "text",
+			  "individual"
+			],
+			[
+			  "fn",
+			  {},
+			  "text",
+			  "Nguyen Pham"
+			],
+			[
+			  "adr",
+			  {},
+			  "text",
+			  [
+				"",
+				"",
+				[
+				  "",
+				  "",
+				  "None"
+				],
+				"Fort Worth",
+				"Texas",
+				"76109",
+				"US"
+			  ]
+			],
+			[
+			  "email",
+			  {},
+			  "text",
+			  "baonguyenyam@gmail.com"
+			],
+			[
+			  "tel",
+			  {
+				"type": "voice"
+			  },
+			  "uri",
+			  "tel:+1.6822340242"
+			],
+			[
+			  "tel",
+			  {
+				"type": "fax"
+			  },
+			  "uri",
+			  "tel:"
+			]
+		  ]
+		],
+		"status": [
+		  "active"
+		],
+		"roles": [
+		  "administrative"
+		],
+		"objectClassName": "entity",
+		"lang": "en"
+	  },
+	  {
+		"vcardArray": [
+		  "vcard",
+		  [
+			[
+			  "version",
+			  {},
+			  "text",
+			  "4.0"
+			],
+			[
+			  "kind",
+			  {},
+			  "text",
+			  "individual"
+			],
+			[
+			  "fn",
+			  {},
+			  "text",
+			  "Nguyen Pham"
+			],
+			[
+			  "adr",
+			  {},
+			  "text",
+			  [
+				"",
+				"",
+				[
+				  "",
+				  "",
+				  "None"
+				],
+				"Fort Worth",
+				"Texas",
+				"76109",
+				"US"
+			  ]
+			],
+			[
+			  "email",
+			  {},
+			  "text",
+			  "baonguyenyam@gmail.com"
+			],
+			[
+			  "tel",
+			  {
+				"type": "voice"
+			  },
+			  "uri",
+			  "tel:+1.6822340242"
+			],
+			[
+			  "tel",
+			  {
+				"type": "fax"
+			  },
+			  "uri",
+			  "tel:"
+			]
+		  ]
+		],
+		"status": [
+		  "active"
+		],
+		"roles": [
+		  "registrant"
+		],
+		"objectClassName": "entity",
+		"lang": "en"
+	  },
+	  {
+		"vcardArray": [
+		  "vcard",
+		  [
+			[
+			  "version",
+			  {},
+			  "text",
+			  "4.0"
+			],
+			[
+			  "org",
+			  {},
+			  "text",
+			  "FastDomain Inc."
+			]
+		  ]
+		],
+		"handle": "1154",
+		"status": [],
+		"roles": [
+		  "registrar"
+		],
+		"entities": [
+		  {
+			"vcardArray": [
+			  "vcard",
+			  [
+				[
+				  "version",
+				  {},
+				  "text",
+				  "4.0"
+				],
+				[
+				  "org",
+				  {},
+				  "text",
+				  "FastDomain Inc."
+				],
+				[
+				  "email",
+				  {},
+				  "text",
+				  "compliance@domain-inc.net"
+				],
+				[
+				  "tel",
+				  {
+					"type": "voice"
+				  },
+				  "uri",
+				  "tel:+1-602-226-2389"
+				]
+			  ]
+			],
+			"status": [],
+			"roles": [
+			  "abuse"
+			],
+			"objectClassName": "entity",
+			"lang": "en"
+		  }
+		],
+		"publicIds": [
+		  {
+			"type": "IANA Registrar ID",
+			"identifier": "1154"
+		  }
+		],
+		"objectClassName": "entity",
+		"lang": "en"
+	  }
+	],
+	"status": [
+	  "client transfer prohibited"
+	],
+	"events": [
+	  {
+		"eventAction": "registration",
+		"eventDate": "2019-07-23T09:21:02.0Z"
+	  },
+	  {
+		"eventAction": "expiration",
+		"eventDate": "2021-07-23T09:21:02.0Z"
+	  },
+	  {
+		"eventAction": "registrar expiration",
+		"eventDate": "2021-07-23T09:21:02.0Z"
+	  },
+	  {
+		"eventAction": "last changed",
+		"eventDate": "2021-04-27T10:58:41.0Z"
+	  },
+	  {
+		"eventAction": "last update of RDAP database",
+		"eventDate": "2021-06-14T01:16:34.995Z"
+	  }
+	],
+	"notices": [
+	  {
+		"title": "Status Codes",
+		"description": [
+		  "For more information on domain status codes, please visit https://icann.org/epp"
+		],
+		"links": [
+		  {
+			"title": "More information on domain status codes",
+			"href": "https://icann.org/epp"
+		  }
+		]
+	  },
+	  {
+		"title": "Terms of Use",
+		"description": [
+		  "For more information on Whois status codes, please visit https://icann.org/epp",
+		  "",
+		  "The data in the FastDomain Inc. WHOIS database is provided",
+		  "to you by FastDomain Inc. for information purposes only,",
+		  "that is, to assist you in obtaining information about or related to",
+		  "a domain name registration record. FastDomain Inc. makes",
+		  "this information available \"as is,\" and does not guarantee its",
+		  "accuracy.  By submitting a WHOIS query, you  agree that you will use",
+		  "this data only for lawful purposes and that, under no circumstances",
+		  "will you use this data to: (1) allow, enable, or otherwise support",
+		  "the transmission of mass unsolicited, commercial advertising or",
+		  "solicitations via direct mail, electronic mail, or by telephone; or",
+		  "(2) enable high volume, automated, electronic processes that apply",
+		  "to FastDomain Inc. (or its systems). The compilation,",
+		  "repackaging, dissemination or other use of this data is expressly",
+		  "prohibited without the prior written consent of",
+		  "FastDomain Inc.. FastDomain Inc. reserves the",
+		  "right to modify these terms at any time.  By submitting this query,",
+		  "you agree to abide by these terms.",
+		  "",
+		  "UNLIMITED storage, bandwidth and domains on one account. Also receive a *FREE* domain for one year when you host with http://www.fastdomain.com/"
+		],
+		"links": [
+		  {
+			"title": "Terms of Use",
+			"href": "https://www.fastdomain.com/"
+		  }
+		]
+	  },
+	  {
+		"title": "RDDS Inaccuracy Complaint Form",
+		"description": [
+		  "URL of the ICANN RDDS Inaccuracy Complaint Form: https://www.icann.org/wicf/"
+		],
+		"links": [
+		  {
+			"title": "ICANN RDDS Inaccuracy Complaint Form",
+			"href": "https://www.icann.org/wicf/"
+		  }
+		]
+	  },
+	  {
+		"title": "Data Policy",
+		"type": "object truncated due to authorization",
+		"description": [
+		  "The contact information for one or more entities associated with this domain has been redacted in accordance with the entity\u0027s disclosure preferences."
+		]
+	  }
+	],
+	"links": [
+	  {
+		"title": "Authoritative URL for this resource",
+		"type": "application/rdap+json",
+		"rel": "self",
+		"href": "https://rdap.fastdomain.com/domain/congdongviet.net"
+	  }
+	],
+	"rdapConformance": [
+	  "icann_rdap_response_profile_0",
+	  "icann_rdap_technical_implementation_guide_0",
+	  "rdap_level_0"
+	],
+	"objectClassName": "domain",
+	"lang": "en"
+  }

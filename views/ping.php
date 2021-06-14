@@ -81,7 +81,9 @@ require_once 'includes/header.php';
     <?php require 'includes/footer.php';?>
 
     <script>
-    <?php if (!empty($_POST["pinglistaddress"])) {?>
+    <?php if (!empty($_POST["pinglistaddress"])) {
+        $doamin = isset(parse_url($_POST["url"])['host']) ? parse_url($_POST["url"])['host'] : $_POST["url"];
+        ?>
         $.ajax({
             url: '/assets/ping.txt',
             dataType: 'text',
@@ -103,7 +105,7 @@ require_once 'includes/header.php';
                     type: 'GET',
                     url: 'doping',
                     dataType: 'html',
-                    data: 'data=' + item.replace(/___YOURDOMAIN___/gi, '<?=parse_url($_POST["url"])['host']?>')+'&number='+(index+1),
+                    data: 'data=' + item.replace(/___YOURDOMAIN___/gi, '<?=$doamin?>')+'&number='+(index+1),
                     success: function(msg){
                         if(index == 0) {
                             $('#pustpingList .onloadtb').remove();

@@ -35,7 +35,8 @@ if(pingURL($_GET["data"])){
 	</td>
 	</tr>';
 } else {
-	echo '<tr>
+  echo '<tr>
+	<td>'.$_GET["number"].'</td>
 	<td><a href="'.$_GET["data"].'" target="_blank">'.$_GET["data"].'</a></td>
 	<td class="text-center text-danger">
 	<i class="fa fa-times"></i>
