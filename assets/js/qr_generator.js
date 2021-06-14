@@ -11,10 +11,10 @@ triggerTabList.forEach(function (triggerEl) {
 	})
 })
 
-var img1 = '/qrcode.php?s=qr&sf=40&sy=40&wq=0&pl=0&pr=0&pt=0&ts=15&th=15&pb=0&d='
-var img2 = '/barcode.php?s=dmtx&sf=70&sy=70&wq=0&pl=0&pr=0&pt=0&ts=15&th=15&pb=0&d='
-var img3 = '/barcode.php?s=code-128&sf=12&sy=6&wq=0&pl=0&pr=0&pt=0&pb=0&ts=0&th=10&d='
-var img4 = '/barcode.php?s=code-39&sf=4&sy=1&wq=0&pl=0&pr=0&pt=0&ts=5&th=16&pb=18&d='
+var img1 = '/qrcode?s=qr&sf=40&sy=40&wq=0&pl=0&pr=0&pt=0&ts=15&th=15&pb=0&d='
+var img2 = '/barcode?s=dmtx&sf=70&sy=70&wq=0&pl=0&pr=0&pt=0&ts=15&th=15&pb=0&d='
+var img3 = '/barcode?s=code-128&sf=12&sy=6&wq=0&pl=0&pr=0&pt=0&pb=0&ts=0&th=10&d='
+var img4 = '/barcode?s=code-39&sf=4&sy=1&wq=0&pl=0&pr=0&pt=0&ts=5&th=16&pb=18&d='
 
 $('#qrgenbtn').on('click', function () {
 	if ($('#inputText').val().length > 0) {

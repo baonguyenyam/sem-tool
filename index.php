@@ -200,6 +200,19 @@ Route::add('/favicon-generator',function(){
     include 'views/favicon_generator.php';
 },'post');
 
+Route::add('/barcode',function(){
+    require 'barcode.php';
+});
+Route::add('/barcode',function(){
+    require 'barcode.php';
+},'get');
+Route::add('/qrcode',function(){
+    require 'qrcode.php';
+});
+Route::add('/qrcode',function(){
+    require 'qrcode.php';
+},'get');
+
 // // Accept only numbers as parameter. Other characters will result in a 404 error
 // Route::add('/foo/([0-9]*)/bar',function($var1){
 //     echo $var1.' is a great number!';

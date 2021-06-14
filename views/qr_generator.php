@@ -152,19 +152,19 @@ require_once 'includes/header.php';
                                 <div class="row">
                                     <div class="col-sm-12 mb-4">
                                         <h6>QR Code</h6>
-                                        <img id="imgqr-1" src="/qrcode.php?s=qr&sf=40&sy=40&wq=0&pl=0&pr=0&pt=0&ts=15&th=15&pb=0&d=lift" class="img-thumbnail clicktosave" style="max-width:100px">
+                                        <img id="imgqr-1" src="/qrcode?s=qr&sf=40&sy=40&wq=0&pl=0&pr=0&pt=0&ts=15&th=15&pb=0&d=lift" class="img-thumbnail clicktosave" style="max-width:100px">
                                     </div>
                                     <div class="col-sm-12 mb-4">
                                         <h6>Code</h6>
-                                        <img id="imgqr-2" src="/barcode.php?s=dmtx&sf=70&sy=70&wq=0&pl=0&pr=0&pt=0&ts=15&th=15&pb=0&d=lift" class="img-thumbnail clicktosave" style="max-width:100px">
+                                        <img id="imgqr-2" src="/barcode?s=dmtx&sf=70&sy=70&wq=0&pl=0&pr=0&pt=0&ts=15&th=15&pb=0&d=lift" class="img-thumbnail clicktosave" style="max-width:100px">
                                     </div>
                                     <div class="col-sm-12 mb-4">
                                         <h6>Bar Code</h6>
-                                        <img id="imgqr-3" src="/barcode.php?s=code-128&sf=12&sy=6&wq=0&pl=0&pr=0&pt=0&pb=0&ts=0&th=10&d=lift" class="img-thumbnail clicktosave" style="max-width:200px">
+                                        <img id="imgqr-3" src="/barcode?s=code-128&sf=12&sy=6&wq=0&pl=0&pr=0&pt=0&pb=0&ts=0&th=10&d=lift" class="img-thumbnail clicktosave" style="max-width:200px">
                                     </div>
                                     <div class="col-sm-12">
                                         <h6>EAN Code</h6>
-                                        <img id="imgqr-4" src="/barcode.php?s=code-39&sf=4&sy=1&wq=0&pl=0&pr=0&pt=0&ts=5&th=16&pb=18&d=lift" class="img-thumbnail clicktosave" style="max-width:100%">
+                                        <img id="imgqr-4" src="/barcode?s=code-39&sf=4&sy=1&wq=0&pl=0&pr=0&pt=0&ts=5&th=16&pb=18&d=lift" class="img-thumbnail clicktosave" style="max-width:100%">
                                     </div>
                                 </div>
                             </div>
