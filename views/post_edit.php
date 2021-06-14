@@ -11,7 +11,7 @@ require_once 'includes/header.php';
 /*// CHECK */
 $getConfig = $auth->getConfig();
 
-if ($isMemberTypye == 1 ) {
+if ($isMemberTypye == 1 || $isMemberTypye == 2) {
 } else {
     $util->redirect("./");
 }
@@ -65,12 +65,13 @@ if (!empty($_POST["change"])) {
                                     <label for="inputTitle">Title</label>
                                 </div>
 								<div class="form-floating mb-3">
-                                    <select name="type" id="type" class="form-select">
-                                        <option value="0"<?php echo $getPOST[0]["post_status"] == 0 ? ' selected' : ''; ?>>Public</option>
-                                        <option value="1"<?php echo $getPOST[0]["post_status"] == 1 ? ' selected' : ''; ?>>Private</option>
-                                    </select>
-                                    <label for="type">Type</label>
-                                </div>
+									<select name="type" id="type" class="form-select">
+										<option value="0"<?php echo $getPOST[0]["post_status"] == 0 ? ' selected' : ''; ?>>Public</option>
+										<option value="1"<?php echo $getPOST[0]["post_status"] == 1 ? ' selected' : ''; ?>>Private</option>
+									</select>
+									<label for="type">Type</label>
+								</div>
+								
                                 <div class="mb-3 mb-lg-0">
                                     <textarea name="content" id="content" class="form-control" rows="20"><?=$getPOST[0]['post_content']?></textarea>
                                 </div>

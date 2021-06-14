@@ -5,12 +5,12 @@
     </button>
     <div class="ml-auto justify-content-end collapse navbar-collapse">
         <ul class="navbar-nav px-3 d-none d-md-flex align-items-center">
-            <?php if ($isMemberTypye != 3) { ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="myhelp" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-question-circle fa-lg fa-fw me-1"></i> Support
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="myhelp">
+                    <?php if ($isMemberTypye != 3) { ?>
                     <li>
                         <a class="dropdown-item" href="app">
                             <i class="bi bi-laptop fa-lg fa-fw me-1"></i> Desktop Apps
@@ -39,9 +39,21 @@
                             <i class="bi bi-diagram-3 fa-lg fa-fw me-1"></i> Roadmap
                         </a>
                     </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item <?= $active === 'helps' ? 'active' : '' ?>" href="helps">
+                            <i class="bi bi-question-circle fa-lg fa-fw me-1"></i> Helps
+                        </a>
+                    </li>
+                    <?php } else { ?>
+                        <li>
+                            <a class="dropdown-item <?= $active === 'helps' ? 'active' : '' ?>" href="help-support">
+                                <i class="bi bi-question-circle fa-lg fa-fw me-1"></i> Helps
+                            </a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </li>
-            <?php } ?>
             <?php if ($isMemberTypye == 1) { ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="myadmin" role="button" data-bs-toggle="dropdown" aria-expanded="false">

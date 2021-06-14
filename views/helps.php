@@ -1,16 +1,16 @@
 <?php 
 require_once 'includes/variables.php';
 /*// HEADER */
-$title = "Posts";
-$active='posts'; 
+$title = "Helps";
+$active='helps'; 
 /*// LAYOUT */
 require_once 'includes/header.php';
 
 if (isset($_GET['s'])) {
-    $posts = $auth->getAllPosts('%' . $_GET['s'] . '%', 'posts');
+    $posts = $auth->getAllPosts('%' . $_GET['s'] . '%', 'helps');
     $query = $_GET['s'];
 } else {
-    $posts = $auth->getAllPosts('%%', 'posts');
+    $posts = $auth->getAllPosts('%%', 'helps');
     $query = '';
 }
 if ($isMemberTypye == 1 || $isMemberTypye == 2) {
@@ -30,10 +30,10 @@ if ($isMemberTypye == 1 || $isMemberTypye == 2) {
 
             <main class="col-md-9 ms-sm col-lg-10 col-xl px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                    <h1 class="h2">Posts</h1>
+                    <h1 class="h2">Helps</h1>
                     <form action="" method="get" class="form-inline mb-2">
 						<div class="form-group d-flex justify-content-center flex-nowrap align-items-center">
-							<a class="btn btn-circle me-3" href="post-add?kind=posts"><i class="bi bi-plus-lg fa-lg"></i></a>
+							<a class="btn btn-circle me-3" href="post-add?kind=helps"><i class="bi bi-plus-lg fa-lg"></i></a>
 							<input type="text" name="s" id="s" placeholder="Search" class="form-control form-control-sm">
 						</div>
 					</form>
@@ -98,7 +98,7 @@ if ($isMemberTypye == 1 || $isMemberTypye == 2) {
                             </div>
                             <div class="col-auto">
 
-                                <?php echo pagination($posts, $allpage, $curent_page, 'posts', ['s']); ?>
+                                <?php echo pagination($posts, $allpage, $curent_page, 'helps', ['s']); ?>
 
                             </div>
                         </div>
@@ -108,7 +108,7 @@ if ($isMemberTypye == 1 || $isMemberTypye == 2) {
                     <?php
                     } else {
                     ?>
-                        <div class="alert alert-danger">No posts found!</div>
+                        <div class="alert alert-danger">No helps found!</div>
                     <?php
                     }
                     ?>

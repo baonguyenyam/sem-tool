@@ -100,6 +100,30 @@ Route::add('/posts',function(){
 Route::add('/posts',function(){
     include 'views/posts.php';
 },'get');
+Route::add('/help-support',function(){
+    include 'views/helps_list.php';
+});
+Route::add('/help-support',function(){
+    include 'views/helps_list.php';
+},'get');
+Route::add('/helps',function(){
+    include 'views/helps.php';
+});
+Route::add('/helps',function(){
+    include 'views/helps.php';
+},'post');
+Route::add('/helps',function(){
+    include 'views/helps.php';
+},'get');
+Route::add('/pages',function(){
+    include 'views/pages.php';
+});
+Route::add('/pages',function(){
+    include 'views/pages.php';
+},'post');
+Route::add('/pages',function(){
+    include 'views/pages.php';
+},'get');
 Route::add('/create-user',function(){
     include 'views/create_user.php';
 });

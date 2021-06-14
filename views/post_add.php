@@ -1,7 +1,7 @@
 <?php 
 require_once 'includes/variables.php';
 /*// HEADER */
-$title = "Add new post";
+$title = "Add new";
 $active='post-add'; 
 /*// LAYOUT */
 require_once 'includes/header.php';
@@ -9,7 +9,7 @@ require_once 'includes/header.php';
 /*// CHECK */
 $getConfig = $auth->getConfig();
 
-if ($isMemberTypye == 1 ) {
+if ($isMemberTypye == 1 || $isMemberTypye == 2) {
 } else {
     $util->redirect("./");
 }
@@ -18,9 +18,16 @@ if (!empty($_POST["change"])) {
     $title = trim(xss_clean($_POST["title"]));
     $content = trim($_POST["content"]);
     $type = (int)trim($_POST["type"]);
+    $kind = trim($_POST["kind"]);
 	$options = serialize(array());
-	$auth->insertPost($title, $content, $type, $options, 'posts');
-	$util->redirect("/posts");
+	$auth->insertPost($title, $content, $type, $options, $kind);
+	if($kind === 'posts') {
+		$util->redirect("/posts");
+	} else if($kind === 'pages') {
+		$util->redirect("/pages");
+	} else if($kind === 'helps') {
+		$util->redirect("/helps");
+	}
 }
 ?>
 
@@ -39,7 +46,7 @@ if (!empty($_POST["change"])) {
                     <div
                         class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                         <div>
-                        <h1 class="h2">Add new post</h1>
+                        <h1 class="h2">Add new</h1>
                         </div>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <div class="btn-group me-2">
@@ -60,13 +67,27 @@ if (!empty($_POST["change"])) {
                                     <input name="title" type="text" value="" id="inputTitle" class="form-control" placeholder="" required>
                                     <label for="inputTitle">Title</label>
                                 </div>
-								<div class="form-floating mb-3">
-                                    <select name="type" id="type" class="form-select">
-                                        <option value="0">Public</option>
-                                        <option value="1">Private</option>
-                                    </select>
-                                    <label for="type">Type</label>
-                                </div>
+								<div class="row">
+									<div class="col-sm-6<?php echo isset($_GET["kind"]) ? ' d-none' : ''; ?>">
+										<div class="form-floating mb-3">
+											<select name="kind" id="kind" class="form-select">
+												<option value="posts"<?php echo isset($_GET["kind"]) && $_GET["kind"] === 'posts' ? ' selected' : ''; ?>>Posts</option>
+												<option value="helps"<?php echo isset($_GET["kind"]) && $_GET["kind"] === 'helps' ? ' selected' : ''; ?>>Helps</option>
+												<option value="pages"<?php echo isset($_GET["kind"]) && $_GET["kind"] === 'pages' ? ' selected' : ''; ?>>Pages</option>
+											</select>
+											<label for="kind">Post Type</label>
+										</div>
+									</div>
+									<div class="col-sm-<?php echo isset($_GET["kind"]) ? '12' : '6'; ?>">
+										<div class="form-floating mb-3">
+											<select name="type" id="type" class="form-select">
+												<option value="0">Public</option>
+												<option value="1">Private</option>
+											</select>
+											<label for="type">Type</label>
+										</div>
+									</div>
+								</div>
                                 <div class="mb-3 mb-lg-0">
                                     <textarea name="content" id="content" class="form-control" rows="20"></textarea>
                                 </div>

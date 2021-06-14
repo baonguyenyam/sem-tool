@@ -49,11 +49,11 @@ class Auth
         $result = $db_handle->runQuery($query, 'sss', array($search, $search, $type));
         return $result;
     }
-    function getPostByID($id, $type)
+    function getPostByID($id)
     {
         $db_handle = new DBController();
-        $query = "SELECT * FROM tbl_posts WHERE post_id = ? AND post_type = ? AND post_del = 0 LIMIT 1";
-        $result = $db_handle->runQuery($query, 'ss', array($id, $type));
+        $query = "SELECT * FROM tbl_posts WHERE post_id = ? AND post_del = 0 LIMIT 1";
+        $result = $db_handle->runQuery($query, 's', array($id));
         return $result;
     }
     function insertPost($title, $content, $status, $options, $type)
