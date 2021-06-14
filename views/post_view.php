@@ -31,7 +31,7 @@ require_once 'includes/header.php';
                 <div class="shadow p-4 mb-5 bg-body rounded border mt-3 mt-xxl-5 mx-xxl-5">
                     <div class="row">
                         <div class="col-lg">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quibusdam earum facilis autem, ipsum repudiandae harum neque ex soluta minus dolores quidem ad illum esse sapiente rerum dolor in quas!
+							<?=$getPOST[0]['post_content']?>
 						</div>
                     </div>
                 </div>

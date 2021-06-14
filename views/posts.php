@@ -58,6 +58,7 @@ if (isset($_GET['s'])) {
                                     <tr>
                                     <th scope="col" width="30">.No</th>
                                     <th scope="col">Title</th>
+                                    <th scope="col" width="100">Status</th>
                                     <th scope="col">Information</th>
                                     <th scope="col" width="100">CP</th>
                                     </tr>
@@ -70,6 +71,9 @@ if (isset($_GET['s'])) {
                                     <tr>
                                     <th scope="row"><?=$m?></th>
                                     <td><a href="post-view?id=<?=$item["post_id"]?>"><?=$item["post_title"]?></a></td>
+                                    <td class="text-<?php echo $item["post_status"] == 0 ? 'success' : 'danger'; ?>">
+                                    <?php echo $item["post_status"] == 0 ? 'Public' : 'Private'; ?>       
+                                </td>
                                     <td>
                                         <div class="small text-muted"><?php echo time_elapsed_string($item["post_date"]) ?></div>
                                 

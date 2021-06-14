@@ -45,22 +45,36 @@ class Auth
     function getAllPosts($search, $type)
     {
         $db_handle = new DBController();
-        $query = "SELECT * FROM tbl_posts WHERE (post_title LIKE ? OR post_content LIKE ?) AND post_type = ? ORDER BY post_id DESC";
+        $query = "SELECT * FROM tbl_posts WHERE (post_title LIKE ? OR post_content LIKE ?) AND post_type = ? AND post_del = 0 ORDER BY post_id DESC";
         $result = $db_handle->runQuery($query, 'sss', array($search, $search, $type));
         return $result;
     }
     function getPostByID($id, $type)
     {
         $db_handle = new DBController();
-        $query = "SELECT * FROM tbl_posts WHERE post_id = ? AND post_type = ? LIMIT 1";
+        $query = "SELECT * FROM tbl_posts WHERE post_id = ? AND post_type = ? AND post_del = 0 LIMIT 1";
         $result = $db_handle->runQuery($query, 'ss', array($id, $type));
         return $result;
     }
-    function insertPosts($title, $content, $status, $options, $type)
+    function insertPost($title, $content, $status, $options, $type)
     {
         $db_handle = new DBController();
-        $query = "INSERT INTO tbl_posts (post_title, post_content, post_status, post_options, post_type) values (?, ?, ?, ?, ?)";
+        $query = "INSERT INTO tbl_posts (post_title, post_content, post_status, post_options, post_type) VALUES (?, ?, ?, ?, ?)";
         $result = $db_handle->insert($query, 'sssss', array($title, $content, $status, $options, $type));
+        return $result;
+    }
+    function updatePost($title, $content, $status, $options, $id)
+    {
+        $db_handle = new DBController();
+        $query = "UPDATE tbl_posts SET post_title = ?, post_content = ?, post_status = ?, post_options = ? WHERE post_id = ?";
+        $result = $db_handle->insert($query, 'sssss', array($title, $content, $status, $options, $id));
+        return $result;
+    }
+    function deletePost($del, $id)
+    {
+        $db_handle = new DBController();
+        $query = "UPDATE tbl_posts SET post_del = ? WHERE post_id = ?";
+        $result = $db_handle->insert($query, 'ss', array($del, $id));
         return $result;
     }
 

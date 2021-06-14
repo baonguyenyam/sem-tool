@@ -1,8 +1,10 @@
 <?php 
 require_once 'includes/variables.php';
 /*// HEADER */
-$title = "Add new post";
-$active='post-add'; 
+$getID  = isset($_GET["id"]) ? $_GET["id"] : $util->redirect("./");
+$getPOST = $auth->getPostByID($getID, 'posts');
+$title = $getPOST[0]['post_title'];
+$active='post-edit'; 
 /*// LAYOUT */
 require_once 'includes/header.php';
 
@@ -19,9 +21,11 @@ if (!empty($_POST["change"])) {
     $content = trim($_POST["content"]);
     $type = (int)trim($_POST["type"]);
 	$options = serialize(array());
-	$auth->insertPost($title, $content, $type, $options, 'posts');
+	$auth->updatePost($title, $content, $type, $options, $getID);
 	$util->redirect("/posts");
 }
+// LOAD DATA 
+// $datadisplay = unserialize($getPOST[0]["post_options"]);
 ?>
 
 <body>
@@ -39,11 +43,11 @@ if (!empty($_POST["change"])) {
                     <div
                         class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                         <div>
-                        <h1 class="h2">Add new post</h1>
+                        <h1 class="h2"><?=$title?></h1>
                         </div>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <div class="btn-group me-2">
-                                <input type="submit" name="change" class="btn btn-sm btn-primary" value="Create" id="create">
+                                <input type="submit" name="change" class="btn btn-sm btn-primary" value="Update" id="create">
                             </div>
 
                         </div>
@@ -57,18 +61,18 @@ if (!empty($_POST["change"])) {
                                     </div>
                                 <?php } ?>
                                 <div class="form-floating mb-3">
-                                    <input name="title" type="text" value="" id="inputTitle" class="form-control" placeholder="" required>
+                                    <input name="title" type="text" value="<?=$title?>" id="inputTitle" class="form-control" placeholder="" required>
                                     <label for="inputTitle">Title</label>
                                 </div>
 								<div class="form-floating mb-3">
                                     <select name="type" id="type" class="form-select">
-                                        <option value="0">Public</option>
-                                        <option value="1">Private</option>
+                                        <option value="0"<?php echo $getPOST[0]["post_status"] == 0 ? ' selected' : ''; ?>>Public</option>
+                                        <option value="1"<?php echo $getPOST[0]["post_status"] == 1 ? ' selected' : ''; ?>>Private</option>
                                     </select>
                                     <label for="type">Type</label>
                                 </div>
                                 <div class="mb-3 mb-lg-0">
-                                    <textarea name="content" id="content" class="form-control" rows="20"></textarea>
+                                    <textarea name="content" id="content" class="form-control" rows="20"><?=$getPOST[0]['post_content']?></textarea>
                                 </div>
                             </div>
                         </div>

@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `tbl_posts` (
   `post_id` int(11) NOT NULL AUTO_INCREMENT,
   `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `post_status` int(11) NOT NULL DEFAULT '0',
+  `post_del` int(11) NOT NULL DEFAULT '0',
   `post_title` varchar(255) NOT NULL,
   `post_content` text NOT NULL,
   `post_type` varchar(50) NOT NULL DEFAULT 'posts',
