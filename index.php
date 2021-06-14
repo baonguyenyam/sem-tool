@@ -72,7 +72,7 @@ Route::add('/users',function(){
 },'get');
 Route::add('/upload-post',function(){
     include 'views/upload_editor.php';
-});
+},'post');
 Route::add('/post-view',function(){
     include 'views/post_view.php';
 });

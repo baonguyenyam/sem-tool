@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 14, 2021 at 03:01 AM
+-- Generation Time: Jun 14, 2021 at 04:36 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
@@ -31,13 +31,14 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `tbl_posts`;
 CREATE TABLE IF NOT EXISTS `tbl_posts` (
   `post_id` int(11) NOT NULL AUTO_INCREMENT,
-  `post_date` timestamp NOT NULL,
+  `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `post_status` int(11) NOT NULL DEFAULT '0',
   `post_title` varchar(255) NOT NULL,
   `post_content` text NOT NULL,
+  `post_type` varchar(50) NOT NULL DEFAULT 'posts',
   `post_options` text NOT NULL,
   PRIMARY KEY (`post_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

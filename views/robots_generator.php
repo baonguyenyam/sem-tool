@@ -1,4 +1,5 @@
 <?php 
+require_once 'includes/variables.php';
 /*// HEADER */
 $title = "Robots.txt Generator";
 $active='robots'; 

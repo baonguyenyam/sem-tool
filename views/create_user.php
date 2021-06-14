@@ -1,4 +1,5 @@
 <?php 
+require_once 'includes/variables.php';
 /*// HEADER */
 $title = "Create an user";
 $active='create'; 

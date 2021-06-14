@@ -1,4 +1,5 @@
 <?php 
+require_once 'includes/variables.php';
 /*// HEADER */
 $title = "Add new post";
 $active='post-add'; 
@@ -16,10 +17,10 @@ if ($isMemberTypye == 1 ) {
 if (!empty($_POST["change"])) {
     $title = trim($_POST["title"]);
     $content = trim($_POST["content"]);
-    $theloai = trim($_POST["theloai"]);
-    $rannum = randomNum(7);
-	$auth->insertHelp($title, $content, $theloai, $rannum, 1);
-	$util->redirect("./help.php");
+	$options = serialize(array());
+	// $datadisplay = unserialize($getBaiThibyID[0]["baithi_data"]);
+	$auth->insertPosts($title, $content, 1, $options, 'posts');
+	$util->redirect("/posts");
 }
 ?>
 
@@ -60,7 +61,7 @@ if (!empty($_POST["change"])) {
                                     <label for="inputTitle">Title</label>
                                 </div>
                                 <div class="mb-3 mb-lg-0">
-                                    <textarea name="content" id="content" class="form-control" rows="20"></textarea>
+                                    <textarea name="content" id="content" class="form-control" rows="20" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -84,6 +85,8 @@ if (!empty($_POST["change"])) {
 				toolbar_mode: 'scrolling',
 				images_upload_url: 'upload-post',
 				image_dimensions: false,
+				relative_urls: false,
+				remove_script_host: false,
 				// override default upload handler to simulate successful upload
 				images_upload_handler: function(blobInfo, success, failure) {
 					var xhr, formData;

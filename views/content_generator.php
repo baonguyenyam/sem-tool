@@ -1,5 +1,6 @@
 <?php $active='content'; ?>
 <?php 
+require_once 'includes/variables.php';
 /*// HEADER */
 $title = "Content SEO generator";
 $active='content'; 

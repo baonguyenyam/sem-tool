@@ -1,4 +1,5 @@
 <?php 
+require_once 'includes/variables.php';
 /*// HEADER */
 $title = "WHOIS Domain Lookup";
 $active='domain'; 

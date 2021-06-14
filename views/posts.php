@@ -1,4 +1,5 @@
 <?php 
+require_once 'includes/variables.php';
 /*// HEADER */
 $title = "Posts";
 $active='posts'; 
@@ -6,10 +7,10 @@ $active='posts';
 require_once 'includes/header.php';
 
 if (isset($_GET['s'])) {
-    $posts = $auth->getAllPosts('%' . $_GET['s'] . '%');
+    $posts = $auth->getAllPosts('%' . $_GET['s'] . '%', 'posts');
     $query = $_GET['s'];
 } else {
-    $posts = $auth->getAllPosts('%%');
+    $posts = $auth->getAllPosts('%%', 'posts');
     $query = '';
 }
 
@@ -68,7 +69,7 @@ if (isset($_GET['s'])) {
                                 <th scope="row"><?=$m?></th>
                                 <td><a href="post-view?id=<?=$item["post_id"]?>"><?=$item["post_title"]?></a></td>
                                 <td>
-                                    <div class="small text-muted"><?php echo time_elapsed_string(date("Y-m-d H:i:s", $item["post_date"])) ?></div>
+                                    <div class="small text-muted"><?php echo time_elapsed_string($item["post_date"]) ?></div>
                             
                             </td>
                                 <td class="small text-nowrap"><a href="post-edit?id=<?=$item["post_id"]?>" class="btn btn-sm btn-primary text-nowrap">Edit</a> <a href="post-del?id=<?=$item["post_id"]?>" class="btn btn-sm btn-danger text-nowrap" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
