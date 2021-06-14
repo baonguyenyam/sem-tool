@@ -54,6 +54,11 @@
                                 <i class="bi bi-upload fa-lg fa-fw me-1"></i> Upload
                             </a>
                         </li>
+                        <li>
+                            <a href="posts" class="dropdown-item <?= $active === 'posts' ? 'active' : '' ?>">
+                                <i class="bi bi-card-text fa-lg fa-fw me-1"></i> Post List
+                            </a>
+                        </li>
                         <li><hr class="dropdown-divider"></li>
                         <?php } ?>
                         <li>

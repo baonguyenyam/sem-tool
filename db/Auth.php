@@ -6,7 +6,7 @@ class Auth
     function upload($name,$fname,$type,$version)
     {
         $db_handle = new DBController();
-        $query = "INSERT INTO tbl_upload (upload_name,upload_fname,upload_type,upload_version) values (?, ?, ?, ?)";
+        $query = "INSERT INTO tbl_upload (upload_name,upload_fname,upload_type,upload_version) VALUES (?, ?, ?, ?)";
         $result = $db_handle->insert($query, 'ssss', array($name,$fname,$type,$version));
         return $result;
     }
@@ -29,7 +29,7 @@ class Auth
     function getConfig()
     {
         $db_handle = new DBController();
-        $query = "Select * from tbl_config where config_id = 1";
+        $query = "SELECT * FROM tbl_config WHERE config_id = 1";
         $result = $db_handle->runBaseQuery($query);
         return $result;
     }
@@ -41,11 +41,21 @@ class Auth
         return $result;
     }
 
+    // POSTS
+    function getAllPosts($search)
+    {
+        $db_handle = new DBController();
+        $query = "SELECT * FROM tbl_posts WHERE (post_title LIKE ? OR post_content LIKE ?) ORDER BY post_id DESC";
+        $result = $db_handle->runQuery($query, 'ss', array($search, $search));
+        return $result;
+    }
+
+
     // USER
     function getAllMember($search)
     {
         $db_handle = new DBController();
-        $query = "Select * from tbl_members WHERE (member_name LIKE ? OR member_email LIKE ? OR member_fullname LIKE ?) ORDER BY member_id DESC";
+        $query = "SELECT * FROM tbl_members WHERE (member_name LIKE ? OR member_email LIKE ? OR member_fullname LIKE ?) ORDER BY member_id DESC";
         $result = $db_handle->runQuery($query, 'sss', array($search, $search, $search));
         return $result;
     }
@@ -54,14 +64,14 @@ class Auth
     function getMemberByID($id)
     {
         $db_handle = new DBController();
-        $query = "Select * from tbl_members where member_id = ?";
+        $query = "SELECT * FROM tbl_members WHERE member_id = ?";
         $result = $db_handle->runQuery($query, 's', array($id));
         return $result;
     }
     function getLogin($id)
     {
         $db_handle = new DBController();
-        $query = "Select * from tbl_login where member_id = ?";
+        $query = "SELECT * FROM tbl_login WHERE member_id = ?";
         $result = $db_handle->runQuery($query, 's', array($id));
         return $result;
     }
@@ -82,21 +92,21 @@ class Auth
     function insertLogin($now, $id)
     {
         $db_handle = new DBController();
-        $query = "INSERT INTO tbl_login (login_last_login, member_id) values (?, ?)";
+        $query = "INSERT INTO tbl_login (login_last_login, member_id) VALUES (?, ?)";
         $result = $db_handle->insert($query, 'ss', array($now, $id));
         return $result;
     }
-    function insertToken($username, $random_password_hash, $random_selector_hash, $expiry_date)
+    function insertToken($username, $random_password_hash, $random_SELECTor_hash, $expiry_date)
     {
         $db_handle = new DBController();
-        $query = "INSERT INTO tbl_token_auth (auth_username, auth_password_hash, auth_selector_hash, auth_expiry_date) values (?, ?, ?,?)";
-        $result = $db_handle->insert($query, 'ssss', array($username, $random_password_hash, $random_selector_hash, $expiry_date));
+        $query = "INSERT INTO tbl_token_auth (auth_username, auth_password_hash, auth_SELECTor_hash, auth_expiry_date) VALUES (?, ?, ?,?)";
+        $result = $db_handle->insert($query, 'ssss', array($username, $random_password_hash, $random_SELECTor_hash, $expiry_date));
         return $result;
     }
     function getTokenByUsername($username, $expired)
     {
         $db_handle = new DBController();
-        $query = "Select * from tbl_token_auth where auth_username = ? and auth_is_expired = ?";
+        $query = "SELECT * FROM tbl_token_auth WHERE auth_username = ? AND auth_is_expired = ?";
         $result = $db_handle->runQuery($query, 'si', array($username, $expired));
         return $result;
     }
@@ -111,21 +121,21 @@ class Auth
     function getMemberByUsername($username)
     {
         $db_handle = new DBController();
-        $query = "Select * from tbl_members where member_name = ?";
+        $query = "SELECT * FROM tbl_members WHERE member_name = ?";
         $result = $db_handle->runQuery($query, 's', array($username));
         return $result;
     }
     function checkEmail($email)
     {
         $db_handle = new DBController();
-        $query = "Select * from tbl_members where member_email = ?";
+        $query = "SELECT * FROM tbl_members WHERE member_email = ?";
         $result = $db_handle->runQuery($query, 's', array($email));
         return $result;
     }
     function insertUser($username, $random_password, $email, $type, $fullname, $content)
     {
         $db_handle = new DBController();
-        $query = "INSERT INTO tbl_members (member_name, member_password, member_email, member_type, member_fullname, member_info) values (?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO tbl_members (member_name, member_password, member_email, member_type, member_fullname, member_info) VALUES (?, ?, ?, ?, ?, ?)";
         $result = $db_handle->insert($query, 'ssssss', array($username, $random_password, $email, $type, $fullname, $content));
         return $result;
     }
@@ -151,7 +161,7 @@ class Auth
     function checkReset($id, $email, $key)
     {
         $db_handle = new DBController();
-        $query = "Select * from tbl_members where member_id = ? AND member_email = ? AND member_temp_pass = ?";
+        $query = "SELECT * FROM tbl_members WHERE member_id = ? AND member_email = ? AND member_temp_pass = ?";
         $result = $db_handle->runQuery($query, 'sss', array($id, $email, $key));
         return $result;
     }

@@ -87,6 +87,12 @@
 		</a>
 	</li>
 	<li>
+		<a href="domain">
+		<i class="bi bi-globe fa-3x fa-fw me-1"></i>
+		<span>WHOIS Domain Lookup</span>
+		</a>
+	</li>
+	<li>
 		<a href="crawler">
 		<i class="bi bi-lightning fa-3x fa-fw me-1"></i>
 		<span>Crawler List</span>

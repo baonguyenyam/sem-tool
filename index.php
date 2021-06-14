@@ -70,6 +70,36 @@ Route::add('/users',function(){
 Route::add('/users',function(){
     include 'views/users.php';
 },'get');
+Route::add('/upload-post',function(){
+    include 'views/upload_editor.php';
+});
+Route::add('/post-view',function(){
+    include 'views/post_view.php';
+});
+Route::add('/post-del',function(){
+    include 'views/post_del.php';
+});
+Route::add('/post-edit',function(){
+    include 'views/post_edit.php';
+});
+Route::add('/post-edit',function(){
+    include 'views/post_edit.php';
+},'post');
+Route::add('/post-add',function(){
+    include 'views/post_add.php';
+});
+Route::add('/post-add',function(){
+    include 'views/post_add.php';
+},'post');
+Route::add('/posts',function(){
+    include 'views/posts.php';
+});
+Route::add('/posts',function(){
+    include 'views/posts.php';
+},'post');
+Route::add('/posts',function(){
+    include 'views/posts.php';
+},'get');
 Route::add('/create-user',function(){
     include 'views/create_user.php';
 });

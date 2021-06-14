@@ -54,6 +54,14 @@ html.dark {
 				border-color: var(--border);
 			}
 		}
+		.btn.btn-circle {
+			background-color: var(--box);
+			color: var(--color);
+			&:hover, &.active {
+				background-color: #d63384;
+				color: #fff;
+			}
+		}
 		.btn-primary {
 			background-color: #d63384;
 			border-color: #8b1952;
@@ -224,6 +232,4 @@ html.dark {
 	#sidebarMenu::-webkit-scrollbar-thumb:hover {
 		background: #d63384;
 	}
-
-
 }

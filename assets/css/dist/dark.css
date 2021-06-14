@@ -47,6 +47,14 @@ html.dark body table thead tr th {
 html.dark body table tr th, html.dark body table tr td {
   border-color: var(--border);
 }
+html.dark body .btn.btn-circle {
+  background-color: var(--box);
+  color: var(--color);
+}
+html.dark body .btn.btn-circle:hover, html.dark body .btn.btn-circle.active {
+  background-color: #d63384;
+  color: #fff;
+}
 html.dark body .btn-primary {
   background-color: #d63384;
   border-color: #8b1952;

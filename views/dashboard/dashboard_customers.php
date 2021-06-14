@@ -6,21 +6,15 @@
 		</a>
 	</li>
 	<li>
-		<a href="html-validator">
-		<i class="bi bi-check2-all fa-3x fa-fw me-1"></i>
-		<span>HTML Code Validator</span>
-		</a>
-	</li>
-	<li>
 		<a href="banner-creator/index.html" target="_blank">
 		<i class="bi bi-camera fa-3x fa-fw me-1"></i>
 		<span>Banner Creator</span>
 		</a>
 	</li>
 	<li>
-		<a href="ping">
-		<i class="bi bi-arrow-left-right fa-3x fa-fw me-1"></i>
-		<span>Ping Your Website</span>
+		<a href="domain">
+		<i class="bi bi-globe fa-3x fa-fw me-1"></i>
+		<span>WHOIS Domain Lookup</span>
 		</a>
 	</li>
 	<li>
