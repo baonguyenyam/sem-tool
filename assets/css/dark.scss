@@ -62,9 +62,19 @@ html.dark {
 				color: #fff;
 			}
 		}
+		.page-item.active .page-link,
 		.btn-primary {
 			background-color: #d63384;
 			border-color: #8b1952;
+		}
+		.page-item {
+			.page-link {
+				background-color: var(--border);
+				border-color: var(--border);
+				&:hover {
+					color: #8b1952;
+				}
+			}
 		}
 		.text-primary {
 			color: var(--white) !important;

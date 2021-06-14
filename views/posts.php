@@ -46,7 +46,7 @@ if ($isMemberTypye == 1 || $isMemberTypye == 2) {
                     <?php
                     if ($posts) {
 
-                        $pageper = 20;
+                        $pageper = 1;
                         $curent_page = isset($_GET["p"]) ? $_GET["p"] : 1;
                         $allpage = (ceil(count($posts) / $pageper)) > 0 ? ceil(count($posts) / $pageper) : 1;
                         $page = get_page($posts, $curent_page, $pageper);

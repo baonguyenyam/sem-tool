@@ -55,9 +55,17 @@ html.dark body .btn.btn-circle:hover, html.dark body .btn.btn-circle.active {
   background-color: #d63384;
   color: #fff;
 }
+html.dark body .page-item.active .page-link,
 html.dark body .btn-primary {
   background-color: #d63384;
   border-color: #8b1952;
+}
+html.dark body .page-item .page-link {
+  background-color: var(--border);
+  border-color: var(--border);
+}
+html.dark body .page-item .page-link:hover {
+  color: #8b1952;
 }
 html.dark body .text-primary {
   color: var(--white) !important;

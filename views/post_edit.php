@@ -88,6 +88,10 @@ if (!empty($_POST["change"])) {
 	<script>
 		$().ready(function() {
 			$('textarea').tinymce({
+				<?php if (isset($_COOKIE["active_theme"]) && $_COOKIE["active_theme"] === '1') {?>
+				skin: "oxide-dark",
+				content_css: "dark",
+				<?php } ?>
 				plugins: [
 					'code paste wordcount',
 					"advlist autoresize autolink lists link image charmap print preview anchor",
