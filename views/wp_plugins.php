@@ -143,6 +143,34 @@ require_once 'includes/header.php';
                         }
                     ?>
 
+                    <?php   
+                        $arr = $auth->getfile(6);
+                        foreach ($arr as &$value) {                    
+                    ?>
+
+                    <div class="d-flex text-muted pt-3">
+                        <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+                        <i class="fas fa-archive fa-3x text-primary"></i>
+                        </div>
+
+                        <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
+                            <div class="d-lg-flex w-100 justify-content-between align-items-start">
+                                <div class="mb-2">
+                                    <strong class="d-block text-gray-dark">LIFT Chat</strong>
+                                    <p class="mb-0">A Better Way to Connect With Customers</p>
+                                    <small class="mb-0 text-primary">
+                                    <?php $arrN = $auth->getfileAll(6); foreach ($arrN as &$item) {  ?><a href="download?filename=<?=md5($item['upload_version'])?>&f=<?=$item['upload_fname']?>">v<?=$item['upload_version']?></a> <?php } ?>
+                                    </small>                                
+                                </div>
+                                <a href="download?filename=<?=md5($value['upload_version'])?>&f=<?=$value['upload_fname']?>" class="btn btn-sm btn-success">Download v<?=$value['upload_version']?></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php
+                        }
+                    ?>
+
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
                             <i class="fas fa-archive fa-3x"></i>

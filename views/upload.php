@@ -30,7 +30,7 @@ if(isset($_POST['submit'])!=""){
         $move =  move_uploaded_file($temp,"uploads/".$fname);
         if($move){
             $auth->upload($name,$fname,$stype,$version);
-                header("location: index.php");
+                header("location: /");
         }
     }
 }
@@ -68,6 +68,7 @@ if(isset($_POST['submit'])!=""){
                                 <option value="3">LIFT Addons for Visual Composer</option>
                                 <option value="4">LIFT Blocks</option>
                                 <option value="5">LIFT CleanUp</option>
+                                <option value="6">LIFT Chat</option>
                             </select>
                         </div>
                         <div class="mb-3">
