@@ -71,39 +71,71 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                 <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#liftModal" class="howto"><i class="fa fa-question"></i></a>
                                             </div>
                                             <textarea class="form-control" placeholder="Paste export file (.xml) from WordPress post article" id="source" rows="13"></textarea>
+                                            <p class="mt-2"><strong>Code Key:</strong> <code class="a" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE___</code>, <code class="a" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE_A___</code>, <code class="a" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE_B___</code>, <code class="a" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE_C___</code>, <code class="a" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE_D___</code>, <code class="a" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE_E___</code>
+                                        </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xxl-6 mb-3" id="multiresults">
                                     <h5 class="mb-3"><span class="badge bg-info">Step 2</span></h5>
                                     <div class="uv">
-                                        <h6 class="mb-2"><span class="badge bg-primary">A</span> keywords</h6>
-                                        <div class="form-floating-0 mb-4">
-                                            <textarea class="form-control" placeholder="" id="a_kw"
-                                                style="height: 40px">LIFT, Sandiego</textarea>
-                                            <!-- <label for="a_kw">enter keywords and add comma (,) end of words</label> -->
-                                        </div>
-                                        <h6 class="mb-2"><span class="badge bg-info">B</span> keywords</h6>
-                                        <div class="form-floating-0 mb-4">
-                                            <textarea class="form-control" placeholder="" id="b_kw"
-                                                style="height: 40px">Web, WordPress</textarea>
-                                            <!-- <label for="b_kw">enter keywords and add comma (,) end of words</label> -->
-                                        </div>
-                                        <h6 class="mb-2"><span class="badge bg-warning">C</span> keywords</h6>
-                                        <div class="form-floating-0 mb-4">
-                                            <textarea class="form-control" placeholder="" id="c_kw" style="height: 40px"></textarea>
-                                            <!-- <label for="c_kw">enter keywords and add comma (,) end of words</label> -->
-                                        </div>
-                                        <h6 class="mb-2"><span class="badge bg-dark">D</span> keywords</h6>
-                                        <div class="form-floating-0 mb-4">
-                                            <textarea class="form-control" placeholder="" id="d_kw" style="height: 40px"></textarea>
-                                            <!-- <label for="d_kw">enter keywords and add comma (,) end of words</label> -->
-                                        </div>
-                                        <h6 class="mb-2"><span class="badge bg-secondary">E</span> keywords</h6>
-                                        <div class="form-floating-0 mb-5 mb-lg-0">
-                                            <textarea class="form-control" placeholder="" id="e_kw"
-                                                style="height: 40px"></textarea>
-                                            <!-- <label for="e_kw">enter keywords and add comma (,) end of words</label> -->
+
+                                        <ul class="nav nav-tabs nav-sm" id="qrtabnice" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a href="javascript:void(0)" class="nav-link active" id="tabkws-tab" data-bs-toggle="tab" data-bs-target="#tabkws">Keywords</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a href="javascript:void(0)" class="nav-link" id="tabmakets-tab" data-bs-toggle="tab" data-bs-target="#tabmakets">Categories</a>
+                                            </li>
+                                        </ul>
+
+
+                                        <div class="tab-content pt-4" id="myTabContentNice">
+                                            <div class="tab-pane fade show active" id="tabkws">
+                                                <h6 class="mb-2"><span class="badge bg-primary">A</span> keywords</h6>
+                                                <div class="form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="" id="a_kw"
+                                                        style="height: 40px">LIFT, Sandiego</textarea>
+                                                    <!-- <label for="a_kw">enter keywords and add comma (,) end of words</label> -->
+                                                </div>
+                                                <h6 class="mb-2"><span class="badge bg-info">B</span> keywords</h6>
+                                                <div class="form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="" id="b_kw"
+                                                        style="height: 40px">Web, WordPress</textarea>
+                                                    <!-- <label for="b_kw">enter keywords and add comma (,) end of words</label> -->
+                                                </div>
+                                                <h6 class="mb-2"><span class="badge bg-warning">C</span> keywords</h6>
+                                                <div class="form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="" id="c_kw" style="height: 40px"></textarea>
+                                                    <!-- <label for="c_kw">enter keywords and add comma (,) end of words</label> -->
+                                                </div>
+                                                <h6 class="mb-2"><span class="badge bg-dark">D</span> keywords</h6>
+                                                <div class="form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="" id="d_kw" style="height: 40px"></textarea>
+                                                    <!-- <label for="d_kw">enter keywords and add comma (,) end of words</label> -->
+                                                </div>
+                                                <h6 class="mb-2"><span class="badge bg-secondary">E</span> keywords</h6>
+                                                <div class="form-floating-0 mb-5 mb-lg-2">
+                                                    <textarea class="form-control" placeholder="" id="e_kw"
+                                                        style="height: 40px"></textarea>
+                                                    <!-- <label for="e_kw">enter keywords and add comma (,) end of words</label> -->
+                                                </div>
+                                                <p class="text-muted">e.g: https://domain.com/<code>state</code>/<code>location</code>/<code class="text-primary">primary-keyword</code></p>
+
+                                            </div>
+                                            <div class="tab-pane fade" id="tabmakets">
+                                                <h6 class="mb-2">States</h6>
+                                                <div class="form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="" id="instate"
+                                                        style="height: 40px">Texas, New York</textarea>
+                                                </div>
+                                                <h6 class="mb-2">Cities</h6>
+                                                <div class="form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="" id="inlocation"
+                                                        style="height: 40px">Fort Worth, Dallas</textarea>
+                                                </div>
+                                                <p class="text-muted">e.g: https://domain.com/<code>state</code>/<code>location</code>/<code class="text-primary">primary-keyword</code></p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="rv d-none">

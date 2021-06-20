@@ -85,6 +85,15 @@ function loadCSVFileAsText() {
     }
 }
 
+function buildStringURL(str) {
+    return str.toString()
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/gi, "-")
+        .replace(/[\uE000-\uF8FF]/g, '')
+        .replace(/^[\u0080-\uffff]/g, "")
+}
+
 function loadFileAsText() {
     if (document.getElementById("fileToLoad").value) {
         var fileToLoad = document.getElementById("fileToLoad").files[0];

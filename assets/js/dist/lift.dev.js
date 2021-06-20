@@ -4,6 +4,10 @@ var LIFT_APP = {
   KW: [],
   rePlaceMulti: '',
   rePlaceMulti_Done: [],
+  getStateAndLocation: {
+    'state': '',
+    'location': ''
+  },
   code: null,
   init: function init() {
     $(function () {
@@ -87,47 +91,52 @@ var LIFT_APP = {
   },
   genmulti: function genmulti() {
     this.rePlaceMulti = replaceLIFT(LIFT_APP.code.getValue());
+    this.getStateAndLocation['state'] = replaceLIFT($('#instate').val()).trim().split(",");
+    this.getStateAndLocation['location'] = replaceLIFT($('#inlocation').val()).trim().split(",");
     var dochange = this.rePlaceMulti.replace(/<item>(.*?)<\/item>/gi, '___LIFTCHANGE___');
     var nst = 0;
+    var category = '';
 
-    for (var index_a = 0; index_a < this.akw_get().length; index_a++) {
-      var _a = lift_encode(this.akw_get()[index_a].trim());
+    try {
+      for (var index_a = 0; index_a < this.akw_get().length; index_a++) {
+        var _a = lift_encode(this.akw_get()[index_a].trim());
 
-      if (_a.length > 0) {
-        // nst++;
-        // this.KW.push(_a)
-        // this.replaceMultiKW(this.rePlaceMulti,nst,_a)
-        for (var index_b = 0; index_b < this.bkw_get().length; index_b++) {
-          var _b = lift_encode(this.bkw_get()[index_b].trim());
+        if (_a.length > 0) {
+          // nst++;
+          // this.KW.push(_a)
+          // this.replaceMultiKW(this.rePlaceMulti,nst,_a)
+          for (var index_b = 0; index_b < this.bkw_get().length; index_b++) {
+            var _b = lift_encode(this.bkw_get()[index_b].trim());
 
-          if (_b.length > 0) {
-            nst++;
-            this.KW.push(_a + " " + _b);
-            this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b);
+            if (_b.length > 0) {
+              nst++;
+              this.KW.push(_a + " " + _b);
+              this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b);
 
-            for (var index_c = 0; index_c < this.ckw_get().length; index_c++) {
-              var _c = lift_encode(this.ckw_get()[index_c].trim());
+              for (var index_c = 0; index_c < this.ckw_get().length; index_c++) {
+                var _c = lift_encode(this.ckw_get()[index_c].trim());
 
-              if (_c.length > 0) {
-                nst++;
-                this.KW.push(_a + " " + _b + " " + _c);
-                this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c);
+                if (_c.length > 0) {
+                  nst++;
+                  this.KW.push(_a + " " + _b + " " + _c);
+                  this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c);
 
-                for (var index_d = 0; index_d < this.dkw_get().length; index_d++) {
-                  var _d = lift_encode(this.dkw_get()[index_d].trim());
+                  for (var index_d = 0; index_d < this.dkw_get().length; index_d++) {
+                    var _d = lift_encode(this.dkw_get()[index_d].trim());
 
-                  if (_d.length > 0) {
-                    nst++;
-                    this.KW.push(_a + " " + _b + " " + _c + " " + _d);
-                    this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d);
+                    if (_d.length > 0) {
+                      nst++;
+                      this.KW.push(_a + " " + _b + " " + _c + " " + _d);
+                      this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d);
 
-                    for (var index_e = 0; index_e < this.ekw_get().length; index_e++) {
-                      var _e = lift_encode(this.ekw_get()[index_e].trim());
+                      for (var index_e = 0; index_e < this.ekw_get().length; index_e++) {
+                        var _e = lift_encode(this.ekw_get()[index_e].trim());
 
-                      if (_e.length > 0) {
-                        nst++;
-                        this.KW.push(_a + " " + _b + " " + _c + " " + _d + " " + _e);
-                        this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d, _e);
+                        if (_e.length > 0) {
+                          nst++;
+                          this.KW.push(_a + " " + _b + " " + _c + " " + _d + " " + _e);
+                          this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d, _e);
+                        }
                       }
                     }
                   }
@@ -137,21 +146,38 @@ var LIFT_APP = {
           }
         }
       }
-    }
-
-    var t = dochange.replace('___LIFTCHANGE___', this.rePlaceMulti_Done.join(""));
-    $("#resultsmulti").val(unReplaceLIFT(t));
-    $("#results").val(lift_decode(LIFT_APP.KW.join("\n")));
-    $("#number").text(this.rePlaceMulti_Done.length);
-    $("#multiresults .uv").addClass('d-none');
-    $("#multiresults .rv").removeClass('d-none');
-    var text = $("#resultsmulti").val();
-    var filename = "LIFT_POST_GEN_" + new Date().getTime() + ".xml";
-
-    try {
-      text;
     } catch (e) {} finally {
-      download(filename, text);
+      var t = dochange.replace('___LIFTCHANGE___', this.rePlaceMulti_Done.join("")).replace(/<category[^>]*>(.*?)<\/category>/gi, '___STATELOCATION___');
+
+      for (var index = 0; index < this.getStateAndLocation['state'].length; index++) {
+        var inSNice = this.getStateAndLocation['state'][index].trim();
+        var inS = buildStringURL(this.getStateAndLocation['state'][index]);
+        category += '<category domain="category" nicename="' + inS + '"><![CDATA[' + inSNice + ']]></category>';
+      }
+
+      for (var indexL = 0; indexL < this.getStateAndLocation['location'].length; indexL++) {
+        var inLNice = this.getStateAndLocation['location'][indexL].trim();
+        var inL = buildStringURL(this.getStateAndLocation['location'][indexL]);
+        category += '<category domain="category" nicename="' + inL + '"><![CDATA[' + inLNice + ']]></category>';
+      }
+
+      t = t.replace(/___STATELOCATION___/gi, category);
+      $("#resultsmulti").val(unReplaceLIFT(t));
+      $("#results").val(lift_decode(LIFT_APP.KW.join("\n")));
+      $("#number").text(this.rePlaceMulti_Done.length);
+      $("#multiresults .uv").addClass('d-none');
+      $("#multiresults .rv").removeClass('d-none');
+      var text = $("#resultsmulti").val();
+      var filename = "LIFT_POST_GEN_" + new Date().getTime() + ".xml";
+
+      try {
+        text;
+        console.log(text);
+      } catch (e) {} finally {
+        setTimeout(function () {
+          download(filename, text);
+        }, 1000);
+      }
     }
   },
   replaceMultiKW: function replaceMultiKW(rePlaceMulti, nst, _a, _b, _c, _d, _e) {
