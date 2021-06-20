@@ -146,3 +146,7 @@ h1 {
 .table-responsive table tbody tr:last-child th:last-child {
   border-bottom-right-radius: 10px;
 }
+.badge.badge-sm {
+  padding: 0.2em 0.5em;
+  font-size: 0.65em;
+}

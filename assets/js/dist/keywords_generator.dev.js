@@ -30,16 +30,16 @@ $("#dwn-btn").on("click", function () {
   }
 });
 $("#save-btn").on("click", function () {
-  localStorage.removeItem("myLIFT_A");
-  localStorage.setItem("myLIFT_A", $("#a_kw").val());
-  localStorage.removeItem("myLIFT_B");
-  localStorage.setItem("myLIFT_B", $("#b_kw").val());
-  localStorage.removeItem("myLIFT_C");
-  localStorage.setItem("myLIFT_C", $("#c_kw").val());
-  localStorage.removeItem("myLIFT_D");
-  localStorage.setItem("myLIFT_D", $("#d_kw").val());
-  localStorage.removeItem("myLIFT_E");
-  localStorage.setItem("myLIFT_E", $("#e_kw").val());
+  // localStorage.removeItem("myLIFT_A");
+  // localStorage.setItem("myLIFT_A", $("#a_kw").val());
+  // localStorage.removeItem("myLIFT_B");
+  // localStorage.setItem("myLIFT_B", $("#b_kw").val());
+  // localStorage.removeItem("myLIFT_C");
+  // localStorage.setItem("myLIFT_C", $("#c_kw").val());
+  // localStorage.removeItem("myLIFT_D");
+  // localStorage.setItem("myLIFT_D", $("#d_kw").val());
+  // localStorage.removeItem("myLIFT_E");
+  // localStorage.setItem("myLIFT_E", $("#e_kw").val());
   localStorage.removeItem("myLIFT");
   localStorage.setItem("myLIFT", $("#results").val());
   localStorage.removeItem("myLIFT_KW");

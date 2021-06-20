@@ -5,6 +5,7 @@ $title = "WordPress Post generator";
 $active='post'; 
 /*// LAYOUT */
 require_once 'includes/header.php';
+$btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
 ?>
 
 <body>
@@ -24,7 +25,7 @@ require_once 'includes/header.php';
                         </h1>
                         <p>The tool auto-generation posts from the keywords list you have.</p>
                     </div>
-                    <button type="button" class="btn btn-primary btn-sm" id="create-btn">Create import file</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="create-btn<?=$btnquest?>">Create import file</button>
                 </div>
 
                 <div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border mt-xxl-5 mx-xxl-5">
@@ -44,22 +45,72 @@ require_once 'includes/header.php';
 
                     <div class="pt-4 border-top-0">
                         <?php if(isset($_GET['type']) && $_GET['type'] === 'multi') {?>
-                            <div class="row">
-                                <div class="col">
-                                    <h5><span class="badge bg-info">Step 1</span></h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-auto">
-                                    <h5 class="mb-3">Upload xml file</h5>
 
-                                    <div class="input-group mb-3">
-                                        <input type="file" class="form-control" id="fileToLoad">
-                                        <button class="btn btn-primary" type="button" id="loadf" onclick="loadFileAsText()">Upload</button>
+                            <div class="row gx-5">
+                                <div class="col-xxl-6 mb-3">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5><span class="badge bg-info">Step 1</span></h5>
+                                        </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <h5 class="mb-3">Upload xml file</h5>
+        
+                                            <div class="input-group mb-3">
+                                                <input type="file" class="form-control" id="fileToLoad">
+                                                <button class="btn btn-primary" type="button" id="loadf" onclick="loadFileAsText()">Upload</button>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                                <h5>Source</h5>
+                                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#liftModal" class="howto"><i class="fa fa-question"></i></a>
+                                            </div>
+                                            <textarea class="form-control" placeholder="Paste export file (.xml) from WordPress post article" id="source" rows="13"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6 mb-3">
+                                    <h5 class="mb-3"><span class="badge bg-info">Step 2</span></h5>
 
+                                    <h6 class="mb-2"><span class="badge bg-primary">A</span> keywords</h6>
+                                    <div class="form-floating-0 mb-4">
+                                        <textarea class="form-control" placeholder="" id="a_kw"
+                                            style="height: 40px">LIFT, Sandiego</textarea>
+                                        <!-- <label for="a_kw">enter keywords and add comma (,) end of words</label> -->
+                                    </div>
+                                    <h6 class="mb-2"><span class="badge bg-info">B</span> keywords</h6>
+                                    <div class="form-floating-0 mb-4">
+                                        <textarea class="form-control" placeholder="" id="b_kw"
+                                            style="height: 40px">Web, WordPress</textarea>
+                                        <!-- <label for="b_kw">enter keywords and add comma (,) end of words</label> -->
+                                    </div>
+                                    <h6 class="mb-2"><span class="badge bg-warning">C</span> keywords</h6>
+                                    <div class="form-floating-0 mb-4">
+                                        <textarea class="form-control" placeholder="" id="c_kw" style="height: 40px"></textarea>
+                                        <!-- <label for="c_kw">enter keywords and add comma (,) end of words</label> -->
+                                    </div>
+                                    <h6 class="mb-2"><span class="badge bg-dark">D</span> keywords</h6>
+                                    <div class="form-floating-0 mb-4">
+                                        <textarea class="form-control" placeholder="" id="d_kw" style="height: 40px"></textarea>
+                                        <!-- <label for="d_kw">enter keywords and add comma (,) end of words</label> -->
+                                    </div>
+                                    <h6 class="mb-2"><span class="badge bg-secondary">E</span> keywords</h6>
+                                    <div class="form-floating-0 mb-5 mb-lg-0">
+                                        <textarea class="form-control" placeholder="" id="e_kw"
+                                            style="height: 40px"></textarea>
+                                        <!-- <label for="e_kw">enter keywords and add comma (,) end of words</label> -->
+                                    </div>
+                                    
+                                    <textarea class="form-control mb-2" placeholder="" rows="20" id="results"></textarea>
+                                    <textarea class="d-none" id="results<?=$btnquest?>"></textarea>
                                 </div>
                             </div>
+
                         <?php } else { ?>
                             <div class="row">
                                 <div class="col">
@@ -98,6 +149,7 @@ require_once 'includes/header.php';
                                     <div class="d-flex flex-row justify-content-between align-items-center mt-2">
                                         <p><strong>Code Key:</strong> <code class="a" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE___</code>
                                         </p>
+                                        <textarea class="d-none" id="results"></textarea>
                                         <button type="button" class="btn btn-xs btn-danger" id="clear">Clear</button>
                                     </div>
 
@@ -125,6 +177,7 @@ require_once 'includes/header.php';
                     <img src="/assets/img/help-1.png" alt="" class="img-thumbnail img-fluid">
                 </div>
                 <div class="modal-footer">
+                    <a href="download?filename=<?=md5('demo')?>&f=demo.xml" class="btn btn-primary">Download sample file</a>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>

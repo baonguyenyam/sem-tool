@@ -7,6 +7,7 @@ if(!is_readable($file)) die('File not found!');
 $size = filesize($file);
 $name = rawurldecode($name);
 $known_mime_types=array(
+    "xml" => "text/xml",
     // "pdf" => "application/pdf",
     "txt" => "text/plain",
     // "html" => "text/html",

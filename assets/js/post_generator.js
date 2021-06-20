@@ -5,31 +5,31 @@ $("#clear").on("click", function () {
     $("#keyworkds").val('');
     $('#keyworkds_toast').toast("show")
 });
-$("#clear_a").on("click", function () {
-    localStorage.removeItem("myLIFT_A");
-    $("#keyworkds_a").val('');
-    $('#keyworkds_toast').toast("show")
-});
-$("#clear_b").on("click", function () {
-    localStorage.removeItem("myLIFT_B");
-    $("#keyworkds_b").val('');
-    $('#keyworkds_toast').toast("show")
-});
-$("#clear_c").on("click", function () {
-    localStorage.removeItem("myLIFT_C");
-    $("#keyworkds_c").val('');
-    $('#keyworkds_toast').toast("show")
-});
-$("#clear_d").on("click", function () {
-    localStorage.removeItem("myLIFT_D");
-    $("#keyworkds_d").val('');
-    $('#keyworkds_toast').toast("show")
-});
-$("#clear_e").on("click", function () {
-    localStorage.removeItem("myLIFT_E");
-    $("#keyworkds_e").val('');
-    $('#keyworkds_toast').toast("show")
-});
+// $("#clear_a").on("click", function () {
+//     localStorage.removeItem("myLIFT_A");
+//     $("#keyworkds_a").val('');
+//     $('#keyworkds_toast').toast("show")
+// });
+// $("#clear_b").on("click", function () {
+//     localStorage.removeItem("myLIFT_B");
+//     $("#keyworkds_b").val('');
+//     $('#keyworkds_toast').toast("show")
+// });
+// $("#clear_c").on("click", function () {
+//     localStorage.removeItem("myLIFT_C");
+//     $("#keyworkds_c").val('');
+//     $('#keyworkds_toast').toast("show")
+// });
+// $("#clear_d").on("click", function () {
+//     localStorage.removeItem("myLIFT_D");
+//     $("#keyworkds_d").val('');
+//     $('#keyworkds_toast').toast("show")
+// });
+// $("#clear_e").on("click", function () {
+//     localStorage.removeItem("myLIFT_E");
+//     $("#keyworkds_e").val('');
+//     $('#keyworkds_toast').toast("show")
+// });
 $("#create-btn").on("click", function () {
     var err = "";
     if (!$("#source").val()) {
@@ -53,7 +53,7 @@ $("#create-btn").on("click", function () {
         for (let gmc = 0; gmc < nel.length; gmc++) {
             var id = makeid(5);
             if(nel[gmc] && nel[gmc].length>1) {
-                arrayDone.push(result[0].replace(/___REPLACE___/gi, nel[gmc].trim()).replace(/<wp:post_id>(.*?)<\/wp:post_id>/gi, '<wp:post_id>'+id+'</wp:post_id>'))
+                arrayDone.push(result[0].replace(/(___REPLACE___|___replace___)/gi, nel[gmc].trim()).replace(/<wp:post_id>(.*?)<\/wp:post_id>/gi, '<wp:post_id>'+id+'</wp:post_id>'))
             }
         }
         var t = dochange.replace(nst, arrayDone.join(""))
@@ -71,8 +71,8 @@ $("#create-btn").on("click", function () {
     }
 });
 $("#keyworkds").val(localStorage.getItem("myLIFT"));
-$("#keyworkds_a").val(localStorage.getItem("myLIFT_A"));
-$("#keyworkds_b").val(localStorage.getItem("myLIFT_B"));
-$("#keyworkds_c").val(localStorage.getItem("myLIFT_C"));
-$("#keyworkds_d").val(localStorage.getItem("myLIFT_D"));
-$("#keyworkds_e").val(localStorage.getItem("myLIFT_E"));
+// $("#keyworkds_a").val(localStorage.getItem("myLIFT_A"));
+// $("#keyworkds_b").val(localStorage.getItem("myLIFT_B"));
+// $("#keyworkds_c").val(localStorage.getItem("myLIFT_C"));
+// $("#keyworkds_d").val(localStorage.getItem("myLIFT_D"));
+// $("#keyworkds_e").val(localStorage.getItem("myLIFT_E"));
