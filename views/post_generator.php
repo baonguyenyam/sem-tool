@@ -74,39 +74,42 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xxl-6 mb-3">
+                                <div class="col-xxl-6 mb-3" id="multiresults">
                                     <h5 class="mb-3"><span class="badge bg-info">Step 2</span></h5>
-
-                                    <h6 class="mb-2"><span class="badge bg-primary">A</span> keywords</h6>
-                                    <div class="form-floating-0 mb-4">
-                                        <textarea class="form-control" placeholder="" id="a_kw"
-                                            style="height: 40px">LIFT, Sandiego</textarea>
-                                        <!-- <label for="a_kw">enter keywords and add comma (,) end of words</label> -->
+                                    <div class="uv">
+                                        <h6 class="mb-2"><span class="badge bg-primary">A</span> keywords</h6>
+                                        <div class="form-floating-0 mb-4">
+                                            <textarea class="form-control" placeholder="" id="a_kw"
+                                                style="height: 40px">LIFT, Sandiego</textarea>
+                                            <!-- <label for="a_kw">enter keywords and add comma (,) end of words</label> -->
+                                        </div>
+                                        <h6 class="mb-2"><span class="badge bg-info">B</span> keywords</h6>
+                                        <div class="form-floating-0 mb-4">
+                                            <textarea class="form-control" placeholder="" id="b_kw"
+                                                style="height: 40px">Web, WordPress</textarea>
+                                            <!-- <label for="b_kw">enter keywords and add comma (,) end of words</label> -->
+                                        </div>
+                                        <h6 class="mb-2"><span class="badge bg-warning">C</span> keywords</h6>
+                                        <div class="form-floating-0 mb-4">
+                                            <textarea class="form-control" placeholder="" id="c_kw" style="height: 40px"></textarea>
+                                            <!-- <label for="c_kw">enter keywords and add comma (,) end of words</label> -->
+                                        </div>
+                                        <h6 class="mb-2"><span class="badge bg-dark">D</span> keywords</h6>
+                                        <div class="form-floating-0 mb-4">
+                                            <textarea class="form-control" placeholder="" id="d_kw" style="height: 40px"></textarea>
+                                            <!-- <label for="d_kw">enter keywords and add comma (,) end of words</label> -->
+                                        </div>
+                                        <h6 class="mb-2"><span class="badge bg-secondary">E</span> keywords</h6>
+                                        <div class="form-floating-0 mb-5 mb-lg-0">
+                                            <textarea class="form-control" placeholder="" id="e_kw"
+                                                style="height: 40px"></textarea>
+                                            <!-- <label for="e_kw">enter keywords and add comma (,) end of words</label> -->
+                                        </div>
                                     </div>
-                                    <h6 class="mb-2"><span class="badge bg-info">B</span> keywords</h6>
-                                    <div class="form-floating-0 mb-4">
-                                        <textarea class="form-control" placeholder="" id="b_kw"
-                                            style="height: 40px">Web, WordPress</textarea>
-                                        <!-- <label for="b_kw">enter keywords and add comma (,) end of words</label> -->
+                                    <div class="rv d-none">
+                                        <h5>Results <span id="number" class="badge badge-sm bg-success"></span></h5>
+                                        <textarea class="form-control mb-2" placeholder="" rows="15" id="results"></textarea>
                                     </div>
-                                    <h6 class="mb-2"><span class="badge bg-warning">C</span> keywords</h6>
-                                    <div class="form-floating-0 mb-4">
-                                        <textarea class="form-control" placeholder="" id="c_kw" style="height: 40px"></textarea>
-                                        <!-- <label for="c_kw">enter keywords and add comma (,) end of words</label> -->
-                                    </div>
-                                    <h6 class="mb-2"><span class="badge bg-dark">D</span> keywords</h6>
-                                    <div class="form-floating-0 mb-4">
-                                        <textarea class="form-control" placeholder="" id="d_kw" style="height: 40px"></textarea>
-                                        <!-- <label for="d_kw">enter keywords and add comma (,) end of words</label> -->
-                                    </div>
-                                    <h6 class="mb-2"><span class="badge bg-secondary">E</span> keywords</h6>
-                                    <div class="form-floating-0 mb-5 mb-lg-0">
-                                        <textarea class="form-control" placeholder="" id="e_kw"
-                                            style="height: 40px"></textarea>
-                                        <!-- <label for="e_kw">enter keywords and add comma (,) end of words</label> -->
-                                    </div>
-                                    
-                                    <textarea class="form-control mb-2" placeholder="" rows="20" id="results"></textarea>
                                     <textarea class="d-none" id="results<?=$btnquest?>"></textarea>
                                 </div>
                             </div>

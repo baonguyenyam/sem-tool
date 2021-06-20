@@ -142,6 +142,9 @@ var LIFT_APP = {
     var t = dochange.replace('___LIFTCHANGE___', this.rePlaceMulti_Done.join(""));
     $("#resultsmulti").val(unReplaceLIFT(t));
     $("#results").val(lift_decode(LIFT_APP.KW.join("\n")));
+    $("#number").text(this.rePlaceMulti_Done.length);
+    $("#multiresults .uv").addClass('d-none');
+    $("#multiresults .rv").removeClass('d-none');
     var text = $("#resultsmulti").val();
     var filename = "LIFT_POST_GEN_" + new Date().getTime() + ".xml";
 
