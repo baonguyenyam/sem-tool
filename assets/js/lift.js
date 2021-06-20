@@ -146,7 +146,7 @@ var LIFT_APP = {
                 let inL = buildStringURL(this.getStateAndLocation['location'][indexL])
                 category += '<category domain="category" nicename="'+inL+'"><![CDATA['+inLNice+']]></category>';
             }
-            t = t.replace(/___STATELOCATION___/gi, category)
+            t = t.replace(/___STATELOCATION___/gi, category).replace(/___LIFTCHANGE___/gi, '')
             $("#resultsmulti").val(unReplaceLIFT(t))
             $("#results").val(lift_decode(LIFT_APP.KW.join("\n")));
             $("#number").text(this.rePlaceMulti_Done.length);
@@ -156,7 +156,6 @@ var LIFT_APP = {
             var filename = "LIFT_POST_GEN_" + new Date().getTime() + ".xml";
             try {
                 text
-                console.log(text)
             }
             catch (e) {
             }

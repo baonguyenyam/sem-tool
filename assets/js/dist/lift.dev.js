@@ -161,7 +161,7 @@ var LIFT_APP = {
         category += '<category domain="category" nicename="' + inL + '"><![CDATA[' + inLNice + ']]></category>';
       }
 
-      t = t.replace(/___STATELOCATION___/gi, category);
+      t = t.replace(/___STATELOCATION___/gi, category).replace(/___LIFTCHANGE___/gi, '');
       $("#resultsmulti").val(unReplaceLIFT(t));
       $("#results").val(lift_decode(LIFT_APP.KW.join("\n")));
       $("#number").text(this.rePlaceMulti_Done.length);
@@ -172,7 +172,6 @@ var LIFT_APP = {
 
       try {
         text;
-        console.log(text);
       } catch (e) {} finally {
         setTimeout(function () {
           download(filename, text);
