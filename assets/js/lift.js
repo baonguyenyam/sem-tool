@@ -136,15 +136,15 @@ var LIFT_APP = {
         }
         finally {
             var t = dochange.replace('___LIFTCHANGE___', this.rePlaceMulti_Done.join("")).replace(/<category[^>]*>(.*?)<\/category>/gi, '___STATELOCATION___')
-            for (let index = 0; index < this.getStateAndLocation['state'].length; index++) {
-                let inSNice = this.getStateAndLocation['state'][index].trim()
-                let inS = buildStringURL(this.getStateAndLocation['state'][index])
-                category += '<category domain="category" nicename="'+inS+'"><![CDATA['+inSNice+']]></category>';
-            }
             for (let indexL = 0; indexL < this.getStateAndLocation['location'].length; indexL++) {
                 let inLNice = this.getStateAndLocation['location'][indexL].trim()
                 let inL = buildStringURL(this.getStateAndLocation['location'][indexL])
                 category += '<category domain="category" nicename="'+inL+'"><![CDATA['+inLNice+']]></category>';
+            }
+            for (let index = 0; index < this.getStateAndLocation['state'].length; index++) {
+                let inSNice = this.getStateAndLocation['state'][index].trim()
+                let inS = buildStringURL(this.getStateAndLocation['state'][index])
+                category += '<category domain="category" nicename="'+inS+'"><![CDATA['+inSNice+']]></category>';
             }
             t = t.replace(/___STATELOCATION___/gi, category).replace(/___LIFTCHANGE___/gi, '')
             $("#resultsmulti").val(unReplaceLIFT(t))
