@@ -28,10 +28,12 @@ require_once 'includes/header.php';
 
           <div class="mt-xxl-5 mx-xxl-5">
 
-            <?php if ($isMemberTypye != 3) { ?>
-                <?php include 'dashboard/dashboard_lift.php'; ?>
-            <?php } else { ?>
+            <?php if ($isMemberTypye == 3) { ?>
                 <?php include 'dashboard/dashboard_customers.php'; ?>
+            <?php } else if ($isMemberTypye == 0) { ?>
+                <?php include 'dashboard/dashboard_user.php'; ?>
+            <?php } else { ?>
+                <?php include 'dashboard/dashboard_lift.php'; ?>
             <?php } ?>
 
             <h4>Control Panel</h4>

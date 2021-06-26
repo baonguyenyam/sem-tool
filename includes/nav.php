@@ -10,7 +10,7 @@
                     <i class="bi bi-question-circle fa-lg fa-fw me-1"></i> Support
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="myhelp">
-                    <?php if ($isMemberTypye != 3) { ?>
+                    <?php if ($isMemberTypye != 3 && $isMemberTypye != 0) { ?>
                     <li>
                         <a class="dropdown-item" href="app">
                             <i class="bi bi-laptop fa-lg fa-fw me-1"></i> Desktop Apps
@@ -46,6 +46,12 @@
                         </a>
                     </li>
                     <?php } else { ?>
+                        <li>
+                            <a class="dropdown-item" href="app">
+                                <i class="bi bi-laptop fa-lg fa-fw me-1"></i> Desktop Apps
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
                         <li>
                             <a class="dropdown-item <?= $active === 'helps' ? 'active' : '' ?>" href="help-support">
                                 <i class="bi bi-question-circle fa-lg fa-fw me-1"></i> Helps

@@ -9,10 +9,12 @@
             </li>
         </ul>
         
-            <?php if ($isMemberTypye != 3) { ?>
-                <?php include 'sidebar_lift.php'; ?>
-            <?php } else { ?>
+            <?php if ($isMemberTypye == 3) { ?>
                 <?php include 'sidebar_customers.php'; ?>
+            <?php } else if ($isMemberTypye == 0) { ?>
+                <?php include 'sidebar_user.php'; ?>
+            <?php } else { ?>
+                <?php include 'sidebar_lift.php'; ?>
             <?php } ?>
         
         <hr>

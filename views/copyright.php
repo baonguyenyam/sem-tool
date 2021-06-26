@@ -36,7 +36,7 @@ require_once 'includes/header.php';
                             <p class="mb-0"><strong>Call Us:</strong> <a href="tel:866-244-1150" target="_blank">866-244-1150</a></p>
 
                             <hr>
-                            <p class="mb-0"><strong>Author:</strong> <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>
+                            <p class="mb-0"><strong>Author:</strong> <a href="https://baonguyenyam.github.io/" target="_blank">Nguyen Pham</a></p>
 
                             </div>
                         </div>

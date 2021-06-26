@@ -24,28 +24,42 @@ if(!$getMemberByID) {
 
 // CREATE 
 if (!empty($_POST["change"])) {
-    $userid = isset($_POST["userid"]) ?  $_POST["userid"] : $_SESSION["member_id"];
-    $email = strtolower(trim($_POST["member_email"]));
-    $fullname = trim($_POST["fullname"]);
-    $content = $_POST["content"];
-    $type = $_POST["type"];
-    $password = trim($_POST["member_password"]);
-    $random_password_hash = password_hash($password, PASSWORD_DEFAULT);
-    $getPass = $random_password_hash;
-    $getnow = date("Y-m-d H:i:s");
+    // IF is `demo` user 
+    if($getID != 7 && $_POST["userid"] !=7) {
+        $userid = isset($_POST["userid"]) ?  $_POST["userid"] : $_SESSION["member_id"];
+        $email = strtolower(trim($_POST["member_email"]));
+        $fullname = trim($_POST["fullname"]);
+        $content = $_POST["content"];
+        $type = $_POST["type"];
+        $password = trim($_POST["member_password"]);
+        $random_password_hash = password_hash($password, PASSWORD_DEFAULT);
+        $getPass = $random_password_hash;
+        $getnow = date("Y-m-d H:i:s");
+        
+        if (isset($_POST["darkmode"])) {
+            setcookie("active_theme", true, $cookie_expiration_time);
+        } else {
+            setcookie("active_theme", '');
+        }
     
-    if (isset($_POST["darkmode"])) {
-        setcookie("active_theme", true, $cookie_expiration_time);
-    } else {
-        setcookie("active_theme", '');
-    }
-
-    if ($email !== $getMemberByID[0]['member_email']) {
-        if ($auth->checkEmail($email)) {
-            $message = 'This email already exits';
+        if ($email !== $getMemberByID[0]['member_email']) {
+            if ($auth->checkEmail($email)) {
+                $message = 'This email already exits';
+            } else {
+                if($isMemberTypye == 1 && $getMemberByID[0]["member_id"] == $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"]) {
+                    $auth->editUser($email, null , $fullname, $content, $userid);
+                } else {
+                    $auth->editUser($email, $type, $fullname, $content, $userid);
+                }
+                if ($isMemberTypye == 1) {
+                    $util->redirect("./profile?id=" . $getID . "");
+                } else {
+                    $util->redirect("./profile");
+                }
+            }
         } else {
             if($isMemberTypye == 1 && $getMemberByID[0]["member_id"] == $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"]) {
-                $auth->editUser($email, null , $fullname, $content, $userid);
+                $auth->editUser($email, null, $fullname, $content, $userid);
             } else {
                 $auth->editUser($email, $type, $fullname, $content, $userid);
             }
@@ -54,17 +68,6 @@ if (!empty($_POST["change"])) {
             } else {
                 $util->redirect("./profile");
             }
-        }
-    } else {
-        if($isMemberTypye == 1 && $getMemberByID[0]["member_id"] == $auth->getMemberByID($_SESSION["member_id"])[0]["member_id"]) {
-            $auth->editUser($email, null, $fullname, $content, $userid);
-        } else {
-            $auth->editUser($email, $type, $fullname, $content, $userid);
-        }
-        if ($isMemberTypye == 1) {
-            $util->redirect("./profile?id=" . $getID . "");
-        } else {
-            $util->redirect("./profile");
         }
     }
 
