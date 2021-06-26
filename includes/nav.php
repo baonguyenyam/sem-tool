@@ -1,10 +1,15 @@
 <header class="navbar navbar-white sticky-top bg-white flex-md-nowrap p-0 shadow-sm navbar-expand-md">
     <a class="navbar-brand col-md-3 col-lg-2 col-xl-auto me-0 px-3" href="/"><img src="./assets/img/logoc.png" alt=""></a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="bi bi-list"></span>
     </button>
     <div class="ml-auto justify-content-end collapse navbar-collapse">
         <ul class="navbar-nav px-3 d-none d-md-flex align-items-center">
+            <?php if($_SESSION["member_id"] == 7) { ?>
+            <li class="nav-item me-2">
+                <div class="badge bg-danger rounded-pill py-2 px-3">DEMO MODE</div>
+            </li>
+            <?php } ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="myhelp" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-question-circle fa-lg fa-fw me-1"></i> Support

@@ -171,6 +171,8 @@ require_once 'includes/header.php';
                         }
                     ?>
 
+                <?php if($_SESSION["member_id"] != 7) { ?>
+
                     <div class="d-flex text-muted pt-3">
                         <div class="bd-placeholder-img flex-shrink-0 me-2 rounded">
                             <i class="fas fa-archive fa-3x"></i>
@@ -206,6 +208,8 @@ require_once 'includes/header.php';
                             </div>
                         </div>
                     </div>
+
+                <?php } ?>
 
                 </div>
 

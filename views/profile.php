@@ -24,6 +24,12 @@ if(!$getMemberByID) {
 
 // CREATE 
 if (!empty($_POST["change"])) {
+    if (isset($_POST["darkmode"])) {
+        setcookie("active_theme", true, $cookie_expiration_time);
+    } else {
+        setcookie("active_theme", '');
+    }
+    
     // IF is `demo` user 
     if($getID != 7 && $_POST["userid"] !=7) {
         $userid = isset($_POST["userid"]) ?  $_POST["userid"] : $_SESSION["member_id"];
@@ -36,11 +42,6 @@ if (!empty($_POST["change"])) {
         $getPass = $random_password_hash;
         $getnow = date("Y-m-d H:i:s");
         
-        if (isset($_POST["darkmode"])) {
-            setcookie("active_theme", true, $cookie_expiration_time);
-        } else {
-            setcookie("active_theme", '');
-        }
     
         if ($email !== $getMemberByID[0]['member_email']) {
             if ($auth->checkEmail($email)) {
