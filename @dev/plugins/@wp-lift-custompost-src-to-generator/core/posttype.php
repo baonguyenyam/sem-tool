@@ -1,7 +1,7 @@
 <?php 
 // https://developer.wordpress.org/resource/dashicons/#album
 
-function lift_create_posttype_cp() {
+function lift_create_posttype_cp_LIFT_WP_CP() {
 
 	$name = '___replace___';
 	$shortname = '___replaceshort___';
@@ -103,5 +103,5 @@ function lift_create_posttype_cp() {
 
 }
 // Hooking up our function to theme setup
-add_action( 'init', 'lift_create_posttype_cp' );
+add_action( 'init', 'lift_create_posttype_cp_LIFT_WP_CP' );
 

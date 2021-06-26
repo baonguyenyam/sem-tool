@@ -1,12 +1,12 @@
 {
-  "name": "trenews",
-  "description": "Default WP Theme",
+  "name": "nguyen-wp",
+  "description": "Nguyen WP Plugins",
   "main": "",
   "authors": [
     "Nguyen Pham <baonguyenyam@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/baonguyenyam/trenews",
+  "homepage": "https://github.com/nguyen-wp",
   "ignore": [
     "**/.*",
     "node_modules",
