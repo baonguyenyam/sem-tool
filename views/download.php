@@ -1,6 +1,6 @@
 <?php
 // exit;
-function output_file($file, $name, $mime_type='')
+function output_file($file, $name, $mime_type='', $filename = null)
 {
 if(!is_readable($file)) die('File not found!');
 
@@ -34,11 +34,14 @@ $mime_type="application/force-download";
 
 @ob_end_clean();
 
+$extpp = pathinfo($name, PATHINFO_EXTENSION);
+$getname = isset($filename) ? $filename.'.'.$extpp : $name;
 
 if(ini_get('zlib.output_compression'))
 ini_set('zlib.output_compression', 'Off');
 header('Content-Type: ' . $mime_type);
-header('Content-Disposition: attachment; filename="'.$name.'"');
+header('Content-Disposition: attachment; filename="'.$getname.'"');
+// header('Content-Disposition: filename="'.$getname.'"');
 header("Content-Transfer-Encoding: binary");
 header('Accept-Ranges: bytes');
 header("Cache-control: private");
@@ -87,10 +90,11 @@ die('Error - cannot open file.');
 die();
 }
 set_time_limit(0);
+$filename = $_REQUEST['name'];
 if(isset($_REQUEST['dir'])) {
     $file_path= $_REQUEST['dir'].'/'.$_REQUEST['f'];
 } else {
     $file_path='uploads/'.$_REQUEST['f'];
 }
-output_file($file_path, ''.$_REQUEST['f'].'', 'text/plain');
+output_file($file_path, ''.$_REQUEST['f'].'', 'text/plain', $filename);
 ?>

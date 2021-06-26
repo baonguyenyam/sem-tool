@@ -38,8 +38,9 @@ if(isset($_POST['submit'])) {
             }
         }
     } finally {
-        zipData($dist, './tmp/wp-lift-custompost'.$num.'.zip',"wp-lift-custompost".$num);
-        $downloadDone = 'wp-lift-custompost'.$num.'.zip';
+        zipDataPlugins($dist, './tmp/wp-lift-custompost'.$num.'.zip',"wp-lift-custompost".$num);
+        $downloadDone = 'download?filename='.md5("wp-lift-custompost'.$num.'").'&f=wp-lift-custompost'.$num.'.zip&dir=tmp&name=wp-lift-custompost-'.$_POST['slug'].'';
+
     }
  
     } else {
@@ -74,7 +75,7 @@ if(isset($_POST['submit'])) {
                             <div class="alert alert-success my-3">
                                 <p>Thank you!</p>
                                 <p class="mb-0">
-                                    <a href="/tmp/<?=$downloadDone?>" class="btn btn-primary">Download</a>
+                                    <a href="<?=$downloadDone?>" class="btn btn-primary">Download</a>
                                 </p>
                             </div>
                         <?php } else { ?>

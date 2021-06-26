@@ -73,8 +73,8 @@ require_once 'core/class-php-ico.php';
                         $ico_lib = new PHP_ICO( $getpath );
                         $ico_lib->save_ico( $destination );
                     } finally {
-                        zipData($dist, './tmp/favicon_'.$num.'.zip',"favicon_".$num);
-                        $downloadDone = 'favicon_'.$num.'.zip';
+                        zipDataPlugins($dist, './tmp/favicon_'.$num.'.zip',"favicon_".$num);
+                        $downloadDone = 'download?filename='.md5("favicon_'.$num.'").'&f=favicon_'.$num.'.zip&dir=tmp&name=favicon';
                     }
                 } else {
                     $output .= 'Error';
@@ -176,7 +176,7 @@ require_once 'core/class-php-ico.php';
                                 <div class="tv<?=isset($_POST['favisresult']) ? '' : ' d-none'?>">
                                     <h5 class="mb-3">Results</h5>
                                     <?php if(isset($downloadDone)) {?>
-                                        <p><a href="download?filename=<?=md5($downloadDone)?>&f=<?=$downloadDone?>&dir=tmp" class="btn btn-sm btn-success">Download (.zip)</a></p>
+                                        <p><a href="<?=$downloadDone?>" class="btn btn-sm btn-success">Download (.zip)</a></p>
                                     <?php } ?>
                                     <textarea class="form-control form-control-sm d-none" id="favisresult" name="favisresult" rows="1"><?=isset($_POST['favisresult']) ? $_POST['favisresult'] : ''?></textarea>
                                     <textarea class="form-control form-control-sm" id="favisresulte" rows="30"></textarea>
