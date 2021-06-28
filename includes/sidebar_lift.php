@@ -29,18 +29,23 @@
 		</a>
 	</li> -->
 	<li class="nav-item">
+		<a class="nav-link <?= $active === 'geo' ? 'active' : '' ?>" href="geo-generator">
+		<i class="bi bi-pin-map fa-lg fa-fw me-1"></i> GEO Generator
+		</a>
+	</li>
+	<li class="nav-item">
 		<a class="nav-link <?= $active === 'favicon' ? 'active' : '' ?>" href="favicon-generator">
 		<i class="bi bi-command fa-lg fa-fw me-1"></i> Favicon Generator
 		</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link <?= $active === 'robots' ? 'active' : '' ?>" href="robots-generator">
-		<i class="bi bi-bug fa-lg fa-fw me-1"></i> Robots.txt Generator
+		<a class="nav-link <?= $active === 'plugingen' ? 'active' : '' ?>" href="plugin-generator">
+			<i class="bi bi-cloud-download fa-lg fa-fw me-1"></i> Plugin Generator
 		</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link <?= $active === 'plugingen' ? 'active' : '' ?>" href="plugin-generator">
-		<i class="bi bi-cloud-download fa-lg fa-fw me-1"></i> Plugin Generator
+		<a class="nav-link <?= $active === 'robots' ? 'active' : '' ?>" href="robots-generator">
+		<i class="bi bi-bug fa-lg fa-fw me-1"></i> Robots.txt Generator
 		</a>
 	</li>
 	<li class="nav-item">

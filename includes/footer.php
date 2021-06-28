@@ -11,6 +11,7 @@ $jsList = [
     'assets/js/dist/robots_generator.prod.js',
     'assets/js/dist/qr_generator.prod.js',
     'assets/js/dist/favicon_generator.prod.js',
+    'assets/js/dist/geo_generator.prod.js',
 ];
 if(LIFT_DEV) {
     foreach ($jsList as $value) {

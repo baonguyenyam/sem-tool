@@ -31,6 +31,12 @@
 		</a>
 	</li> -->
 	<li>
+		<a href="geo-generator">
+		<i class="bi bi-pin-map fa-3x fa-fw me-1"></i>
+		<span>GEO Generator</span>
+		</a>
+	</li>
+	<li>
 		<a href="favicon-generator">
 		<i class="bi bi-command fa-3x fa-fw me-1"></i>
 		<span>Favicon Generator</span>
