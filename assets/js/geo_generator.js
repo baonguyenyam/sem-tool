@@ -51,9 +51,9 @@ $('#geogenerator').on('click', function () {
 					'<meta name="og:locality" content="'+json[0].address.city+'" />\n' +
 					'<meta name="og:region" content="'+code+'" />\n' +
 					'<meta name="og:postal-code" content="'+json[0].address.postcode+'" />\n' +
-					'<meta name="og:email" content="'+email+'">\n' +
-					'<meta name="og:phone_number" content="'+phone+'">\n' +
-					'<meta name="og:fax_number" content="'+fax+'">\n' +
+					'<meta name="og:email" content="'+email+'" />\n' +
+					'<meta name="og:phone_number" content="'+phone+'" />\n' +
+					'<meta name="og:fax_number" content="'+fax+'" />\n' +
 					'<meta name="og:country-name" content="USA" />';
 
 				$('#geosource').val(tmp)
