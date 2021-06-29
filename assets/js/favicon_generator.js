@@ -28,6 +28,12 @@ function loadfilePreview() {
 	'<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">\n'+
 	'<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">\n'+
 	'<link rel="manifest" href="/favicon/manifest.json">\n'+
+	'<meta name="apple-mobile-web-app-title" content="'+$('#sitename').val().trim()+'">\n' +
+	'<meta name="apple-mobile-web-app-capable" content="yes"\n' +
+	'<meta name="apple-touch-fullscreen" content="yes"\n' +
+	'<meta name="apple-mobile-web-app-status-bar-style" content="'+$('#sitecolor').val().trim()+'"></meta\n' +
+	'<link rel="shortcut icon" type="image/ico" href="/favicon/favicon.ico">\n'+
+	'<link rel="fluid-icon" type="image/png" href="/favicon/apple-icon.png">\n'+
 	'<meta name="msapplication-config" content="/favicon/browserconfig.xml" />\n'+
 	'<meta name="msapplication-TileColor" content="'+$('#sitecolor').val().trim()+'">\n'+
 	'<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">\n'+

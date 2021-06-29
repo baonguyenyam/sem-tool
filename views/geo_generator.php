@@ -50,9 +50,21 @@ require_once 'core/class-php-ico.php';
                                         </div>
                                     </div>
 									<div class="row">
-										<div class="col-md-12 mb-3">
+										<div class="col-md-6 mb-3">
 											<h6>Your State</h6>
 											<select id="geostate" class="form-select"></select>
+										</div>
+                                        <div class="col-md-6 mb-3">
+											<h6>Your Email</h6>
+											<input type="text" class="form-control" id="geoemail">
+										</div>
+                                        <div class="col-md-6 mb-3">
+											<h6>Your Phone</h6>
+											<input type="text" class="form-control" id="geophone">
+										</div>
+                                        <div class="col-md-6 mb-3">
+											<h6>Your Fax</h6>
+											<input type="text" class="form-control" id="geofax">
 										</div>
 									</div>
 									<div class="row">
