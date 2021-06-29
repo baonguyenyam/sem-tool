@@ -33,7 +33,6 @@ $('#geogenerator').on('click', function () {
 			url: 'https://nominatim.openstreetmap.org/search?q='+encodeURIComponent(url)+'&format=json&json_callback=&addressdetails=1&limit=1',
 			type: 'GET',
 			success: function(json) {
-				console.log(json)
 				var tmp = '<!--//\n' +
 					'╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐\n'+
 					'║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐\n'+
