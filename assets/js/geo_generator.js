@@ -45,7 +45,6 @@ $('#geogenerator').on('click', function () {
 					'<meta name="geo.position" content="'+json[0].lat+';'+json[0].lon+'" />\n' +
 					'<meta name="address" content="'+json[0].display_name+'" />\n' +
 					'<meta name="ICBM" content="'+json[0].lat+', '+json[0].lon+'" />\n' +
-					'<meta name="og:country-name" content="USA" />\n' +
 					'<meta name="og:latitude" content="'+json[0].lat+'" />\n' +
 					'<meta name="og:longitude" content="'+json[0].lon+'" />\n' +
 					'<meta name="og:street-address" content="'+url+'" />\n' +
@@ -66,7 +65,7 @@ $('#geogenerator').on('click', function () {
 					smartIndent: true,
 					indentWithTabs: true
 				});
-				LIFT_APP.code.setOption("theme", 'monokai')
+				LIFT_APP.code.setOption("theme", 'default')
 			},
 			error: function () {
 			},

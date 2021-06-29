@@ -40,7 +40,7 @@ $('#geogenerator').on('click', function () {
       type: 'GET',
       success: function success(json) {
         console.log(json);
-        var tmp = '<!--//\n' + '╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐\n' + '║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐\n' + '╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘\n' + '//-->\n' + '<meta name="DC.title" content="' + name + '" />\n' + '<meta name="geo.region" content="' + json[0].address.country_code.toUpperCase() + '-' + code + '" />\n' + '<meta name="geo.placename" content="' + json[0].address.city + '" />\n' + '<meta name="geo.position" content="' + json[0].lat + ';' + json[0].lon + '" />\n' + '<meta name="address" content="' + json[0].display_name + '" />\n' + '<meta name="ICBM" content="' + json[0].lat + ', ' + json[0].lon + '" />\n' + '<meta name="og:country-name" content="USA" />\n' + '<meta name="og:latitude" content="' + json[0].lat + '" />\n' + '<meta name="og:longitude" content="' + json[0].lon + '" />\n' + '<meta name="og:street-address" content="' + url + '" />\n' + '<meta name="og:locality" content="' + json[0].address.city + '" />\n' + '<meta name="og:region" content="' + code + '" />\n' + '<meta name="og:postal-code" content="' + json[0].address.postcode + '" />\n' + '<meta name="og:email" content="' + email + '">\n' + '<meta name="og:phone_number" content="' + phone + '">\n' + '<meta name="og:fax_number" content="' + fax + '">\n' + '<meta name="og:country-name" content="USA" />';
+        var tmp = '<!--//\n' + '╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐\n' + '║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐\n' + '╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘\n' + '//-->\n' + '<meta name="DC.title" content="' + name + '" />\n' + '<meta name="geo.region" content="' + json[0].address.country_code.toUpperCase() + '-' + code + '" />\n' + '<meta name="geo.placename" content="' + json[0].address.city + '" />\n' + '<meta name="geo.position" content="' + json[0].lat + ';' + json[0].lon + '" />\n' + '<meta name="address" content="' + json[0].display_name + '" />\n' + '<meta name="ICBM" content="' + json[0].lat + ', ' + json[0].lon + '" />\n' + '<meta name="og:latitude" content="' + json[0].lat + '" />\n' + '<meta name="og:longitude" content="' + json[0].lon + '" />\n' + '<meta name="og:street-address" content="' + url + '" />\n' + '<meta name="og:locality" content="' + json[0].address.city + '" />\n' + '<meta name="og:region" content="' + code + '" />\n' + '<meta name="og:postal-code" content="' + json[0].address.postcode + '" />\n' + '<meta name="og:email" content="' + email + '">\n' + '<meta name="og:phone_number" content="' + phone + '">\n' + '<meta name="og:fax_number" content="' + fax + '">\n' + '<meta name="og:country-name" content="USA" />';
         $('#geosource').val(tmp);
         LIFT_APP.code = CodeMirror.fromTextArea(document.getElementById("geosource"), {
           mode: "text/html",
@@ -50,7 +50,7 @@ $('#geogenerator').on('click', function () {
           smartIndent: true,
           indentWithTabs: true
         });
-        LIFT_APP.code.setOption("theme", 'monokai');
+        LIFT_APP.code.setOption("theme", 'default');
       },
       error: function error() {}
     });
