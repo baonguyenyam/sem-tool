@@ -34,7 +34,12 @@ $('#geogenerator').on('click', function () {
 			type: 'GET',
 			success: function(json) {
 				console.log(json)
-				var tmp = '<meta name="DC.title" content="'+name+'" />\n' +
+				var tmp = '<!--//\n' +
+					'╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐\n'+
+					'║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐\n'+
+					'╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘\n'+
+					'//-->\n' + 
+					'<meta name="DC.title" content="'+name+'" />\n' +
 					'<meta name="geo.region" content="'+json[0].address.country_code.toUpperCase()+'-'+code+'" />\n' +
 					'<meta name="geo.placename" content="'+json[0].address.city+'" />\n' +
 					'<meta name="geo.position" content="'+json[0].lat+';'+json[0].lon+'" />\n' +

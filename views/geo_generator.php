@@ -35,35 +35,35 @@ require_once 'core/class-php-ico.php';
 					<div class="row">
 					<div class="col-xl-8 offset-xl-2">
 							<div class="shadow p-4 p-xxl-5 mb-5 bg-body rounded border mt-xxl-5 mx-xxl-5" id="geoResult">
-                                <h5 class="mb-3">Address</h5>
+                                <h5 class="mb-3">Your information</h5>
                                 <div class="mb-5">
                                     <div class="row">
-                                        <div class="col-md-12 mb-3">
+                                        <div class="col-md-12 mt-2 mb-3">
                                             <h6>Start here and enter the address (street, city, country)</h6>
                                             <input type="text" name="geoaddress" value="1065 Foch St, Fort Worth, TX 76107" class="form-control" id="geoaddress" placeholder="Your address" required>
                                         </div>
                                     </div>
 									<div class="row">
-                                        <div class="col-md-12 mb-3">
-                                            <h6>Your Website's name</h6>
-                                            <input type="text" name="geowebname" class="form-control" id="geowebname" placeholder="Your Website's name" required>
+                                        <div class="col-md-12 mt-2 mb-3">
+                                            <h6>Website's name</h6>
+                                            <input type="text" name="geowebname" class="form-control" id="geowebname" required>
                                         </div>
                                     </div>
 									<div class="row">
-										<div class="col-md-6 mb-3">
-											<h6>Your State</h6>
+										<div class="col-md-6 mt-2 mb-3">
+											<h6>State</h6>
 											<select id="geostate" class="form-select"></select>
 										</div>
-                                        <div class="col-md-6 mb-3">
-											<h6>Your Email</h6>
+                                        <div class="col-md-6 mt-2 mb-3">
+											<h6>Email</h6>
 											<input type="text" class="form-control" id="geoemail">
 										</div>
-                                        <div class="col-md-6 mb-3">
-											<h6>Your Phone</h6>
+                                        <div class="col-md-6 mt-2 mb-3">
+											<h6>Phone</h6>
 											<input type="text" class="form-control" id="geophone">
 										</div>
-                                        <div class="col-md-6 mb-3">
-											<h6>Your Fax</h6>
+                                        <div class="col-md-6 mt-2 mb-3">
+											<h6>Fax</h6>
 											<input type="text" class="form-control" id="geofax">
 										</div>
 									</div>
