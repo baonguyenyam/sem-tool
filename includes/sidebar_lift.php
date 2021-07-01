@@ -84,6 +84,11 @@
 		</a>
 	</li>
 	<li class="nav-item">
+		<a class="nav-link <?= $active === 'themes' ? 'active' : '' ?>" href="themes">
+		<i class="bi bi-palette fa-lg fa-fw me-1"></i> WordPress Themes
+		</a>
+	</li>
+	<li class="nav-item">
 		<a class="nav-link" href="banner-creator/index.html" target="_blank">
 		<i class="bi bi-camera fa-lg fa-fw me-1"></i> Banner Creator
 		</a>

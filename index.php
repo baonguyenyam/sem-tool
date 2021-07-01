@@ -10,6 +10,7 @@ Route::add('/plugin-generator',function(){ include 'views/plugin_generator.php';
 Route::add('/plugin-generator',function(){ include 'views/plugin_generator.php'; },'post');
 Route::add('/html-validator',function(){ include 'views/html_validator.php'; });
 Route::add('/html-validator',function(){ include 'views/html_validator.php'; },'get');
+Route::add('/themes',function(){ include 'views/themes.php'; });
 Route::add('/chrome-extensions',function(){ include 'views/chrome_extensions.php'; });
 Route::add('/app',function(){ include 'views/app.php'; });
 Route::add('/domain',function(){ include 'views/domain.php'; });
