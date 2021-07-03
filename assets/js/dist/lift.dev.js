@@ -99,14 +99,14 @@ var LIFT_APP = {
 
     try {
       for (var index_a = 0; index_a < this.akw_get().length; index_a++) {
-        var _a = lift_encode(this.akw_get()[index_a].trim());
+        var _a = this.akw_get()[index_a].trim();
 
         if (_a.length > 0) {
           // nst++;
           // this.KW.push(_a)
           // this.replaceMultiKW(this.rePlaceMulti,nst,_a)
           for (var index_b = 0; index_b < this.bkw_get().length; index_b++) {
-            var _b = lift_encode(this.bkw_get()[index_b].trim());
+            var _b = this.bkw_get()[index_b].trim();
 
             if (_b.length > 0) {
               nst++;
@@ -114,7 +114,7 @@ var LIFT_APP = {
               this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b);
 
               for (var index_c = 0; index_c < this.ckw_get().length; index_c++) {
-                var _c = lift_encode(this.ckw_get()[index_c].trim());
+                var _c = this.ckw_get()[index_c].trim();
 
                 if (_c.length > 0) {
                   nst++;
@@ -122,7 +122,7 @@ var LIFT_APP = {
                   this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c);
 
                   for (var index_d = 0; index_d < this.dkw_get().length; index_d++) {
-                    var _d = lift_encode(this.dkw_get()[index_d].trim());
+                    var _d = this.dkw_get()[index_d].trim();
 
                     if (_d.length > 0) {
                       nst++;
@@ -130,7 +130,7 @@ var LIFT_APP = {
                       this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d);
 
                       for (var index_e = 0; index_e < this.ekw_get().length; index_e++) {
-                        var _e = lift_encode(this.ekw_get()[index_e].trim());
+                        var _e = this.ekw_get()[index_e].trim();
 
                         if (_e.length > 0) {
                           nst++;
@@ -149,21 +149,21 @@ var LIFT_APP = {
     } catch (e) {} finally {
       var t = dochange.replace('___LIFTCHANGE___', this.rePlaceMulti_Done.join("")).replace(/<category[^>]*>(.*?)<\/category>/gi, '___STATELOCATION___');
 
-      for (var index = 0; index < this.getStateAndLocation['state'].length; index++) {
-        var inSNice = this.getStateAndLocation['state'][index].trim();
-        var inS = buildStringURL(this.getStateAndLocation['state'][index]);
-        category += '<category domain="category" nicename="' + inS + '"><![CDATA[' + inSNice + ']]></category>';
-      }
-
       for (var indexL = 0; indexL < this.getStateAndLocation['location'].length; indexL++) {
         var inLNice = this.getStateAndLocation['location'][indexL].trim();
         var inL = buildStringURL(this.getStateAndLocation['location'][indexL]);
         category += '<category domain="category" nicename="' + inL + '"><![CDATA[' + inLNice + ']]></category>';
       }
 
+      for (var index = 0; index < this.getStateAndLocation['state'].length; index++) {
+        var inSNice = this.getStateAndLocation['state'][index].trim();
+        var inS = buildStringURL(this.getStateAndLocation['state'][index]);
+        category += '<category domain="category" nicename="' + inS + '"><![CDATA[' + inSNice + ']]></category>';
+      }
+
       t = t.replace(/___STATELOCATION___/gi, category).replace(/___LIFTCHANGE___/gi, '');
       $("#resultsmulti").val(unReplaceLIFT(t));
-      $("#results").val(lift_decode(LIFT_APP.KW.join("\n")));
+      $("#results").val(LIFT_APP.KW.join("\n"));
       $("#number").text(this.rePlaceMulti_Done.length);
       $("#multiresults .uv").addClass('d-none');
       $("#multiresults .rv").removeClass('d-none');

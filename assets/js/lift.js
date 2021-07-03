@@ -92,31 +92,31 @@ var LIFT_APP = {
         var category = '';        
         try {
             for (let index_a = 0; index_a < this.akw_get().length; index_a++) {
-                let _a = lift_encode(this.akw_get()[index_a].trim());
+                let _a = this.akw_get()[index_a].trim();
                 if (_a.length > 0) {
                     // nst++;
                     // this.KW.push(_a)
                     // this.replaceMultiKW(this.rePlaceMulti,nst,_a)
                     for (let index_b = 0; index_b < this.bkw_get().length; index_b++) {
-                        let _b = lift_encode(this.bkw_get()[index_b].trim());
+                        let _b = this.bkw_get()[index_b].trim();
                         if (_b.length > 0) {
                             nst++;
                             this.KW.push(_a + " " + _b);
                             this.replaceMultiKW(this.rePlaceMulti,nst,_a,_b)
                             for (let index_c = 0; index_c < this.ckw_get().length; index_c++) {
-                                let _c = lift_encode(this.ckw_get()[index_c].trim());
+                                let _c = this.ckw_get()[index_c].trim();
                                 if (_c.length > 0) {
                                     nst++;
                                     this.KW.push(_a + " " + _b + " " + _c);
                                     this.replaceMultiKW(this.rePlaceMulti,nst,_a,_b,_c)
                                     for (let index_d = 0;index_d < this.dkw_get().length;index_d++) {
-                                        let _d = lift_encode(this.dkw_get()[index_d].trim());
+                                        let _d = this.dkw_get()[index_d].trim();
                                         if (_d.length > 0) {
                                             nst++;
                                             this.KW.push(_a + " " + _b + " " + _c + " " + _d);
                                             this.replaceMultiKW(this.rePlaceMulti,nst,_a,_b,_c,_d)
                                             for (let index_e = 0;index_e < this.ekw_get().length;index_e++) {
-                                                let _e = lift_encode(this.ekw_get()[index_e].trim());
+                                                let _e = this.ekw_get()[index_e].trim();
                                                 if (_e.length > 0) {
                                                     nst++;
                                                     this.KW.push(_a + " " + _b + " " + _c + " " + _d + " " + _e);
@@ -148,7 +148,7 @@ var LIFT_APP = {
             }
             t = t.replace(/___STATELOCATION___/gi, category).replace(/___LIFTCHANGE___/gi, '')
             $("#resultsmulti").val(unReplaceLIFT(t))
-            $("#results").val(lift_decode(LIFT_APP.KW.join("\n")));
+            $("#results").val(LIFT_APP.KW.join("\n"));
             $("#number").text(this.rePlaceMulti_Done.length);
             $("#multiresults .uv").addClass('d-none');
             $("#multiresults .rv").removeClass('d-none');
@@ -183,6 +183,7 @@ var LIFT_APP = {
         .replace(/(___REPLACE_D___|___replace_d___)/gi, (gend).trim())
         .replace(/(___REPLACE_E___|___replace_e___)/gi, (gene).trim()).trim()
         this.rePlaceMulti_Done.push(pls.replace(/<wp:post_id>(.*?)<\/wp:post_id>/gi, '<wp:post_id>'+id+'</wp:post_id>'))
+
     }
 };
 
