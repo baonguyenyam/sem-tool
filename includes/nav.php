@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="https://myseo.website/wp" target="_blank">
+                        <a class="dropdown-item" href="https://demo.myseo.website" target="_blank">
                             <i class="bi bi-braces fa-lg fa-fw me-1"></i>
                             <span>Testing Site</span>
                         </a>

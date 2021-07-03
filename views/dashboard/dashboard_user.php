@@ -117,7 +117,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="https://myseo.website/wp" target="_blank">
+		<a href="https://demo.myseo.website" target="_blank">
 		<i class="bi bi-braces fa-3x fa-fw me-1"></i>
 		<span>Testing Site</span>
 		</a>
