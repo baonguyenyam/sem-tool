@@ -5,31 +5,7 @@ $("#clear").on("click", function () {
     $("#keyworkds").val('');
     $('#keyworkds_toast').toast("show")
 });
-// $("#clear_a").on("click", function () {
-//     localStorage.removeItem("myLIFT_A");
-//     $("#keyworkds_a").val('');
-//     $('#keyworkds_toast').toast("show")
-// });
-// $("#clear_b").on("click", function () {
-//     localStorage.removeItem("myLIFT_B");
-//     $("#keyworkds_b").val('');
-//     $('#keyworkds_toast').toast("show")
-// });
-// $("#clear_c").on("click", function () {
-//     localStorage.removeItem("myLIFT_C");
-//     $("#keyworkds_c").val('');
-//     $('#keyworkds_toast').toast("show")
-// });
-// $("#clear_d").on("click", function () {
-//     localStorage.removeItem("myLIFT_D");
-//     $("#keyworkds_d").val('');
-//     $('#keyworkds_toast').toast("show")
-// });
-// $("#clear_e").on("click", function () {
-//     localStorage.removeItem("myLIFT_E");
-//     $("#keyworkds_e").val('');
-//     $('#keyworkds_toast').toast("show")
-// });
+
 $("#create-btn").on("click", function () {
     var err = "";
     if (!$("#source").val()) {
@@ -71,8 +47,33 @@ $("#create-btn").on("click", function () {
     }
 });
 $("#keyworkds").val(localStorage.getItem("myLIFT"));
-// $("#keyworkds_a").val(localStorage.getItem("myLIFT_A"));
-// $("#keyworkds_b").val(localStorage.getItem("myLIFT_B"));
-// $("#keyworkds_c").val(localStorage.getItem("myLIFT_C"));
-// $("#keyworkds_d").val(localStorage.getItem("myLIFT_D"));
-// $("#keyworkds_e").val(localStorage.getItem("myLIFT_E"));
+localStorage.getItem("keyworkds_a") ? $("#a_kw").val(localStorage.getItem("keyworkds_a")) : null;
+localStorage.getItem("keyworkds_b") ? $("#b_kw").val(localStorage.getItem("keyworkds_b")) : null;
+localStorage.getItem("keyworkds_c") ? $("#c_kw").val(localStorage.getItem("keyworkds_c")) : null;
+localStorage.getItem("keyworkds_d") ? $("#d_kw").val(localStorage.getItem("keyworkds_d")) : null;
+localStorage.getItem("keyworkds_e") ? $("#e_kw").val(localStorage.getItem("keyworkds_e")) : null;
+localStorage.getItem("keyworkds_f") ? $("#instate").val(localStorage.getItem("keyworkds_f")) : null;
+localStorage.getItem("keyworkds_g") ? $("#inlocation").val(localStorage.getItem("keyworkds_g")) : null;
+
+$(".btn-save").on("click", function () {
+    if(localStorage.getItem($(this).attr('id'))) {
+        localStorage.removeItem($(this).attr('id'));
+        $(this).parents('.relative').find('textarea').val('')
+        $(this).removeClass('ready').text('Save')
+    } else {
+        if($(this).parents('.relative').find('textarea').val().length>0) {
+            localStorage.removeItem($(this).attr('id'));
+            localStorage.setItem($(this).attr('id'), $(this).parents('.relative').find('textarea').val());
+            $(this).addClass('ready').text('Clear')
+        } else {
+            alert('Please enter keywords')
+        }
+    }
+    $('#keyworkds_toast').toast("show")
+});
+
+$('.btn-save').each(function() {
+    if(localStorage.getItem($(this).attr('id'))) {
+        $(this).addClass('ready').text('Clear')
+    }
+})

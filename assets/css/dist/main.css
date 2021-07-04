@@ -43,6 +43,35 @@ body {
   border-color: #50575d;
 }
 
+.relative {
+  position: relative;
+}
+
+.btn-save {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0 0 0.25rem 0.25rem;
+  background-color: #88919a;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: calc(100% - 1px);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-save.ready {
+  background-color: #dc3545;
+}
+.btn-save:hover {
+  background-color: #0957cc;
+}
+
 h1 {
   color: #0c6efd;
 }
@@ -173,6 +202,33 @@ h1 {
 }
 .nav.nav-tabs.nav-sm .nav-item .nav-link {
   padding: 0.75rem 1.5rem;
+}
+
+#tabkws h6,
+#tabmakets h6 {
+  margin-bottom: 0;
+  display: inline-flex;
+  background: #f5f5f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  border: 1px solid #ced4da;
+  border-bottom: 0;
+  font-size: 0.9rem;
+}
+#tabkws h6 .badge,
+#tabmakets h6 .badge {
+  padding: 0.05rem 0.45rem;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3px;
+  font-size: 0.65rem;
+}
+#tabkws textarea,
+#tabmakets textarea {
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .navbar-brand {

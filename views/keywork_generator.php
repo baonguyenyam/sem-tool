@@ -41,32 +41,32 @@ require_once 'includes/header.php';
                         <div class="col-lg">
 
                             <h5 class="mb-2"><span class="badge bg-primary">A</span> keywords</h5>
-                            <div class="form-floating-0 mb-4">
+                            <div class="relative form-floating-0 mb-4">
                                 <textarea class="form-control" placeholder="" id="a_kw"
-                                    style="height: 70px">nguyen,van</textarea>
-                                <!-- <label for="a_kw">enter keywords and add comma (,) end of words</label> -->
+                                    style="height: 70px"></textarea>
+                                <div id="keyworkds_a" class="btn-save">Save</div>
                             </div>
                             <h5 class="mb-2"><span class="badge bg-info">B</span> keywords</h5>
-                            <div class="form-floating-0 mb-4">
+                            <div class="relative form-floating-0 mb-4">
                                 <textarea class="form-control" placeholder="" id="b_kw"
-                                    style="height: 70px">1,2,3</textarea>
-                                <!-- <label for="b_kw">enter keywords and add comma (,) end of words</label> -->
+                                    style="height: 70px"></textarea>
+                                <div id="keyworkds_b" class="btn-save">Save</div>
                             </div>
                             <h5 class="mb-2"><span class="badge bg-warning">C</span> keywords</h5>
-                            <div class="form-floating-0 mb-4">
-                                <textarea class="form-control" placeholder="" id="c_kw" style="height: 70px">@,#</textarea>
-                                <!-- <label for="c_kw">enter keywords and add comma (,) end of words</label> -->
+                            <div class="relative form-floating-0 mb-4">
+                                <textarea class="form-control" placeholder="" id="c_kw" style="height: 70px"></textarea>
+                                <div id="keyworkds_c" class="btn-save">Save</div>
                             </div>
                             <h5 class="mb-2"><span class="badge bg-dark">D</span> keywords</h5>
-                            <div class="form-floating-0 mb-4">
-                                <textarea class="form-control" placeholder="" id="d_kw" style="height: 70px">ᚠ,ᛉ</textarea>
-                                <!-- <label for="d_kw">enter keywords and add comma (,) end of words</label> -->
+                            <div class="relative form-floating-0 mb-4">
+                                <textarea class="form-control" placeholder="" id="d_kw" style="height: 70px"></textarea>
+                                <div id="keyworkds_d" class="btn-save">Save</div>
                             </div>
                             <h5 class="mb-2"><span class="badge bg-secondary">E</span> keywords</h5>
-                            <div class="form-floating-0 mb-5 mb-lg-0">
+                            <div class="relative form-floating-0 mb-5 mb-lg-0">
                                 <textarea class="form-control" placeholder="" id="e_kw"
-                                    style="height: 70px">隨,河,予</textarea>
-                                <!-- <label for="e_kw">enter keywords and add comma (,) end of words</label> -->
+                                    style="height: 70px"></textarea>
+                                <div id="keyworkds_e" class="btn-save">Save</div>
                             </div>
                         </div>
                         <div class="col-lg">

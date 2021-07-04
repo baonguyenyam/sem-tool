@@ -92,47 +92,51 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
 
                                         <div class="tab-content pt-4" id="myTabContentNice">
                                             <div class="tab-pane fade show active" id="tabkws">
-                                                <h6 class="mb-2"><span class="badge bg-primary">A</span> keywords</h6>
-                                                <div class="form-floating-0 mb-4">
-                                                    <textarea class="form-control" placeholder="" id="a_kw"
-                                                        style="height: 40px">LIFT, Sandiego</textarea>
-                                                    <!-- <label for="a_kw">enter keywords and add comma (,) end of words</label> -->
+                                                <h6><span class="badge bg-primary">A</span> keywords</h6>
+                                                <div class="relative form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="e.g: LIFT, Sandiego" id="a_kw"
+                                                        style="height: 40px"></textarea>
+                                                    <div id="keyworkds_a" class="btn-save">Save</div>
                                                 </div>
-                                                <h6 class="mb-2"><span class="badge bg-info">B</span> keywords</h6>
-                                                <div class="form-floating-0 mb-4">
-                                                    <textarea class="form-control" placeholder="" id="b_kw"
-                                                        style="height: 40px">Web, WordPress</textarea>
-                                                    <!-- <label for="b_kw">enter keywords and add comma (,) end of words</label> -->
+                                                <h6><span class="badge bg-info">B</span> keywords</h6>
+                                                <div class="relative form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="e.g: Web, WordPress" id="b_kw"
+                                                        style="height: 40px"></textarea>
+                                                    <div id="keyworkds_b" class="btn-save">Save</div>
                                                 </div>
-                                                <h6 class="mb-2"><span class="badge bg-warning">C</span> keywords</h6>
-                                                <div class="form-floating-0 mb-4">
+                                                <h6><span class="badge bg-warning">C</span> keywords</h6>
+                                                <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="" id="c_kw" style="height: 40px"></textarea>
-                                                    <!-- <label for="c_kw">enter keywords and add comma (,) end of words</label> -->
+                                                    <div id="keyworkds_c" class="btn-save">Save</div>
                                                 </div>
-                                                <h6 class="mb-2"><span class="badge bg-dark">D</span> keywords</h6>
-                                                <div class="form-floating-0 mb-4">
+                                                <h6><span class="badge bg-dark">D</span> keywords</h6>
+                                                <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="" id="d_kw" style="height: 40px"></textarea>
-                                                    <!-- <label for="d_kw">enter keywords and add comma (,) end of words</label> -->
+                                                    <div id="keyworkds_d" class="btn-save">Save</div>
                                                 </div>
-                                                <h6 class="mb-2"><span class="badge bg-secondary">E</span> keywords</h6>
-                                                <div class="form-floating-0 mb-5 mb-lg-2">
+                                                <h6><span class="badge bg-secondary">E</span> keywords</h6>
+                                                <div class="relative form-floating-0 mb-5 mb-lg-2">
                                                     <textarea class="form-control" placeholder="" id="e_kw"
                                                         style="height: 40px"></textarea>
-                                                    <!-- <label for="e_kw">enter keywords and add comma (,) end of words</label> -->
+                                                    <div id="keyworkds_e" class="btn-save">Save</div>
                                                 </div>
                                                 <p class="text-muted">e.g: https://domain.com/<code>state</code>/<code>location</code>/<code class="text-primary">primary-keyword</code></p>
 
                                             </div>
                                             <div class="tab-pane fade" id="tabmakets">
-                                                <h6 class="mb-2">States</h6>
-                                                <div class="form-floating-0 mb-4">
+                                                <h6>States</h6>
+                                                <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="" id="instate"
-                                                        style="height: 40px">Texas, New York</textarea>
+                                                        style="height: 40px"></textarea>
+                                                        <div id="keyworkds_f" class="btn-save">Save</div>
+
                                                 </div>
-                                                <h6 class="mb-2">Cities</h6>
-                                                <div class="form-floating-0 mb-4">
-                                                    <textarea class="form-control" placeholder="" id="inlocation"
-                                                        style="height: 40px">Fort Worth, Dallas</textarea>
+                                                <h6>Cities</h6>
+                                                <div class="relative form-floating-0 mb-4">
+                                                    <textarea class="form-control" placeholder="e.g: Fort Worth" id="inlocation"
+                                                        style="height: 40px"></textarea>
+                                                        <div id="keyworkds_g" class="btn-save">Save</div>
+
                                                 </div>
                                                 <p class="text-muted">e.g: https://domain.com/<code>state</code>/<code>location</code>/<code class="text-primary">primary-keyword</code></p>
                                             </div>
@@ -222,12 +226,12 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
         <div id="keyworkds_toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-                <strong class="me-auto">Memory cleared</strong>
+                <strong class="me-auto">Memory update</strong>
                 <small>1s ago</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                Your keywords list has been cleared
+                Your keywords list has been update
             </div>
         </div>
     </div>
