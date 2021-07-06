@@ -49,6 +49,7 @@ if(isset($_POST['submit'])) {
                                     <?=$errorNoti?>
                                 </div>
                             <?php } ?>
+                            <?php if(!isset($_POST['submit'])) {?>
                             <div class="mb-3">
                                 <label for="name" class="form-label text-primary">Your Domain</label>
                                 <input type="text" value="<?=isset($_POST['name'])?$_POST['name']:null;?>" class="form-control" id="name" name="name" placeholder="e.g: abc.com" required>
@@ -64,19 +65,27 @@ if(isset($_POST['submit'])) {
                                 <input type="date" value="<?=isset($_POST['date'])?$_POST['date']:null;?>" class="form-control" id="date" name="date" required>
                                 <div id="emailHelp" class="form-text">Format: <code>MM/DD/YYYY</code></div>
                             </div>
-                            <?php if(isset($_POST['submit'])) {?>
-                            <div class="mb-3">
-                                <label for="slug" class="form-label text-primary">Your KEY</label>
-                                <input type="text" value="<?=isset($yourkey)?$yourkey:null;?>" class="form-control" id="key" name="key">
-                            </div>
-                            <div class="mb-3">
-                                <label for="slug" class="form-label text-primary">Your License</label>
-                                <textarea class="form-control" placeholder="" id="hash"
-                                    style="height: 40px"><?=isset($yourHashkey)?$yourHashkey:null;?></textarea>
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                            <?php } else { ?>
+                            <div class="mb-0">
+                                <div class="fs-3 text-primary">Your License</div>
+                                <div id="youkey" class="border rounded border-3 p-4 mt-3 mb-4 fs-5 bg-light text-break">
+                                    <p class="fw-bold mb-0">You Domain:</p>
+                                    <p><?=isset($_POST['name'])?$_POST['name']:null;?></p>
+                                    <p class="fw-bold mb-0">You Email:</p>
+                                    <p><?=isset($_POST['email'])?$_POST['email']:null;?></p>
+                                    <p class="fw-bold mb-0">You Package:</p>
+                                    <p><?=isset($_POST['date'])?date('m/d/Y', strtotime($_POST['date'])):null;?></p>
+                                    <p class="fw-bold mb-0">You Key:</p>
+                                    <p><?=isset($yourkey)?$yourkey:null;?></p>
+                                    <p class="fw-bold mb-0">You License:</p>
+                                    <p class="mb-0"><?=isset($yourHashkey)?$yourHashkey:null;?></p>
+                                </div>
+                                <textarea class="d-none" placeholder="" rows="20" id="youlicense">Your Domain:&#13;&#10;<?=isset($_POST['name'])?$_POST['name']:null;?>&#13;&#10;&#13;&#10;Your Email:&#13;&#10;<?=isset($_POST['email'])?$_POST['email']:null;?>&#13;&#10;&#13;&#10;Your Package:&#13;&#10;<?=isset($_POST['date'])?date('m/d/Y', strtotime($_POST['date'])):null;?>&#13;&#10;&#13;&#10;Your Key:&#13;&#10;<?=isset($yourkey)?$yourkey:null;?>&#13;&#10;&#13;&#10;Your License:&#13;&#10;<?=isset($yourHashkey)?$yourHashkey:null;?></textarea>
+                                <button type="button" class="btn btn-success" id="key-btn">Download</button>
                             </div>
                             <?php } ?>
 
-                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>

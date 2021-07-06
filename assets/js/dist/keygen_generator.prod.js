@@ -1,0 +1,1 @@
+"use strict";youlicense,$("#key-btn").on("click",function(){var e=$("#youlicense").val(),n="LIFT_LICENSE_"+(new Date).getTime()+".txt";download(n,e)});
