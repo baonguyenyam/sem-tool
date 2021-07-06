@@ -51,7 +51,9 @@ if(isset($_POST['submit'])) {
                             <?php } ?>
                             <div class="mb-3">
                                 <label for="name" class="form-label text-primary">Your Domain</label>
-                                <input type="text" value="<?=isset($_POST['name'])?$_POST['name']:null;?>" class="form-control" id="name" name="name" placeholder="e.g: LIFT Member" required>
+                                <input type="text" value="<?=isset($_POST['name'])?$_POST['name']:null;?>" class="form-control" id="name" name="name" placeholder="e.g: abc.com" required>
+                                <div id="emailHelp" class="form-text">Don't add <code>http://</code></div>
+
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label text-primary">Your Email</label>
@@ -60,7 +62,9 @@ if(isset($_POST['submit'])) {
                             <div class="mb-3">
                                 <label for="date" class="form-label text-primary">Your Package</label>
                                 <input type="date" value="<?=isset($_POST['date'])?$_POST['date']:null;?>" class="form-control" id="date" name="date" required>
+                                <div id="emailHelp" class="form-text">Format: <code>MM/DD/YYYY</code></div>
                             </div>
+                            <?php if(isset($_POST['submit'])) {?>
                             <div class="mb-3">
                                 <label for="slug" class="form-label text-primary">Your KEY</label>
                                 <input type="text" value="<?=isset($yourkey)?$yourkey:null;?>" class="form-control" id="key" name="key">
@@ -70,6 +74,8 @@ if(isset($_POST['submit'])) {
                                 <textarea class="form-control" placeholder="" id="hash"
                                     style="height: 40px"><?=isset($yourHashkey)?$yourHashkey:null;?></textarea>
                             </div>
+                            <?php } ?>
+
                             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
