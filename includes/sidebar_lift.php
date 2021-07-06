@@ -44,6 +44,11 @@
 		</a>
 	</li>
 	<li class="nav-item">
+		<a class="nav-link <?= $active === 'keygen' ? 'active' : '' ?>" href="keygen">
+			<i class="bi bi-key fa-lg fa-fw me-1"></i> Keygen Generator
+		</a>
+	</li>
+	<li class="nav-item">
 		<a class="nav-link <?= $active === 'robots' ? 'active' : '' ?>" href="robots-generator">
 		<i class="bi bi-bug fa-lg fa-fw me-1"></i> Robots.txt Generator
 		</a>

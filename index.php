@@ -69,6 +69,8 @@ Route::add('/doping',function(){ include 'views/doping.php'; },'get');
 Route::add('/favicon-generator',function(){ include 'views/favicon_generator.php'; });
 Route::add('/favicon-generator',function(){ include 'views/favicon_generator.php'; },'post');
 Route::add('/geo-generator',function(){ include 'views/geo_generator.php'; });
+Route::add('/keygen',function(){ include 'views/keygen.php'; },'get');
+Route::add('/keygen',function(){ include 'views/keygen.php'; },'post');
 // CORE 
 Route::add('/barcode',function(){ include 'core/barcode.php'; });
 Route::add('/barcode',function(){ include 'core/barcode.php'; },'get');

@@ -55,6 +55,12 @@
 		<span>Plugin Generator</span>
 		</a>
 	</li>
+	<li>
+		<a href="keygen">
+		<i class="bi bi-key fa-3x fa-fw me-1"></i>
+		<span>Keygen Generator</span>
+		</a>
+	</li>
 
 	<li>
 		<a href="wp-plugins">
