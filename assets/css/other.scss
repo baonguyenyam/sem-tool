@@ -37,3 +37,21 @@
 		}
 	}
 }
+
+.lock-btn {
+	position: absolute;
+    left: 0;
+    bottom: -2rem;
+    padding-left: 0;
+	.form-check-input {
+		margin: 0;
+	}
+}
+.lock-btn-small {
+	position: absolute;
+    right: 0;
+    top: -1.2rem;
+	.form-check-input {
+		margin: 0;
+	}
+}

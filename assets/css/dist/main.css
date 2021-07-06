@@ -603,3 +603,22 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+.lock-btn {
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+  padding-left: 0;
+}
+.lock-btn .form-check-input {
+  margin: 0;
+}
+
+.lock-btn-small {
+  position: absolute;
+  right: 0;
+  top: -1.2rem;
+}
+.lock-btn-small .form-check-input {
+  margin: 0;
+}

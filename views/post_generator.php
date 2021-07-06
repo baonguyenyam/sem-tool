@@ -96,28 +96,43 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                 <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="e.g: LIFT, Sandiego" id="a_kw"
                                                         style="height: 40px"></textarea>
+                                                    <div class="form-check form-switch lock-btn-small" id="lock_a">
+                                                        <input class="form-check-input" type="checkbox" id="l_a" checked disabled>
+                                                    </div>
                                                     <div id="keyworkds_a" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-info">B</span> keywords</h6>
                                                 <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="e.g: Web, WordPress" id="b_kw"
                                                         style="height: 40px"></textarea>
+                                                    <div class="form-check form-switch lock-btn-small" id="lock_b">
+                                                        <input class="form-check-input" type="checkbox" id="l_b">
+                                                    </div>
                                                     <div id="keyworkds_b" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-warning">C</span> keywords</h6>
                                                 <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="" id="c_kw" style="height: 40px"></textarea>
+                                                    <div class="form-check form-switch lock-btn-small" id="lock_c">
+                                                        <input class="form-check-input" type="checkbox" id="l_c">
+                                                    </div>
                                                     <div id="keyworkds_c" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-dark">D</span> keywords</h6>
                                                 <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="" id="d_kw" style="height: 40px"></textarea>
+                                                    <div class="form-check form-switch lock-btn-small" id="lock_d">
+                                                        <input class="form-check-input" type="checkbox" id="l_d">
+                                                    </div>
                                                     <div id="keyworkds_d" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-secondary">E</span> keywords</h6>
                                                 <div class="relative form-floating-0 mb-5 mb-lg-2">
                                                     <textarea class="form-control" placeholder="" id="e_kw"
                                                         style="height: 40px"></textarea>
+                                                    <div class="form-check form-switch lock-btn-small" id="lock_e">
+                                                        <input class="form-check-input" type="checkbox" id="l_e" disabled>
+                                                    </div>
                                                     <div id="keyworkds_e" class="btn-save">Save</div>
                                                 </div>
                                                 <p class="text-muted">e.g: https://domain.com/<code>state</code>/<code>location</code>/<code class="text-primary">primary-keyword</code></p>

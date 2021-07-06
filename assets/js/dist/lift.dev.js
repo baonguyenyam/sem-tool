@@ -46,33 +46,33 @@ var LIFT_APP = {
   },
   gen: function gen() {
     for (var index_a = 0; index_a < this.akw_get().length; index_a++) {
-      var _a = lift_encode(this.akw_get()[index_a].trim());
+      var _a = this.akw_get()[index_a].trim();
 
       if (_a.length > 0) {
         // this.KW.push(_a)
         for (var index_b = 0; index_b < this.bkw_get().length; index_b++) {
-          var _b = lift_encode(this.bkw_get()[index_b].trim());
+          var _b = this.bkw_get()[index_b].trim();
 
           if (_b.length > 0) {
-            this.KW.push(_a + " " + _b);
+            $('#l_b').prop('checked') ? null : this.KW.push(_a + " " + _b);
 
             for (var index_c = 0; index_c < this.ckw_get().length; index_c++) {
-              var _c = lift_encode(this.ckw_get()[index_c].trim());
+              var _c = this.ckw_get()[index_c].trim();
 
               if (_c.length > 0) {
-                this.KW.push(_a + " " + _b + " " + _c);
+                $('#l_c').prop('checked') ? null : this.KW.push(_a + " " + _b + " " + _c);
 
                 for (var index_d = 0; index_d < this.dkw_get().length; index_d++) {
-                  var _d = lift_encode(this.dkw_get()[index_d].trim());
+                  var _d = this.dkw_get()[index_d].trim();
 
                   if (_d.length > 0) {
-                    this.KW.push(_a + " " + _b + " " + _c + " " + _d);
+                    $('#l_d').prop('checked') ? null : this.KW.push(_a + " " + _b + " " + _c + " " + _d);
 
                     for (var index_e = 0; index_e < this.ekw_get().length; index_e++) {
-                      var _e = lift_encode(this.ekw_get()[index_e].trim());
+                      var _e = this.ekw_get()[index_e].trim();
 
                       if (_e.length > 0) {
-                        this.KW.push(_a + " " + _b + " " + _c + " " + _d + " " + _e);
+                        $('#l_e').prop('checked') ? null : this.KW.push(_a + " " + _b + " " + _c + " " + _d + " " + _e);
                       }
                     }
                   }
@@ -84,7 +84,7 @@ var LIFT_APP = {
       }
     }
 
-    $("#results").text(lift_decode(LIFT_APP.KW.join("\n")));
+    $("#results").text(LIFT_APP.KW.join("\n"));
     $("#boxresult .rs").removeClass("d-none");
     $("#boxresult .rv").hide();
     $("#number").text(LIFT_APP.KW.length);
@@ -109,33 +109,41 @@ var LIFT_APP = {
             var _b = this.bkw_get()[index_b].trim();
 
             if (_b.length > 0) {
-              nst++;
-              this.KW.push(_a + " " + _b);
-              this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b);
+              if (!$('#l_b').prop('checked')) {
+                nst++;
+                this.KW.push(_a + " " + _b);
+                this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b);
+              }
 
               for (var index_c = 0; index_c < this.ckw_get().length; index_c++) {
                 var _c = this.ckw_get()[index_c].trim();
 
                 if (_c.length > 0) {
-                  nst++;
-                  this.KW.push(_a + " " + _b + " " + _c);
-                  this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c);
+                  if (!$('#l_c').prop('checked')) {
+                    nst++;
+                    this.KW.push(_a + " " + _b + " " + _c);
+                    this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c);
+                  }
 
                   for (var index_d = 0; index_d < this.dkw_get().length; index_d++) {
                     var _d = this.dkw_get()[index_d].trim();
 
                     if (_d.length > 0) {
-                      nst++;
-                      this.KW.push(_a + " " + _b + " " + _c + " " + _d);
-                      this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d);
+                      if (!$('#l_d').prop('checked')) {
+                        nst++;
+                        this.KW.push(_a + " " + _b + " " + _c + " " + _d);
+                        this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d);
+                      }
 
                       for (var index_e = 0; index_e < this.ekw_get().length; index_e++) {
                         var _e = this.ekw_get()[index_e].trim();
 
                         if (_e.length > 0) {
-                          nst++;
-                          this.KW.push(_a + " " + _b + " " + _c + " " + _d + " " + _e);
-                          this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d, _e);
+                          if (!$('#l_e').prop('checked')) {
+                            nst++;
+                            this.KW.push(_a + " " + _b + " " + _c + " " + _d + " " + _e);
+                            this.replaceMultiKW(this.rePlaceMulti, nst, _a, _b, _c, _d, _e);
+                          }
                         }
                       }
                     }
@@ -195,3 +203,17 @@ var LIFT_APP = {
   }
 };
 LIFT_APP.init();
+$('#l_c').change(function () {
+  if (!$('#l_b').prop('checked')) {
+    alert('Please lock B keywork first');
+    $(this).prop('checked', false);
+    return false;
+  }
+});
+$('#l_d').change(function () {
+  if (!$('#l_c').prop('checked')) {
+    alert('Please lock C keywork first');
+    $(this).prop('checked', false);
+    return false;
+  }
+});
