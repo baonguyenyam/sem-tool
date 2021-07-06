@@ -3,8 +3,8 @@
 $("#clear").on("click", function () {
   localStorage.removeItem("myLIFT_KW");
   localStorage.removeItem("myLIFT");
-  $("#keyworkds").val('');
-  $('#keyworkds_toast').toast("show");
+  $("#keywordds").val('');
+  $('#keywordds_toast').toast("show");
 });
 $("#create-btn").on("click", function () {
   var err = "";
@@ -13,14 +13,14 @@ $("#create-btn").on("click", function () {
     err += "Please upload source file\n";
   }
 
-  if (!$("#keyworkds").val()) {
+  if (!$("#keywordds").val()) {
     err += "Please enter keywords list\n";
   }
 
   if (err) {
     alert(err);
   } else {
-    var nel = $("#keyworkds").val().split("\n");
+    var nel = $("#keywordds").val().split("\n");
     var nst = '';
     var arrayDone = [];
     var m = replaceLIFT(LIFT_APP.code.getValue());
@@ -53,14 +53,14 @@ $("#create-btn").on("click", function () {
     }
   }
 });
-$("#keyworkds").val(localStorage.getItem("myLIFT"));
-localStorage.getItem("keyworkds_a") ? $("#a_kw").val(localStorage.getItem("keyworkds_a")) : null;
-localStorage.getItem("keyworkds_b") ? $("#b_kw").val(localStorage.getItem("keyworkds_b")) : null;
-localStorage.getItem("keyworkds_c") ? $("#c_kw").val(localStorage.getItem("keyworkds_c")) : null;
-localStorage.getItem("keyworkds_d") ? $("#d_kw").val(localStorage.getItem("keyworkds_d")) : null;
-localStorage.getItem("keyworkds_e") ? $("#e_kw").val(localStorage.getItem("keyworkds_e")) : null;
-localStorage.getItem("keyworkds_f") ? $("#instate").val(localStorage.getItem("keyworkds_f")) : null;
-localStorage.getItem("keyworkds_g") ? $("#inlocation").val(localStorage.getItem("keyworkds_g")) : null;
+$("#keywordds").val(localStorage.getItem("myLIFT"));
+localStorage.getItem("keywordds_a") ? $("#a_kw").val(localStorage.getItem("keywordds_a")) : null;
+localStorage.getItem("keywordds_b") ? $("#b_kw").val(localStorage.getItem("keywordds_b")) : null;
+localStorage.getItem("keywordds_c") ? $("#c_kw").val(localStorage.getItem("keywordds_c")) : null;
+localStorage.getItem("keywordds_d") ? $("#d_kw").val(localStorage.getItem("keywordds_d")) : null;
+localStorage.getItem("keywordds_e") ? $("#e_kw").val(localStorage.getItem("keywordds_e")) : null;
+localStorage.getItem("keywordds_f") ? $("#instate").val(localStorage.getItem("keywordds_f")) : null;
+localStorage.getItem("keywordds_g") ? $("#inlocation").val(localStorage.getItem("keywordds_g")) : null;
 $(".btn-save").on("click", function () {
   if (localStorage.getItem($(this).attr('id'))) {
     localStorage.removeItem($(this).attr('id'));
@@ -76,7 +76,7 @@ $(".btn-save").on("click", function () {
     }
   }
 
-  $('#keyworkds_toast').toast("show");
+  $('#keywordds_toast').toast("show");
 });
 $('.btn-save').each(function () {
   if (localStorage.getItem($(this).attr('id'))) {

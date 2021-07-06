@@ -1,6 +1,6 @@
 <ul>
 	<li>
-		<a href="keywork-generator">
+		<a href="keyword-generator">
 		<i class="bi bi-type-h1 fa-3x fa-fw me-1"></i>
 		<span>Keywords Generator</span>
 		</a>

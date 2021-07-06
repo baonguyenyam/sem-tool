@@ -3,7 +3,7 @@ include('core/route.php');
 
 Route::add('/',function(){ include 'views/home.php'; });
 Route::add('/copyright',function(){ include 'views/copyright.php'; });
-Route::add('/keywork-generator',function(){ include 'views/keywork_generator.php'; });
+Route::add('/keyword-generator',function(){ include 'views/keyword_generator.php'; });
 Route::add('/post-generator',function(){ include 'views/post_generator.php'; });
 Route::add('/content-generator',function(){ include 'views/content_generator.php'; });
 Route::add('/plugin-generator',function(){ include 'views/plugin_generator.php'; });

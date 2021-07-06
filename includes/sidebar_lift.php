@@ -4,7 +4,7 @@
 </h6>
 <ul class="nav flex-column">
 	<li class="nav-item">
-		<a class="nav-link <?= $active === 'keyword' ? 'active' : '' ?>" href="keywork-generator">
+		<a class="nav-link <?= $active === 'keyword' ? 'active' : '' ?>" href="keyword-generator">
 		<i class="bi bi-type-h1 fa-lg fa-fw me-1"></i> Keywords Generator
 		</a>
 	</li>

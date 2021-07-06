@@ -34,7 +34,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                         <div class="col-12">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a href="?type=default" class="nav-link<?= (isset($_GET['type']) && $_GET['type'] === 'default' || !isset($_GET['type'])) ? ' active' : '' ?>">Primary Keywork</a>
+                                    <a href="?type=default" class="nav-link<?= (isset($_GET['type']) && $_GET['type'] === 'default' || !isset($_GET['type'])) ? ' active' : '' ?>">Primary Keyword</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a href="?type=multi" class="nav-link<?= isset($_GET['type']) && $_GET['type'] === 'multi' ? ' active' : '' ?>">Multi-Keywords</a>
@@ -99,7 +99,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div class="form-check form-switch lock-btn-small" id="lock_a">
                                                         <input class="form-check-input" type="checkbox" id="l_a" checked disabled>
                                                     </div>
-                                                    <div id="keyworkds_a" class="btn-save">Save</div>
+                                                    <div id="keywordds_a" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-info">B</span> keywords</h6>
                                                 <div class="relative form-floating-0 mb-4">
@@ -108,7 +108,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div class="form-check form-switch lock-btn-small" id="lock_b">
                                                         <input class="form-check-input" type="checkbox" id="l_b">
                                                     </div>
-                                                    <div id="keyworkds_b" class="btn-save">Save</div>
+                                                    <div id="keywordds_b" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-warning">C</span> keywords</h6>
                                                 <div class="relative form-floating-0 mb-4">
@@ -116,7 +116,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div class="form-check form-switch lock-btn-small" id="lock_c">
                                                         <input class="form-check-input" type="checkbox" id="l_c">
                                                     </div>
-                                                    <div id="keyworkds_c" class="btn-save">Save</div>
+                                                    <div id="keywordds_c" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-dark">D</span> keywords</h6>
                                                 <div class="relative form-floating-0 mb-4">
@@ -124,7 +124,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div class="form-check form-switch lock-btn-small" id="lock_d">
                                                         <input class="form-check-input" type="checkbox" id="l_d">
                                                     </div>
-                                                    <div id="keyworkds_d" class="btn-save">Save</div>
+                                                    <div id="keywordds_d" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-secondary">E</span> keywords</h6>
                                                 <div class="relative form-floating-0 mb-5 mb-lg-2">
@@ -133,7 +133,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div class="form-check form-switch lock-btn-small" id="lock_e">
                                                         <input class="form-check-input" type="checkbox" id="l_e" disabled>
                                                     </div>
-                                                    <div id="keyworkds_e" class="btn-save">Save</div>
+                                                    <div id="keywordds_e" class="btn-save">Save</div>
                                                 </div>
                                                 <p class="text-muted">e.g: https://domain.com/<code>state</code>/<code>location</code>/<code class="text-primary">primary-keyword</code></p>
 
@@ -143,14 +143,14 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                 <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="" id="instate"
                                                         style="height: 40px"></textarea>
-                                                        <div id="keyworkds_f" class="btn-save">Save</div>
+                                                        <div id="keywordds_f" class="btn-save">Save</div>
 
                                                 </div>
                                                 <h6>Cities</h6>
                                                 <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="e.g: Fort Worth" id="inlocation"
                                                         style="height: 40px"></textarea>
-                                                        <div id="keyworkds_g" class="btn-save">Save</div>
+                                                        <div id="keywordds_g" class="btn-save">Save</div>
 
                                                 </div>
                                                 <p class="text-muted">e.g: https://domain.com/<code>state</code>/<code>location</code>/<code class="text-primary">primary-keyword</code></p>
@@ -198,8 +198,8 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                 </div>
                                 <div class="col-xxl-5 mb-3">
 
-                                    <h5>Keyworks</h5>
-                                    <textarea class="form-control text-sm" placeholder="Paste your keywords list here" id="keyworkds" rows="11"></textarea>
+                                    <h5>Keywords</h5>
+                                    <textarea class="form-control text-sm" placeholder="Paste your keywords list here" id="keywordds" rows="11"></textarea>
                                     <div class="d-flex flex-row justify-content-between align-items-center mt-2">
                                         <p><strong>Code Key:</strong> <code class="a" style="-webkit-user-select: all!important;-moz-user-select: all!important;user-select: all!important;">___REPLACE___</code>
                                         </p>
@@ -239,7 +239,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
     </div>
 
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
-        <div id="keyworkds_toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="keywordds_toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <strong class="me-auto">Memory update</strong>
                 <small>1s ago</small>

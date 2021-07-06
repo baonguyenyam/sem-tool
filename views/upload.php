@@ -94,7 +94,7 @@ if(isset($_POST['submit'])!=""){
 
 
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
-        <div id="keyworkds_toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="keywordds_toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <strong class="me-auto">Keywords saved</strong>
                 <small>1s ago</small>

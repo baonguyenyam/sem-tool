@@ -197,14 +197,14 @@ LIFT_APP.init();
 
 $('#l_c').change(function() {
     if(!$('#l_b').prop('checked')) {
-        alert('Please lock B keywork first');
+        alert('Please lock B keyword first');
         $(this).prop('checked', false)
         return false;
     }
 });
 $('#l_d').change(function() {
     if(!$('#l_c').prop('checked')) {
-        alert('Please lock C keywork first');
+        alert('Please lock C keyword first');
         $(this).prop('checked', false)
         return false;
     }
