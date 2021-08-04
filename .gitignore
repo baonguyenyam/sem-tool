@@ -22,7 +22,6 @@ log.txt
 *.sublime-workspace
 .sass-cache/
 .versions/
-tmp/
 temp/
 www/
 wwwroot/
