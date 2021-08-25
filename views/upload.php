@@ -70,6 +70,7 @@ if(isset($_POST['submit'])!=""){
                                 <option value="5">LIFT CleanUp</option>
                                 <option value="6">LIFT Chat</option>
                                 <option value="7">WP Theme</option>
+                                <option value="8">LIFT WP Configure</option>
                             </select>
                         </div>
                         <div class="mb-3">

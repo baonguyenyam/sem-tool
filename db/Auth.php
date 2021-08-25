@@ -98,6 +98,13 @@ class Auth
         $result = $db_handle->runQuery($query, 'sss', array($search, $search, $search));
         return $result;
     }
+    function getAllActiveWeb()
+    {
+        $db_handle = new DBController();
+        $query = "SELECT * FROM tbl_check_version ORDER BY version_id DESC";
+        $result = $db_handle->runBaseQuery($query);
+        return $result;
+    }
 
     // AUTHENTICATION 
     function getMemberByID($id)

@@ -103,4 +103,9 @@
 		<i class="bi bi-lightning fa-lg fa-fw me-1"></i> Crawler List
 		</a>
 	</li>
+	<li class="nav-item">
+		<a class="nav-link <?= $active === 'active-version' ? 'active' : '' ?>" href="active-version">
+		<i class="bi bi-shield-check fa-lg fa-fw me-1"></i> Active Website
+		</a>
+	</li>
 </ul>
