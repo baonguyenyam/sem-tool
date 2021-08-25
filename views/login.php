@@ -213,11 +213,11 @@ require_once 'core/class-concat.php';
                                 <div class="alert alert-danger mb-3"><?php echo $message; ?></div>
                             <?php } ?>
                             <div class="form-label-group">
-                                <input name="member_name" type="text" value="<?php echo isset($_COOKIE["member_login"]) ? $_COOKIE["member_login"]: 'demo' ?>" id="inputEmail" class="form-control" placeholder="Account" required autofocus>
+                                <input name="member_name" type="text" value="<?php echo isset($_COOKIE["member_login"]) ? $_COOKIE["member_login"]: '' ?>" id="inputEmail" class="form-control" placeholder="Account" required autofocus>
                                 <label for="inputEmail">Account</label>
                             </div>
                             <div class="form-label-group">
-                                <input name="member_password" type="password" value="<?php echo isset($_COOKIE["member_password"]) ? $_COOKIE["member_password"]: 'demo' ?>" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <input name="member_password" type="password" value="<?php echo isset($_COOKIE["member_password"]) ? $_COOKIE["member_password"]: '' ?>" id="inputPassword" class="form-control" placeholder="Password" required>
                                 <label for="inputPassword">Password</label>
 
                             </div>

@@ -67,6 +67,13 @@ class Auth
         $result = $db_handle->insert($query, 'sssss', array($title, $content, $status, $options, $type));
         return $result;
     }
+    function checkVersion($url)
+    {
+        $db_handle = new DBController();
+        $query = "INSERT INTO tbl_check_version (version_url) VALUES (?)";
+        $result = $db_handle->insert($query, 's', array($url));
+        return $result;
+    }
     function updatePost($title, $content, $status, $options, $id)
     {
         $db_handle = new DBController();
