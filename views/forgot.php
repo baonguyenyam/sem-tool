@@ -235,10 +235,10 @@ $getConfig = $auth->getConfig();
 
                 
 
-                <!-- <div class="mb-1 text-center mt-5">
-                    <p class="mb-0"><a href="https://docs.myseo.website/" target="_blank">Guidelines</a></p>
-                </div> -->
-                <p class="mb-5 mt-5 text-muted text-center">© <?php echo date('Y'); ?></p>
+                <div class="mb-1 text-center mt-5">
+                    <p class="mb-0">Author: <a href="https://baonguyenyam.github.io/" target="_blank">Nguyen Pham</a></p>
+                </div>
+                <p class="mb-5 text-muted text-center">© <?php echo date('Y'); ?></p>
 
             </div>
         </div>
