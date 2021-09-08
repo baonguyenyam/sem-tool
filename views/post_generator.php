@@ -93,7 +93,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                         <div class="tab-content pt-4" id="myTabContentNice">
                                             <div class="tab-pane fade show active" id="tabkws">
                                                 <h6><span class="badge bg-primary">A</span> keywords</h6>
-                                                <div class="relative form-floating-0 mb-4">
+                                                <div class="relative form-floating-0 mb-5">
                                                     <textarea class="form-control" placeholder="e.g: LIFT, Sandiego" id="a_kw"
                                                         style="height: 40px"></textarea>
                                                     <div class="form-check form-switch lock-btn-small" id="lock_a">
@@ -102,7 +102,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div id="keywordds_a" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-info">B</span> keywords</h6>
-                                                <div class="relative form-floating-0 mb-4">
+                                                <div class="relative form-floating-0 mb-5">
                                                     <textarea class="form-control" placeholder="e.g: Web, WordPress" id="b_kw"
                                                         style="height: 40px"></textarea>
                                                     <div class="form-check form-switch lock-btn-small" id="lock_b">
@@ -111,7 +111,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div id="keywordds_b" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-warning">C</span> keywords</h6>
-                                                <div class="relative form-floating-0 mb-4">
+                                                <div class="relative form-floating-0 mb-5">
                                                     <textarea class="form-control" placeholder="" id="c_kw" style="height: 40px"></textarea>
                                                     <div class="form-check form-switch lock-btn-small" id="lock_c">
                                                         <input class="form-check-input" type="checkbox" id="l_c">
@@ -119,7 +119,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div id="keywordds_c" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-dark">D</span> keywords</h6>
-                                                <div class="relative form-floating-0 mb-4">
+                                                <div class="relative form-floating-0 mb-5">
                                                     <textarea class="form-control" placeholder="" id="d_kw" style="height: 40px"></textarea>
                                                     <div class="form-check form-switch lock-btn-small" id="lock_d">
                                                         <input class="form-check-input" type="checkbox" id="l_d">
@@ -127,7 +127,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                                     <div id="keywordds_d" class="btn-save">Save</div>
                                                 </div>
                                                 <h6><span class="badge bg-secondary">E</span> keywords</h6>
-                                                <div class="relative form-floating-0 mb-5 mb-lg-2">
+                                                <div class="relative form-floating-0 mb-4">
                                                     <textarea class="form-control" placeholder="" id="e_kw"
                                                         style="height: 40px"></textarea>
                                                     <div class="form-check form-switch lock-btn-small" id="lock_e">
@@ -140,7 +140,7 @@ $btnquest = isset($_GET['type']) && $_GET['type'] === 'multi' ? 'multi' : '';
                                             </div>
                                             <div class="tab-pane fade" id="tabmakets">
                                                 <h6>States</h6>
-                                                <div class="relative form-floating-0 mb-4">
+                                                <div class="relative form-floating-0 mb-5">
                                                     <textarea class="form-control" placeholder="" id="instate"
                                                         style="height: 40px"></textarea>
                                                         <div id="keywordds_f" class="btn-save">Save</div>

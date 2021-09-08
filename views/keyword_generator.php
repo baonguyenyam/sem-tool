@@ -44,7 +44,7 @@ require_once 'includes/header.php';
                             <div class="relative form-floating-0 mb-5">
                                 <textarea class="form-control" placeholder="" id="a_kw"
                                     style="height: 70px"></textarea>
-                                <div class="form-check form-switch lock-btn" id="lock_a">
+                                <div class="form-check form-switch lock-btn-small" id="lock_a">
                                     <input class="form-check-input" type="checkbox" id="l_a" checked disabled>
                                 </div>
                                 <div id="keywordds_a" class="btn-save">Save</div>
@@ -53,7 +53,7 @@ require_once 'includes/header.php';
                             <div class="relative form-floating-0 mb-5">
                                 <textarea class="form-control" placeholder="" id="b_kw"
                                     style="height: 70px"></textarea>
-                                <div class="form-check form-switch lock-btn" id="lock_b">
+                                <div class="form-check form-switch lock-btn-small" id="lock_b">
                                     <input class="form-check-input" type="checkbox" id="l_b">
                                 </div>
                                 <div id="keywordds_b" class="btn-save">Save</div>
@@ -61,7 +61,7 @@ require_once 'includes/header.php';
                             <h5 class="mb-2"><span class="badge bg-warning">C</span> keywords</h5>
                             <div class="relative form-floating-0 mb-5">
                                 <textarea class="form-control" placeholder="" id="c_kw" style="height: 70px"></textarea>
-                                <div class="form-check form-switch lock-btn" id="lock_c">
+                                <div class="form-check form-switch lock-btn-small" id="lock_c">
                                     <input class="form-check-input" type="checkbox" id="l_c">
                                 </div>
                                 <div id="keywordds_c" class="btn-save">Save</div>
@@ -69,7 +69,7 @@ require_once 'includes/header.php';
                             <h5 class="mb-2"><span class="badge bg-dark">D</span> keywords</h5>
                             <div class="relative form-floating-0 mb-5">
                                 <textarea class="form-control" placeholder="" id="d_kw" style="height: 70px"></textarea>
-                                <div class="form-check form-switch lock-btn" id="lock_d">
+                                <div class="form-check form-switch lock-btn-small" id="lock_d">
                                     <input class="form-check-input" type="checkbox" id="l_d">
                                 </div>
                                 <div id="keywordds_d" class="btn-save">Save</div>
@@ -78,7 +78,7 @@ require_once 'includes/header.php';
                             <div class="relative form-floating-0 mb-5 mb-lg-0">
                                 <textarea class="form-control" placeholder="" id="e_kw"
                                     style="height: 70px"></textarea>
-                                <div class="form-check form-switch lock-btn" id="lock_e">
+                                <div class="form-check form-switch lock-btn-small" id="lock_e">
                                     <input class="form-check-input" type="checkbox" id="l_e" disabled>
                                 </div>
                                 <div id="keywordds_e" class="btn-save">Save</div>

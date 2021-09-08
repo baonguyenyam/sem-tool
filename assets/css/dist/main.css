@@ -60,7 +60,7 @@ body {
   background-color: #88919a;
   color: #fff;
   position: absolute;
-  right: 0;
+  left: 0;
   top: calc(100% - 1px);
   text-transform: uppercase;
   cursor: pointer;
@@ -228,7 +228,7 @@ h1 {
 #tabkws textarea,
 #tabmakets textarea {
   border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .navbar-brand {
