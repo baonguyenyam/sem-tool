@@ -95,8 +95,8 @@ CREATE TABLE `tbl_members` (
 
 INSERT INTO `tbl_members` (`member_id`, `member_name`, `member_password`, `member_type`, `member_email`, `member_info`, `member_fullname`, `member_temp_pass`, `member_active`) VALUES
 (1, 'root', '$2y$10$zSmnwKXVRdzpqeUK9WkJdeSe3E2bs7V87nFurG.kPOjlAIlAcePTK', 1, 'baonguyenyam@gmail.com', '', 'Nguyen Pham', NULL, 1),
-(2, 'admin', '$2y$10$cWQUuub9z8/8OrAlv9KZiOBEvCQGxqy.30imTDK8EPoD5QDJT3cLu', 1, 'nguyen@liftcreations.com', '', 'Nguyen Pham', NULL, 1),
-(7, 'demo', '$2y$10$RHnaJS220vCPsGbhWkm6POf/fyIo.46neXz0TtJ1mcRSzqLWBi2Py', 0, 'demo@demo.com', '', 'Demo', NULL, 1);
+(2, 'admin', '$2y$10$cWQUuub9z8/8OrAlv9KZiOBEvCQGxqy.30imTDK8EPoD5QDJT3cLu', 1, 'hello@liftcreations.com', '', 'LIFT Creations', NULL, 1),
+(7, 'demo', '$2y$10$RHnaJS220vCPsGbhWkm6POf/fyIo.46neXz0TtJ1mcRSzqLWBi2Py', 0, 'demo@liftcreations.com', '', 'LIFT DEMO', NULL, 1);
 
 -- --------------------------------------------------------
 

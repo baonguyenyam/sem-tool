@@ -45,7 +45,7 @@ require_once 'includes/header.php';
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
                             <div class="d-lg-flex w-100 justify-content-between align-items-start">
                                 <div class="mb-2">
-                                    <strong class="d-block text-gray-dark">LIFT Core</strong>
+                                    <strong class="d-block text-gray-dark">LIFT Core <span class="text-danger">(*)</span></strong>
                                     <p class="mb-0">This plugins add new LIFT's menu into WordPress site. It also auto rename image file by post title</p>
                                     <small class="mb-0 text-primary">
                                     <?php $arrN = $auth->getfileAll(2); foreach ($arrN as &$item) {  ?><a href="download?filename=<?=md5($item['upload_version'])?>&f=<?=$item['upload_fname']?>">v<?=$item['upload_version']?></a> <?php } ?>
@@ -128,7 +128,7 @@ require_once 'includes/header.php';
                         <div class="flex-fill pb-3 mb-0 small lh-sm border-bottom">
                             <div class="d-lg-flex w-100 justify-content-between align-items-start">
                                 <div class="mb-2">
-                                    <strong class="d-block text-gray-dark">LIFT CleanUp</strong>
+                                    <strong class="d-block text-gray-dark">LIFT CleanUp <span class="text-danger">(*)</span></strong>
                                     <p class="mb-0">This is a product of LIFT Creations.</p>
                                     <small class="mb-0 text-primary">
                                     <?php $arrN = $auth->getfileAll(5); foreach ($arrN as &$item) {  ?><a href="download?filename=<?=md5($item['upload_version'])?>&f=<?=$item['upload_fname']?>">v<?=$item['upload_version']?></a> <?php } ?>
@@ -266,6 +266,9 @@ require_once 'includes/header.php';
 
                 <?php } ?>
 
+
+                
+                <p class="mt-3"><span class="text-danger">(*)</span>: Deleted or not support anymore</p>
                 </div>
 
 
