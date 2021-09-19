@@ -19,6 +19,11 @@
 		</a>
 	</li>
 	<li class="nav-item">
+		<a class="nav-link <?= $active === 'json' ? 'active' : '' ?>" href="json-generator">
+		<i class="bi bi-receipt-cutoff fa-lg fa-fw me-1"></i> JSON SEO Generator
+		</a>
+	</li>
+	<li class="nav-item">
 		<a class="nav-link <?= $active === 'qr' ? 'active' : '' ?>" href="qr-generator">
 		<i class="bi bi-upc-scan fa-lg fa-fw me-1"></i> QR Code Generator
 		</a>

@@ -8,6 +8,7 @@ $jsList = [
     'assets/js/dist/post_generator.prod.js',
     'assets/js/dist/post_multi_generator.prod.js',
     'assets/js/dist/content_generator.prod.js',
+    'assets/js/dist/json_generator.prod.js',
     'assets/js/dist/robots_generator.prod.js',
     'assets/js/dist/qr_generator.prod.js',
     'assets/js/dist/favicon_generator.prod.js',

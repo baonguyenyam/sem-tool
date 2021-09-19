@@ -85,6 +85,32 @@ function loadCSVFileAsText() {
     }
 }
 
+function loadCSVFileAsTextNoTable() {
+    if (document.getElementById("fileCSVToLoad").value) {
+        var fileCSVToLoad = document.getElementById("fileCSVToLoad").files[0];
+        var fileReader = new FileReader();
+        if(LIFT_APP.code) {
+            LIFT_APP.code.toTextArea()
+        }
+        fileReader.onload = function (fileLoadedEvent) {
+            var textFromFileLoaded = fileLoadedEvent.target.result;
+            document.getElementById("csvsource").value = textFromFileLoaded;
+            LIFT_APP.code = CodeMirror.fromTextArea(document.getElementById("csvsource"), {
+                mode: "text/x-textile",
+                lineNumbers: true,
+                styleActiveLine: true,
+                matchBrackets: true,
+                smartIndent: true,
+                indentWithTabs: true
+            });
+            LIFT_APP.code.setOption("theme", 'monokai')
+        };
+        fileReader.readAsText(fileCSVToLoad, "UTF-8");
+    } else {
+        alert('Please upload file')
+    }
+}
+
 function buildStringURL(str) {
     return str.toString()
         .toLowerCase()

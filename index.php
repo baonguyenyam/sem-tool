@@ -8,6 +8,7 @@ Route::add('/copyright',function(){ include 'views/copyright.php'; });
 Route::add('/keyword-generator',function(){ include 'views/keyword_generator.php'; });
 Route::add('/post-generator',function(){ include 'views/post_generator.php'; });
 Route::add('/content-generator',function(){ include 'views/content_generator.php'; });
+Route::add('/json-generator',function(){ include 'views/json_generator.php'; });
 Route::add('/plugin-generator',function(){ include 'views/plugin_generator.php'; });
 Route::add('/plugin-generator',function(){ include 'views/plugin_generator.php'; },'post');
 Route::add('/html-validator',function(){ include 'views/html_validator.php'; });
